@@ -1,0 +1,148 @@
+{
+  "project": "resonant",
+  "displayName": "Resonant.ai",
+  "category": "client",
+  "currentPhase": "pre-development",
+  "lastUpdated": "2026-01-11",
+  "steps": [
+    {
+      "id": 1,
+      "name": "Discovery & Research",
+      "status": "completed",
+      "progress": 100,
+      "tasks": [
+        { "name": "Analyser Poppy AI (Infos.md)", "done": true },
+        { "name": "Identifier les pain points marché", "done": true },
+        { "name": "Définir le positionnement", "done": true },
+        { "name": "Analyser la concurrence", "done": true }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Documentation Pre-Launch",
+      "status": "completed",
+      "progress": 100,
+      "tasks": [
+        { "name": "Créer Market Research (01)", "done": true },
+        { "name": "Créer Business Potential (02)", "done": true },
+        { "name": "Créer Vision & Mission (03)", "done": true },
+        { "name": "Créer PRD détaillé (04)", "done": true },
+        { "name": "Créer Features & Stack (05)", "done": true },
+        { "name": "Créer Comparaison Poppy vs Resonant (06)", "done": true },
+        { "name": "Synchroniser CLAUDE.md projet", "done": true }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Fundraising Preparation",
+      "status": "pending",
+      "progress": 0,
+      "tasks": [
+        { "name": "Créer pitch deck (slides)", "done": false },
+        { "name": "Préparer demo prototype (Figma)", "done": false },
+        { "name": "Liste investisseurs cibles", "done": false },
+        { "name": "Executive summary 1-pager", "done": false }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Technical Planning",
+      "status": "pending",
+      "progress": 0,
+      "tasks": [
+        { "name": "Finaliser architecture technique", "done": false },
+        { "name": "Créer wireframes UI/UX", "done": false },
+        { "name": "Définir API contracts", "done": false },
+        { "name": "Planifier sprints développement", "done": false }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Foundation Development",
+      "status": "pending",
+      "progress": 0,
+      "tasks": [
+        { "name": "Setup Next.js 16 + TypeScript", "done": false },
+        { "name": "Setup Convex backend", "done": false },
+        { "name": "Intégrer Clerk auth", "done": false },
+        { "name": "Setup shadcn/ui + design system", "done": false },
+        { "name": "Implémenter schema Convex", "done": false }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Core Editor MVP",
+      "status": "pending",
+      "progress": 0,
+      "tasks": [
+        { "name": "Intégrer React Flow", "done": false },
+        { "name": "Créer block system", "done": false },
+        { "name": "Implémenter workflow execution", "done": false },
+        { "name": "Connecter premier AI provider (Claude)", "done": false }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Multi-AI & Routing",
+      "status": "pending",
+      "progress": 0,
+      "tasks": [
+        { "name": "Ajouter GPT-4, Gemini, Llama", "done": false },
+        { "name": "Implémenter smart routing", "done": false },
+        { "name": "Cost optimization logic", "done": false },
+        { "name": "Provider fallback system", "done": false }
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Collaboration Features",
+      "status": "pending",
+      "progress": 0,
+      "tasks": [
+        { "name": "Intégrer Yjs CRDT", "done": false },
+        { "name": "Real-time cursors", "done": false },
+        { "name": "Comments system", "done": false },
+        { "name": "Version control (git-like)", "done": false }
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Monetization",
+      "status": "pending",
+      "progress": 0,
+      "tasks": [
+        { "name": "Intégrer Stripe", "done": false },
+        { "name": "Subscription management", "done": false },
+        { "name": "Usage tracking & metering", "done": false },
+        { "name": "Customer portal", "done": false }
+      ]
+    },
+    {
+      "id": 10,
+      "name": "Launch Preparation",
+      "status": "pending",
+      "progress": 0,
+      "tasks": [
+        { "name": "Beta testing (50 users)", "done": false },
+        { "name": "Bug fixes & polish", "done": false },
+        { "name": "Landing page", "done": false },
+        { "name": "Documentation utilisateur", "done": false },
+        { "name": "Product Hunt launch", "done": false }
+      ]
+    }
+  ],
+  "metrics": {
+    "targetARR_Y1": "$500K",
+    "targetARR_Y3": "$15M",
+    "targetUsers_Y1": 500,
+    "preSeedTarget": "$2M",
+    "valuation": "$10M post-money"
+  },
+  "timeline": {
+    "discovery": "2026-Q1",
+    "fundraising": "2026-Q1-Q2",
+    "mvpDevelopment": "2026-Q2-Q3",
+    "betaLaunch": "2026-Q3",
+    "publicLaunch": "2026-Q4"
+  }
+}
