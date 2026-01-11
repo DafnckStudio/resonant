@@ -1,0 +1,75 @@
+{
+  "step": 140,
+  "id": "140-phase4-integration",
+  "phase": 4,
+  "phaseName": "Workflow Editor Core",
+  "title": "Phase 4 Integration & Testing",
+  "description": "Integrate and test complete workflow editor",
+  "estimatedMinutes": 60,
+  "priority": "P0",
+  "dependencies": ["139-editor-performance"],
+
+  "objective": {
+    "what": "Test complete workflow editor",
+    "why": "Ensure all editor features work together",
+    "outcome": "Fully functional visual editor"
+  },
+
+  "specifications": {
+    "testCases": [
+      "Create workflow → add blocks → connect → save",
+      "Load existing workflow → modify → save",
+      "Undo/redo operations",
+      "Copy/paste nodes",
+      "Keyboard shortcuts all work",
+      "Touch gestures on tablet",
+      "Auto-save triggers correctly",
+      "Validation catches errors",
+      "100+ node performance"
+    ],
+    "validation": {
+      "editor": "All editor features work",
+      "persistence": "Save/load works correctly",
+      "performance": "60fps with 100 nodes",
+      "ux": "Intuitive user experience"
+    }
+  },
+
+  "prompt": {
+    "mission": "Complete Phase 4 integration",
+    "tasks": [
+      "Test full editor workflow",
+      "Test all keyboard shortcuts",
+      "Test save/load cycle",
+      "Test undo/redo",
+      "Test copy/paste",
+      "Test validation",
+      "Performance test with 100 nodes",
+      "Fix any integration issues"
+    ],
+    "validation": [
+      "npm run build passes",
+      "All editor features functional",
+      "Performance targets met",
+      "No console errors"
+    ]
+  },
+
+  "outputs": {
+    "milestone": "Phase 4 Complete",
+    "readyFor": "Phase 5: Block System",
+    "deliverables": [
+      "React Flow integration",
+      "Custom nodes and edges",
+      "Block palette with drag-drop",
+      "Properties panel",
+      "Toolbar with all actions",
+      "Undo/redo history",
+      "Copy/paste functionality",
+      "Keyboard shortcuts",
+      "Auto-save and load",
+      "Workflow validation",
+      "Performance optimization"
+    ]
+  }
+}

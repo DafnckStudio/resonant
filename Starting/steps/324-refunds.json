@@ -1,0 +1,57 @@
+{
+  "step": 324,
+  "id": "324-refunds",
+  "phase": 10,
+  "phaseName": "Monetization & Billing",
+  "title": "Refunds",
+  "description": "Refund processing system",
+  "estimatedMinutes": 30,
+  "priority": "P2",
+  "dependencies": ["312-invoice-management"],
+
+  "objective": {
+    "what": "Refund processing",
+    "why": "Customer satisfaction",
+    "outcome": "Smooth refunds"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/lib/billing/refunds.ts",
+      "src/components/billing/refund-request.tsx",
+      "convex/refunds.ts"
+    ],
+    "features": {
+      "request": "Request refund",
+      "process": "Process via Stripe",
+      "partial": "Partial refunds",
+      "track": "Track refund status"
+    },
+    "policies": {
+      "window": "30-day refund window",
+      "prorated": "Prorated refunds",
+      "full": "Full refund scenarios",
+      "credits": "Credits vs refunds"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create refund system",
+    "tasks": [
+      "Refund request form",
+      "Process refund via Stripe",
+      "Support partial refunds",
+      "Track refund status",
+      "Update subscription status"
+    ],
+    "constraints": [
+      "Clear refund policy",
+      "Audit trail",
+      "Status visibility"
+    ]
+  },
+
+  "outputs": {
+    "files": 3
+  }
+}

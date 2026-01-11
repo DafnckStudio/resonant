@@ -1,0 +1,56 @@
+{
+  "step": 291,
+  "id": "291-purchased-templates",
+  "phase": 9,
+  "phaseName": "Templates & Marketplace",
+  "title": "Purchased Templates",
+  "description": "View purchased templates",
+  "estimatedMinutes": 25,
+  "priority": "P1",
+  "dependencies": ["290-template-purchase"],
+
+  "objective": {
+    "what": "Show purchased templates",
+    "why": "Access bought templates",
+    "outcome": "Purchases page"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/app/(dashboard)/templates/purchased/page.tsx",
+      "src/components/templates/purchased-list.tsx"
+    ],
+    "features": {
+      "list": "List all purchases",
+      "download": "Download receipts",
+      "use": "Use purchased template",
+      "updates": "Template updates"
+    },
+    "display": {
+      "date": "Purchase date",
+      "price": "Price paid",
+      "version": "Current version",
+      "status": "Active/updates available"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create purchased templates page",
+    "tasks": [
+      "Build purchases page",
+      "List purchased templates",
+      "Show purchase details",
+      "Enable template use",
+      "Show available updates"
+    ],
+    "constraints": [
+      "Clear ownership",
+      "Easy access",
+      "Update visibility"
+    ]
+  },
+
+  "outputs": {
+    "files": 2
+  }
+}

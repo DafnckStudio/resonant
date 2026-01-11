@@ -1,0 +1,56 @@
+{
+  "step": 111,
+  "id": "111-properties-panel",
+  "phase": 4,
+  "phaseName": "Workflow Editor Core",
+  "title": "Create Properties Panel",
+  "description": "Build right sidebar for node properties",
+  "estimatedMinutes": 50,
+  "priority": "P0",
+  "dependencies": ["107-node-selection", "102-editor-layout"],
+
+  "objective": {
+    "what": "Create properties panel for selected node",
+    "why": "Users need to configure block settings",
+    "outcome": "Dynamic form for block configuration"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/components/editor/properties/properties-panel.tsx",
+      "src/components/editor/properties/property-form.tsx",
+      "src/components/editor/properties/property-field.tsx",
+      "src/components/editor/properties/property-types.ts"
+    ],
+    "features": {
+      "dynamic": "Form based on block type",
+      "validation": "Real-time validation",
+      "preview": "Live preview of changes",
+      "collapse": "Collapsible sections"
+    },
+    "fieldTypes": [
+      "text", "textarea", "number", "select",
+      "toggle", "color", "code", "json"
+    ]
+  },
+
+  "prompt": {
+    "mission": "Create properties panel",
+    "tasks": [
+      "Create PropertiesPanel container",
+      "Build PropertyForm component",
+      "Create PropertyField variants",
+      "Show when node selected",
+      "Update node data on change",
+      "Add validation feedback"
+    ],
+    "constraints": [
+      "Use React Hook Form",
+      "Debounce updates"
+    ]
+  },
+
+  "outputs": {
+    "files": 4
+  }
+}

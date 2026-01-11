@@ -1,0 +1,57 @@
+{
+  "step": 148,
+  "id": "148-ai-text-generation-block",
+  "phase": 5,
+  "phaseName": "Block System",
+  "title": "AI Text Generation Block",
+  "description": "Create AI text generation block",
+  "estimatedMinutes": 50,
+  "priority": "P0",
+  "dependencies": ["142-block-registry"],
+
+  "objective": {
+    "what": "Create AI text generation block",
+    "why": "Core AI capability for content generation",
+    "outcome": "Multi-model text generation"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/components/editor/blocks/ai/text-generation-block.tsx"
+    ],
+    "config": {
+      "model": "claude-3-5-sonnet/gpt-4o/gemini-pro",
+      "systemPrompt": "System instructions",
+      "temperature": "Creativity 0-1",
+      "maxTokens": "Max output length",
+      "topP": "Nucleus sampling",
+      "stopSequences": "Stop strings"
+    },
+    "inputs": {
+      "prompt": "User prompt input"
+    },
+    "outputs": {
+      "text": "Generated text",
+      "usage": "Token usage stats"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create AI text block",
+    "tasks": [
+      "Create TextGenerationBlock component",
+      "Add model selector",
+      "Add parameter controls",
+      "Show system prompt editor",
+      "Preview prompt with variables"
+    ],
+    "constraints": [
+      "Support all AI providers",
+      "Show token estimates"
+    ]
+  },
+
+  "outputs": {
+    "files": 1
+  }
+}

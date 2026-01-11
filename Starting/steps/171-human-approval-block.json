@@ -1,0 +1,56 @@
+{
+  "step": 171,
+  "id": "171-human-approval-block",
+  "phase": 5,
+  "phaseName": "Block System",
+  "title": "Human Approval Block",
+  "description": "Create human-in-the-loop approval block",
+  "estimatedMinutes": 45,
+  "priority": "P1",
+  "dependencies": ["142-block-registry"],
+
+  "objective": {
+    "what": "Create human approval block",
+    "why": "Require human review before continuing",
+    "outcome": "Pause for human approval"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/components/editor/blocks/human/approval-block.tsx",
+      "src/components/workflow/approval-dialog.tsx",
+      "convex/approvals.ts"
+    ],
+    "config": {
+      "approvers": "Who can approve",
+      "timeout": "Auto-reject timeout",
+      "message": "Approval message"
+    },
+    "inputs": {
+      "data": "Data to review"
+    },
+    "outputs": {
+      "approved": "Approved branch",
+      "rejected": "Rejected branch"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create approval block",
+    "tasks": [
+      "Create ApprovalBlock component",
+      "Create ApprovalDialog for reviewers",
+      "Store pending approvals",
+      "Send notifications",
+      "Handle approval/rejection"
+    ],
+    "constraints": [
+      "Pause execution",
+      "Send email notifications"
+    ]
+  },
+
+  "outputs": {
+    "files": 3
+  }
+}

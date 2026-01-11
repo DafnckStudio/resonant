@@ -1,0 +1,52 @@
+{
+  "step": 147,
+  "id": "147-file-input-block",
+  "phase": 5,
+  "phaseName": "Block System",
+  "title": "File Input Block",
+  "description": "Create file upload input block",
+  "estimatedMinutes": 35,
+  "priority": "P1",
+  "dependencies": ["142-block-registry"],
+
+  "objective": {
+    "what": "Create file input block",
+    "why": "Allow file uploads for processing",
+    "outcome": "Drag-drop file upload"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/components/editor/blocks/input/file-input-block.tsx"
+    ],
+    "config": {
+      "accept": "Accepted file types",
+      "maxSize": "Max file size MB",
+      "multiple": "Allow multiple files"
+    },
+    "outputs": {
+      "file": "File object/URL",
+      "content": "File content (if text)",
+      "metadata": "File metadata"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create file input block",
+    "tasks": [
+      "Create FileInputBlock component",
+      "Add dropzone UI",
+      "Handle file upload",
+      "Extract file content",
+      "Show file preview"
+    ],
+    "constraints": [
+      "Use Convex file storage",
+      "Validate file types"
+    ]
+  },
+
+  "outputs": {
+    "files": 1
+  }
+}

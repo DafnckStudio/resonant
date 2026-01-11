@@ -1,0 +1,50 @@
+{
+  "step": 94,
+  "id": "094-dashboard-stats",
+  "phase": 3,
+  "phaseName": "Workspace & Projects",
+  "title": "Create Dashboard Statistics",
+  "description": "Build stats cards for dashboard overview",
+  "estimatedMinutes": 30,
+  "priority": "P1",
+  "dependencies": ["076-workspace-context", "010-convex-schema-executions"],
+
+  "objective": {
+    "what": "Create statistics overview for dashboard",
+    "why": "Users need quick visibility into workspace activity",
+    "outcome": "Stats cards showing key metrics"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/components/dashboard/stats-cards.tsx",
+      "src/components/dashboard/stat-card.tsx",
+      "convex/stats.ts"
+    ],
+    "filesToModify": [
+      "src/app/(dashboard)/page.tsx"
+    ],
+    "stats": [
+      { "id": "workflows", "label": "Total Workflows", "icon": "Workflow" },
+      { "id": "executions", "label": "Executions Today", "icon": "Play" },
+      { "id": "successRate", "label": "Success Rate", "icon": "CheckCircle" },
+      { "id": "aiCalls", "label": "AI Calls", "icon": "Sparkles" }
+    ]
+  },
+
+  "prompt": {
+    "mission": "Create dashboard statistics",
+    "tasks": [
+      "Create stats queries in Convex",
+      "Build StatsCards component",
+      "Create individual StatCard",
+      "Add to dashboard page",
+      "Show loading state"
+    ]
+  },
+
+  "outputs": {
+    "files": 3,
+    "filesModified": 1
+  }
+}

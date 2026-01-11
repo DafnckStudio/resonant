@@ -1,0 +1,58 @@
+{
+  "step": 356,
+  "id": "356-api-keys",
+  "phase": 11,
+  "phaseName": "Dashboard & Analytics",
+  "title": "API Keys",
+  "description": "API key management",
+  "estimatedMinutes": 35,
+  "priority": "P2",
+  "dependencies": ["076-workspace-schema"],
+
+  "objective": {
+    "what": "API key management",
+    "why": "API access control",
+    "outcome": "Secure API keys"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/app/(dashboard)/settings/api-keys/page.tsx",
+      "src/components/settings/api-key-list.tsx",
+      "src/components/settings/create-api-key.tsx",
+      "convex/apiKeys.ts"
+    ],
+    "features": {
+      "create": "Generate new key",
+      "list": "List all keys",
+      "revoke": "Revoke key",
+      "scopes": "Permission scopes"
+    },
+    "security": {
+      "hash": "Hash stored keys",
+      "showOnce": "Show key only once",
+      "expiry": "Optional expiry",
+      "audit": "Usage audit log"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create API key management",
+    "tasks": [
+      "Build API keys page",
+      "Create key generation",
+      "Implement key listing",
+      "Add revoke functionality",
+      "Include scope selection"
+    ],
+    "constraints": [
+      "Secure handling",
+      "Show once only",
+      "Clear revocation"
+    ]
+  },
+
+  "outputs": {
+    "files": 4
+  }
+}

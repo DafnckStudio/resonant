@@ -1,0 +1,55 @@
+{
+  "step": 287,
+  "id": "287-marketplace-schema",
+  "phase": 9,
+  "phaseName": "Templates & Marketplace",
+  "title": "Marketplace Schema",
+  "description": "Database schema for marketplace",
+  "estimatedMinutes": 25,
+  "priority": "P1",
+  "dependencies": ["276-template-schema"],
+
+  "objective": {
+    "what": "Create marketplace schema",
+    "why": "Support paid templates",
+    "outcome": "Marketplace data model"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "convex/schema/marketplace.ts"
+    ],
+    "tables": {
+      "marketplaceListings": "Published templates",
+      "purchases": "Purchase records",
+      "reviews": "User reviews",
+      "payouts": "Creator payouts"
+    },
+    "fields": {
+      "price": "Template price",
+      "seller": "Seller reference",
+      "sales": "Sales count",
+      "revenue": "Total revenue"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create marketplace schema",
+    "tasks": [
+      "Define listings table",
+      "Add purchases table",
+      "Create reviews table",
+      "Add payouts tracking",
+      "Plan indexes"
+    ],
+    "constraints": [
+      "Financial accuracy",
+      "Audit trail",
+      "Convex patterns"
+    ]
+  },
+
+  "outputs": {
+    "files": 1
+  }
+}

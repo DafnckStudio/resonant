@@ -1,0 +1,56 @@
+{
+  "step": 306,
+  "id": "306-subscription-management",
+  "phase": 10,
+  "phaseName": "Monetization & Billing",
+  "title": "Subscription Management",
+  "description": "Manage user subscriptions",
+  "estimatedMinutes": 35,
+  "priority": "P1",
+  "dependencies": ["305-stripe-webhooks"],
+
+  "objective": {
+    "what": "Manage subscriptions",
+    "why": "Self-service billing",
+    "outcome": "Subscription controls"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/lib/billing/subscription.ts",
+      "src/hooks/useSubscription.ts",
+      "convex/billing.ts"
+    ],
+    "features": {
+      "view": "View current plan",
+      "upgrade": "Upgrade plan",
+      "downgrade": "Downgrade plan",
+      "cancel": "Cancel subscription"
+    },
+    "data": {
+      "status": "Subscription status",
+      "nextBilling": "Next billing date",
+      "usage": "Current usage"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create subscription management",
+    "tasks": [
+      "Get subscription status",
+      "Enable plan changes",
+      "Handle cancellations",
+      "Show billing info",
+      "Create React hook"
+    ],
+    "constraints": [
+      "Real-time status",
+      "Clear information",
+      "Safe operations"
+    ]
+  },
+
+  "outputs": {
+    "files": 3
+  }
+}

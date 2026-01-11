@@ -1,0 +1,58 @@
+{
+  "step": 268,
+  "id": "268-version-audit-log",
+  "phase": 8,
+  "phaseName": "Version Control",
+  "title": "Version Audit Log",
+  "description": "Audit trail for versions",
+  "estimatedMinutes": 30,
+  "priority": "P2",
+  "dependencies": ["256-version-restore", "258-version-branching"],
+
+  "objective": {
+    "what": "Create audit log",
+    "why": "Track all version actions",
+    "outcome": "Complete audit trail"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/lib/versioning/audit.ts",
+      "convex/versionAudit.ts",
+      "src/components/editor/version-control/audit-log-viewer.tsx"
+    ],
+    "events": {
+      "created": "Version created",
+      "restored": "Version restored",
+      "deleted": "Version deleted",
+      "exported": "Version exported",
+      "branched": "Branch created"
+    },
+    "data": {
+      "who": "User who performed action",
+      "when": "Timestamp",
+      "what": "Action details",
+      "context": "Additional context"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create version audit log",
+    "tasks": [
+      "Log all version actions",
+      "Store audit data",
+      "Create audit viewer",
+      "Add filtering",
+      "Export audit log"
+    ],
+    "constraints": [
+      "Complete logging",
+      "Immutable records",
+      "Searchable"
+    ]
+  },
+
+  "outputs": {
+    "files": 3
+  }
+}

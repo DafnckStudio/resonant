@@ -1,0 +1,56 @@
+{
+  "step": 189,
+  "id": "189-fallback-mechanism",
+  "phase": 6,
+  "phaseName": "AI Router & Execution",
+  "title": "Provider Fallback System",
+  "description": "Automatic failover when providers fail",
+  "estimatedMinutes": 45,
+  "priority": "P0",
+  "dependencies": ["188-intelligent-router"],
+
+  "objective": {
+    "what": "Implement fallback mechanism",
+    "why": "Ensure reliability when providers fail",
+    "outcome": "Resilient AI calls"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/lib/ai/fallback/fallback-manager.ts",
+      "src/lib/ai/fallback/fallback-chains.ts",
+      "src/lib/ai/fallback/health-monitor.ts"
+    ],
+    "fallbackChains": {
+      "text": ["claude-3-5-sonnet", "gpt-4o", "gemini-1.5-pro", "llama-3.1-70b"],
+      "vision": ["gpt-4o", "claude-3-5-sonnet", "gemini-1.5-pro"],
+      "code": ["claude-3-5-sonnet", "gpt-4o", "gemini-1.5-pro"]
+    },
+    "triggers": {
+      "error": "API returns error",
+      "timeout": "Request times out",
+      "rateLimit": "Rate limited",
+      "unavailable": "Service down"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create fallback system",
+    "tasks": [
+      "Define fallback chains",
+      "Implement automatic retry",
+      "Add health monitoring",
+      "Create circuit breaker",
+      "Log fallback events"
+    ],
+    "constraints": [
+      "Preserve request context",
+      "Minimal latency overhead",
+      "Track fallback metrics"
+    ]
+  },
+
+  "outputs": {
+    "files": 3
+  }
+}

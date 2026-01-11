@@ -1,0 +1,57 @@
+{
+  "step": 292,
+  "id": "292-template-reviews",
+  "phase": 9,
+  "phaseName": "Templates & Marketplace",
+  "title": "Template Reviews",
+  "description": "Review and rate templates",
+  "estimatedMinutes": 35,
+  "priority": "P2",
+  "dependencies": ["291-purchased-templates"],
+
+  "objective": {
+    "what": "Add review system",
+    "why": "Help users choose",
+    "outcome": "Reviews and ratings"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/lib/marketplace/reviews.ts",
+      "src/components/marketplace/review-form.tsx",
+      "src/components/marketplace/reviews-list.tsx",
+      "convex/reviews.ts"
+    ],
+    "features": {
+      "rating": "1-5 star rating",
+      "review": "Written review",
+      "helpful": "Mark as helpful",
+      "reply": "Seller replies"
+    },
+    "rules": {
+      "verified": "Only verified purchasers",
+      "onePerUser": "One review per user",
+      "editable": "Edit own reviews"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create template reviews",
+    "tasks": [
+      "Build review form",
+      "Create reviews list",
+      "Calculate averages",
+      "Add helpful voting",
+      "Enable seller replies"
+    ],
+    "constraints": [
+      "Verified purchases only",
+      "Fair moderation",
+      "Helpful sorting"
+    ]
+  },
+
+  "outputs": {
+    "files": 4
+  }
+}

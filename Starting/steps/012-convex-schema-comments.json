@@ -1,0 +1,58 @@
+{
+  "step": 12,
+  "id": "012-convex-schema-comments",
+  "phase": 0,
+  "phaseName": "Foundation Setup",
+  "title": "Create Convex Schema - Comments Table",
+  "description": "Define comments table for collaborative annotations on workflows",
+  "estimatedMinutes": 10,
+  "priority": "P1",
+  "dependencies": ["011-convex-schema-templates"],
+
+  "objective": {
+    "what": "Create comments table for Figma-like annotations on workflow blocks",
+    "why": "Comments enable team collaboration and feedback on workflows",
+    "outcome": "Comments table with block position linking and resolution tracking"
+  },
+
+  "specifications": {
+    "filesToModify": ["convex/schema.ts"],
+    "schema": {
+      "comments": {
+        "fields": {
+          "workflowId": "v.id('workflows')",
+          "userId": "v.id('users')",
+          "content": "v.string()",
+          "blockId": "v.optional(v.string()) - Linked block",
+          "position": "v.optional(v.object({ x, y })) - Canvas position",
+          "parentId": "v.optional(v.id('comments')) - For threads",
+          "isResolved": "v.boolean()",
+          "resolvedBy": "v.optional(v.id('users'))",
+          "resolvedAt": "v.optional(v.number())",
+          "createdAt": "v.number()",
+          "updatedAt": "v.number()"
+        },
+        "indexes": [
+          { "name": "by_workflowId", "fields": ["workflowId"] },
+          { "name": "by_userId", "fields": ["userId"] },
+          { "name": "by_parentId", "fields": ["parentId"] },
+          { "name": "by_workflowId_isResolved", "fields": ["workflowId", "isResolved"] }
+        ]
+      }
+    }
+  },
+
+  "prompt": {
+    "mission": "Add comments table for collaboration",
+    "tasks": [
+      "Add comments table with thread support",
+      "Include block linking and position",
+      "Add resolution tracking"
+    ]
+  },
+
+  "outputs": {
+    "tables": ["comments"],
+    "indexes": 4
+  }
+}

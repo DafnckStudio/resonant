@@ -1,0 +1,57 @@
+{
+  "step": 191,
+  "id": "191-workflow-executor-core",
+  "phase": 6,
+  "phaseName": "AI Router & Execution",
+  "title": "Workflow Executor Core",
+  "description": "Main execution engine for workflows",
+  "estimatedMinutes": 90,
+  "priority": "P0",
+  "dependencies": ["180-phase5-integration", "188-intelligent-router"],
+
+  "objective": {
+    "what": "Build workflow execution engine",
+    "why": "Execute DAG-based workflows",
+    "outcome": "Working execution engine"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/lib/execution/executor.ts",
+      "src/lib/execution/execution-context.ts",
+      "src/lib/execution/dag-traverser.ts",
+      "src/lib/execution/types.ts"
+    ],
+    "features": {
+      "dagExecution": "Topological sort execution",
+      "parallelBranches": "Execute parallel paths",
+      "context": "Shared execution context",
+      "state": "Track execution state"
+    },
+    "executionModes": {
+      "full": "Execute entire workflow",
+      "partial": "Execute from specific block",
+      "debug": "Step-by-step execution"
+    }
+  },
+
+  "prompt": {
+    "mission": "Build workflow executor",
+    "tasks": [
+      "Implement DAG traversal",
+      "Create execution context",
+      "Handle parallel branches",
+      "Track execution state",
+      "Support partial execution"
+    ],
+    "constraints": [
+      "Respect dependencies",
+      "Handle cycles gracefully",
+      "Cancelable execution"
+    ]
+  },
+
+  "outputs": {
+    "files": 4
+  }
+}

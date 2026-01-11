@@ -1,0 +1,53 @@
+{
+  "step": 102,
+  "id": "102-editor-layout",
+  "phase": 4,
+  "phaseName": "Workflow Editor Core",
+  "title": "Create Editor Layout",
+  "description": "Build the workflow editor page layout",
+  "estimatedMinutes": 35,
+  "priority": "P0",
+  "dependencies": ["101-react-flow-setup"],
+
+  "objective": {
+    "what": "Create the full editor page layout with panels",
+    "why": "Editor needs toolbar, canvas, sidebars for block palette and properties",
+    "outcome": "Editor shell with all panel areas"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/app/(dashboard)/workflows/[workflowId]/edit/page.tsx",
+      "src/components/editor/editor-layout.tsx",
+      "src/components/editor/editor-toolbar.tsx",
+      "src/components/editor/editor-sidebar.tsx"
+    ],
+    "layout": {
+      "top": "Toolbar with save, run, undo/redo, zoom",
+      "left": "Block palette (collapsible)",
+      "center": "Flow canvas (React Flow)",
+      "right": "Properties panel (collapsible)",
+      "bottom": "Status bar"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create editor layout",
+    "tasks": [
+      "Create editor route page",
+      "Build EditorLayout with resizable panels",
+      "Create EditorToolbar component",
+      "Add EditorSidebar for block palette",
+      "Setup panel collapse/expand"
+    ],
+    "constraints": [
+      "Use resizable panels",
+      "Remember panel sizes in localStorage"
+    ]
+  },
+
+  "outputs": {
+    "files": 4,
+    "route": "/workflows/[workflowId]/edit"
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "step": 373,
+  "id": "373-visual-regression",
+  "phase": 12,
+  "phaseName": "Testing & Polish",
+  "title": "Visual Regression",
+  "description": "Visual regression testing",
+  "estimatedMinutes": 35,
+  "priority": "P2",
+  "dependencies": ["361-test-setup"],
+
+  "objective": {
+    "what": "Visual regression tests",
+    "why": "UI consistency",
+    "outcome": "Visual stability"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "tests/visual/dashboard.spec.ts",
+      "tests/visual/editor.spec.ts",
+      "tests/visual/components.spec.ts",
+      "playwright-visual.config.ts"
+    ],
+    "pages": {
+      "dashboard": "Dashboard screenshots",
+      "editor": "Editor screenshots",
+      "settings": "Settings screenshots",
+      "billing": "Billing screenshots"
+    },
+    "features": {
+      "snapshots": "Snapshot comparison",
+      "threshold": "Diff threshold",
+      "responsive": "Multiple viewports"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create visual regression tests",
+    "tasks": [
+      "Setup Playwright visual",
+      "Capture baseline screenshots",
+      "Test dashboard views",
+      "Test editor views",
+      "Test responsive layouts"
+    ],
+    "constraints": [
+      "Multiple viewports",
+      "1% diff threshold",
+      "CI integration"
+    ]
+  },
+
+  "outputs": {
+    "files": 4
+  }
+}

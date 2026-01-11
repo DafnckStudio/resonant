@@ -1,0 +1,59 @@
+{
+  "step": 14,
+  "id": "014-convex-schema-usage",
+  "phase": 0,
+  "phaseName": "Foundation Setup",
+  "title": "Create Convex Schema - Usage Records Table",
+  "description": "Define usageRecords table for token-based billing and analytics",
+  "estimatedMinutes": 10,
+  "priority": "P0",
+  "dependencies": ["013-convex-schema-ai-providers"],
+
+  "objective": {
+    "what": "Create usageRecords table for granular usage tracking and billing",
+    "why": "Token-based pricing requires detailed usage tracking per execution",
+    "outcome": "Usage table with per-request token and cost tracking"
+  },
+
+  "specifications": {
+    "filesToModify": ["convex/schema.ts"],
+    "schema": {
+      "usageRecords": {
+        "fields": {
+          "workspaceId": "v.id('workspaces')",
+          "userId": "v.id('users')",
+          "executionId": "v.optional(v.id('executions'))",
+          "provider": "v.string()",
+          "model": "v.string()",
+          "inputTokens": "v.number()",
+          "outputTokens": "v.number()",
+          "totalTokens": "v.number()",
+          "cost": "v.number() - In cents",
+          "type": "v.union('ai_call', 'embedding', 'image')",
+          "billingPeriod": "v.string() - YYYY-MM format",
+          "createdAt": "v.number()"
+        },
+        "indexes": [
+          { "name": "by_workspaceId", "fields": ["workspaceId"] },
+          { "name": "by_userId", "fields": ["userId"] },
+          { "name": "by_billingPeriod", "fields": ["billingPeriod"] },
+          { "name": "by_workspaceId_billingPeriod", "fields": ["workspaceId", "billingPeriod"] }
+        ]
+      }
+    }
+  },
+
+  "prompt": {
+    "mission": "Add usage tracking table for billing",
+    "tasks": [
+      "Add usageRecords table",
+      "Include token breakdown (input/output)",
+      "Add billing period for aggregation"
+    ]
+  },
+
+  "outputs": {
+    "tables": ["usageRecords"],
+    "indexes": 4
+  }
+}

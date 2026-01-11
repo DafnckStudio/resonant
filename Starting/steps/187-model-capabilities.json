@@ -1,0 +1,61 @@
+{
+  "step": 187,
+  "id": "187-model-capabilities",
+  "phase": 6,
+  "phaseName": "AI Router & Execution",
+  "title": "Model Capabilities Database",
+  "description": "Define capabilities and limits for all models",
+  "estimatedMinutes": 35,
+  "priority": "P0",
+  "dependencies": ["186-provider-registry"],
+
+  "objective": {
+    "what": "Create model capability database",
+    "why": "Enable intelligent model selection",
+    "outcome": "Complete model metadata"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/lib/ai/models/capabilities.ts",
+      "src/lib/ai/models/pricing.ts",
+      "src/lib/ai/models/limits.ts"
+    ],
+    "capabilities": {
+      "text": "Text generation",
+      "vision": "Image understanding",
+      "imageGen": "Image generation",
+      "embedding": "Text embeddings",
+      "audio": "Speech to text / text to speech",
+      "tools": "Function calling"
+    },
+    "metadata": {
+      "contextWindow": "Max tokens in context",
+      "maxOutput": "Max output tokens",
+      "inputPrice": "Price per input token",
+      "outputPrice": "Price per output token",
+      "latency": "Average response time",
+      "quality": "Quality score 1-100"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create model capabilities",
+    "tasks": [
+      "Define capability matrix",
+      "Add pricing information",
+      "Define token limits",
+      "Add latency estimates",
+      "Create quality scores"
+    ],
+    "constraints": [
+      "Keep pricing updated",
+      "Document all capabilities",
+      "Include deprecation dates"
+    ]
+  },
+
+  "outputs": {
+    "files": 3
+  }
+}

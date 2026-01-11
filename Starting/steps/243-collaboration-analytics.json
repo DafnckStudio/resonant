@@ -1,0 +1,55 @@
+{
+  "step": 243,
+  "id": "243-collaboration-analytics",
+  "phase": 7,
+  "phaseName": "Real-time Collaboration",
+  "title": "Collaboration Analytics",
+  "description": "Track collaboration metrics",
+  "estimatedMinutes": 35,
+  "priority": "P3",
+  "dependencies": ["233-activity-feed"],
+
+  "objective": {
+    "what": "Track collaboration stats",
+    "why": "Understand team usage",
+    "outcome": "Collaboration insights"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/lib/collaboration/analytics/collab-analytics.ts",
+      "convex/collaborationStats.ts"
+    ],
+    "metrics": {
+      "sessions": "Collaborative sessions",
+      "duration": "Session durations",
+      "edits": "Edits per user",
+      "concurrent": "Concurrent editors"
+    },
+    "reports": {
+      "team": "Team collaboration summary",
+      "workflow": "Per-workflow stats",
+      "user": "Per-user contribution"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create collaboration analytics",
+    "tasks": [
+      "Track collaboration events",
+      "Calculate metrics",
+      "Store statistics",
+      "Create summary reports",
+      "Add to dashboard"
+    ],
+    "constraints": [
+      "Privacy-conscious",
+      "Efficient tracking",
+      "Useful insights"
+    ]
+  },
+
+  "outputs": {
+    "files": 2
+  }
+}

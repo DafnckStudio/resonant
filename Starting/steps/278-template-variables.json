@@ -1,0 +1,56 @@
+{
+  "step": 278,
+  "id": "278-template-variables",
+  "phase": 9,
+  "phaseName": "Templates & Marketplace",
+  "title": "Template Variables",
+  "description": "Define customizable template variables",
+  "estimatedMinutes": 30,
+  "priority": "P1",
+  "dependencies": ["277-template-creation"],
+
+  "objective": {
+    "what": "Template variable system",
+    "why": "Make templates customizable",
+    "outcome": "Variable placeholders"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/lib/templates/variables.ts",
+      "src/components/templates/variable-editor.tsx"
+    ],
+    "variableTypes": {
+      "text": "Text input",
+      "select": "Dropdown options",
+      "apiKey": "API key (masked)",
+      "url": "URL input"
+    },
+    "features": {
+      "define": "Define variables in template",
+      "default": "Default values",
+      "required": "Required vs optional",
+      "validation": "Input validation"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create template variables",
+    "tasks": [
+      "Define variable types",
+      "Build variable editor",
+      "Add validation rules",
+      "Support defaults",
+      "Mark required fields"
+    ],
+    "constraints": [
+      "Type safety",
+      "Clear naming",
+      "Validation messages"
+    ]
+  },
+
+  "outputs": {
+    "files": 2
+  }
+}

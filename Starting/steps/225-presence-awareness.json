@@ -1,0 +1,59 @@
+{
+  "step": 225,
+  "id": "225-presence-awareness",
+  "phase": 7,
+  "phaseName": "Real-time Collaboration",
+  "title": "User Presence & Awareness",
+  "description": "Show who is editing in real-time",
+  "estimatedMinutes": 45,
+  "priority": "P0",
+  "dependencies": ["221-yjs-setup"],
+
+  "objective": {
+    "what": "Implement presence awareness",
+    "why": "See collaborators in real-time",
+    "outcome": "Live presence indicators"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/lib/collaboration/presence/presence-manager.ts",
+      "src/lib/collaboration/presence/cursor-tracker.ts",
+      "src/hooks/usePresence.ts"
+    ],
+    "features": {
+      "online": "Who is currently online",
+      "cursor": "Cursor position tracking",
+      "selection": "What each user selected",
+      "activity": "User activity status"
+    },
+    "data": {
+      "userId": "Clerk user ID",
+      "name": "Display name",
+      "avatar": "Profile image",
+      "color": "Unique user color",
+      "cursor": "Canvas position",
+      "selection": "Selected nodes"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create presence system",
+    "tasks": [
+      "Implement presence manager",
+      "Track cursor positions",
+      "Track selections",
+      "Assign user colors",
+      "Create presence hook"
+    ],
+    "constraints": [
+      "Low latency updates",
+      "Efficient bandwidth",
+      "Clean up on disconnect"
+    ]
+  },
+
+  "outputs": {
+    "files": 3
+  }
+}

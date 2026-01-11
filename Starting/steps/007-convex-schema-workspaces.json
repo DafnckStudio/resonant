@@ -1,0 +1,109 @@
+{
+  "step": 7,
+  "id": "007-convex-schema-workspaces",
+  "phase": 0,
+  "phaseName": "Foundation Setup",
+  "title": "Create Convex Schema - Workspaces & Members Tables",
+  "description": "Define workspaces and workspaceMembers tables for team collaboration",
+  "estimatedMinutes": 15,
+  "priority": "P0",
+  "dependencies": ["006-convex-schema-users"],
+
+  "objective": {
+    "what": "Create workspaces and workspaceMembers tables for multi-tenant team structure",
+    "why": "Workspaces enable team collaboration and separate billing - core multi-tenancy feature",
+    "outcome": "Workspaces and members tables with proper relationships and indexes"
+  },
+
+  "context": {
+    "dataModel": "Workspaces contain workflows and have members with roles",
+    "relationships": {
+      "workspace": {
+        "belongsTo": ["user (owner)"],
+        "hasMany": ["workspaceMembers", "workflows", "aiProviderConfigs"]
+      },
+      "workspaceMember": {
+        "belongsTo": ["workspace", "user"]
+      }
+    }
+  },
+
+  "specifications": {
+    "filesToModify": [
+      "convex/schema.ts"
+    ],
+    "schema": {
+      "workspaces": {
+        "fields": {
+          "name": "v.string() - Workspace name",
+          "slug": "v.string() - URL-friendly slug",
+          "description": "v.optional(v.string()) - Description",
+          "ownerId": "v.id('users') - Owner user ID",
+          "logoUrl": "v.optional(v.string()) - Workspace logo",
+          "plan": "v.string() - Subscription plan",
+          "settings": "v.optional(v.object({...})) - Workspace settings",
+          "tokenUsage": "v.optional(v.number()) - Current month usage",
+          "tokenLimit": "v.optional(v.number()) - Monthly limit",
+          "createdAt": "v.number()",
+          "updatedAt": "v.number()"
+        },
+        "indexes": [
+          { "name": "by_ownerId", "fields": ["ownerId"] },
+          { "name": "by_slug", "fields": ["slug"] }
+        ]
+      },
+      "workspaceMembers": {
+        "fields": {
+          "workspaceId": "v.id('workspaces')",
+          "userId": "v.id('users')",
+          "role": "v.union(v.literal('owner'), v.literal('admin'), v.literal('editor'), v.literal('viewer'))",
+          "invitedBy": "v.optional(v.id('users'))",
+          "invitedAt": "v.optional(v.number())",
+          "joinedAt": "v.number()"
+        },
+        "indexes": [
+          { "name": "by_workspaceId", "fields": ["workspaceId"] },
+          { "name": "by_userId", "fields": ["userId"] },
+          { "name": "by_workspaceId_userId", "fields": ["workspaceId", "userId"] }
+        ]
+      }
+    }
+  },
+
+  "prompt": {
+    "mission": "Add workspaces and workspaceMembers tables to the Convex schema",
+    "tasks": [
+      "Add workspaces table to convex/schema.ts",
+      "Add workspaceMembers table for member relationships",
+      "Define role types: owner, admin, editor, viewer",
+      "Add all required indexes",
+      "Push schema with npx convex dev"
+    ],
+    "constraints": [
+      "Use v.id('tableName') for foreign keys",
+      "Slug must be unique per workspace",
+      "Include compound index for workspaceId + userId"
+    ],
+    "validation": [
+      "Schema pushes without errors",
+      "Both tables visible in dashboard"
+    ]
+  },
+
+  "validation": {
+    "automated": [
+      "Schema validation passes",
+      "No reference errors"
+    ],
+    "functional": [
+      "Tables appear in Convex dashboard",
+      "Indexes created correctly"
+    ]
+  },
+
+  "outputs": {
+    "files": ["convex/schema.ts"],
+    "tables": ["workspaces", "workspaceMembers"],
+    "indexes": 5
+  }
+}

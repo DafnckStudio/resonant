@@ -1,0 +1,55 @@
+{
+  "step": 253,
+  "id": "253-manual-save-version",
+  "phase": 8,
+  "phaseName": "Version Control",
+  "title": "Manual Save Version",
+  "description": "Create named versions manually",
+  "estimatedMinutes": 25,
+  "priority": "P1",
+  "dependencies": ["252-auto-save-versions"],
+
+  "objective": {
+    "what": "Allow manual version saves",
+    "why": "Mark important milestones",
+    "outcome": "Named versions"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/components/editor/version-control/save-version-dialog.tsx",
+      "src/lib/versioning/manual-save.ts"
+    ],
+    "features": {
+      "name": "Version name/title",
+      "description": "Optional description",
+      "tags": "Version tags",
+      "shortcut": "Ctrl+S for save"
+    },
+    "ui": {
+      "dialog": "Save version dialog",
+      "validation": "Name validation",
+      "confirmation": "Success feedback"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create manual version save",
+    "tasks": [
+      "Create save dialog",
+      "Add name and description",
+      "Support version tags",
+      "Implement keyboard shortcut",
+      "Show save confirmation"
+    ],
+    "constraints": [
+      "Quick save flow",
+      "Optional details",
+      "Clear feedback"
+    ]
+  },
+
+  "outputs": {
+    "files": 2
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "step": 130,
+  "id": "130-editor-help-modal",
+  "phase": 4,
+  "phaseName": "Workflow Editor Core",
+  "title": "Editor Help Modal",
+  "description": "Create help modal with shortcuts and tips",
+  "estimatedMinutes": 25,
+  "priority": "P2",
+  "dependencies": ["119-keyboard-shortcuts-editor"],
+
+  "objective": {
+    "what": "Create help modal for editor",
+    "why": "Teach users keyboard shortcuts",
+    "outcome": "? shortcut opens help"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/components/editor/help/help-modal.tsx"
+    ],
+    "content": {
+      "shortcuts": "All keyboard shortcuts",
+      "gestures": "Mouse/touch gestures",
+      "tips": "Power user tips",
+      "blocks": "Block type overview"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create help modal",
+    "tasks": [
+      "Create HelpModal component",
+      "List all shortcuts",
+      "Add gesture guide",
+      "Add tips section",
+      "Open with ? key",
+      "Style with tabs"
+    ],
+    "constraints": [
+      "Use shadcn Dialog",
+      "Searchable shortcuts"
+    ]
+  },
+
+  "outputs": {
+    "files": 1
+  }
+}

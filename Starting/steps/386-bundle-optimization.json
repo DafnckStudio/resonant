@@ -1,0 +1,56 @@
+{
+  "step": 386,
+  "id": "386-bundle-optimization",
+  "phase": 12,
+  "phaseName": "Testing & Polish",
+  "title": "Bundle Optimization",
+  "description": "Optimize JavaScript bundle size",
+  "estimatedMinutes": 35,
+  "priority": "P1",
+  "dependencies": [],
+
+  "objective": {
+    "what": "Bundle optimization",
+    "why": "Fast initial load",
+    "outcome": "Minimal bundle size"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/lib/imports/dynamic.ts",
+      "next.config.js updates"
+    ],
+    "analysis": {
+      "analyzer": "Bundle analyzer",
+      "tree-shaking": "Tree shaking verification",
+      "splitting": "Code splitting",
+      "duplicates": "Duplicate detection"
+    },
+    "optimizations": {
+      "dynamic": "Dynamic imports",
+      "chunks": "Chunk optimization",
+      "externals": "External dependencies",
+      "compression": "Compression settings"
+    }
+  },
+
+  "prompt": {
+    "mission": "Optimize bundles",
+    "tasks": [
+      "Analyze bundle composition",
+      "Add dynamic imports",
+      "Optimize chunk splitting",
+      "Remove unused code",
+      "Configure compression"
+    ],
+    "constraints": [
+      "Initial bundle < 200KB",
+      "Turbopack compatible",
+      "No runtime regressions"
+    ]
+  },
+
+  "outputs": {
+    "files": 2
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "step": 152,
+  "id": "152-ai-speech-to-text-block",
+  "phase": 5,
+  "phaseName": "Block System",
+  "title": "AI Speech-to-Text Block",
+  "description": "Create audio transcription block",
+  "estimatedMinutes": 35,
+  "priority": "P2",
+  "dependencies": ["148-ai-text-generation-block"],
+
+  "objective": {
+    "what": "Create speech-to-text block",
+    "why": "Transcribe audio content",
+    "outcome": "Audio transcription with timestamps"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/components/editor/blocks/ai/speech-to-text-block.tsx"
+    ],
+    "config": {
+      "model": "whisper-1",
+      "language": "Auto-detect or specify",
+      "timestamps": "Include timestamps",
+      "format": "text/srt/vtt"
+    },
+    "inputs": {
+      "audio": "Audio file URL"
+    },
+    "outputs": {
+      "transcript": "Full transcript",
+      "segments": "Timestamped segments"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create STT block",
+    "tasks": [
+      "Create SpeechToTextBlock component",
+      "Handle audio input",
+      "Add language selector",
+      "Show transcription progress",
+      "Display transcript with timestamps"
+    ],
+    "constraints": [
+      "Use Whisper API",
+      "Support long audio"
+    ]
+  },
+
+  "outputs": {
+    "files": 1
+  }
+}

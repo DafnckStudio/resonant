@@ -1,0 +1,57 @@
+{
+  "step": 305,
+  "id": "305-stripe-webhooks",
+  "phase": 10,
+  "phaseName": "Monetization & Billing",
+  "title": "Stripe Webhooks",
+  "description": "Handle Stripe webhook events",
+  "estimatedMinutes": 45,
+  "priority": "P0",
+  "dependencies": ["304-checkout-flow"],
+
+  "objective": {
+    "what": "Handle Stripe webhooks",
+    "why": "Sync subscription state",
+    "outcome": "Webhook handling"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/app/api/webhooks/stripe/route.ts",
+      "src/lib/billing/webhook-handlers.ts",
+      "convex/subscriptions.ts"
+    ],
+    "events": {
+      "checkout.session.completed": "New subscription",
+      "customer.subscription.updated": "Plan changed",
+      "customer.subscription.deleted": "Canceled",
+      "invoice.payment_failed": "Payment failed"
+    },
+    "handling": {
+      "verify": "Verify signature",
+      "process": "Process event",
+      "sync": "Sync to Convex",
+      "idempotent": "Handle duplicates"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create Stripe webhooks",
+    "tasks": [
+      "Setup webhook endpoint",
+      "Verify webhook signatures",
+      "Handle each event type",
+      "Sync subscription state",
+      "Handle failures gracefully"
+    ],
+    "constraints": [
+      "Secure verification",
+      "Idempotent handling",
+      "Complete event coverage"
+    ]
+  },
+
+  "outputs": {
+    "files": 3
+  }
+}

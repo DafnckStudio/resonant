@@ -1,0 +1,53 @@
+{
+  "step": 77,
+  "id": "077-create-workspace",
+  "phase": 3,
+  "phaseName": "Workspace & Projects",
+  "title": "Implement Create Workspace Flow",
+  "description": "Build workspace creation dialog and mutation",
+  "estimatedMinutes": 30,
+  "priority": "P0",
+  "dependencies": ["076-workspace-context"],
+
+  "objective": {
+    "what": "Allow users to create new workspaces",
+    "why": "Users need multiple workspaces for different projects/teams",
+    "outcome": "Working workspace creation with name and slug"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/components/workspace/create-workspace-dialog.tsx",
+      "convex/workspaces.ts"
+    ],
+    "fields": {
+      "name": "Workspace name",
+      "slug": "URL-friendly slug (auto-generated)",
+      "description": "Optional description"
+    },
+    "mutations": {
+      "createWorkspace": "Create workspace and add owner member"
+    }
+  },
+
+  "prompt": {
+    "mission": "Implement create workspace",
+    "tasks": [
+      "Create CreateWorkspaceDialog component",
+      "Build create workspace mutation",
+      "Auto-generate slug from name",
+      "Check slug uniqueness",
+      "Add creator as owner member",
+      "Redirect to new workspace"
+    ],
+    "constraints": [
+      "Slug must be unique",
+      "Auto-lowercase and hyphenate slug"
+    ]
+  },
+
+  "outputs": {
+    "files": 2,
+    "mutations": ["createWorkspace"]
+  }
+}

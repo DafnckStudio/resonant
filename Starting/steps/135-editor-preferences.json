@@ -1,0 +1,51 @@
+{
+  "step": 135,
+  "id": "135-editor-preferences",
+  "phase": 4,
+  "phaseName": "Workflow Editor Core",
+  "title": "Editor Preferences",
+  "description": "User preferences for editor behavior",
+  "estimatedMinutes": 30,
+  "priority": "P2",
+  "dependencies": ["060-user-preferences"],
+
+  "objective": {
+    "what": "Add editor-specific preferences",
+    "why": "Users want to customize their editor",
+    "outcome": "Configurable editor settings"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/components/editor/settings/editor-preferences.tsx"
+    ],
+    "preferences": {
+      "snapToGrid": "Enable grid snapping",
+      "gridSize": "Grid size (10/20/40)",
+      "showMinimap": "Show minimap",
+      "autoSave": "Auto-save enabled",
+      "autoSaveInterval": "Auto-save interval",
+      "defaultZoom": "Default zoom level",
+      "animateEdges": "Animate edge flow"
+    }
+  },
+
+  "prompt": {
+    "mission": "Add editor preferences",
+    "tasks": [
+      "Create EditorPreferences component",
+      "Add preference toggles",
+      "Persist to user preferences",
+      "Apply on editor load",
+      "Add to settings menu"
+    ],
+    "constraints": [
+      "Store in Convex",
+      "Real-time updates"
+    ]
+  },
+
+  "outputs": {
+    "files": 1
+  }
+}

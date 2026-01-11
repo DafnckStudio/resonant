@@ -1,0 +1,56 @@
+{
+  "step": 303,
+  "id": "303-stripe-setup",
+  "phase": 10,
+  "phaseName": "Monetization & Billing",
+  "title": "Stripe Setup",
+  "description": "Configure Stripe integration",
+  "estimatedMinutes": 35,
+  "priority": "P0",
+  "dependencies": ["302-pricing-plans"],
+
+  "objective": {
+    "what": "Setup Stripe integration",
+    "why": "Enable payments",
+    "outcome": "Stripe configured"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/lib/stripe/client.ts",
+      "src/lib/stripe/products.ts",
+      "src/lib/stripe/config.ts"
+    ],
+    "setup": {
+      "products": "Create Stripe products",
+      "prices": "Create price tiers",
+      "webhooks": "Configure webhooks",
+      "portal": "Customer portal setup"
+    },
+    "environment": {
+      "test": "Test mode keys",
+      "live": "Live mode keys",
+      "webhookSecret": "Webhook secrets"
+    }
+  },
+
+  "prompt": {
+    "mission": "Setup Stripe integration",
+    "tasks": [
+      "Initialize Stripe client",
+      "Create products/prices",
+      "Configure webhook endpoint",
+      "Setup customer portal",
+      "Test with test keys"
+    ],
+    "constraints": [
+      "Secure key handling",
+      "Test before live",
+      "Proper error handling"
+    ]
+  },
+
+  "outputs": {
+    "files": 3
+  }
+}

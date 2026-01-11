@@ -1,0 +1,55 @@
+{
+  "step": 296,
+  "id": "296-featured-templates",
+  "phase": 9,
+  "phaseName": "Templates & Marketplace",
+  "title": "Featured Templates",
+  "description": "Curate featured templates",
+  "estimatedMinutes": 25,
+  "priority": "P3",
+  "dependencies": ["289-marketplace-browse"],
+
+  "objective": {
+    "what": "Feature quality templates",
+    "why": "Highlight best content",
+    "outcome": "Featured section"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/lib/templates/featured.ts",
+      "src/components/marketplace/featured-carousel.tsx"
+    ],
+    "features": {
+      "selection": "Admin selection",
+      "rotation": "Rotate featured",
+      "categories": "Featured per category",
+      "badges": "Featured badge"
+    },
+    "display": {
+      "carousel": "Hero carousel",
+      "section": "Featured section",
+      "badge": "Featured indicator"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create featured templates",
+    "tasks": [
+      "Build featured selection",
+      "Create carousel display",
+      "Add featured badge",
+      "Rotate featured items",
+      "Admin controls"
+    ],
+    "constraints": [
+      "Quality curation",
+      "Fair rotation",
+      "Visual prominence"
+    ]
+  },
+
+  "outputs": {
+    "files": 2
+  }
+}

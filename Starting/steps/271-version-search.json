@@ -1,0 +1,56 @@
+{
+  "step": 271,
+  "id": "271-version-search",
+  "phase": 8,
+  "phaseName": "Version Control",
+  "title": "Version Search",
+  "description": "Search through version history",
+  "estimatedMinutes": 30,
+  "priority": "P3",
+  "dependencies": ["254-version-history-panel"],
+
+  "objective": {
+    "what": "Search version history",
+    "why": "Find specific changes",
+    "outcome": "Version search capability"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/lib/versioning/search.ts",
+      "src/components/editor/version-control/version-search.tsx"
+    ],
+    "searchableFields": {
+      "message": "Version message",
+      "author": "Author name",
+      "content": "Workflow content",
+      "tags": "Version tags"
+    },
+    "filters": {
+      "dateRange": "Date range filter",
+      "author": "By author",
+      "tags": "By tags",
+      "type": "Auto-save vs manual"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create version search",
+    "tasks": [
+      "Implement search logic",
+      "Create search UI",
+      "Add advanced filters",
+      "Highlight search results",
+      "Fast search index"
+    ],
+    "constraints": [
+      "Fast search",
+      "Relevance ranking",
+      "Clear results"
+    ]
+  },
+
+  "outputs": {
+    "files": 2
+  }
+}

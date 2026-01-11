@@ -1,0 +1,58 @@
+{
+  "step": 195,
+  "id": "195-execution-queue",
+  "phase": 6,
+  "phaseName": "AI Router & Execution",
+  "title": "Execution Queue System",
+  "description": "Queue and manage execution jobs",
+  "estimatedMinutes": 50,
+  "priority": "P0",
+  "dependencies": ["191-workflow-executor-core"],
+
+  "objective": {
+    "what": "Create execution queue",
+    "why": "Manage concurrent executions",
+    "outcome": "Scalable job queue"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/lib/execution/queue/execution-queue.ts",
+      "src/lib/execution/queue/job-manager.ts",
+      "convex/executionJobs.ts"
+    ],
+    "features": {
+      "queuing": "Queue execution requests",
+      "priority": "Priority-based scheduling",
+      "concurrency": "Limit concurrent executions",
+      "retry": "Automatic retry on failure"
+    },
+    "jobSchema": {
+      "workflowId": "Workflow to execute",
+      "triggerId": "Trigger that started it",
+      "priority": "1-10 priority",
+      "attempts": "Execution attempts",
+      "maxAttempts": "Max retry count"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create execution queue",
+    "tasks": [
+      "Design job schema",
+      "Implement queue logic",
+      "Add priority scheduling",
+      "Implement retry mechanism",
+      "Add concurrency limits"
+    ],
+    "constraints": [
+      "Fair scheduling",
+      "Prevent starvation",
+      "Handle job expiry"
+    ]
+  },
+
+  "outputs": {
+    "files": 3
+  }
+}

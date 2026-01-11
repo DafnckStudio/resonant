@@ -1,0 +1,58 @@
+{
+  "step": 329,
+  "id": "329-billing-testing",
+  "phase": 10,
+  "phaseName": "Monetization & Billing",
+  "title": "Billing Testing",
+  "description": "Comprehensive billing tests",
+  "estimatedMinutes": 45,
+  "priority": "P1",
+  "dependencies": ["301-billing-schema"],
+
+  "objective": {
+    "what": "Billing test suite",
+    "why": "Financial reliability",
+    "outcome": "Verified billing flows"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "tests/billing/checkout.test.ts",
+      "tests/billing/subscriptions.test.ts",
+      "tests/billing/webhooks.test.ts",
+      "tests/billing/usage.test.ts"
+    ],
+    "unitTests": {
+      "pricing": "Pricing calculations",
+      "proration": "Proration logic",
+      "limits": "Limit enforcement",
+      "usage": "Usage tracking"
+    },
+    "integrationTests": {
+      "checkout": "Checkout flow",
+      "webhooks": "Webhook handling",
+      "upgrade": "Upgrade/downgrade",
+      "cancellation": "Cancellation flow"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create billing test suite",
+    "tasks": [
+      "Test checkout flow",
+      "Test webhook handlers",
+      "Test subscription changes",
+      "Test usage tracking",
+      "Test limit enforcement"
+    ],
+    "constraints": [
+      "Use Stripe test mode",
+      "Mock webhook events",
+      "Cover edge cases"
+    ]
+  },
+
+  "outputs": {
+    "files": 4
+  }
+}

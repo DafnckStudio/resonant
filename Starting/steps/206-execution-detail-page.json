@@ -1,0 +1,54 @@
+{
+  "step": 206,
+  "id": "206-execution-detail-page",
+  "phase": 6,
+  "phaseName": "AI Router & Execution",
+  "title": "Execution Detail Page",
+  "description": "Detailed view of single execution",
+  "estimatedMinutes": 50,
+  "priority": "P1",
+  "dependencies": ["205-execution-history"],
+
+  "objective": {
+    "what": "Create execution detail view",
+    "why": "Debug and analyze executions",
+    "outcome": "Complete execution details"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/app/(dashboard)/workflows/[id]/executions/[executionId]/page.tsx",
+      "src/components/executions/detail/execution-header.tsx",
+      "src/components/executions/detail/block-results.tsx",
+      "src/components/executions/detail/execution-graph.tsx",
+      "src/components/executions/detail/log-viewer.tsx"
+    ],
+    "sections": {
+      "summary": "Execution summary and metadata",
+      "graph": "Visual execution path",
+      "blocks": "Per-block inputs/outputs",
+      "logs": "Full execution logs",
+      "costs": "Token and cost breakdown"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create detail page",
+    "tasks": [
+      "Build execution detail page",
+      "Show execution summary",
+      "Display visual execution path",
+      "Show block-by-block results",
+      "Add log viewer"
+    ],
+    "constraints": [
+      "Handle large outputs",
+      "JSON formatting",
+      "Copy to clipboard"
+    ]
+  },
+
+  "outputs": {
+    "files": 5
+  }
+}

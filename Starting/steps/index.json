@@ -1,0 +1,237 @@
+{
+  "project": "Resonant.ai",
+  "description": "Visual AI Content Workflow Platform",
+  "version": "1.0.0",
+  "totalSteps": 400,
+  "createdAt": "2026-01-11",
+
+  "techStack": {
+    "framework": "Next.js 16",
+    "runtime": "React 19",
+    "backend": "Convex",
+    "auth": "Clerk",
+    "payments": "Stripe",
+    "ui": "shadcn/ui + Tailwind CSS 4",
+    "workflow": "React Flow",
+    "collaboration": "Yjs CRDT",
+    "ai": "Vercel AI SDK + Multi-Provider Router"
+  },
+
+  "phases": [
+    {
+      "phase": 0,
+      "name": "Foundation Setup",
+      "steps": "001-020",
+      "count": 20,
+      "description": "Project initialization, configuration, and basic setup"
+    },
+    {
+      "phase": 1,
+      "name": "Core UI & Layout",
+      "steps": "021-050",
+      "count": 30,
+      "description": "App shell, navigation, sidebar, and core layout components"
+    },
+    {
+      "phase": 2,
+      "name": "Authentication & Users",
+      "steps": "051-075",
+      "count": 25,
+      "description": "Clerk auth, user profiles, onboarding, and account management"
+    },
+    {
+      "phase": 3,
+      "name": "Workspace & Projects",
+      "steps": "076-100",
+      "count": 25,
+      "description": "Workspace creation, project management, and organization"
+    },
+    {
+      "phase": 4,
+      "name": "Workflow Editor Core",
+      "steps": "101-140",
+      "count": 40,
+      "description": "React Flow canvas, node system, connections, and editor UI"
+    },
+    {
+      "phase": 5,
+      "name": "Block System",
+      "steps": "141-180",
+      "count": 40,
+      "description": "AI blocks, input blocks, output blocks, and transformation blocks"
+    },
+    {
+      "phase": 6,
+      "name": "AI Router & Execution",
+      "steps": "181-220",
+      "count": 40,
+      "description": "Multi-AI provider router, execution engine, and content generation"
+    },
+    {
+      "phase": 7,
+      "name": "Real-time Collaboration",
+      "steps": "221-250",
+      "count": 30,
+      "description": "Yjs CRDT, presence, cursors, and team collaboration features"
+    },
+    {
+      "phase": 8,
+      "name": "Version Control",
+      "steps": "251-275",
+      "count": 25,
+      "description": "Workflow versioning, history, diffing, and restore functionality"
+    },
+    {
+      "phase": 9,
+      "name": "Templates & Marketplace",
+      "steps": "276-300",
+      "count": 25,
+      "description": "Template system, marketplace, and community sharing"
+    },
+    {
+      "phase": 10,
+      "name": "Monetization & Billing",
+      "steps": "301-330",
+      "count": 30,
+      "description": "Stripe integration, subscriptions, usage billing, and plans"
+    },
+    {
+      "phase": 11,
+      "name": "Dashboard & Analytics",
+      "steps": "331-360",
+      "count": 30,
+      "description": "Analytics dashboard, notifications, search, and admin features"
+    },
+    {
+      "phase": 12,
+      "name": "Testing & Polish",
+      "steps": "361-400",
+      "count": 40,
+      "description": "Testing suite, performance optimization, and production polish"
+    }
+  ],
+
+  "keyMilestones": [
+    {
+      "step": 20,
+      "id": "020-phase0-integration",
+      "name": "Foundation Complete"
+    },
+    {
+      "step": 50,
+      "id": "050-phase1-integration",
+      "name": "Core UI Complete"
+    },
+    {
+      "step": 75,
+      "id": "075-phase2-integration",
+      "name": "Auth System Complete"
+    },
+    {
+      "step": 100,
+      "id": "100-phase3-integration",
+      "name": "Workspace System Complete"
+    },
+    {
+      "step": 140,
+      "id": "140-phase4-integration",
+      "name": "Workflow Editor Complete"
+    },
+    {
+      "step": 180,
+      "id": "180-phase5-integration",
+      "name": "Block System Complete"
+    },
+    {
+      "step": 220,
+      "id": "220-phase6-integration",
+      "name": "AI Execution Complete"
+    },
+    {
+      "step": 250,
+      "id": "250-phase7-integration",
+      "name": "Collaboration Complete"
+    },
+    {
+      "step": 275,
+      "id": "275-phase8-integration",
+      "name": "Version Control Complete"
+    },
+    {
+      "step": 300,
+      "id": "300-phase9-integration",
+      "name": "Marketplace Complete"
+    },
+    {
+      "step": 330,
+      "id": "330-phase10-integration",
+      "name": "Billing Complete"
+    },
+    {
+      "step": 360,
+      "id": "360-phase11-integration",
+      "name": "Analytics Complete"
+    },
+    {
+      "step": 400,
+      "id": "400-phase12-integration",
+      "name": "MVP Complete"
+    }
+  ],
+
+  "estimatedTotalMinutes": 12500,
+  "estimatedDays": 52,
+
+  "coreFeatures": [
+    "Visual DAG workflow builder with React Flow",
+    "Multi-AI content generation (Claude, GPT-4, Gemini, Llama)",
+    "Real-time collaboration with Yjs CRDT",
+    "Complete version control with diffing",
+    "Template marketplace with community sharing",
+    "Flexible billing (subscription + usage-based)",
+    "Comprehensive analytics dashboard",
+    "Full test coverage with E2E tests"
+  ],
+
+  "aiProviders": [
+    {
+      "name": "Claude",
+      "provider": "Anthropic",
+      "models": ["claude-3-opus", "claude-3-sonnet", "claude-3-haiku"]
+    },
+    {
+      "name": "GPT-4",
+      "provider": "OpenAI",
+      "models": ["gpt-4-turbo", "gpt-4", "gpt-3.5-turbo"]
+    },
+    {
+      "name": "Gemini",
+      "provider": "Google",
+      "models": ["gemini-pro", "gemini-ultra"]
+    },
+    {
+      "name": "Llama",
+      "provider": "Meta (via various)",
+      "models": ["llama-3-70b", "llama-3-8b"]
+    }
+  ],
+
+  "blockTypes": [
+    "text-input",
+    "image-input",
+    "file-input",
+    "ai-generate",
+    "ai-transform",
+    "ai-analyze",
+    "text-output",
+    "image-output",
+    "export",
+    "condition",
+    "loop",
+    "merge",
+    "split",
+    "delay",
+    "webhook",
+    "api-call"
+  ]
+}

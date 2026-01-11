@@ -1,0 +1,55 @@
+{
+  "step": 159,
+  "id": "159-logic-switch-block",
+  "phase": 5,
+  "phaseName": "Block System",
+  "title": "Switch Block",
+  "description": "Create multi-way switch/router block",
+  "estimatedMinutes": 35,
+  "priority": "P1",
+  "dependencies": ["158-logic-condition-block"],
+
+  "objective": {
+    "what": "Create switch block",
+    "why": "Route to multiple branches based on value",
+    "outcome": "Multi-way branching"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/components/editor/blocks/logic/switch-block.tsx"
+    ],
+    "config": {
+      "expression": "Value to switch on",
+      "cases": "Case values and branches",
+      "default": "Default branch"
+    },
+    "inputs": {
+      "value": "Switch value"
+    },
+    "outputs": {
+      "case1": "First case output",
+      "case2": "Second case output",
+      "default": "Default output"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create switch block",
+    "tasks": [
+      "Create SwitchBlock component",
+      "Add case list editor",
+      "Support dynamic cases",
+      "Handle multiple outputs",
+      "Visual branch preview"
+    ],
+    "constraints": [
+      "Dynamic output handles",
+      "Support patterns"
+    ]
+  },
+
+  "outputs": {
+    "files": 1
+  }
+}

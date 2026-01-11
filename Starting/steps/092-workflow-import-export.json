@@ -1,0 +1,51 @@
+{
+  "step": 92,
+  "id": "092-workflow-import-export",
+  "phase": 3,
+  "phaseName": "Workspace & Projects",
+  "title": "Implement Workflow Import/Export",
+  "description": "Add workflow import and export as JSON",
+  "estimatedMinutes": 35,
+  "priority": "P2",
+  "dependencies": ["081-workflow-crud"],
+
+  "objective": {
+    "what": "Allow importing and exporting workflows as JSON",
+    "why": "Users need to backup and share workflows",
+    "outcome": "Export/import buttons with JSON format"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/components/workflow/export-workflow-button.tsx",
+      "src/components/workflow/import-workflow-dialog.tsx",
+      "src/lib/workflow-export.ts"
+    ],
+    "exportFormat": {
+      "version": "1.0",
+      "metadata": "name, description, tags",
+      "nodes": "Block definitions",
+      "edges": "Connections",
+      "variables": "Workflow variables"
+    }
+  },
+
+  "prompt": {
+    "mission": "Implement import/export",
+    "tasks": [
+      "Create export utility function",
+      "Build ExportWorkflowButton",
+      "Create ImportWorkflowDialog",
+      "Validate imported JSON",
+      "Handle version compatibility"
+    ],
+    "constraints": [
+      "Include version for compatibility",
+      "Validate JSON structure on import"
+    ]
+  },
+
+  "outputs": {
+    "files": 3
+  }
+}

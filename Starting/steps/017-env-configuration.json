@@ -1,0 +1,85 @@
+{
+  "step": 17,
+  "id": "017-env-configuration",
+  "phase": 0,
+  "phaseName": "Foundation Setup",
+  "title": "Configure Environment Variables",
+  "description": "Set up all environment variables and create .env.example template",
+  "estimatedMinutes": 15,
+  "priority": "P0",
+  "dependencies": ["016-clerk-convex-integration"],
+
+  "objective": {
+    "what": "Create comprehensive .env.local and .env.example with all required variables",
+    "why": "Proper env management is critical for security and deployment",
+    "outcome": ".env.example documenting all variables for the project"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      ".env.example",
+      "src/lib/env.ts"
+    ],
+    "envVariables": {
+      "app": {
+        "NEXT_PUBLIC_APP_URL": "http://localhost:22003",
+        "NEXT_PUBLIC_APP_NAME": "Resonant.ai"
+      },
+      "convex": {
+        "CONVEX_DEPLOYMENT": "dev:resonant-xxx",
+        "NEXT_PUBLIC_CONVEX_URL": "https://xxx.convex.cloud"
+      },
+      "clerk": {
+        "NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY": "pk_test_xxx",
+        "CLERK_SECRET_KEY": "sk_test_xxx",
+        "CLERK_WEBHOOK_SECRET": "whsec_xxx",
+        "NEXT_PUBLIC_CLERK_SIGN_IN_URL": "/sign-in",
+        "NEXT_PUBLIC_CLERK_SIGN_UP_URL": "/sign-up",
+        "NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL": "/dashboard",
+        "NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL": "/onboarding"
+      },
+      "stripe": {
+        "STRIPE_SECRET_KEY": "sk_test_xxx",
+        "STRIPE_WEBHOOK_SECRET": "whsec_xxx",
+        "NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY": "pk_test_xxx"
+      },
+      "ai": {
+        "ANTHROPIC_API_KEY": "sk-ant-xxx",
+        "OPENAI_API_KEY": "sk-xxx",
+        "GOOGLE_AI_API_KEY": "xxx"
+      }
+    },
+    "zodValidation": "import { z } from 'zod';\n\nconst envSchema = z.object({\n  NEXT_PUBLIC_CONVEX_URL: z.string().url(),\n  CLERK_SECRET_KEY: z.string().min(1),\n  // ... etc\n});\n\nexport const env = envSchema.parse(process.env);"
+  },
+
+  "prompt": {
+    "mission": "Configure all environment variables for Resonant.ai",
+    "tasks": [
+      "Create comprehensive .env.example template",
+      "Create src/lib/env.ts with Zod validation",
+      "Document each variable with comments",
+      "Ensure .env.local is in .gitignore"
+    ],
+    "constraints": [
+      "NEVER commit actual secrets",
+      "All required vars must have validation",
+      "NEXT_PUBLIC_ prefix for client-side vars"
+    ]
+  },
+
+  "validation": {
+    "automated": [
+      "Zod validation passes",
+      ".env.local not in git"
+    ],
+    "functional": [
+      "App starts with all vars",
+      "Missing vars throw clear errors"
+    ]
+  },
+
+  "outputs": {
+    "files": [".env.example", "src/lib/env.ts"],
+    "envVars": 15
+  }
+}

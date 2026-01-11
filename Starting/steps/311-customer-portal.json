@@ -1,0 +1,55 @@
+{
+  "step": 311,
+  "id": "311-customer-portal",
+  "phase": 10,
+  "phaseName": "Monetization & Billing",
+  "title": "Customer Portal",
+  "description": "Stripe customer portal access",
+  "estimatedMinutes": 25,
+  "priority": "P1",
+  "dependencies": ["307-billing-page"],
+
+  "objective": {
+    "what": "Integrate Stripe portal",
+    "why": "Self-service billing",
+    "outcome": "Portal access"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/app/api/billing/portal/route.ts",
+      "src/components/billing/portal-button.tsx"
+    ],
+    "features": {
+      "paymentMethods": "Update payment",
+      "invoices": "View invoices",
+      "subscription": "Manage subscription",
+      "address": "Billing address"
+    },
+    "customization": {
+      "branding": "Custom branding",
+      "features": "Enable/disable features",
+      "returnUrl": "Return URL"
+    }
+  },
+
+  "prompt": {
+    "mission": "Integrate customer portal",
+    "tasks": [
+      "Create portal session",
+      "Build portal button",
+      "Configure portal features",
+      "Custom branding",
+      "Handle return"
+    ],
+    "constraints": [
+      "Secure session",
+      "Smooth redirect",
+      "Branded experience"
+    ]
+  },
+
+  "outputs": {
+    "files": 2
+  }
+}

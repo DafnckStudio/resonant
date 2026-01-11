@@ -1,0 +1,55 @@
+{
+  "step": 297,
+  "id": "297-template-recommendations",
+  "phase": 9,
+  "phaseName": "Templates & Marketplace",
+  "title": "Template Recommendations",
+  "description": "Recommend templates to users",
+  "estimatedMinutes": 35,
+  "priority": "P3",
+  "dependencies": ["289-marketplace-browse"],
+
+  "objective": {
+    "what": "Personalized recommendations",
+    "why": "Help users discover",
+    "outcome": "Smart recommendations"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/lib/templates/recommendations.ts",
+      "src/components/templates/recommendations-section.tsx"
+    ],
+    "signals": {
+      "usage": "Based on usage patterns",
+      "similar": "Similar to used templates",
+      "popular": "Popular in category",
+      "recent": "Recently viewed"
+    },
+    "display": {
+      "section": "For You section",
+      "sidebar": "Sidebar suggestions",
+      "email": "Email recommendations"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create template recommendations",
+    "tasks": [
+      "Build recommendation engine",
+      "Track usage signals",
+      "Create recommendations UI",
+      "Add similar templates",
+      "Email digest option"
+    ],
+    "constraints": [
+      "Relevant suggestions",
+      "Non-intrusive",
+      "Diverse recommendations"
+    ]
+  },
+
+  "outputs": {
+    "files": 2
+  }
+}

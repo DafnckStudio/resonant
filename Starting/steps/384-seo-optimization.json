@@ -1,0 +1,57 @@
+{
+  "step": 384,
+  "id": "384-seo-optimization",
+  "phase": 12,
+  "phaseName": "Testing & Polish",
+  "title": "SEO Optimization",
+  "description": "Optimize for search engines",
+  "estimatedMinutes": 30,
+  "priority": "P2",
+  "dependencies": [],
+
+  "objective": {
+    "what": "SEO optimization",
+    "why": "Organic discovery",
+    "outcome": "Search-optimized pages"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/lib/seo/metadata.ts",
+      "src/components/seo/json-ld.tsx",
+      "src/app/sitemap.ts",
+      "src/app/robots.ts"
+    ],
+    "optimization": {
+      "meta": "Meta tags",
+      "structured": "JSON-LD data",
+      "sitemap": "Dynamic sitemap",
+      "robots": "Robots.txt"
+    },
+    "performance": {
+      "lcp": "Largest Contentful Paint",
+      "cls": "Cumulative Layout Shift",
+      "fid": "First Input Delay"
+    }
+  },
+
+  "prompt": {
+    "mission": "Optimize SEO",
+    "tasks": [
+      "Add meta tags to all pages",
+      "Implement JSON-LD schemas",
+      "Generate dynamic sitemap",
+      "Configure robots.txt",
+      "Optimize Core Web Vitals"
+    ],
+    "constraints": [
+      "Next.js 16 metadata API",
+      "Valid structured data",
+      "Good performance scores"
+    ]
+  },
+
+  "outputs": {
+    "files": 4
+  }
+}

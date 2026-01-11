@@ -1,0 +1,57 @@
+{
+  "step": 232,
+  "id": "232-comments-system",
+  "phase": 7,
+  "phaseName": "Real-time Collaboration",
+  "title": "Collaborative Comments System",
+  "description": "Add comments to workflow elements",
+  "estimatedMinutes": 55,
+  "priority": "P1",
+  "dependencies": ["224-react-flow-yjs-binding"],
+
+  "objective": {
+    "what": "Implement commenting system",
+    "why": "Discuss workflow elements",
+    "outcome": "Working comments"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/lib/collaboration/comments/comment-manager.ts",
+      "src/components/editor/collaboration/comment-thread.tsx",
+      "src/components/editor/collaboration/comment-indicator.tsx",
+      "convex/comments.ts"
+    ],
+    "features": {
+      "threads": "Threaded comments",
+      "anchored": "Anchored to nodes/canvas",
+      "mentions": "@mention users",
+      "resolve": "Mark as resolved"
+    },
+    "realtime": {
+      "sync": "Real-time sync via Yjs",
+      "notifications": "Notify on mention",
+      "typing": "Typing indicator"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create comments system",
+    "tasks": [
+      "Create comment schema",
+      "Build comment thread UI",
+      "Add comment indicators",
+      "Implement mentions",
+      "Add resolve functionality"
+    ],
+    "constraints": [
+      "Real-time sync",
+      "Anchor to elements",
+      "Filter resolved"
+    ]
+  },
+
+  "outputs": {
+    "files": 4
+  }
+}

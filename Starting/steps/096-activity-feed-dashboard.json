@@ -1,0 +1,47 @@
+{
+  "step": 96,
+  "id": "096-activity-feed-dashboard",
+  "phase": 3,
+  "phaseName": "Workspace & Projects",
+  "title": "Add Activity Feed to Dashboard",
+  "description": "Show recent workspace activity on dashboard",
+  "estimatedMinutes": 25,
+  "priority": "P2",
+  "dependencies": ["069-user-activity-log", "094-dashboard-stats"],
+
+  "objective": {
+    "what": "Display activity feed on dashboard",
+    "why": "Team visibility into workspace activity",
+    "outcome": "Recent activity feed widget"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/components/dashboard/activity-widget.tsx"
+    ],
+    "filesToModify": [
+      "src/app/(dashboard)/page.tsx"
+    ],
+    "features": {
+      "recent": "Show last 10 activities",
+      "filter": "Filter by activity type",
+      "viewAll": "Link to full activity page"
+    }
+  },
+
+  "prompt": {
+    "mission": "Add activity feed to dashboard",
+    "tasks": [
+      "Create ActivityWidget component",
+      "Query recent activities",
+      "Format activity messages",
+      "Add relative timestamps",
+      "Link to full activity log"
+    ]
+  },
+
+  "outputs": {
+    "files": 1,
+    "filesModified": 1
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "step": 23,
+  "id": "023-workspace-selector",
+  "phase": 1,
+  "phaseName": "Core UI & Layout",
+  "title": "Create Workspace Selector Component",
+  "description": "Build dropdown selector for switching between workspaces",
+  "estimatedMinutes": 25,
+  "priority": "P0",
+  "dependencies": ["022-sidebar-navigation"],
+
+  "objective": {
+    "what": "Create workspace selector dropdown with current workspace display and switch capability",
+    "why": "Users need to switch between multiple workspaces seamlessly",
+    "outcome": "Working workspace selector in sidebar header"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/components/layout/workspace-selector.tsx",
+      "src/hooks/use-workspace.ts"
+    ],
+    "features": {
+      "display": "Current workspace name + logo",
+      "dropdown": "List all user workspaces",
+      "actions": ["Switch workspace", "Create new workspace", "Manage workspaces"],
+      "indicator": "Plan badge (Free, Pro, Team)"
+    },
+    "components": {
+      "use": ["DropdownMenu", "Avatar", "Button", "Badge"],
+      "custom": "WorkspaceAvatar for logos"
+    }
+  },
+
+  "prompt": {
+    "mission": "Build workspace selector component",
+    "tasks": [
+      "Create WorkspaceSelector component",
+      "Build useWorkspace hook for current workspace state",
+      "Implement DropdownMenu with workspace list",
+      "Add Create New Workspace option",
+      "Show plan badge on each workspace",
+      "Handle workspace switching"
+    ],
+    "constraints": [
+      "Use shadcn DropdownMenu",
+      "Store current workspace in URL or context",
+      "Show loading state while switching"
+    ]
+  },
+
+  "outputs": {
+    "files": ["src/components/layout/workspace-selector.tsx", "src/hooks/use-workspace.ts"]
+  }
+}

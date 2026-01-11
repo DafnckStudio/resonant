@@ -1,0 +1,49 @@
+{
+  "step": 39,
+  "id": "039-team-settings",
+  "phase": 1,
+  "phaseName": "Core UI & Layout",
+  "title": "Create Team Settings Page",
+  "description": "Build team management page with member list and invites",
+  "estimatedMinutes": 30,
+  "priority": "P1",
+  "dependencies": ["038-workspace-settings"],
+
+  "objective": {
+    "what": "Create team settings page for managing workspace members",
+    "why": "Team collaboration requires member management",
+    "outcome": "Team page with member list, roles, and invite functionality"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/app/(dashboard)/settings/team/page.tsx",
+      "src/components/settings/team-members-list.tsx",
+      "src/components/settings/invite-member-dialog.tsx",
+      "src/components/settings/member-role-select.tsx"
+    ],
+    "features": {
+      "memberList": "All members with roles",
+      "invite": "Invite by email",
+      "roleChange": "Change member role",
+      "remove": "Remove member"
+    },
+    "roles": ["owner", "admin", "editor", "viewer"]
+  },
+
+  "prompt": {
+    "mission": "Create team settings page",
+    "tasks": [
+      "Create team settings page",
+      "Build TeamMembersList component",
+      "Create InviteMemberDialog",
+      "Add role selection dropdown",
+      "Implement remove member with confirmation"
+    ]
+  },
+
+  "outputs": {
+    "files": 4,
+    "components": ["TeamMembersList", "InviteMemberDialog", "MemberRoleSelect"]
+  }
+}

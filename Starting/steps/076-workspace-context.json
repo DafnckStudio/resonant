@@ -1,0 +1,47 @@
+{
+  "step": 76,
+  "id": "076-workspace-context",
+  "phase": 3,
+  "phaseName": "Workspace & Projects",
+  "title": "Create Workspace Context Provider",
+  "description": "Build React context for current workspace state",
+  "estimatedMinutes": 30,
+  "priority": "P0",
+  "dependencies": ["055-user-context", "007-convex-schema-workspaces"],
+
+  "objective": {
+    "what": "Create workspace context provider for app-wide workspace state",
+    "why": "Components need access to current workspace throughout the app",
+    "outcome": "useWorkspace hook providing current workspace data"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/providers/workspace-provider.tsx",
+      "src/hooks/use-workspace.ts",
+      "src/hooks/use-workspaces.ts"
+    ],
+    "features": {
+      "current": "Current active workspace",
+      "list": "All user's workspaces",
+      "switch": "Switch between workspaces",
+      "persist": "Remember last workspace in localStorage"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create workspace context provider",
+    "tasks": [
+      "Create WorkspaceProvider component",
+      "Build useWorkspace hook for current workspace",
+      "Create useWorkspaces hook for all workspaces",
+      "Add workspace switching logic",
+      "Persist selection in localStorage"
+    ]
+  },
+
+  "outputs": {
+    "files": 3,
+    "hooks": ["useWorkspace", "useWorkspaces"]
+  }
+}

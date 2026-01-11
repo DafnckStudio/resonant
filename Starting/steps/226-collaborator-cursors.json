@@ -1,0 +1,56 @@
+{
+  "step": 226,
+  "id": "226-collaborator-cursors",
+  "phase": 7,
+  "phaseName": "Real-time Collaboration",
+  "title": "Collaborator Cursor Display",
+  "description": "Show other users' cursors on canvas",
+  "estimatedMinutes": 40,
+  "priority": "P0",
+  "dependencies": ["225-presence-awareness"],
+
+  "objective": {
+    "what": "Display collaborator cursors",
+    "why": "See where others are working",
+    "outcome": "Visible cursor indicators"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/components/editor/collaboration/cursor-overlay.tsx",
+      "src/components/editor/collaboration/cursor-pointer.tsx"
+    ],
+    "features": {
+      "cursor": "Show cursor position",
+      "name": "Name label near cursor",
+      "color": "Unique color per user",
+      "smooth": "Smooth cursor movement"
+    },
+    "styling": {
+      "pointer": "Custom pointer SVG",
+      "label": "Rounded name badge",
+      "animation": "Smooth interpolation",
+      "fadeIn": "Fade in when appears"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create cursor display",
+    "tasks": [
+      "Create cursor overlay component",
+      "Design cursor pointer",
+      "Add name labels",
+      "Implement smooth animation",
+      "Handle viewport transform"
+    ],
+    "constraints": [
+      "Smooth 60fps animation",
+      "Handle many cursors",
+      "Don't block interaction"
+    ]
+  },
+
+  "outputs": {
+    "files": 2
+  }
+}

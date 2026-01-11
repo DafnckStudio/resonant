@@ -1,0 +1,57 @@
+{
+  "step": 290,
+  "id": "290-template-purchase",
+  "phase": 9,
+  "phaseName": "Templates & Marketplace",
+  "title": "Template Purchase",
+  "description": "Purchase paid templates",
+  "estimatedMinutes": 40,
+  "priority": "P1",
+  "dependencies": ["289-marketplace-browse"],
+
+  "objective": {
+    "what": "Enable template purchases",
+    "why": "Monetize templates",
+    "outcome": "Purchase flow"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/lib/marketplace/purchase.ts",
+      "src/components/marketplace/purchase-dialog.tsx",
+      "src/app/api/marketplace/purchase/route.ts",
+      "convex/purchases.ts"
+    ],
+    "process": {
+      "checkout": "Stripe checkout",
+      "payment": "Process payment",
+      "delivery": "Grant access",
+      "receipt": "Send receipt"
+    },
+    "features": {
+      "preview": "Preview before buy",
+      "bundleDiscounts": "Bundle pricing",
+      "refund": "Refund policy"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create template purchase",
+    "tasks": [
+      "Build checkout flow",
+      "Integrate Stripe",
+      "Grant access on purchase",
+      "Send purchase receipt",
+      "Record transaction"
+    ],
+    "constraints": [
+      "Secure payments",
+      "Instant access",
+      "Clear confirmation"
+    ]
+  },
+
+  "outputs": {
+    "files": 4
+  }
+}

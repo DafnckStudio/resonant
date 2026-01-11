@@ -1,0 +1,64 @@
+{
+  "step": 330,
+  "id": "330-phase10-integration",
+  "phase": 10,
+  "phaseName": "Monetization & Billing",
+  "title": "Phase 10 Integration",
+  "description": "Complete billing system integration",
+  "estimatedMinutes": 60,
+  "priority": "P0",
+  "dependencies": [
+    "301-billing-schema",
+    "304-checkout-flow",
+    "305-stripe-webhooks",
+    "306-subscription-management",
+    "310-usage-limits",
+    "329-billing-testing"
+  ],
+
+  "objective": {
+    "what": "Integrate all billing components",
+    "why": "Phase 10 completion",
+    "outcome": "Production-ready billing"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/lib/billing/index.ts",
+      "docs/BILLING.md"
+    ],
+    "integration": {
+      "exports": "Unified billing exports",
+      "providers": "Billing context providers",
+      "hooks": "Custom billing hooks",
+      "middleware": "Plan-based access middleware"
+    },
+    "verification": {
+      "checkout": "Complete checkout flow",
+      "management": "Full subscription lifecycle",
+      "usage": "Usage tracking and limits",
+      "recovery": "Payment failure recovery"
+    }
+  },
+
+  "prompt": {
+    "mission": "Complete Phase 10 integration",
+    "tasks": [
+      "Create unified billing exports",
+      "Test complete billing flows",
+      "Verify all webhooks working",
+      "Document billing system",
+      "Final integration testing"
+    ],
+    "constraints": [
+      "All billing flows functional",
+      "Stripe test mode verified",
+      "Production checklist complete"
+    ]
+  },
+
+  "outputs": {
+    "files": 2,
+    "milestone": "Phase 10 Complete - Monetization & Billing"
+  }
+}

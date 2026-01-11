@@ -1,0 +1,53 @@
+{
+  "step": 155,
+  "id": "155-transform-json-block",
+  "phase": 5,
+  "phaseName": "Block System",
+  "title": "JSON Transform Block",
+  "description": "Create JSON manipulation block",
+  "estimatedMinutes": 35,
+  "priority": "P0",
+  "dependencies": ["154-transform-text-block"],
+
+  "objective": {
+    "what": "Create JSON transform block",
+    "why": "Parse and manipulate JSON data",
+    "outcome": "JSONPath and jq-like operations"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/components/editor/blocks/transform/json-transform-block.tsx"
+    ],
+    "operations": [
+      "parse", "stringify", "get (JSONPath)",
+      "set", "merge", "filter", "map",
+      "pick", "omit", "flatten"
+    ],
+    "inputs": {
+      "data": "JSON input"
+    },
+    "outputs": {
+      "result": "Transformed JSON"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create JSON transform block",
+    "tasks": [
+      "Create JsonTransformBlock component",
+      "Add operation selector",
+      "Add JSONPath editor",
+      "Preview JSON output",
+      "Validate JSON syntax"
+    ],
+    "constraints": [
+      "Use JSONPath syntax",
+      "Pretty print output"
+    ]
+  },
+
+  "outputs": {
+    "files": 1
+  }
+}

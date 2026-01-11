@@ -1,0 +1,55 @@
+{
+  "step": 310,
+  "id": "310-usage-limits",
+  "phase": 10,
+  "phaseName": "Monetization & Billing",
+  "title": "Usage Limits",
+  "description": "Enforce plan limits",
+  "estimatedMinutes": 35,
+  "priority": "P1",
+  "dependencies": ["309-usage-tracking"],
+
+  "objective": {
+    "what": "Enforce usage limits",
+    "why": "Plan differentiation",
+    "outcome": "Limit enforcement"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/lib/billing/limits.ts",
+      "src/lib/billing/limit-checker.ts",
+      "src/components/billing/limit-warning.tsx"
+    ],
+    "limits": {
+      "hard": "Block when exceeded",
+      "soft": "Warn near limit",
+      "grace": "Grace period"
+    },
+    "enforcement": {
+      "check": "Check before action",
+      "block": "Block if exceeded",
+      "notify": "Notify approaching limit"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create usage limits",
+    "tasks": [
+      "Define limit rules",
+      "Create limit checker",
+      "Show warning UI",
+      "Block at limit",
+      "Grace period handling"
+    ],
+    "constraints": [
+      "Fair enforcement",
+      "Clear messaging",
+      "Upgrade prompts"
+    ]
+  },
+
+  "outputs": {
+    "files": 3
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "step": 215,
+  "id": "215-loop-execution",
+  "phase": 6,
+  "phaseName": "AI Router & Execution",
+  "title": "Loop Execution Handler",
+  "description": "Handle loop block execution",
+  "estimatedMinutes": 45,
+  "priority": "P1",
+  "dependencies": ["192-block-executor", "160-logic-loop-block"],
+
+  "objective": {
+    "what": "Implement loop execution",
+    "why": "Process arrays and iterate",
+    "outcome": "Working loop execution"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/lib/execution/loops/loop-executor.ts",
+      "src/lib/execution/loops/iteration-context.ts"
+    ],
+    "loopTypes": {
+      "forEach": "Iterate over array",
+      "while": "Condition-based loop",
+      "times": "Fixed iteration count",
+      "parallel": "Parallel foreach"
+    },
+    "features": {
+      "context": "Iteration-scoped context",
+      "index": "Current index available",
+      "break": "Break out of loop",
+      "continue": "Skip iteration"
+    },
+    "limits": {
+      "maxIterations": "Prevent infinite loops",
+      "timeout": "Per-iteration timeout"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create loop execution",
+    "tasks": [
+      "Implement loop executor",
+      "Create iteration context",
+      "Add loop controls",
+      "Implement iteration limits",
+      "Add parallel foreach"
+    ],
+    "constraints": [
+      "Prevent infinite loops",
+      "Iteration visibility",
+      "Memory management"
+    ]
+  },
+
+  "outputs": {
+    "files": 2
+  }
+}

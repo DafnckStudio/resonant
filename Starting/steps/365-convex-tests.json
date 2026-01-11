@@ -1,0 +1,58 @@
+{
+  "step": 365,
+  "id": "365-convex-tests",
+  "phase": 12,
+  "phaseName": "Testing & Polish",
+  "title": "Convex Tests",
+  "description": "Convex mutation and query tests",
+  "estimatedMinutes": 45,
+  "priority": "P1",
+  "dependencies": ["361-test-setup"],
+
+  "objective": {
+    "what": "Convex function tests",
+    "why": "Backend reliability",
+    "outcome": "Tested backend"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "tests/convex/workflows.test.ts",
+      "tests/convex/blocks.test.ts",
+      "tests/convex/users.test.ts",
+      "tests/convex/billing.test.ts"
+    ],
+    "tests": {
+      "queries": "Test query functions",
+      "mutations": "Test mutations",
+      "actions": "Test actions",
+      "validators": "Test validators"
+    },
+    "patterns": {
+      "setup": "Setup test database",
+      "seed": "Seed test data",
+      "assert": "Verify results",
+      "cleanup": "Clean test data"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create Convex tests",
+    "tasks": [
+      "Test workflow functions",
+      "Test block functions",
+      "Test user functions",
+      "Test billing functions",
+      "Test error handling"
+    ],
+    "constraints": [
+      "Isolated database",
+      "Test data cleanup",
+      "Auth mocking"
+    ]
+  },
+
+  "outputs": {
+    "files": 4
+  }
+}

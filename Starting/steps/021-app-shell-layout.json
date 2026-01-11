@@ -1,0 +1,79 @@
+{
+  "step": 21,
+  "id": "021-app-shell-layout",
+  "phase": 1,
+  "phaseName": "Core UI & Layout",
+  "title": "Create App Shell Layout",
+  "description": "Build the main application shell with sidebar, header, and content areas",
+  "estimatedMinutes": 30,
+  "priority": "P0",
+  "dependencies": ["020-git-setup"],
+
+  "objective": {
+    "what": "Create the main dashboard layout with responsive sidebar and content area",
+    "why": "The app shell is the foundation for all dashboard pages",
+    "outcome": "Working layout with collapsible sidebar matching DentistryGPT patterns"
+  },
+
+  "context": {
+    "references": [
+      "/home/hacker/VibeCoding/clients/DentistryGPT/components/dashboard/",
+      "/home/hacker/.claude/templates/dashboard-reference/"
+    ],
+    "patterns": "DentistryGPT sidebar pattern with SidebarProvider"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/app/(dashboard)/layout.tsx",
+      "src/components/layout/app-sidebar.tsx",
+      "src/components/layout/sidebar-nav.tsx",
+      "src/components/layout/sidebar-header.tsx",
+      "src/components/layout/sidebar-footer.tsx",
+      "src/components/layout/main-content.tsx"
+    ],
+    "structure": {
+      "layout": "Sidebar (280px collapsed 80px) + Main Content",
+      "sidebar": {
+        "header": "Logo + workspace selector",
+        "nav": "Main navigation links",
+        "footer": "User button + settings"
+      },
+      "responsive": "Mobile: sheet overlay, Desktop: persistent sidebar"
+    },
+    "components": {
+      "SidebarProvider": "From shadcn/ui",
+      "Sidebar": "Custom styled",
+      "SidebarTrigger": "Toggle button",
+      "Sheet": "Mobile navigation"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create the app shell layout for Resonant.ai dashboard",
+    "tasks": [
+      "Create (dashboard)/layout.tsx with SidebarProvider",
+      "Build AppSidebar component with header, nav, footer sections",
+      "Implement collapsible sidebar using shadcn Sidebar",
+      "Add responsive behavior with Sheet for mobile",
+      "Include workspace selector placeholder in header",
+      "Add UserButton from Clerk in footer"
+    ],
+    "constraints": [
+      "Follow DentistryGPT layout patterns",
+      "Use shadcn/ui Sidebar components",
+      "Must be responsive",
+      "Sidebar width: 280px expanded, 80px collapsed"
+    ],
+    "validation": [
+      "Layout renders correctly",
+      "Sidebar toggles work",
+      "Mobile sheet works"
+    ]
+  },
+
+  "outputs": {
+    "files": 6,
+    "components": ["AppSidebar", "SidebarNav", "MainContent"]
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "step": 265,
+  "id": "265-version-notifications",
+  "phase": 8,
+  "phaseName": "Version Control",
+  "title": "Version Notifications",
+  "description": "Notify on version changes",
+  "estimatedMinutes": 25,
+  "priority": "P3",
+  "dependencies": ["240-collaboration-notifications", "256-version-restore"],
+
+  "objective": {
+    "what": "Notify version changes",
+    "why": "Keep team informed",
+    "outcome": "Version change alerts"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/lib/versioning/notifications.ts"
+    ],
+    "events": {
+      "restore": "Version restored",
+      "branch": "Branch created",
+      "merge": "Branch merged",
+      "tag": "Version tagged"
+    },
+    "channels": {
+      "inApp": "In-app notification",
+      "email": "Email for major changes",
+      "webhook": "Webhook for integrations"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create version notifications",
+    "tasks": [
+      "Define notification events",
+      "Send in-app notifications",
+      "Email for major events",
+      "Add webhook option",
+      "Respect preferences"
+    ],
+    "constraints": [
+      "Don't spam",
+      "Respect settings",
+      "Useful information"
+    ]
+  },
+
+  "outputs": {
+    "files": 1
+  }
+}

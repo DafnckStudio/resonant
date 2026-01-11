@@ -1,0 +1,122 @@
+{
+  "step": 2,
+  "id": "002-shadcn-ui-setup",
+  "phase": 0,
+  "phaseName": "Foundation Setup",
+  "title": "Initialize shadcn/ui Design System",
+  "description": "Set up shadcn/ui with custom theme, CSS variables, and base components",
+  "estimatedMinutes": 20,
+  "priority": "P0",
+  "dependencies": ["001-project-initialization"],
+
+  "objective": {
+    "what": "Initialize shadcn/ui with Resonant brand colors, dark mode first, and install base components",
+    "why": "shadcn/ui provides accessible, customizable components that match our design system requirements",
+    "outcome": "shadcn/ui configured with brand theme and 15+ base components installed"
+  },
+
+  "context": {
+    "projectPath": "/home/hacker/VibeCoding/clients/resonant",
+    "designSystem": {
+      "primaryColor": "Blue (AI/tech feel)",
+      "mode": "Dark mode first",
+      "fonts": {
+        "primary": "Inter",
+        "mono": "Space Mono"
+      },
+      "icons": "Lucide React ONLY"
+    },
+    "references": [
+      "/home/hacker/.claude/templates/dashboard-reference/components/",
+      "/home/hacker/VibeCoding/clients/DentistryGPT/components/ui/"
+    ]
+  },
+
+  "specifications": {
+    "commands": [
+      "pnpm dlx shadcn@latest init -y",
+      "pnpm dlx shadcn@latest add button card input label form toast sonner dialog dropdown-menu avatar badge separator skeleton textarea scroll-area sidebar sheet tabs table tooltip popover command alert alert-dialog breadcrumb checkbox collapsible context-menu hover-card menubar navigation-menu progress radio-group select slider switch toggle toggle-group"
+    ],
+    "filesToCreate": [
+      "components.json",
+      "src/components/ui/button.tsx",
+      "src/components/ui/card.tsx",
+      "src/lib/utils.ts"
+    ],
+    "filesToModify": [
+      "src/app/globals.css",
+      "tailwind.config.ts"
+    ],
+    "themeConfig": {
+      "style": "new-york",
+      "baseColor": "zinc",
+      "cssVariables": true,
+      "tailwindCss": true,
+      "tailwindCssVariables": true,
+      "prefix": ""
+    },
+    "cssVariables": {
+      "dark": {
+        "background": "240 10% 3.9%",
+        "foreground": "0 0% 98%",
+        "primary": "217.2 91.2% 59.8%",
+        "primary-foreground": "222.2 47.4% 11.2%",
+        "secondary": "217.2 32.6% 17.5%",
+        "accent": "217.2 32.6% 17.5%",
+        "muted": "217.2 32.6% 17.5%"
+      }
+    }
+  },
+
+  "prompt": {
+    "mission": "Set up shadcn/ui design system for Resonant.ai with dark mode first approach",
+    "tasks": [
+      "Initialize shadcn/ui with pnpm dlx shadcn@latest init",
+      "Configure components.json with new-york style and zinc base",
+      "Update globals.css with Resonant brand CSS variables (blue primary)",
+      "Install all base components (button, card, input, form, dialog, etc.)",
+      "Add Inter and Space Mono fonts via next/font",
+      "Verify dark mode is default"
+    ],
+    "constraints": [
+      "ONLY use Lucide icons (lucide-react)",
+      "NEVER use Heroicons, FontAwesome, or other icon libraries",
+      "Dark mode MUST be default",
+      "Use Inter for text, Space Mono for code/mono",
+      "Follow new-york style variant"
+    ],
+    "validation": [
+      "All components render in dark mode",
+      "Button variants work correctly",
+      "Fonts load properly"
+    ]
+  },
+
+  "validation": {
+    "automated": [
+      "pnpm build passes",
+      "No missing component errors"
+    ],
+    "functional": [
+      "Components render in dark mode",
+      "Button hover states work",
+      "Dialog opens/closes"
+    ],
+    "quality": [
+      "components.json exists with correct config",
+      "CSS variables set for dark mode",
+      "Inter and Space Mono fonts configured"
+    ]
+  },
+
+  "troubleshooting": {
+    "componentNotFound": "Run pnpm dlx shadcn@latest add <component>",
+    "stylesNotApplying": "Check globals.css imports and tailwind.config.ts content paths",
+    "fontsNotLoading": "Verify next/font import in layout.tsx"
+  },
+
+  "outputs": {
+    "files": ["components.json", "src/components/ui/*.tsx", "src/lib/utils.ts"],
+    "componentsInstalled": 30
+  }
+}

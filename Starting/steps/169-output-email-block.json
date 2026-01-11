@@ -1,0 +1,55 @@
+{
+  "step": 169,
+  "id": "169-output-email-block",
+  "phase": 5,
+  "phaseName": "Block System",
+  "title": "Email Output Block",
+  "description": "Create email sending block",
+  "estimatedMinutes": 35,
+  "priority": "P2",
+  "dependencies": ["167-output-response-block"],
+
+  "objective": {
+    "what": "Create email output block",
+    "why": "Send emails from workflows",
+    "outcome": "Email sending via Resend"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/components/editor/blocks/output/email-block.tsx"
+    ],
+    "config": {
+      "to": "Recipients",
+      "from": "Sender email",
+      "subject": "Email subject",
+      "template": "Email template"
+    },
+    "inputs": {
+      "to": "Dynamic recipients",
+      "data": "Template data"
+    },
+    "outputs": {
+      "messageId": "Sent message ID"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create email block",
+    "tasks": [
+      "Create EmailBlock component",
+      "Add recipient fields",
+      "Add rich text editor",
+      "Support HTML templates",
+      "Preview email"
+    ],
+    "constraints": [
+      "Use Resend API",
+      "Template support"
+    ]
+  },
+
+  "outputs": {
+    "files": 1
+  }
+}

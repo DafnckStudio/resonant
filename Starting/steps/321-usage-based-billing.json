@@ -1,0 +1,57 @@
+{
+  "step": 321,
+  "id": "321-usage-based-billing",
+  "phase": 10,
+  "phaseName": "Monetization & Billing",
+  "title": "Usage-Based Billing",
+  "description": "Metered usage billing",
+  "estimatedMinutes": 45,
+  "priority": "P2",
+  "dependencies": ["309-usage-tracking", "305-stripe-webhooks"],
+
+  "objective": {
+    "what": "Usage-based billing",
+    "why": "Fair pricing for heavy users",
+    "outcome": "Metered billing"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/lib/billing/usage-billing.ts",
+      "src/components/billing/usage-charges.tsx",
+      "src/components/billing/usage-forecast.tsx"
+    ],
+    "metrics": {
+      "aiTokens": "AI tokens used over limit",
+      "executions": "Workflow executions over limit",
+      "storage": "Storage over limit",
+      "api": "API calls over limit"
+    },
+    "billing": {
+      "reporting": "Report usage to Stripe",
+      "thresholds": "Threshold alerts",
+      "caps": "Optional spending caps",
+      "preview": "Usage preview before charge"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create usage-based billing",
+    "tasks": [
+      "Report usage to Stripe meters",
+      "Calculate overage charges",
+      "Show usage cost forecast",
+      "Implement spending caps",
+      "Display usage on invoice"
+    ],
+    "constraints": [
+      "Accurate usage reporting",
+      "Clear overage pricing",
+      "Spending cap enforcement"
+    ]
+  },
+
+  "outputs": {
+    "files": 3
+  }
+}

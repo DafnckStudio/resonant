@@ -1,0 +1,58 @@
+{
+  "step": 344,
+  "id": "344-notifications-system",
+  "phase": 11,
+  "phaseName": "Dashboard & Analytics",
+  "title": "Notifications System",
+  "description": "In-app notifications",
+  "estimatedMinutes": 40,
+  "priority": "P1",
+  "dependencies": ["332-event-tracking"],
+
+  "objective": {
+    "what": "Notification system",
+    "why": "User awareness",
+    "outcome": "In-app notifications"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "convex/notifications.ts",
+      "src/components/notifications/notification-bell.tsx",
+      "src/components/notifications/notification-list.tsx",
+      "src/components/notifications/notification-item.tsx"
+    ],
+    "types": {
+      "workflow": "Workflow status changes",
+      "collaboration": "Team activity",
+      "billing": "Billing events",
+      "system": "System announcements"
+    },
+    "features": {
+      "badge": "Unread count badge",
+      "dropdown": "Notification dropdown",
+      "markRead": "Mark as read",
+      "settings": "Notification preferences"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create notifications system",
+    "tasks": [
+      "Create notifications schema",
+      "Build notification bell",
+      "Create notification list",
+      "Implement mark as read",
+      "Add notification settings"
+    ],
+    "constraints": [
+      "Real-time delivery",
+      "Non-intrusive",
+      "User preferences"
+    ]
+  },
+
+  "outputs": {
+    "files": 4
+  }
+}

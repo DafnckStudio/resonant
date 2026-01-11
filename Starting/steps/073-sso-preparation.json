@@ -1,0 +1,48 @@
+{
+  "step": 73,
+  "id": "073-sso-preparation",
+  "phase": 2,
+  "phaseName": "Authentication & Users",
+  "title": "Prepare SSO Configuration",
+  "description": "Add SSO configuration structure for enterprise",
+  "estimatedMinutes": 20,
+  "priority": "P3",
+  "dependencies": ["051-clerk-middleware"],
+
+  "objective": {
+    "what": "Prepare infrastructure for SSO (SAML/OIDC)",
+    "why": "Enterprise customers need SSO integration",
+    "outcome": "SSO configuration structure ready for Clerk Enterprise"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/app/(dashboard)/settings/sso/page.tsx",
+      "src/components/settings/sso-configuration.tsx"
+    ],
+    "ssoTypes": [
+      { "id": "saml", "name": "SAML 2.0" },
+      { "id": "oidc", "name": "OpenID Connect" }
+    ],
+    "note": "Actual SSO implementation requires Clerk Enterprise plan"
+  },
+
+  "prompt": {
+    "mission": "Prepare SSO configuration",
+    "tasks": [
+      "Create SSO settings page (placeholder)",
+      "Build SSOConfiguration component",
+      "Show enterprise upgrade prompt",
+      "Document SSO setup for future"
+    ],
+    "constraints": [
+      "This is a placeholder - SSO requires Clerk Enterprise",
+      "Show clear upgrade path"
+    ]
+  },
+
+  "outputs": {
+    "files": 2,
+    "route": "/settings/sso"
+  }
+}

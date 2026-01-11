@@ -1,0 +1,55 @@
+{
+  "step": 252,
+  "id": "252-auto-save-versions",
+  "phase": 8,
+  "phaseName": "Version Control",
+  "title": "Auto-Save Versions",
+  "description": "Automatic version creation",
+  "estimatedMinutes": 30,
+  "priority": "P1",
+  "dependencies": ["251-version-history-schema"],
+
+  "objective": {
+    "what": "Auto-save workflow versions",
+    "why": "Never lose work",
+    "outcome": "Automatic versioning"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/lib/versioning/auto-save.ts",
+      "convex/versions.ts"
+    ],
+    "triggers": {
+      "interval": "Save every 5 minutes",
+      "onChange": "Save after significant changes",
+      "onClose": "Save when leaving editor",
+      "manual": "Explicit save button"
+    },
+    "optimization": {
+      "debounce": "Debounce rapid changes",
+      "dedup": "Skip if no changes",
+      "compression": "Compress snapshots"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create auto-save versioning",
+    "tasks": [
+      "Implement interval auto-save",
+      "Detect significant changes",
+      "Save on editor close",
+      "Debounce rapid edits",
+      "Store in Convex"
+    ],
+    "constraints": [
+      "Non-blocking saves",
+      "Efficient storage",
+      "Reliable saving"
+    ]
+  },
+
+  "outputs": {
+    "files": 2
+  }
+}

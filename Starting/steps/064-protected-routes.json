@@ -1,0 +1,46 @@
+{
+  "step": 64,
+  "id": "064-protected-routes",
+  "phase": 2,
+  "phaseName": "Authentication & Users",
+  "title": "Implement Protected Route Components",
+  "description": "Create HOC and components for route protection",
+  "estimatedMinutes": 25,
+  "priority": "P0",
+  "dependencies": ["051-clerk-middleware"],
+
+  "objective": {
+    "what": "Create reusable protected route components",
+    "why": "Some routes need additional protection beyond middleware",
+    "outcome": "Flexible route protection with loading states"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/components/auth/protected-route.tsx",
+      "src/components/auth/require-workspace.tsx",
+      "src/components/auth/require-role.tsx"
+    ],
+    "protectionLevels": {
+      "authenticated": "Must be signed in",
+      "hasWorkspace": "Must have workspace selected",
+      "role": "Must have specific role in workspace"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create protected route components",
+    "tasks": [
+      "Create ProtectedRoute wrapper",
+      "Add RequireWorkspace component",
+      "Create RequireRole for permissions",
+      "Handle loading and redirect states",
+      "Add proper TypeScript types"
+    ]
+  },
+
+  "outputs": {
+    "files": 3,
+    "components": ["ProtectedRoute", "RequireWorkspace", "RequireRole"]
+  }
+}

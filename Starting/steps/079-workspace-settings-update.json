@@ -1,0 +1,53 @@
+{
+  "step": 79,
+  "id": "079-workspace-settings-update",
+  "phase": 3,
+  "phaseName": "Workspace & Projects",
+  "title": "Implement Workspace Settings Update",
+  "description": "Add functionality to update workspace settings",
+  "estimatedMinutes": 30,
+  "priority": "P1",
+  "dependencies": ["038-workspace-settings", "076-workspace-context"],
+
+  "objective": {
+    "what": "Allow workspace admins to update settings",
+    "why": "Workspaces need configurable settings",
+    "outcome": "Working settings form with save functionality"
+  },
+
+  "specifications": {
+    "filesToModify": [
+      "src/components/settings/workspace-form.tsx",
+      "convex/workspaces.ts"
+    ],
+    "fields": {
+      "name": "Workspace name",
+      "slug": "URL slug (with change warning)",
+      "description": "Description",
+      "logoUrl": "Logo URL (upload later)"
+    },
+    "mutations": {
+      "updateWorkspace": "Update workspace details"
+    }
+  },
+
+  "prompt": {
+    "mission": "Implement workspace settings update",
+    "tasks": [
+      "Wire WorkspaceForm to current workspace data",
+      "Create updateWorkspace mutation",
+      "Add slug change warning",
+      "Handle permission check (owner/admin only)",
+      "Show success toast"
+    ],
+    "constraints": [
+      "Warn when changing slug (breaks URLs)",
+      "Only owner/admin can update"
+    ]
+  },
+
+  "outputs": {
+    "filesModified": 2,
+    "mutations": ["updateWorkspace"]
+  }
+}

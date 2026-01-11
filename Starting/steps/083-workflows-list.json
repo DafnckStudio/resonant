@@ -1,0 +1,46 @@
+{
+  "step": 83,
+  "id": "083-workflows-list",
+  "phase": 3,
+  "phaseName": "Workspace & Projects",
+  "title": "Wire Workflows List Page",
+  "description": "Connect workflows list to real data",
+  "estimatedMinutes": 30,
+  "priority": "P0",
+  "dependencies": ["082-create-workflow-dialog", "032-workflows-list-page"],
+
+  "objective": {
+    "what": "Connect workflows list page to Convex data",
+    "why": "Users need to see and manage their workflows",
+    "outcome": "Working workflows list with real data"
+  },
+
+  "specifications": {
+    "filesToModify": [
+      "src/app/(dashboard)/workflows/page.tsx",
+      "src/components/workflow/workflow-card.tsx"
+    ],
+    "features": {
+      "list": "Show all workspace workflows",
+      "grid": "Grid layout with cards",
+      "sort": "Sort by name, created, updated",
+      "filter": "Filter by status",
+      "search": "Search by name"
+    }
+  },
+
+  "prompt": {
+    "mission": "Wire workflows list",
+    "tasks": [
+      "Connect to listWorkflows query",
+      "Pass data to WorkflowCard components",
+      "Add sorting controls",
+      "Implement search filter",
+      "Show empty state when no workflows"
+    ]
+  },
+
+  "outputs": {
+    "filesModified": 2
+  }
+}

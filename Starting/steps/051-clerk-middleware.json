@@ -1,0 +1,50 @@
+{
+  "step": 51,
+  "id": "051-clerk-middleware",
+  "phase": 2,
+  "phaseName": "Authentication & Users",
+  "title": "Configure Clerk Middleware (proxy.ts)",
+  "description": "Set up Next.js 16 proxy.ts for Clerk authentication",
+  "estimatedMinutes": 20,
+  "priority": "P0",
+  "dependencies": ["015-clerk-setup"],
+
+  "objective": {
+    "what": "Configure Clerk middleware using Next.js 16 proxy.ts pattern",
+    "why": "Protect routes and handle authentication at the edge",
+    "outcome": "Working route protection with public/private routes"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/proxy.ts"
+    ],
+    "filesToModify": [
+      "next.config.ts"
+    ],
+    "routeConfig": {
+      "public": ["/", "/sign-in(.*)", "/sign-up(.*)", "/api/webhooks(.*)"],
+      "protected": ["/dashboard(.*)", "/workflows(.*)", "/settings(.*)"]
+    }
+  },
+
+  "prompt": {
+    "mission": "Configure Clerk middleware",
+    "tasks": [
+      "Create proxy.ts (NOT middleware.ts for Next.js 16)",
+      "Define public routes array",
+      "Configure route matcher",
+      "Enable authentication middleware",
+      "Test protected route redirect"
+    ],
+    "constraints": [
+      "Use proxy.ts NOT middleware.ts (Next.js 16)",
+      "Public routes must include webhooks"
+    ]
+  },
+
+  "outputs": {
+    "files": 1,
+    "filesModified": 1
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "step": 60,
+  "id": "060-user-preferences",
+  "phase": 2,
+  "phaseName": "Authentication & Users",
+  "title": "Implement User Preferences",
+  "description": "Build user preferences storage and UI",
+  "estimatedMinutes": 30,
+  "priority": "P1",
+  "dependencies": ["058-user-profile-update"],
+
+  "objective": {
+    "what": "Create user preferences system for app settings",
+    "why": "Users need to customize their experience",
+    "outcome": "Preferences stored in Convex and applied globally"
+  },
+
+  "specifications": {
+    "filesToModify": [
+      "src/components/settings/preferences-form.tsx",
+      "convex/schema.ts",
+      "convex/users.ts"
+    ],
+    "filesToCreate": [
+      "src/hooks/use-preferences.ts"
+    ],
+    "preferences": {
+      "theme": "light | dark | system",
+      "defaultProvider": "AI provider ID",
+      "emailNotifications": "boolean",
+      "inAppNotifications": "boolean",
+      "timezone": "string",
+      "locale": "string"
+    }
+  },
+
+  "prompt": {
+    "mission": "Implement user preferences",
+    "tasks": [
+      "Add preferences field to user schema",
+      "Create usePreferences hook",
+      "Wire PreferencesForm to mutations",
+      "Apply preferences on app load",
+      "Sync theme preference with next-themes"
+    ]
+  },
+
+  "outputs": {
+    "files": 1,
+    "filesModified": 3,
+    "hooks": ["usePreferences"]
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "step": 341,
+  "id": "341-usage-dashboard",
+  "phase": 11,
+  "phaseName": "Dashboard & Analytics",
+  "title": "Usage Dashboard",
+  "description": "Plan usage overview dashboard",
+  "estimatedMinutes": 35,
+  "priority": "P1",
+  "dependencies": ["309-usage-tracking", "340-ai-usage-analytics"],
+
+  "objective": {
+    "what": "Usage overview dashboard",
+    "why": "Usage awareness",
+    "outcome": "Usage visibility"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/app/(dashboard)/usage/page.tsx",
+      "src/components/usage/usage-overview.tsx",
+      "src/components/usage/usage-meter.tsx",
+      "src/components/usage/usage-breakdown.tsx"
+    ],
+    "metrics": {
+      "workflows": "Workflows vs limit",
+      "executions": "Executions vs limit",
+      "tokens": "AI tokens vs limit",
+      "storage": "Storage vs limit"
+    },
+    "features": {
+      "meters": "Visual progress meters",
+      "warnings": "Near-limit warnings",
+      "history": "Usage history",
+      "projections": "Month-end projections"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create usage dashboard",
+    "tasks": [
+      "Build usage page",
+      "Create usage meters",
+      "Show limit warnings",
+      "Display usage history",
+      "Add month-end projections"
+    ],
+    "constraints": [
+      "Clear limit display",
+      "Actionable warnings",
+      "Historical trends"
+    ]
+  },
+
+  "outputs": {
+    "files": 4
+  }
+}

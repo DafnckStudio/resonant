@@ -1,0 +1,43 @@
+{
+  "step": 53,
+  "id": "053-sign-up-page",
+  "phase": 2,
+  "phaseName": "Authentication & Users",
+  "title": "Create Sign Up Page",
+  "description": "Build sign-up page with Clerk SignUp component",
+  "estimatedMinutes": 15,
+  "priority": "P0",
+  "dependencies": ["052-sign-in-page"],
+
+  "objective": {
+    "what": "Create sign-up page using Clerk SignUp component",
+    "why": "New users need to create accounts",
+    "outcome": "Styled sign-up page with social options"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/app/(auth)/sign-up/[[...sign-up]]/page.tsx"
+    ],
+    "features": {
+      "socialSignup": ["Google", "GitHub"],
+      "email": "Email/password registration",
+      "verification": "Email verification flow"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create sign-up page",
+    "tasks": [
+      "Create sign-up page with catch-all route",
+      "Configure Clerk SignUp component",
+      "Style to match sign-in page",
+      "Add terms/privacy links placeholder"
+    ]
+  },
+
+  "outputs": {
+    "files": 1,
+    "route": "/sign-up"
+  }
+}

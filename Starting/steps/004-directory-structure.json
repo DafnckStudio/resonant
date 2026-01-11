@@ -1,0 +1,117 @@
+{
+  "step": 4,
+  "id": "004-directory-structure",
+  "phase": 0,
+  "phaseName": "Foundation Setup",
+  "title": "Create Project Directory Structure",
+  "description": "Establish the complete directory structure following Atomic Design and DentistryGPT patterns",
+  "estimatedMinutes": 15,
+  "priority": "P0",
+  "dependencies": ["003-fonts-configuration"],
+
+  "objective": {
+    "what": "Create organized directory structure for components, lib, hooks, providers, types, and app routes",
+    "why": "Proper organization is critical for a large-scale project - enables maintainability and team collaboration",
+    "outcome": "Complete directory structure with placeholder index files"
+  },
+
+  "context": {
+    "pattern": "Atomic Design + Feature-based organization",
+    "references": [
+      "/home/hacker/VibeCoding/clients/DentistryGPT/",
+      "/home/hacker/.claude/templates/dashboard-reference/"
+    ]
+  },
+
+  "specifications": {
+    "directoryStructure": {
+      "src/": {
+        "app/": {
+          "(auth)/": "Authentication routes",
+          "(dashboard)/": "Protected dashboard routes",
+          "(marketing)/": "Public marketing pages",
+          "api/": "API routes and webhooks"
+        },
+        "components/": {
+          "ui/": "shadcn/ui base components",
+          "layout/": "Layout components (sidebar, header, shells)",
+          "workflow/": "Workflow editor components",
+          "blocks/": "Block type components",
+          "collaboration/": "Real-time collaboration UI",
+          "dashboard/": "Dashboard-specific components",
+          "landing/": "Marketing page components",
+          "shared/": "Shared/common components"
+        },
+        "lib/": {
+          "utils.ts": "Utility functions",
+          "validations/": "Zod schemas",
+          "ai/": "AI provider abstractions",
+          "blocks/": "Block type definitions and executors"
+        },
+        "hooks/": "Custom React hooks",
+        "providers/": "React context providers",
+        "types/": "TypeScript type definitions",
+        "config/": "App configuration constants",
+        "styles/": "Additional CSS modules if needed"
+      },
+      "convex/": {
+        "schema.ts": "Database schema",
+        "functions/": "Queries and mutations by domain"
+      },
+      "public/": "Static assets"
+    },
+    "filesToCreate": [
+      "src/components/ui/.gitkeep",
+      "src/components/layout/.gitkeep",
+      "src/components/workflow/.gitkeep",
+      "src/components/blocks/.gitkeep",
+      "src/components/collaboration/.gitkeep",
+      "src/components/dashboard/.gitkeep",
+      "src/components/landing/.gitkeep",
+      "src/components/shared/.gitkeep",
+      "src/lib/validations/.gitkeep",
+      "src/lib/ai/.gitkeep",
+      "src/lib/blocks/.gitkeep",
+      "src/hooks/.gitkeep",
+      "src/providers/.gitkeep",
+      "src/types/index.ts",
+      "src/config/index.ts"
+    ]
+  },
+
+  "prompt": {
+    "mission": "Create the complete directory structure for Resonant.ai",
+    "tasks": [
+      "Create all directories as specified in the structure",
+      "Add .gitkeep files to empty directories",
+      "Create index.ts files for types/ and config/",
+      "Create placeholder files for main feature directories",
+      "Document the structure in a README.md in src/"
+    ],
+    "constraints": [
+      "Follow the exact structure specified",
+      "Use .gitkeep for empty directories",
+      "Create index.ts for barrel exports where needed"
+    ],
+    "validation": [
+      "All directories exist",
+      "Structure matches specification"
+    ]
+  },
+
+  "validation": {
+    "automated": [
+      "Directory structure matches spec",
+      "No nested structure errors"
+    ],
+    "functional": [
+      "Imports work with @/ alias",
+      "Components can be placed correctly"
+    ]
+  },
+
+  "outputs": {
+    "directories": 20,
+    "files": ["src/types/index.ts", "src/config/index.ts"]
+  }
+}

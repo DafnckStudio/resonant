@@ -1,0 +1,55 @@
+{
+  "step": 178,
+  "id": "178-variable-interpolation",
+  "phase": 5,
+  "phaseName": "Block System",
+  "title": "Variable Interpolation System",
+  "description": "Create variable interpolation for block configs",
+  "estimatedMinutes": 45,
+  "priority": "P0",
+  "dependencies": ["141-block-type-system"],
+
+  "objective": {
+    "what": "Implement variable system",
+    "why": "Reference data between blocks dynamically",
+    "outcome": "{{variable}} interpolation"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/lib/blocks/variable-parser.ts",
+      "src/lib/blocks/variable-resolver.ts",
+      "src/components/editor/variables/variable-picker.tsx"
+    ],
+    "syntax": {
+      "basic": "{{blockId.output}}",
+      "nested": "{{blockId.output.field}}",
+      "function": "{{uppercase(blockId.output)}}",
+      "fallback": "{{blockId.output | 'default'}}"
+    },
+    "features": {
+      "autocomplete": "Suggest available variables",
+      "validation": "Check variable exists",
+      "preview": "Show resolved value"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create variable system",
+    "tasks": [
+      "Create variable parser",
+      "Create resolver with context",
+      "Build VariablePicker component",
+      "Add autocomplete to editors",
+      "Validate references"
+    ],
+    "constraints": [
+      "Support nested paths",
+      "Handle missing values"
+    ]
+  },
+
+  "outputs": {
+    "files": 3
+  }
+}

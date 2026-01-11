@@ -1,0 +1,58 @@
+{
+  "step": 326,
+  "id": "326-billing-webhooks-external",
+  "phase": 10,
+  "phaseName": "Monetization & Billing",
+  "title": "Billing Webhooks External",
+  "description": "Outgoing billing webhooks",
+  "estimatedMinutes": 30,
+  "priority": "P3",
+  "dependencies": ["305-stripe-webhooks"],
+
+  "objective": {
+    "what": "External billing webhooks",
+    "why": "Integration with external systems",
+    "outcome": "Billing event notifications"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/lib/billing/external-webhooks.ts",
+      "src/components/billing/webhook-settings.tsx",
+      "convex/billingWebhooks.ts"
+    ],
+    "events": {
+      "subscriptionCreated": "New subscription",
+      "subscriptionUpdated": "Plan change",
+      "subscriptionCancelled": "Cancellation",
+      "paymentSucceeded": "Payment success",
+      "paymentFailed": "Payment failure"
+    },
+    "features": {
+      "configure": "Configure webhook URLs",
+      "retry": "Automatic retries",
+      "logs": "Delivery logs",
+      "test": "Test webhook delivery"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create external billing webhooks",
+    "tasks": [
+      "Webhook URL configuration UI",
+      "Fire webhooks on billing events",
+      "Implement retry logic",
+      "Log webhook deliveries",
+      "Test webhook functionality"
+    ],
+    "constraints": [
+      "Reliable delivery",
+      "Retry on failure",
+      "Signed payloads"
+    ]
+  },
+
+  "outputs": {
+    "files": 3
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "step": 270,
+  "id": "270-version-comparison-page",
+  "phase": 8,
+  "phaseName": "Version Control",
+  "title": "Version Comparison Page",
+  "description": "Full-page version comparison",
+  "estimatedMinutes": 35,
+  "priority": "P2",
+  "dependencies": ["257-version-diff"],
+
+  "objective": {
+    "what": "Create comparison page",
+    "why": "Detailed version comparison",
+    "outcome": "Full comparison view"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/app/(dashboard)/workflows/[id]/compare/page.tsx",
+      "src/components/version-control/comparison-view.tsx"
+    ],
+    "features": {
+      "sideBySide": "Two versions side by side",
+      "unified": "Unified diff view",
+      "navigate": "Navigate between changes",
+      "comments": "Comment on diff"
+    },
+    "controls": {
+      "versionSelect": "Select versions to compare",
+      "viewToggle": "Toggle view modes",
+      "zoom": "Zoom in/out",
+      "export": "Export comparison"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create comparison page",
+    "tasks": [
+      "Build comparison page",
+      "Implement side-by-side view",
+      "Add unified diff view",
+      "Enable change navigation",
+      "Export comparison option"
+    ],
+    "constraints": [
+      "Clear visualization",
+      "Responsive layout",
+      "Fast rendering"
+    ]
+  },
+
+  "outputs": {
+    "files": 2
+  }
+}

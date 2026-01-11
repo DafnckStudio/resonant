@@ -1,0 +1,55 @@
+{
+  "step": 337,
+  "id": "337-quick-actions",
+  "phase": 11,
+  "phaseName": "Dashboard & Analytics",
+  "title": "Quick Actions",
+  "description": "Dashboard quick action buttons",
+  "estimatedMinutes": 20,
+  "priority": "P2",
+  "dependencies": ["333-dashboard-layout"],
+
+  "objective": {
+    "what": "Quick action shortcuts",
+    "why": "Faster task completion",
+    "outcome": "Quick access buttons"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/components/dashboard/quick-actions.tsx",
+      "src/components/dashboard/action-button.tsx"
+    ],
+    "actions": {
+      "newWorkflow": "Create new workflow",
+      "runRecent": "Run recent workflow",
+      "importTemplate": "Import template",
+      "inviteTeam": "Invite team member"
+    },
+    "features": {
+      "keyboard": "Keyboard shortcuts",
+      "contextual": "Context-aware actions",
+      "tooltip": "Action descriptions"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create quick actions",
+    "tasks": [
+      "Build quick actions bar",
+      "Create action button component",
+      "Add keyboard shortcuts",
+      "Show contextual actions",
+      "Include tooltip descriptions"
+    ],
+    "constraints": [
+      "Intuitive icons",
+      "Fast access",
+      "Keyboard accessible"
+    ]
+  },
+
+  "outputs": {
+    "files": 2
+  }
+}

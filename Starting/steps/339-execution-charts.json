@@ -1,0 +1,56 @@
+{
+  "step": 339,
+  "id": "339-execution-charts",
+  "phase": 11,
+  "phaseName": "Dashboard & Analytics",
+  "title": "Execution Charts",
+  "description": "Workflow execution visualizations",
+  "estimatedMinutes": 35,
+  "priority": "P1",
+  "dependencies": ["338-workflow-analytics"],
+
+  "objective": {
+    "what": "Execution data charts",
+    "why": "Visual insights",
+    "outcome": "Execution visualization"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/components/charts/execution-timeline.tsx",
+      "src/components/charts/success-rate-chart.tsx",
+      "src/components/charts/duration-histogram.tsx"
+    ],
+    "charts": {
+      "timeline": "Executions per day/week/month",
+      "success": "Success vs failure rate",
+      "duration": "Execution time distribution",
+      "comparison": "Week-over-week comparison"
+    },
+    "features": {
+      "interactive": "Hover for details",
+      "export": "Export chart data",
+      "zoom": "Time range zoom"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create execution charts",
+    "tasks": [
+      "Build execution timeline chart",
+      "Create success rate visualization",
+      "Add duration histogram",
+      "Implement interactive hover",
+      "Add data export"
+    ],
+    "constraints": [
+      "Recharts library",
+      "Interactive tooltips",
+      "Responsive sizing"
+    ]
+  },
+
+  "outputs": {
+    "files": 3
+  }
+}

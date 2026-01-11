@@ -1,0 +1,46 @@
+{
+  "step": 84,
+  "id": "084-workflow-card-actions",
+  "phase": 3,
+  "phaseName": "Workspace & Projects",
+  "title": "Add Workflow Card Actions",
+  "description": "Implement actions menu on workflow cards",
+  "estimatedMinutes": 25,
+  "priority": "P1",
+  "dependencies": ["083-workflows-list"],
+
+  "objective": {
+    "what": "Add action menu to workflow cards",
+    "why": "Users need quick access to workflow operations",
+    "outcome": "Dropdown menu with edit, duplicate, delete actions"
+  },
+
+  "specifications": {
+    "filesToModify": [
+      "src/components/workflow/workflow-card.tsx"
+    ],
+    "actions": [
+      { "id": "edit", "label": "Edit", "icon": "Pencil" },
+      { "id": "run", "label": "Run", "icon": "Play" },
+      { "id": "duplicate", "label": "Duplicate", "icon": "Copy" },
+      { "id": "rename", "label": "Rename", "icon": "Type" },
+      { "id": "delete", "label": "Delete", "icon": "Trash", "destructive": true }
+    ]
+  },
+
+  "prompt": {
+    "mission": "Add workflow card actions",
+    "tasks": [
+      "Add dropdown menu to card",
+      "Implement edit action (navigate to editor)",
+      "Add duplicate action",
+      "Implement rename inline edit",
+      "Add delete with confirmation"
+    ]
+  },
+
+  "outputs": {
+    "filesModified": 1,
+    "actions": 5
+  }
+}

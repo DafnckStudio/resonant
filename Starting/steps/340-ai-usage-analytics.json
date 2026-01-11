@@ -1,0 +1,58 @@
+{
+  "step": 340,
+  "id": "340-ai-usage-analytics",
+  "phase": 11,
+  "phaseName": "Dashboard & Analytics",
+  "title": "AI Usage Analytics",
+  "description": "AI provider usage tracking",
+  "estimatedMinutes": 35,
+  "priority": "P1",
+  "dependencies": ["331-analytics-schema"],
+
+  "objective": {
+    "what": "AI usage analytics",
+    "why": "Cost and usage insights",
+    "outcome": "AI usage visibility"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/components/analytics/ai-usage-dashboard.tsx",
+      "src/components/analytics/provider-breakdown.tsx",
+      "src/components/analytics/token-usage-chart.tsx",
+      "src/lib/analytics/ai-stats.ts"
+    ],
+    "metrics": {
+      "totalTokens": "Total tokens used",
+      "byProvider": "Usage by AI provider",
+      "byCost": "Cost by provider",
+      "byWorkflow": "Usage by workflow"
+    },
+    "breakdowns": {
+      "claude": "Claude usage",
+      "gpt4": "GPT-4 usage",
+      "gemini": "Gemini usage",
+      "llama": "Llama usage"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create AI usage analytics",
+    "tasks": [
+      "Build AI usage dashboard",
+      "Create provider breakdown chart",
+      "Show token usage over time",
+      "Calculate cost estimates",
+      "Breakdown by workflow"
+    ],
+    "constraints": [
+      "Accurate tracking",
+      "Cost estimation",
+      "Provider comparison"
+    ]
+  },
+
+  "outputs": {
+    "files": 4
+  }
+}

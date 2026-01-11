@@ -1,0 +1,65 @@
+{
+  "step": 18,
+  "id": "018-typescript-config",
+  "phase": 0,
+  "phaseName": "Foundation Setup",
+  "title": "Configure TypeScript Strict Settings",
+  "description": "Set up TypeScript with strict mode and project-specific configuration",
+  "estimatedMinutes": 10,
+  "priority": "P0",
+  "dependencies": ["017-env-configuration"],
+
+  "objective": {
+    "what": "Configure tsconfig.json with strict settings and path aliases",
+    "why": "Strict TypeScript catches bugs early and ensures type safety",
+    "outcome": "TypeScript strict mode enabled with all recommended checks"
+  },
+
+  "specifications": {
+    "filesToModify": ["tsconfig.json"],
+    "config": {
+      "compilerOptions": {
+        "strict": true,
+        "noUncheckedIndexedAccess": true,
+        "noImplicitReturns": true,
+        "noFallthroughCasesInSwitch": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "exactOptionalPropertyTypes": true,
+        "forceConsistentCasingInFileNames": true,
+        "paths": {
+          "@/*": ["./src/*"],
+          "@/components/*": ["./src/components/*"],
+          "@/lib/*": ["./src/lib/*"],
+          "@/hooks/*": ["./src/hooks/*"],
+          "@/types/*": ["./src/types/*"]
+        }
+      }
+    }
+  },
+
+  "prompt": {
+    "mission": "Configure TypeScript for maximum type safety",
+    "tasks": [
+      "Enable all strict mode options",
+      "Add noUncheckedIndexedAccess",
+      "Configure path aliases",
+      "Ensure Convex types are included"
+    ],
+    "constraints": [
+      "strict: true is mandatory",
+      "No any without explicit override"
+    ]
+  },
+
+  "validation": {
+    "automated": [
+      "pnpm build passes",
+      "No type errors"
+    ]
+  },
+
+  "outputs": {
+    "files": ["tsconfig.json"]
+  }
+}

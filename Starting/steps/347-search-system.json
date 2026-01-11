@@ -1,0 +1,58 @@
+{
+  "step": 347,
+  "id": "347-search-system",
+  "phase": 11,
+  "phaseName": "Dashboard & Analytics",
+  "title": "Search System",
+  "description": "Global search functionality",
+  "estimatedMinutes": 45,
+  "priority": "P1",
+  "dependencies": ["076-workspace-schema"],
+
+  "objective": {
+    "what": "Global search system",
+    "why": "Quick content discovery",
+    "outcome": "Fast search"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/components/search/search-dialog.tsx",
+      "src/components/search/search-results.tsx",
+      "src/components/search/search-filters.tsx",
+      "convex/search.ts"
+    ],
+    "searchable": {
+      "workflows": "Search workflows",
+      "blocks": "Search blocks",
+      "templates": "Search templates",
+      "content": "Full-text search"
+    },
+    "features": {
+      "keyboard": "Cmd+K activation",
+      "filters": "Filter by type",
+      "recent": "Recent searches",
+      "suggestions": "Search suggestions"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create search system",
+    "tasks": [
+      "Build search dialog",
+      "Implement full-text search",
+      "Create result components",
+      "Add search filters",
+      "Show recent searches"
+    ],
+    "constraints": [
+      "Fast results",
+      "Keyboard navigation",
+      "Relevant ranking"
+    ]
+  },
+
+  "outputs": {
+    "files": 4
+  }
+}

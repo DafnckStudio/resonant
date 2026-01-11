@@ -1,0 +1,48 @@
+{
+  "step": 85,
+  "id": "085-workflow-details-page",
+  "phase": 3,
+  "phaseName": "Workspace & Projects",
+  "title": "Create Workflow Details Page",
+  "description": "Build workflow details/overview page",
+  "estimatedMinutes": 35,
+  "priority": "P1",
+  "dependencies": ["081-workflow-crud"],
+
+  "objective": {
+    "what": "Create workflow details page with overview",
+    "why": "Users need to see workflow info before editing",
+    "outcome": "Details page with metadata, stats, and quick actions"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/app/(dashboard)/workflows/[workflowId]/page.tsx",
+      "src/app/(dashboard)/workflows/[workflowId]/layout.tsx",
+      "src/components/workflow/workflow-header.tsx",
+      "src/components/workflow/workflow-stats.tsx"
+    ],
+    "sections": {
+      "header": "Name, description, quick actions",
+      "stats": "Executions, success rate, last run",
+      "recentExecutions": "Last 5 executions",
+      "activity": "Recent activity log"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create workflow details page",
+    "tasks": [
+      "Create workflow details route",
+      "Build WorkflowHeader component",
+      "Create WorkflowStats card",
+      "Show recent executions table",
+      "Add edit/run quick actions"
+    ]
+  },
+
+  "outputs": {
+    "files": 4,
+    "route": "/workflows/[workflowId]"
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "step": 122,
+  "id": "122-load-workflow",
+  "phase": 4,
+  "phaseName": "Workflow Editor Core",
+  "title": "Implement Load Workflow",
+  "description": "Load workflow from database into editor",
+  "estimatedMinutes": 30,
+  "priority": "P0",
+  "dependencies": ["120-workflow-state-management", "081-workflow-crud"],
+
+  "objective": {
+    "what": "Load workflow into editor on page load",
+    "why": "Editor needs to display saved workflows",
+    "outcome": "Full workflow loading with state hydration"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/hooks/use-load-workflow.ts"
+    ],
+    "filesToModify": [
+      "src/app/(dashboard)/workflows/[workflowId]/edit/page.tsx"
+    ],
+    "features": {
+      "load": "Load on page mount",
+      "hydrate": "Hydrate editor state",
+      "viewport": "Restore pan/zoom",
+      "loading": "Loading skeleton"
+    }
+  },
+
+  "prompt": {
+    "mission": "Implement load workflow",
+    "tasks": [
+      "Create useLoadWorkflow hook",
+      "Query workflow from Convex",
+      "Deserialize nodes/edges",
+      "Hydrate editor store",
+      "Restore viewport",
+      "Handle not found"
+    ],
+    "constraints": [
+      "Handle empty workflow",
+      "Show loading state"
+    ]
+  },
+
+  "outputs": {
+    "files": 1,
+    "filesModified": 1
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "step": 121,
+  "id": "121-save-workflow",
+  "phase": 4,
+  "phaseName": "Workflow Editor Core",
+  "title": "Implement Save Workflow",
+  "description": "Save workflow to Convex database",
+  "estimatedMinutes": 35,
+  "priority": "P0",
+  "dependencies": ["120-workflow-state-management", "081-workflow-crud"],
+
+  "objective": {
+    "what": "Implement workflow save functionality",
+    "why": "Persist workflow changes to database",
+    "outcome": "Manual and auto-save working"
+  },
+
+  "specifications": {
+    "filesToModify": [
+      "convex/workflows.ts"
+    ],
+    "filesToCreate": [
+      "src/hooks/use-save-workflow.ts"
+    ],
+    "features": {
+      "manual": "Ctrl+S manual save",
+      "auto": "Auto-save every 30s if dirty",
+      "optimistic": "Optimistic UI update",
+      "conflict": "Handle save conflicts"
+    },
+    "data": {
+      "nodes": "Serialize node data",
+      "edges": "Serialize edge data",
+      "viewport": "Save pan/zoom state"
+    }
+  },
+
+  "prompt": {
+    "mission": "Implement save workflow",
+    "tasks": [
+      "Create useSaveWorkflow hook",
+      "Add save mutation",
+      "Implement auto-save",
+      "Show save status",
+      "Handle save errors",
+      "Add unsaved changes warning"
+    ],
+    "constraints": [
+      "Debounce auto-save",
+      "Show saving indicator"
+    ]
+  },
+
+  "outputs": {
+    "files": 1,
+    "filesModified": 1
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "step": 335,
+  "id": "335-recent-workflows-widget",
+  "phase": 11,
+  "phaseName": "Dashboard & Analytics",
+  "title": "Recent Workflows Widget",
+  "description": "Recent workflows list widget",
+  "estimatedMinutes": 25,
+  "priority": "P1",
+  "dependencies": ["333-dashboard-layout"],
+
+  "objective": {
+    "what": "Recent workflows display",
+    "why": "Quick access to work",
+    "outcome": "Workflow quick access"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/components/dashboard/recent-workflows.tsx",
+      "src/components/dashboard/workflow-card-mini.tsx"
+    ],
+    "features": {
+      "list": "Last 5-10 workflows",
+      "thumbnail": "Workflow preview",
+      "status": "Last run status",
+      "actions": "Quick actions"
+    },
+    "display": {
+      "name": "Workflow name",
+      "updated": "Last updated time",
+      "status": "Draft/Active/Error",
+      "runs": "Recent run count"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create recent workflows widget",
+    "tasks": [
+      "Build recent workflows list",
+      "Create mini workflow cards",
+      "Show workflow status",
+      "Add quick action buttons",
+      "Link to workflow editor"
+    ],
+    "constraints": [
+      "Compact display",
+      "Quick navigation",
+      "Status visibility"
+    ]
+  },
+
+  "outputs": {
+    "files": 2
+  }
+}

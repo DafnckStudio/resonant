@@ -1,0 +1,53 @@
+{
+  "step": 82,
+  "id": "082-create-workflow-dialog",
+  "phase": 3,
+  "phaseName": "Workspace & Projects",
+  "title": "Create New Workflow Dialog",
+  "description": "Build dialog to create new workflows",
+  "estimatedMinutes": 25,
+  "priority": "P0",
+  "dependencies": ["081-workflow-crud"],
+
+  "objective": {
+    "what": "Create dialog for creating new workflows",
+    "why": "Users need an easy way to start new workflows",
+    "outcome": "Modal with name input and template selection"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/components/workflow/create-workflow-dialog.tsx"
+    ],
+    "filesToModify": [
+      "src/app/(dashboard)/workflows/page.tsx"
+    ],
+    "fields": {
+      "name": "Workflow name",
+      "description": "Optional description",
+      "template": "Start from blank or template"
+    },
+    "templates": [
+      { "id": "blank", "name": "Blank Workflow", "icon": "Plus" },
+      { "id": "content", "name": "Content Pipeline", "icon": "FileText" },
+      { "id": "image", "name": "Image Generation", "icon": "Image" },
+      { "id": "chat", "name": "Chat Assistant", "icon": "MessageSquare" }
+    ]
+  },
+
+  "prompt": {
+    "mission": "Create new workflow dialog",
+    "tasks": [
+      "Create CreateWorkflowDialog component",
+      "Add name and description fields",
+      "Show template selection grid",
+      "Call create mutation on submit",
+      "Redirect to editor after creation"
+    ]
+  },
+
+  "outputs": {
+    "files": 1,
+    "filesModified": 1
+  }
+}

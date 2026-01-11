@@ -1,0 +1,68 @@
+{
+  "step": 66,
+  "id": "066-invite-system",
+  "phase": 2,
+  "phaseName": "Authentication & Users",
+  "title": "Create Team Invite System",
+  "description": "Build invite by email functionality for workspaces",
+  "estimatedMinutes": 45,
+  "priority": "P1",
+  "dependencies": ["065-role-based-access", "039-team-settings"],
+
+  "objective": {
+    "what": "Create invite system for workspace team members",
+    "why": "Teams need to invite new members to collaborate",
+    "outcome": "Email invites with acceptance flow"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/app/(dashboard)/invite/[token]/page.tsx",
+      "convex/invites.ts",
+      "src/lib/invite-emails.ts"
+    ],
+    "filesToModify": [
+      "src/components/settings/invite-member-dialog.tsx",
+      "convex/schema.ts"
+    ],
+    "schema": {
+      "invites": {
+        "workspaceId": "Id<workspaces>",
+        "email": "string",
+        "role": "string",
+        "token": "string",
+        "expiresAt": "number",
+        "status": "pending | accepted | expired"
+      }
+    },
+    "flow": [
+      "Admin enters email and role",
+      "System creates invite with token",
+      "Email sent with invite link (placeholder)",
+      "User clicks link, sees invite",
+      "User accepts, joins workspace"
+    ]
+  },
+
+  "prompt": {
+    "mission": "Create team invite system",
+    "tasks": [
+      "Add invites table to schema",
+      "Create invite mutations",
+      "Build invite acceptance page",
+      "Wire InviteMemberDialog",
+      "Handle invite expiration",
+      "Add email placeholder (Resend later)"
+    ],
+    "constraints": [
+      "Invites expire in 7 days",
+      "Check if user already member"
+    ]
+  },
+
+  "outputs": {
+    "files": 3,
+    "filesModified": 2,
+    "schemaTable": "invites"
+  }
+}

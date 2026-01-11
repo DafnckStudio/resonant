@@ -1,0 +1,57 @@
+{
+  "step": 186,
+  "id": "186-provider-registry",
+  "phase": 6,
+  "phaseName": "AI Router & Execution",
+  "title": "AI Provider Registry",
+  "description": "Central registry for all AI providers",
+  "estimatedMinutes": 30,
+  "priority": "P0",
+  "dependencies": ["182-anthropic-provider", "183-openai-provider", "184-google-provider", "185-llama-provider"],
+
+  "objective": {
+    "what": "Create provider registry singleton",
+    "why": "Unified access to all providers",
+    "outcome": "Central provider management"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/lib/ai/registry/provider-registry.ts",
+      "src/lib/ai/registry/index.ts"
+    ],
+    "features": {
+      "registration": "Register providers by ID",
+      "lookup": "Get provider by ID or model",
+      "capabilities": "Query provider capabilities",
+      "health": "Check provider availability"
+    },
+    "methods": [
+      "getProvider(id: AIProvider)",
+      "getProviderForModel(model: string)",
+      "listProviders()",
+      "listModels()",
+      "getCapabilities(provider)"
+    ]
+  },
+
+  "prompt": {
+    "mission": "Create provider registry",
+    "tasks": [
+      "Create ProviderRegistry singleton",
+      "Register all providers",
+      "Add model-to-provider mapping",
+      "Implement capability queries",
+      "Add health checks"
+    ],
+    "constraints": [
+      "Singleton pattern",
+      "Type-safe lookups",
+      "Lazy initialization"
+    ]
+  },
+
+  "outputs": {
+    "files": 2
+  }
+}

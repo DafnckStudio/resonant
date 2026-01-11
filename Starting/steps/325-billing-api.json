@@ -1,0 +1,56 @@
+{
+  "step": 325,
+  "id": "325-billing-api",
+  "phase": 10,
+  "phaseName": "Monetization & Billing",
+  "title": "Billing API",
+  "description": "Public billing API endpoints",
+  "estimatedMinutes": 35,
+  "priority": "P2",
+  "dependencies": ["306-subscription-management", "309-usage-tracking"],
+
+  "objective": {
+    "what": "Billing API endpoints",
+    "why": "Programmatic billing access",
+    "outcome": "Billing API"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/app/api/billing/subscription/route.ts",
+      "src/app/api/billing/usage/route.ts",
+      "src/app/api/billing/invoices/route.ts"
+    ],
+    "endpoints": {
+      "subscription": "GET/POST subscription info",
+      "usage": "GET current usage",
+      "invoices": "GET invoice list",
+      "limits": "GET plan limits"
+    },
+    "responses": {
+      "format": "JSON responses",
+      "errors": "Standard error format",
+      "pagination": "Paginated lists"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create billing API",
+    "tasks": [
+      "Subscription status endpoint",
+      "Usage metrics endpoint",
+      "Invoice list endpoint",
+      "Plan limits endpoint",
+      "Add rate limiting"
+    ],
+    "constraints": [
+      "Authenticated access only",
+      "Consistent response format",
+      "Rate limited"
+    ]
+  },
+
+  "outputs": {
+    "files": 3
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "step": 164,
+  "id": "164-utility-log-block",
+  "phase": 5,
+  "phaseName": "Block System",
+  "title": "Log/Debug Block",
+  "description": "Create logging/debug block",
+  "estimatedMinutes": 20,
+  "priority": "P1",
+  "dependencies": ["142-block-registry"],
+
+  "objective": {
+    "what": "Create log block",
+    "why": "Debug workflow data flow",
+    "outcome": "Log data to execution log"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/components/editor/blocks/utility/log-block.tsx"
+    ],
+    "config": {
+      "label": "Log label",
+      "level": "info/warn/error/debug",
+      "format": "json/text"
+    },
+    "inputs": {
+      "data": "Data to log"
+    },
+    "outputs": {
+      "data": "Pass-through data"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create log block",
+    "tasks": [
+      "Create LogBlock component",
+      "Add log level selector",
+      "Format output nicely",
+      "Show in execution logs",
+      "Pass data through"
+    ],
+    "constraints": [
+      "Don't block execution",
+      "Pretty print JSON"
+    ]
+  },
+
+  "outputs": {
+    "files": 1
+  }
+}

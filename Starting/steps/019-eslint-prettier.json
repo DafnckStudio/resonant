@@ -1,0 +1,72 @@
+{
+  "step": 19,
+  "id": "019-eslint-prettier",
+  "phase": 0,
+  "phaseName": "Foundation Setup",
+  "title": "Configure ESLint and Prettier",
+  "description": "Set up ESLint with strict rules and Prettier for code formatting",
+  "estimatedMinutes": 15,
+  "priority": "P1",
+  "dependencies": ["018-typescript-config"],
+
+  "objective": {
+    "what": "Configure ESLint with React, TypeScript, and accessibility rules plus Prettier",
+    "why": "Consistent code style and automatic error detection improve code quality",
+    "outcome": "ESLint and Prettier working with pre-commit hooks"
+  },
+
+  "specifications": {
+    "commands": [
+      "pnpm add -D prettier eslint-config-prettier eslint-plugin-jsx-a11y"
+    ],
+    "filesToCreate": [
+      ".prettierrc",
+      ".prettierignore"
+    ],
+    "filesToModify": [
+      "eslint.config.mjs"
+    ],
+    "prettierConfig": {
+      "semi": true,
+      "singleQuote": false,
+      "tabWidth": 2,
+      "trailingComma": "es5",
+      "printWidth": 100,
+      "plugins": ["prettier-plugin-tailwindcss"]
+    },
+    "eslintRules": {
+      "@typescript-eslint/no-explicit-any": "error",
+      "@typescript-eslint/no-unused-vars": "error",
+      "react-hooks/rules-of-hooks": "error",
+      "react-hooks/exhaustive-deps": "warn",
+      "jsx-a11y/alt-text": "error",
+      "jsx-a11y/aria-props": "error"
+    }
+  },
+
+  "prompt": {
+    "mission": "Configure ESLint and Prettier for code quality",
+    "tasks": [
+      "Add Prettier with Tailwind plugin",
+      "Extend ESLint with accessibility rules",
+      "Add no-explicit-any as error",
+      "Configure .prettierignore"
+    ],
+    "constraints": [
+      "no-any must be error (not warn)",
+      "Accessibility rules enabled"
+    ]
+  },
+
+  "validation": {
+    "automated": [
+      "pnpm lint passes",
+      "pnpm format works"
+    ]
+  },
+
+  "outputs": {
+    "files": [".prettierrc", "eslint.config.mjs"],
+    "scripts": ["lint", "format"]
+  }
+}

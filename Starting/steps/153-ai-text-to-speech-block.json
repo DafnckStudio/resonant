@@ -1,0 +1,54 @@
+{
+  "step": 153,
+  "id": "153-ai-text-to-speech-block",
+  "phase": 5,
+  "phaseName": "Block System",
+  "title": "AI Text-to-Speech Block",
+  "description": "Create text-to-speech audio generation block",
+  "estimatedMinutes": 35,
+  "priority": "P2",
+  "dependencies": ["148-ai-text-generation-block"],
+
+  "objective": {
+    "what": "Create text-to-speech block",
+    "why": "Generate audio from text",
+    "outcome": "Voice synthesis output"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/components/editor/blocks/ai/text-to-speech-block.tsx"
+    ],
+    "config": {
+      "model": "tts-1/tts-1-hd",
+      "voice": "alloy/echo/fable/onyx/nova/shimmer",
+      "speed": "0.25-4.0"
+    },
+    "inputs": {
+      "text": "Text to speak"
+    },
+    "outputs": {
+      "audio": "Generated audio URL",
+      "duration": "Audio duration"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create TTS block",
+    "tasks": [
+      "Create TextToSpeechBlock component",
+      "Add voice selector with preview",
+      "Add speed control",
+      "Show audio player",
+      "Handle long text"
+    ],
+    "constraints": [
+      "Use OpenAI TTS",
+      "Preview voice samples"
+    ]
+  },
+
+  "outputs": {
+    "files": 1
+  }
+}

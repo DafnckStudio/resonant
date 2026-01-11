@@ -1,0 +1,46 @@
+{
+  "step": 38,
+  "id": "038-workspace-settings",
+  "phase": 1,
+  "phaseName": "Core UI & Layout",
+  "title": "Create Workspace Settings Page",
+  "description": "Build workspace settings for name, logo, and configuration",
+  "estimatedMinutes": 25,
+  "priority": "P1",
+  "dependencies": ["037-profile-settings"],
+
+  "objective": {
+    "what": "Create workspace settings page for managing workspace details",
+    "why": "Workspace admins need to configure workspace settings",
+    "outcome": "Workspace form with name, slug, logo, and delete option"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/app/(dashboard)/settings/workspace/page.tsx",
+      "src/components/settings/workspace-form.tsx",
+      "src/components/settings/danger-zone.tsx"
+    ],
+    "sections": {
+      "general": "Name, slug, description",
+      "branding": "Logo upload",
+      "dangerZone": "Delete workspace (with confirmation)"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create workspace settings page",
+    "tasks": [
+      "Create workspace settings page",
+      "Build WorkspaceForm component",
+      "Add logo upload",
+      "Create DangerZone for delete",
+      "Add permission check (owner only)"
+    ]
+  },
+
+  "outputs": {
+    "files": 3,
+    "components": ["WorkspaceForm", "DangerZone"]
+  }
+}

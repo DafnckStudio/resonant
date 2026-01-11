@@ -1,0 +1,55 @@
+{
+  "step": 229,
+  "id": "229-collaborative-undo-redo",
+  "phase": 7,
+  "phaseName": "Real-time Collaboration",
+  "title": "Collaborative Undo/Redo",
+  "description": "User-scoped undo in collaborative context",
+  "estimatedMinutes": 50,
+  "priority": "P1",
+  "dependencies": ["113-undo-redo-system", "224-react-flow-yjs-binding"],
+
+  "objective": {
+    "what": "Implement collaborative undo",
+    "why": "Undo own changes without affecting others",
+    "outcome": "Per-user undo/redo"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/lib/collaboration/history/undo-manager.ts",
+      "src/lib/collaboration/history/operation-tracker.ts"
+    ],
+    "features": {
+      "userScoped": "Undo only own changes",
+      "tracking": "Track operations by user",
+      "preservation": "Don't undo others' work",
+      "conflicts": "Handle undo conflicts"
+    },
+    "implementation": {
+      "yUndoManager": "Use Yjs UndoManager",
+      "scope": "Track per-user origins",
+      "stack": "Per-user undo stacks"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create collaborative undo",
+    "tasks": [
+      "Set up Yjs UndoManager",
+      "Track user origins",
+      "Scope undo to user",
+      "Handle conflicts",
+      "Update UI controls"
+    ],
+    "constraints": [
+      "Only undo own changes",
+      "Clear redo behavior",
+      "Handle edge cases"
+    ]
+  },
+
+  "outputs": {
+    "files": 2
+  }
+}

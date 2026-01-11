@@ -1,0 +1,53 @@
+{
+  "step": 123,
+  "id": "123-workflow-validation",
+  "phase": 4,
+  "phaseName": "Workflow Editor Core",
+  "title": "Workflow Validation System",
+  "description": "Validate workflow structure and configuration",
+  "estimatedMinutes": 40,
+  "priority": "P0",
+  "dependencies": ["120-workflow-state-management"],
+
+  "objective": {
+    "what": "Create workflow validation system",
+    "why": "Catch errors before execution",
+    "outcome": "Real-time validation with visual feedback"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/lib/editor/workflow-validator.ts",
+      "src/hooks/use-workflow-validation.ts",
+      "src/components/editor/validation/validation-panel.tsx"
+    ],
+    "rules": {
+      "hasStart": "Must have input/trigger block",
+      "hasEnd": "Must have output block",
+      "noOrphans": "All nodes must be connected",
+      "noLoops": "No circular dependencies",
+      "configComplete": "All required fields filled"
+    },
+    "errorLevels": ["error", "warning", "info"]
+  },
+
+  "prompt": {
+    "mission": "Create validation system",
+    "tasks": [
+      "Create WorkflowValidator class",
+      "Implement validation rules",
+      "Create useWorkflowValidation hook",
+      "Add ValidationPanel component",
+      "Highlight invalid nodes",
+      "Show validation on save"
+    ],
+    "constraints": [
+      "Run validation on change",
+      "Debounce for performance"
+    ]
+  },
+
+  "outputs": {
+    "files": 3
+  }
+}

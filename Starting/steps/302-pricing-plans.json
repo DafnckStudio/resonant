@@ -1,0 +1,56 @@
+{
+  "step": 302,
+  "id": "302-pricing-plans",
+  "phase": 10,
+  "phaseName": "Monetization & Billing",
+  "title": "Pricing Plans",
+  "description": "Define pricing tiers",
+  "estimatedMinutes": 30,
+  "priority": "P0",
+  "dependencies": ["301-billing-schema"],
+
+  "objective": {
+    "what": "Define pricing plans",
+    "why": "Clear product tiers",
+    "outcome": "Pricing structure"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/lib/billing/plans.ts",
+      "src/lib/billing/features.ts"
+    ],
+    "plans": {
+      "free": "Free tier with limits",
+      "pro": "$29/mo professional",
+      "team": "$79/mo team features",
+      "enterprise": "Custom enterprise"
+    },
+    "features": {
+      "workflows": "Workflow limits",
+      "executions": "Executions/month",
+      "collaboration": "Team size",
+      "aiModels": "AI model access"
+    }
+  },
+
+  "prompt": {
+    "mission": "Define pricing plans",
+    "tasks": [
+      "Create plan definitions",
+      "Define feature limits",
+      "Set pricing per tier",
+      "Plan upgrade paths",
+      "Enterprise custom"
+    ],
+    "constraints": [
+      "Competitive pricing",
+      "Clear value props",
+      "Upgrade incentives"
+    ]
+  },
+
+  "outputs": {
+    "files": 2
+  }
+}

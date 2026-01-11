@@ -1,0 +1,55 @@
+{
+  "step": 182,
+  "id": "182-anthropic-provider",
+  "phase": 6,
+  "phaseName": "AI Router & Execution",
+  "title": "Anthropic Provider Implementation",
+  "description": "Implement Claude API integration",
+  "estimatedMinutes": 45,
+  "priority": "P0",
+  "dependencies": ["181-ai-provider-types"],
+
+  "objective": {
+    "what": "Create Anthropic/Claude provider",
+    "why": "Primary AI provider for high-quality generation",
+    "outcome": "Working Claude integration"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/lib/ai/providers/anthropic.ts",
+      "src/lib/ai/providers/anthropic-models.ts"
+    ],
+    "models": [
+      "claude-3-5-sonnet-20241022",
+      "claude-3-opus-20240229",
+      "claude-3-haiku-20240307"
+    ],
+    "features": {
+      "text": "Text generation with system prompts",
+      "vision": "Image analysis with Claude 3",
+      "streaming": "Server-sent events streaming",
+      "tools": "Function calling support"
+    }
+  },
+
+  "prompt": {
+    "mission": "Implement Anthropic provider",
+    "tasks": [
+      "Create AnthropicProvider class",
+      "Implement text generation",
+      "Add vision support",
+      "Implement streaming",
+      "Add error handling"
+    ],
+    "constraints": [
+      "Use Vercel AI SDK",
+      "Handle rate limits",
+      "Support all Claude 3 models"
+    ]
+  },
+
+  "outputs": {
+    "files": 2
+  }
+}

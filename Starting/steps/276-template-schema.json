@@ -1,0 +1,54 @@
+{
+  "step": 276,
+  "id": "276-template-schema",
+  "phase": 9,
+  "phaseName": "Templates & Marketplace",
+  "title": "Template Schema",
+  "description": "Database schema for templates",
+  "estimatedMinutes": 25,
+  "priority": "P0",
+  "dependencies": ["275-phase8-integration"],
+
+  "objective": {
+    "what": "Create template schema",
+    "why": "Foundation for templates",
+    "outcome": "Template data model"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "convex/schema/templates.ts"
+    ],
+    "tables": {
+      "templates": "Template definitions",
+      "templateCategories": "Categories/tags",
+      "templateUsage": "Usage statistics"
+    },
+    "fields": {
+      "workflow": "Template workflow data",
+      "metadata": "Name, description, thumbnail",
+      "author": "Creator reference",
+      "pricing": "Free/paid/premium"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create template schema",
+    "tasks": [
+      "Define templates table",
+      "Add categories table",
+      "Create usage tracking",
+      "Add indexes",
+      "Plan relationships"
+    ],
+    "constraints": [
+      "Efficient queries",
+      "Flexible metadata",
+      "Convex patterns"
+    ]
+  },
+
+  "outputs": {
+    "files": 1
+  }
+}

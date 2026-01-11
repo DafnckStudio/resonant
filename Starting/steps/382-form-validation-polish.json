@@ -1,0 +1,57 @@
+{
+  "step": 382,
+  "id": "382-form-validation-polish",
+  "phase": 12,
+  "phaseName": "Testing & Polish",
+  "title": "Form Validation Polish",
+  "description": "Polish form validation and error states",
+  "estimatedMinutes": 30,
+  "priority": "P2",
+  "dependencies": [],
+
+  "objective": {
+    "what": "Form validation polish",
+    "why": "User experience",
+    "outcome": "Perfect form UX"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/lib/validation/schemas.ts",
+      "src/components/ui/form-field.tsx",
+      "src/hooks/use-form-validation.ts"
+    ],
+    "validation": {
+      "realtime": "Real-time validation",
+      "messages": "Clear error messages",
+      "focus": "Focus management",
+      "submit": "Submit validation"
+    },
+    "patterns": {
+      "inline": "Inline errors",
+      "summary": "Error summary",
+      "success": "Success states",
+      "hints": "Field hints"
+    }
+  },
+
+  "prompt": {
+    "mission": "Polish form validation",
+    "tasks": [
+      "Standardize Zod schemas",
+      "Create form field component",
+      "Add real-time validation",
+      "Polish error messages",
+      "Add success states"
+    ],
+    "constraints": [
+      "Zod + React Hook Form",
+      "Accessible errors",
+      "Consistent patterns"
+    ]
+  },
+
+  "outputs": {
+    "files": 3
+  }
+}

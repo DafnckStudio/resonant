@@ -1,0 +1,53 @@
+{
+  "step": 127,
+  "id": "127-node-comments",
+  "phase": 4,
+  "phaseName": "Workflow Editor Core",
+  "title": "Node Comments",
+  "description": "Add comment annotations to nodes",
+  "estimatedMinutes": 30,
+  "priority": "P2",
+  "dependencies": ["103-custom-node-base"],
+
+  "objective": {
+    "what": "Add comments to individual nodes",
+    "why": "Document node purpose and config",
+    "outcome": "Comment icon with popover"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/components/editor/nodes/node-comment.tsx"
+    ],
+    "filesToModify": [
+      "src/components/editor/nodes/base-node.tsx"
+    ],
+    "features": {
+      "add": "Click to add comment",
+      "view": "Hover to view",
+      "edit": "Click to edit",
+      "indicator": "Small icon when has comment"
+    }
+  },
+
+  "prompt": {
+    "mission": "Add node comments",
+    "tasks": [
+      "Create NodeComment component",
+      "Add comment to node data",
+      "Show comment indicator",
+      "Create comment popover",
+      "Allow editing",
+      "Persist with node"
+    ],
+    "constraints": [
+      "Use shadcn Popover",
+      "Support markdown"
+    ]
+  },
+
+  "outputs": {
+    "files": 1,
+    "filesModified": 1
+  }
+}

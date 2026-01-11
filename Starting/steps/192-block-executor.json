@@ -1,0 +1,61 @@
+{
+  "step": 192,
+  "id": "192-block-executor",
+  "phase": 6,
+  "phaseName": "AI Router & Execution",
+  "title": "Block Executor",
+  "description": "Execute individual blocks in workflow",
+  "estimatedMinutes": 60,
+  "priority": "P0",
+  "dependencies": ["191-workflow-executor-core"],
+
+  "objective": {
+    "what": "Create block execution system",
+    "why": "Execute each block type correctly",
+    "outcome": "Working block executor"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/lib/execution/block-executor.ts",
+      "src/lib/execution/executors/input-executors.ts",
+      "src/lib/execution/executors/ai-executors.ts",
+      "src/lib/execution/executors/transform-executors.ts",
+      "src/lib/execution/executors/logic-executors.ts",
+      "src/lib/execution/executors/output-executors.ts"
+    ],
+    "execution": {
+      "input": "Resolve inputs from context",
+      "process": "Execute block logic",
+      "output": "Store results in context"
+    },
+    "handlers": {
+      "input": "Trigger, webhook, schedule handlers",
+      "ai": "Call AI provider with router",
+      "transform": "Data transformation logic",
+      "logic": "Conditional routing",
+      "output": "Emit results"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create block executor",
+    "tasks": [
+      "Create BlockExecutor base class",
+      "Implement input block executors",
+      "Implement AI block executors",
+      "Implement transform executors",
+      "Implement logic executors",
+      "Implement output executors"
+    ],
+    "constraints": [
+      "Handle errors per block",
+      "Support timeouts",
+      "Track execution time"
+    ]
+  },
+
+  "outputs": {
+    "files": 6
+  }
+}

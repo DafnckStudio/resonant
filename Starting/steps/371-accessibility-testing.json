@@ -1,0 +1,57 @@
+{
+  "step": 371,
+  "id": "371-accessibility-testing",
+  "phase": 12,
+  "phaseName": "Testing & Polish",
+  "title": "Accessibility Testing",
+  "description": "WCAG compliance testing",
+  "estimatedMinutes": 40,
+  "priority": "P1",
+  "dependencies": ["361-test-setup"],
+
+  "objective": {
+    "what": "Accessibility tests",
+    "why": "WCAG compliance",
+    "outcome": "Accessible application"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "tests/a11y/navigation.test.ts",
+      "tests/a11y/forms.test.ts",
+      "tests/a11y/canvas.test.ts",
+      "tests/a11y/audit.ts"
+    ],
+    "standards": {
+      "wcag": "WCAG 2.1 AA",
+      "aria": "ARIA best practices",
+      "keyboard": "Keyboard navigation",
+      "screen": "Screen reader support"
+    },
+    "tools": {
+      "axe": "Axe-core testing",
+      "lighthouse": "Lighthouse a11y",
+      "manual": "Manual testing"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create accessibility tests",
+    "tasks": [
+      "Test keyboard navigation",
+      "Test screen reader support",
+      "Run axe-core audits",
+      "Test form accessibility",
+      "Test color contrast"
+    ],
+    "constraints": [
+      "WCAG 2.1 AA",
+      "Zero critical violations",
+      "Full keyboard access"
+    ]
+  },
+
+  "outputs": {
+    "files": 4
+  }
+}

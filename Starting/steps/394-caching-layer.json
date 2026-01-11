@@ -1,0 +1,56 @@
+{
+  "step": 394,
+  "id": "394-caching-layer",
+  "phase": 12,
+  "phaseName": "Testing & Polish",
+  "title": "Caching Layer",
+  "description": "Implement caching strategies",
+  "estimatedMinutes": 35,
+  "priority": "P2",
+  "dependencies": [],
+
+  "objective": {
+    "what": "Caching layer",
+    "why": "Performance boost",
+    "outcome": "Fast responses"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/lib/cache/client-cache.ts",
+      "src/lib/cache/server-cache.ts",
+      "src/lib/cache/invalidation.ts"
+    ],
+    "caching": {
+      "client": "Client-side caching",
+      "server": "Server-side caching",
+      "cdn": "CDN caching",
+      "api": "API response caching"
+    },
+    "strategies": {
+      "stale": "Stale-while-revalidate",
+      "ttl": "TTL-based",
+      "manual": "Manual invalidation"
+    }
+  },
+
+  "prompt": {
+    "mission": "Implement caching",
+    "tasks": [
+      "Add client caching",
+      "Implement server cache",
+      "Configure CDN headers",
+      "Add cache invalidation",
+      "Set appropriate TTLs"
+    ],
+    "constraints": [
+      "Convex real-time aware",
+      "Proper invalidation",
+      "Cache busting"
+    ]
+  },
+
+  "outputs": {
+    "files": 3
+  }
+}

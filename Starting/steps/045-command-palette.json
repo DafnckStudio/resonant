@@ -1,0 +1,58 @@
+{
+  "step": 45,
+  "id": "045-command-palette",
+  "phase": 1,
+  "phaseName": "Core UI & Layout",
+  "title": "Create Command Palette (⌘K)",
+  "description": "Build command palette for quick navigation and actions",
+  "estimatedMinutes": 35,
+  "priority": "P1",
+  "dependencies": ["022-sidebar-navigation"],
+
+  "objective": {
+    "what": "Create a command palette accessible via ⌘K / Ctrl+K",
+    "why": "Power users need quick keyboard navigation",
+    "outcome": "Searchable command palette with actions and navigation"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/components/command-palette/command-palette.tsx",
+      "src/components/command-palette/command-item.tsx",
+      "src/hooks/use-command-palette.ts"
+    ],
+    "features": {
+      "search": "Fuzzy search across items",
+      "navigation": "Go to workflows, templates, settings",
+      "actions": "Create workflow, run workflow",
+      "recent": "Recently accessed items",
+      "keyboard": "Full keyboard navigation"
+    },
+    "shortcuts": {
+      "open": "⌘K / Ctrl+K",
+      "navigate": "↑↓ arrows",
+      "select": "Enter",
+      "close": "Escape"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create command palette component",
+    "tasks": [
+      "Create CommandPalette using shadcn/ui Command",
+      "Add search functionality",
+      "Implement navigation commands",
+      "Add action commands",
+      "Create keyboard shortcut hook"
+    ],
+    "constraints": [
+      "Use shadcn/ui Command component",
+      "Support both Mac and Windows shortcuts"
+    ]
+  },
+
+  "outputs": {
+    "files": 3,
+    "components": ["CommandPalette", "CommandItem"]
+  }
+}

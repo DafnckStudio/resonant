@@ -1,0 +1,55 @@
+{
+  "step": 150,
+  "id": "150-ai-vision-block",
+  "phase": 5,
+  "phaseName": "Block System",
+  "title": "AI Vision Analysis Block",
+  "description": "Create AI vision/image analysis block",
+  "estimatedMinutes": 40,
+  "priority": "P1",
+  "dependencies": ["148-ai-text-generation-block"],
+
+  "objective": {
+    "what": "Create AI vision block",
+    "why": "Analyze and understand images",
+    "outcome": "Image-to-text analysis"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/components/editor/blocks/ai/vision-block.tsx"
+    ],
+    "config": {
+      "model": "gpt-4o/claude-3-opus",
+      "detail": "low/high",
+      "prompt": "Analysis instructions"
+    },
+    "inputs": {
+      "image": "Image URL or file",
+      "prompt": "What to analyze"
+    },
+    "outputs": {
+      "analysis": "Vision analysis text",
+      "objects": "Detected objects (if supported)"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create AI vision block",
+    "tasks": [
+      "Create VisionBlock component",
+      "Handle image input",
+      "Add analysis prompt",
+      "Show image preview",
+      "Display analysis results"
+    ],
+    "constraints": [
+      "Support URL and file",
+      "Handle large images"
+    ]
+  },
+
+  "outputs": {
+    "files": 1
+  }
+}

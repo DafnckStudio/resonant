@@ -1,0 +1,48 @@
+{
+  "step": 89,
+  "id": "089-recent-workflows",
+  "phase": 3,
+  "phaseName": "Workspace & Projects",
+  "title": "Show Recent Workflows",
+  "description": "Display recently accessed workflows",
+  "estimatedMinutes": 20,
+  "priority": "P1",
+  "dependencies": ["081-workflow-crud"],
+
+  "objective": {
+    "what": "Track and show recently accessed workflows",
+    "why": "Quick access to recently used workflows improves UX",
+    "outcome": "Recent workflows section on dashboard"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/components/workflow/recent-workflows.tsx",
+      "src/hooks/use-recent-workflows.ts"
+    ],
+    "filesToModify": [
+      "src/app/(dashboard)/page.tsx"
+    ],
+    "features": {
+      "track": "Track last accessed timestamp",
+      "display": "Show 6 most recent",
+      "persist": "Store in localStorage + Convex"
+    }
+  },
+
+  "prompt": {
+    "mission": "Show recent workflows",
+    "tasks": [
+      "Create RecentWorkflows component",
+      "Track access timestamp on view",
+      "Build useRecentWorkflows hook",
+      "Show on dashboard home",
+      "Handle empty state"
+    ]
+  },
+
+  "outputs": {
+    "files": 2,
+    "filesModified": 1
+  }
+}

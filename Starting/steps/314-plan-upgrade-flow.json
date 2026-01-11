@@ -1,0 +1,57 @@
+{
+  "step": 314,
+  "id": "314-plan-upgrade-flow",
+  "phase": 10,
+  "phaseName": "Monetization & Billing",
+  "title": "Plan Upgrade Flow",
+  "description": "Upgrade subscription plans",
+  "estimatedMinutes": 35,
+  "priority": "P1",
+  "dependencies": ["306-subscription-management"],
+
+  "objective": {
+    "what": "Plan upgrade experience",
+    "why": "Revenue growth",
+    "outcome": "Seamless upgrades"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/lib/billing/upgrade.ts",
+      "src/components/billing/upgrade-modal.tsx",
+      "src/components/billing/plan-comparison.tsx"
+    ],
+    "features": {
+      "compare": "Compare current vs new plan",
+      "prorate": "Show prorated amount",
+      "confirm": "Confirmation dialog",
+      "instant": "Instant upgrade"
+    },
+    "display": {
+      "features": "Feature comparison table",
+      "price": "Price difference",
+      "billing": "Next billing date",
+      "proration": "Proration explanation"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create plan upgrade flow",
+    "tasks": [
+      "Build upgrade modal",
+      "Calculate proration",
+      "Show feature comparison",
+      "Process upgrade via Stripe",
+      "Update local subscription"
+    ],
+    "constraints": [
+      "Clear pricing display",
+      "Instant activation",
+      "Error handling"
+    ]
+  },
+
+  "outputs": {
+    "files": 3
+  }
+}

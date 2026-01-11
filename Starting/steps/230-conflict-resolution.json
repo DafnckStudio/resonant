@@ -1,0 +1,56 @@
+{
+  "step": 230,
+  "id": "230-conflict-resolution",
+  "phase": 7,
+  "phaseName": "Real-time Collaboration",
+  "title": "Conflict Resolution",
+  "description": "Handle concurrent edit conflicts",
+  "estimatedMinutes": 45,
+  "priority": "P1",
+  "dependencies": ["224-react-flow-yjs-binding"],
+
+  "objective": {
+    "what": "Implement conflict resolution",
+    "why": "Handle simultaneous edits gracefully",
+    "outcome": "Seamless conflict handling"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/lib/collaboration/conflicts/conflict-resolver.ts",
+      "src/lib/collaboration/conflicts/merge-strategies.ts"
+    ],
+    "conflicts": {
+      "position": "Same node moved by two users",
+      "property": "Same property edited",
+      "structure": "Node deleted while editing",
+      "connection": "Edge endpoints changed"
+    },
+    "strategies": {
+      "lastWrite": "Last write wins",
+      "merge": "Merge compatible changes",
+      "prompt": "Ask user to resolve",
+      "reject": "Reject conflicting change"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create conflict resolution",
+    "tasks": [
+      "Identify conflict types",
+      "Implement merge strategies",
+      "Handle position conflicts",
+      "Handle property conflicts",
+      "Add conflict notifications"
+    ],
+    "constraints": [
+      "Minimize data loss",
+      "User notification",
+      "Automatic when possible"
+    ]
+  },
+
+  "outputs": {
+    "files": 2
+  }
+}

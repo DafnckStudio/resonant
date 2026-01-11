@@ -1,0 +1,86 @@
+{
+  "step": 9,
+  "id": "009-convex-schema-versions",
+  "phase": 0,
+  "phaseName": "Foundation Setup",
+  "title": "Create Convex Schema - Workflow Versions Table",
+  "description": "Define workflowVersions table for git-like version control",
+  "estimatedMinutes": 15,
+  "priority": "P0",
+  "dependencies": ["008-convex-schema-workflows"],
+
+  "objective": {
+    "what": "Create workflowVersions table to store workflow snapshots with commit-like semantics",
+    "why": "Version control enables rollback, branching, and safe experimentation",
+    "outcome": "Version table with parent references for commit history"
+  },
+
+  "context": {
+    "dataModel": "Versions store snapshots of workflow state with commit messages",
+    "features": ["Rollback", "History browsing", "Diff viewing", "Branch support"]
+  },
+
+  "specifications": {
+    "filesToModify": [
+      "convex/schema.ts"
+    ],
+    "schema": {
+      "workflowVersions": {
+        "fields": {
+          "workflowId": "v.id('workflows') - Parent workflow",
+          "version": "v.number() - Version number",
+          "name": "v.optional(v.string()) - Version name/tag",
+          "description": "v.optional(v.string()) - Commit message",
+          "nodes": "v.array(...) - Snapshot of nodes",
+          "edges": "v.array(...) - Snapshot of edges",
+          "variables": "v.optional(v.array(...)) - Snapshot of variables",
+          "createdBy": "v.id('users') - Who created",
+          "parentVersion": "v.optional(v.number()) - Parent for branching",
+          "isAutoSave": "v.boolean() - Auto-save vs manual commit",
+          "createdAt": "v.number()"
+        },
+        "indexes": [
+          { "name": "by_workflowId", "fields": ["workflowId"] },
+          { "name": "by_workflowId_version", "fields": ["workflowId", "version"] },
+          { "name": "by_createdBy", "fields": ["createdBy"] }
+        ]
+      }
+    }
+  },
+
+  "prompt": {
+    "mission": "Add workflowVersions table for version control",
+    "tasks": [
+      "Add workflowVersions table with snapshot fields",
+      "Include parent reference for branch support",
+      "Add isAutoSave flag to distinguish manual commits",
+      "Create indexes for efficient history queries"
+    ],
+    "constraints": [
+      "Version numbers must be sequential per workflow",
+      "Store complete snapshots (not diffs)",
+      "Include createdBy for audit trail"
+    ],
+    "validation": [
+      "Schema pushes successfully",
+      "Can store version snapshots"
+    ]
+  },
+
+  "validation": {
+    "automated": [
+      "Schema validates",
+      "Foreign key references valid"
+    ],
+    "functional": [
+      "Can create versions",
+      "Version history queryable"
+    ]
+  },
+
+  "outputs": {
+    "files": ["convex/schema.ts"],
+    "tables": ["workflowVersions"],
+    "indexes": 3
+  }
+}

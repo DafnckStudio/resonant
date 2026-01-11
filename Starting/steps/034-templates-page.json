@@ -1,0 +1,56 @@
+{
+  "step": 34,
+  "id": "034-templates-page",
+  "phase": 1,
+  "phaseName": "Core UI & Layout",
+  "title": "Create Templates Gallery Page",
+  "description": "Build template browser with categories and preview",
+  "estimatedMinutes": 30,
+  "priority": "P1",
+  "dependencies": ["033-workflow-card-component"],
+
+  "objective": {
+    "what": "Create templates page with category navigation and template cards",
+    "why": "Templates help users get started quickly with pre-built workflows",
+    "outcome": "Templates gallery with categories and use template action"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/app/(dashboard)/templates/page.tsx",
+      "src/components/templates/template-card.tsx",
+      "src/components/templates/template-categories.tsx",
+      "src/components/templates/template-preview.tsx"
+    ],
+    "categories": [
+      "Content Creation",
+      "Marketing",
+      "Data Processing",
+      "Customer Support",
+      "Sales",
+      "Research"
+    ],
+    "features": {
+      "categoryNav": "Sidebar or tabs",
+      "search": "Search templates",
+      "preview": "Modal preview with details",
+      "useTemplate": "Create workflow from template"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create templates gallery page",
+    "tasks": [
+      "Create templates page with categories",
+      "Build TemplateCard component",
+      "Add category navigation",
+      "Create template preview modal",
+      "Add Use Template action"
+    ]
+  },
+
+  "outputs": {
+    "files": 4,
+    "components": ["TemplateCard", "TemplateCategories", "TemplatePreview"]
+  }
+}

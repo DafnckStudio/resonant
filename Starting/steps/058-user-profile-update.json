@@ -1,0 +1,49 @@
+{
+  "step": 58,
+  "id": "058-user-profile-update",
+  "phase": 2,
+  "phaseName": "Authentication & Users",
+  "title": "Implement User Profile Update",
+  "description": "Add functionality to update user profile in settings",
+  "estimatedMinutes": 25,
+  "priority": "P1",
+  "dependencies": ["037-profile-settings", "055-user-context"],
+
+  "objective": {
+    "what": "Allow users to update their profile information",
+    "why": "Users need to manage their account details",
+    "outcome": "Working profile update with Clerk and Convex sync"
+  },
+
+  "specifications": {
+    "filesToModify": [
+      "src/components/settings/profile-form.tsx",
+      "convex/users.ts"
+    ],
+    "fields": {
+      "clerk": ["firstName", "lastName", "imageUrl"],
+      "convex": ["timezone", "defaultProviderId", "notifications"]
+    },
+    "features": {
+      "avatar": "Update via Clerk UserProfile",
+      "preferences": "Store in Convex",
+      "validation": "Zod validation"
+    }
+  },
+
+  "prompt": {
+    "mission": "Implement profile update",
+    "tasks": [
+      "Wire ProfileForm to real data",
+      "Create updateUserProfile mutation",
+      "Add Zod validation schema",
+      "Handle form submission",
+      "Show success/error toast"
+    ]
+  },
+
+  "outputs": {
+    "filesModified": 2,
+    "mutations": ["updateUserProfile"]
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "step": 98,
+  "id": "098-workspace-transfer",
+  "phase": 3,
+  "phaseName": "Workspace & Projects",
+  "title": "Implement Workspace Ownership Transfer",
+  "description": "Allow transferring workspace ownership",
+  "estimatedMinutes": 25,
+  "priority": "P3",
+  "dependencies": ["080-workspace-delete"],
+
+  "objective": {
+    "what": "Allow owners to transfer workspace ownership",
+    "why": "Organizations need ownership changes",
+    "outcome": "Secure ownership transfer flow"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/components/settings/transfer-ownership-dialog.tsx"
+    ],
+    "filesToModify": [
+      "src/components/settings/danger-zone.tsx",
+      "convex/workspaces.ts"
+    ],
+    "flow": [
+      "Owner clicks transfer in danger zone",
+      "Select new owner from admins",
+      "Confirm with password/2FA",
+      "Transfer ownership",
+      "Demote old owner to admin"
+    ]
+  },
+
+  "prompt": {
+    "mission": "Implement ownership transfer",
+    "tasks": [
+      "Create TransferOwnershipDialog",
+      "List eligible members (admins)",
+      "Add confirmation step",
+      "Create transfer mutation",
+      "Send notification to new owner"
+    ],
+    "constraints": [
+      "Only admins can become owners",
+      "Require confirmation"
+    ]
+  },
+
+  "outputs": {
+    "files": 1,
+    "filesModified": 2
+  }
+}

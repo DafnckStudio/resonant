@@ -1,0 +1,57 @@
+{
+  "step": 249,
+  "id": "249-collaboration-testing",
+  "phase": 7,
+  "phaseName": "Real-time Collaboration",
+  "title": "Collaboration Testing",
+  "description": "Comprehensive collaboration tests",
+  "estimatedMinutes": 50,
+  "priority": "P1",
+  "dependencies": ["246-collaboration-error-recovery", "247-large-workflow-sync"],
+
+  "objective": {
+    "what": "Test collaboration thoroughly",
+    "why": "Real-time is complex to test",
+    "outcome": "Reliable collaboration"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/lib/collaboration/__tests__/sync.test.ts",
+      "src/lib/collaboration/__tests__/presence.test.ts",
+      "src/lib/collaboration/__tests__/conflicts.test.ts",
+      "e2e/collaboration.spec.ts"
+    ],
+    "testCases": {
+      "sync": "Multi-user sync scenarios",
+      "conflicts": "Conflict resolution",
+      "offline": "Offline/online transitions",
+      "performance": "Large workflow sync"
+    },
+    "e2e": {
+      "multiUser": "Multiple browser instances",
+      "realTime": "Real-time updates",
+      "cursors": "Cursor following"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create collaboration tests",
+    "tasks": [
+      "Unit test sync logic",
+      "Test conflict resolution",
+      "Test offline scenarios",
+      "E2E multi-user tests",
+      "Performance benchmarks"
+    ],
+    "constraints": [
+      "High coverage",
+      "Deterministic tests",
+      "CI-friendly"
+    ]
+  },
+
+  "outputs": {
+    "files": 4
+  }
+}

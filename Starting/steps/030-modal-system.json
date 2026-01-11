@@ -1,0 +1,58 @@
+{
+  "step": 30,
+  "id": "030-modal-system",
+  "phase": 1,
+  "phaseName": "Core UI & Layout",
+  "title": "Create Modal System",
+  "description": "Build reusable modal components and modal management system",
+  "estimatedMinutes": 25,
+  "priority": "P1",
+  "dependencies": ["029-toast-notifications"],
+
+  "objective": {
+    "what": "Create modal components and a modal management hook/context",
+    "why": "Modals are used throughout the app for forms and confirmations",
+    "outcome": "Modal system with confirm dialog, form modal, and full-screen modal"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/components/shared/modal.tsx",
+      "src/components/shared/confirm-dialog.tsx",
+      "src/components/shared/form-modal.tsx",
+      "src/hooks/use-modal.ts",
+      "src/providers/modal-provider.tsx"
+    ],
+    "components": {
+      "Modal": "Base modal wrapper",
+      "ConfirmDialog": "Yes/No confirmation",
+      "FormModal": "Modal with form support"
+    },
+    "hook": {
+      "useModal": "Open/close modal by ID",
+      "useConfirm": "Await confirmation result"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create modal system for Resonant.ai",
+    "tasks": [
+      "Create Modal base component",
+      "Create ConfirmDialog for destructive actions",
+      "Create FormModal wrapper",
+      "Build useModal hook for programmatic control",
+      "Create ModalProvider context"
+    ],
+    "constraints": [
+      "Use shadcn Dialog as base",
+      "Support keyboard navigation",
+      "Trap focus inside modal"
+    ]
+  },
+
+  "outputs": {
+    "files": 5,
+    "components": ["Modal", "ConfirmDialog", "FormModal"],
+    "hooks": ["useModal", "useConfirm"]
+  }
+}

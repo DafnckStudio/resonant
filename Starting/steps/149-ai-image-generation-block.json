@@ -1,0 +1,57 @@
+{
+  "step": 149,
+  "id": "149-ai-image-generation-block",
+  "phase": 5,
+  "phaseName": "Block System",
+  "title": "AI Image Generation Block",
+  "description": "Create AI image generation block",
+  "estimatedMinutes": 45,
+  "priority": "P0",
+  "dependencies": ["148-ai-text-generation-block"],
+
+  "objective": {
+    "what": "Create AI image generation block",
+    "why": "Visual content generation capability",
+    "outcome": "Multi-model image generation"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/components/editor/blocks/ai/image-generation-block.tsx"
+    ],
+    "config": {
+      "model": "dall-e-3/midjourney/stable-diffusion",
+      "size": "1024x1024/1792x1024/etc",
+      "quality": "standard/hd",
+      "style": "vivid/natural",
+      "n": "Number of images"
+    },
+    "inputs": {
+      "prompt": "Image description",
+      "negativePrompt": "What to avoid"
+    },
+    "outputs": {
+      "images": "Generated image URLs",
+      "metadata": "Generation metadata"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create AI image block",
+    "tasks": [
+      "Create ImageGenerationBlock component",
+      "Add model selector",
+      "Add size/quality options",
+      "Preview generated images",
+      "Handle multiple outputs"
+    ],
+    "constraints": [
+      "Support DALL-E, Midjourney patterns",
+      "Show cost estimates"
+    ]
+  },
+
+  "outputs": {
+    "files": 1
+  }
+}

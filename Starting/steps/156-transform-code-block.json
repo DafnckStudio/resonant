@@ -1,0 +1,55 @@
+{
+  "step": 156,
+  "id": "156-transform-code-block",
+  "phase": 5,
+  "phaseName": "Block System",
+  "title": "Code Transform Block",
+  "description": "Create custom code execution block",
+  "estimatedMinutes": 45,
+  "priority": "P1",
+  "dependencies": ["154-transform-text-block"],
+
+  "objective": {
+    "what": "Create code execution block",
+    "why": "Run custom JavaScript transformations",
+    "outcome": "Sandboxed JS execution"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/components/editor/blocks/transform/code-block.tsx",
+      "src/lib/blocks/code-sandbox.ts"
+    ],
+    "config": {
+      "language": "javascript",
+      "code": "Custom code",
+      "timeout": "Execution timeout ms"
+    },
+    "inputs": {
+      "input": "Any input data"
+    },
+    "outputs": {
+      "output": "Code return value",
+      "logs": "Console logs"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create code block",
+    "tasks": [
+      "Create CodeBlock component",
+      "Add Monaco editor",
+      "Create sandboxed executor",
+      "Handle async code",
+      "Show console output"
+    ],
+    "constraints": [
+      "Sandboxed execution",
+      "No network access in sandbox"
+    ]
+  },
+
+  "outputs": {
+    "files": 2
+  }
+}

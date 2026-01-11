@@ -1,0 +1,45 @@
+{
+  "step": 78,
+  "id": "078-workspace-switcher",
+  "phase": 3,
+  "phaseName": "Workspace & Projects",
+  "title": "Complete Workspace Switcher",
+  "description": "Wire workspace switcher to real data",
+  "estimatedMinutes": 25,
+  "priority": "P0",
+  "dependencies": ["077-create-workspace", "023-workspace-selector"],
+
+  "objective": {
+    "what": "Connect workspace switcher to Convex data",
+    "why": "Users need to switch between their workspaces",
+    "outcome": "Working dropdown with all workspaces and create option"
+  },
+
+  "specifications": {
+    "filesToModify": [
+      "src/components/layout/workspace-selector.tsx"
+    ],
+    "features": {
+      "list": "Show all user's workspaces",
+      "current": "Highlight current workspace",
+      "switch": "Click to switch workspace",
+      "create": "Open create dialog",
+      "search": "Search workspaces (if many)"
+    }
+  },
+
+  "prompt": {
+    "mission": "Wire workspace switcher",
+    "tasks": [
+      "Connect to useWorkspaces hook",
+      "Show current workspace indicator",
+      "Implement workspace switching",
+      "Add create workspace button",
+      "Add search for 5+ workspaces"
+    ]
+  },
+
+  "outputs": {
+    "filesModified": 1
+  }
+}

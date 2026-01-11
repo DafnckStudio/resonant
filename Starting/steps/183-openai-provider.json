@@ -1,0 +1,59 @@
+{
+  "step": 183,
+  "id": "183-openai-provider",
+  "phase": 6,
+  "phaseName": "AI Router & Execution",
+  "title": "OpenAI Provider Implementation",
+  "description": "Implement GPT API integration",
+  "estimatedMinutes": 45,
+  "priority": "P0",
+  "dependencies": ["181-ai-provider-types"],
+
+  "objective": {
+    "what": "Create OpenAI/GPT provider",
+    "why": "Support for GPT models and DALL-E",
+    "outcome": "Working OpenAI integration"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/lib/ai/providers/openai.ts",
+      "src/lib/ai/providers/openai-models.ts"
+    ],
+    "models": {
+      "text": ["gpt-4o", "gpt-4-turbo", "gpt-3.5-turbo"],
+      "image": ["dall-e-3", "dall-e-2"],
+      "embedding": ["text-embedding-3-large", "text-embedding-3-small"],
+      "tts": ["tts-1", "tts-1-hd"],
+      "stt": ["whisper-1"]
+    },
+    "features": {
+      "text": "Chat completions",
+      "vision": "GPT-4 Vision",
+      "images": "DALL-E generation",
+      "embeddings": "Text embeddings",
+      "audio": "Whisper and TTS"
+    }
+  },
+
+  "prompt": {
+    "mission": "Implement OpenAI provider",
+    "tasks": [
+      "Create OpenAIProvider class",
+      "Implement chat completions",
+      "Add vision support",
+      "Add DALL-E integration",
+      "Implement embeddings",
+      "Add audio endpoints"
+    ],
+    "constraints": [
+      "Use Vercel AI SDK",
+      "Support function calling",
+      "Handle all model types"
+    ]
+  },
+
+  "outputs": {
+    "files": 2
+  }
+}

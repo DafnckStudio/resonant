@@ -1,0 +1,58 @@
+{
+  "step": 333,
+  "id": "333-dashboard-layout",
+  "phase": 11,
+  "phaseName": "Dashboard & Analytics",
+  "title": "Dashboard Layout",
+  "description": "Main dashboard page layout",
+  "estimatedMinutes": 35,
+  "priority": "P1",
+  "dependencies": ["076-workspace-schema"],
+
+  "objective": {
+    "what": "Dashboard page structure",
+    "why": "Central user hub",
+    "outcome": "Dashboard foundation"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/app/(dashboard)/page.tsx",
+      "src/components/dashboard/dashboard-header.tsx",
+      "src/components/dashboard/dashboard-grid.tsx",
+      "src/components/dashboard/widget-wrapper.tsx"
+    ],
+    "layout": {
+      "header": "Welcome + quick stats",
+      "grid": "Widget grid layout",
+      "responsive": "Mobile-friendly grid",
+      "customizable": "Drag to reorder"
+    },
+    "sections": {
+      "overview": "Quick stats cards",
+      "recent": "Recent workflows",
+      "activity": "Activity feed",
+      "shortcuts": "Quick actions"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create dashboard layout",
+    "tasks": [
+      "Build dashboard page",
+      "Create header component",
+      "Implement responsive grid",
+      "Add widget wrapper",
+      "Setup drag reorder"
+    ],
+    "constraints": [
+      "Responsive design",
+      "Fast loading",
+      "Customizable layout"
+    ]
+  },
+
+  "outputs": {
+    "files": 4
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "step": 304,
+  "id": "304-checkout-flow",
+  "phase": 10,
+  "phaseName": "Monetization & Billing",
+  "title": "Checkout Flow",
+  "description": "Subscription checkout process",
+  "estimatedMinutes": 40,
+  "priority": "P0",
+  "dependencies": ["303-stripe-setup"],
+
+  "objective": {
+    "what": "Create checkout flow",
+    "why": "Enable subscriptions",
+    "outcome": "Working checkout"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/lib/billing/checkout.ts",
+      "src/app/api/billing/checkout/route.ts",
+      "src/components/billing/checkout-button.tsx"
+    ],
+    "flow": {
+      "select": "Select plan",
+      "checkout": "Stripe Checkout",
+      "success": "Success callback",
+      "cancel": "Cancel callback"
+    },
+    "features": {
+      "proration": "Plan change proration",
+      "trials": "Free trial support",
+      "coupons": "Coupon codes"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create checkout flow",
+    "tasks": [
+      "Create checkout session",
+      "Build checkout button",
+      "Handle success redirect",
+      "Handle cancellation",
+      "Support trials"
+    ],
+    "constraints": [
+      "PCI compliance",
+      "Clear pricing",
+      "Smooth UX"
+    ]
+  },
+
+  "outputs": {
+    "files": 3
+  }
+}

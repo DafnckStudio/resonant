@@ -1,0 +1,48 @@
+{
+  "step": 95,
+  "id": "095-quick-actions",
+  "phase": 3,
+  "phaseName": "Workspace & Projects",
+  "title": "Add Dashboard Quick Actions",
+  "description": "Create quick action buttons on dashboard",
+  "estimatedMinutes": 20,
+  "priority": "P1",
+  "dependencies": ["094-dashboard-stats"],
+
+  "objective": {
+    "what": "Add quick action buttons to dashboard",
+    "why": "Users need fast access to common actions",
+    "outcome": "Quick actions section with primary tasks"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/components/dashboard/quick-actions.tsx"
+    ],
+    "filesToModify": [
+      "src/app/(dashboard)/page.tsx"
+    ],
+    "actions": [
+      { "id": "newWorkflow", "label": "New Workflow", "icon": "Plus", "href": null },
+      { "id": "templates", "label": "Browse Templates", "icon": "Layout", "href": "/templates" },
+      { "id": "docs", "label": "Documentation", "icon": "Book", "href": "/docs" },
+      { "id": "support", "label": "Get Help", "icon": "HelpCircle", "href": "/support" }
+    ]
+  },
+
+  "prompt": {
+    "mission": "Add dashboard quick actions",
+    "tasks": [
+      "Create QuickActions component",
+      "Add new workflow action (opens dialog)",
+      "Link to templates page",
+      "Add documentation/help links",
+      "Style as button grid"
+    ]
+  },
+
+  "outputs": {
+    "files": 1,
+    "filesModified": 1
+  }
+}

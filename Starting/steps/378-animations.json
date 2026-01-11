@@ -1,0 +1,56 @@
+{
+  "step": 378,
+  "id": "378-animations",
+  "phase": 12,
+  "phaseName": "Testing & Polish",
+  "title": "Animations",
+  "description": "Polish UI animations",
+  "estimatedMinutes": 35,
+  "priority": "P2",
+  "dependencies": [],
+
+  "objective": {
+    "what": "Animation polish",
+    "why": "Delightful UX",
+    "outcome": "Smooth animations"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/lib/animations/variants.ts",
+      "src/lib/animations/transitions.ts",
+      "src/components/ui/animated-container.tsx"
+    ],
+    "animations": {
+      "page": "Page transitions",
+      "modal": "Modal animations",
+      "list": "List animations",
+      "micro": "Micro-interactions"
+    },
+    "performance": {
+      "gpu": "GPU acceleration",
+      "reduce": "Reduced motion support",
+      "lazy": "Lazy animations"
+    }
+  },
+
+  "prompt": {
+    "mission": "Polish UI animations",
+    "tasks": [
+      "Define animation variants",
+      "Add page transitions",
+      "Polish modal animations",
+      "Add list animations",
+      "Respect reduced motion"
+    ],
+    "constraints": [
+      "Framer Motion",
+      "60fps minimum",
+      "Reduced motion support"
+    ]
+  },
+
+  "outputs": {
+    "files": 3
+  }
+}

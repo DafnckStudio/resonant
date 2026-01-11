@@ -1,0 +1,55 @@
+{
+  "step": 104,
+  "id": "104-custom-edges",
+  "phase": 4,
+  "phaseName": "Workflow Editor Core",
+  "title": "Create Custom Edge Components",
+  "description": "Build custom edge components for workflow connections",
+  "estimatedMinutes": 35,
+  "priority": "P0",
+  "dependencies": ["103-custom-node-base"],
+
+  "objective": {
+    "what": "Create custom edge components for connections",
+    "why": "Need visual feedback for data flow between blocks",
+    "outcome": "Custom edges with animations and styles"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/components/editor/edges/base-edge.tsx",
+      "src/components/editor/edges/animated-edge.tsx",
+      "src/components/editor/edges/edge-types.ts"
+    ],
+    "edgeTypes": {
+      "default": "Smooth bezier curve",
+      "animated": "Animated flow particles",
+      "error": "Red error state",
+      "success": "Green success state"
+    },
+    "features": {
+      "labels": "Optional edge labels",
+      "deletable": "Click to delete",
+      "animated": "Show data flow animation"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create custom edge components",
+    "tasks": [
+      "Create BaseEdge component",
+      "Add animated edge variant",
+      "Create edge type registry",
+      "Add delete button on hover",
+      "Implement flow animation"
+    ],
+    "constraints": [
+      "Use React Flow edge API",
+      "Support dark/light mode"
+    ]
+  },
+
+  "outputs": {
+    "files": 3
+  }
+}

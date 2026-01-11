@@ -1,0 +1,54 @@
+{
+  "step": 47,
+  "id": "047-search-component",
+  "phase": 1,
+  "phaseName": "Core UI & Layout",
+  "title": "Create Global Search Component",
+  "description": "Build search input with instant results dropdown",
+  "estimatedMinutes": 30,
+  "priority": "P1",
+  "dependencies": ["045-command-palette"],
+
+  "objective": {
+    "what": "Create a global search component for the header",
+    "why": "Users need to quickly find workflows, templates, and executions",
+    "outcome": "Search input with categorized instant results"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/components/search/global-search.tsx",
+      "src/components/search/search-results.tsx",
+      "src/components/search/search-result-item.tsx",
+      "src/hooks/use-search.ts"
+    ],
+    "features": {
+      "instant": "Results appear as you type",
+      "categories": "Group by type (workflows, templates, executions)",
+      "highlight": "Highlight matching text",
+      "keyboard": "Navigate with keyboard",
+      "recent": "Show recent searches"
+    },
+    "searchableEntities": ["workflows", "templates", "executions", "team-members"]
+  },
+
+  "prompt": {
+    "mission": "Create global search component",
+    "tasks": [
+      "Create GlobalSearch component",
+      "Build SearchResults dropdown",
+      "Add search result highlighting",
+      "Implement debounced search hook",
+      "Add recent searches storage"
+    ],
+    "constraints": [
+      "Debounce search (300ms)",
+      "Limit results per category (5 each)"
+    ]
+  },
+
+  "outputs": {
+    "files": 4,
+    "components": ["GlobalSearch", "SearchResults", "SearchResultItem"]
+  }
+}

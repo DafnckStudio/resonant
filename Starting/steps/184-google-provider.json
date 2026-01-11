@@ -1,0 +1,60 @@
+{
+  "step": 184,
+  "id": "184-google-provider",
+  "phase": 6,
+  "phaseName": "AI Router & Execution",
+  "title": "Google Provider Implementation",
+  "description": "Implement Gemini API integration",
+  "estimatedMinutes": 45,
+  "priority": "P1",
+  "dependencies": ["181-ai-provider-types"],
+
+  "objective": {
+    "what": "Create Google/Gemini provider",
+    "why": "Support for Gemini's large context window",
+    "outcome": "Working Gemini integration"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/lib/ai/providers/google.ts",
+      "src/lib/ai/providers/google-models.ts"
+    ],
+    "models": [
+      "gemini-1.5-pro",
+      "gemini-1.5-flash",
+      "gemini-1.0-pro"
+    ],
+    "features": {
+      "text": "Text generation with large context",
+      "vision": "Image and video understanding",
+      "multimodal": "Multi-image analysis",
+      "streaming": "Stream responses"
+    },
+    "capabilities": {
+      "contextWindow": "1M tokens for Gemini 1.5",
+      "multiImage": "Multiple images in single request",
+      "video": "Video understanding"
+    }
+  },
+
+  "prompt": {
+    "mission": "Implement Google provider",
+    "tasks": [
+      "Create GoogleProvider class",
+      "Implement text generation",
+      "Add multimodal support",
+      "Implement streaming",
+      "Handle large contexts"
+    ],
+    "constraints": [
+      "Use Vercel AI SDK",
+      "Support Gemini 1.5 features",
+      "Handle context limits"
+    ]
+  },
+
+  "outputs": {
+    "files": 2
+  }
+}

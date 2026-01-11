@@ -1,0 +1,58 @@
+{
+  "step": 323,
+  "id": "323-payment-failure-recovery",
+  "phase": 10,
+  "phaseName": "Monetization & Billing",
+  "title": "Payment Failure Recovery",
+  "description": "Handle failed payments and recovery",
+  "estimatedMinutes": 40,
+  "priority": "P1",
+  "dependencies": ["305-stripe-webhooks", "313-payment-methods"],
+
+  "objective": {
+    "what": "Payment failure handling",
+    "why": "Revenue recovery",
+    "outcome": "Reduce involuntary churn"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/lib/billing/payment-recovery.ts",
+      "src/components/billing/payment-failed-banner.tsx",
+      "src/components/billing/update-payment-modal.tsx",
+      "convex/paymentRecovery.ts"
+    ],
+    "features": {
+      "detect": "Detect failed payments",
+      "notify": "Notify user",
+      "retry": "Automatic retry",
+      "update": "Update payment method"
+    },
+    "dunning": {
+      "day0": "Immediate notification",
+      "day3": "First retry + email",
+      "day7": "Second retry + warning",
+      "day14": "Final warning before suspension"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create payment failure recovery",
+    "tasks": [
+      "Handle invoice.payment_failed webhook",
+      "Show failed payment banner",
+      "Dunning email sequence",
+      "Easy payment method update",
+      "Grace period before suspension"
+    ],
+    "constraints": [
+      "Clear communication",
+      "Easy recovery path",
+      "Graceful degradation"
+    ]
+  },
+
+  "outputs": {
+    "files": 4
+  }
+}

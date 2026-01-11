@@ -1,0 +1,56 @@
+{
+  "step": 81,
+  "id": "081-workflow-crud",
+  "phase": 3,
+  "phaseName": "Workspace & Projects",
+  "title": "Implement Workflow CRUD Operations",
+  "description": "Build create, read, update, delete for workflows",
+  "estimatedMinutes": 45,
+  "priority": "P0",
+  "dependencies": ["008-convex-schema-workflows", "076-workspace-context"],
+
+  "objective": {
+    "what": "Implement complete CRUD operations for workflows",
+    "why": "Workflows are the core entity of the application",
+    "outcome": "Working workflow management with all operations"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "convex/workflows.ts"
+    ],
+    "mutations": {
+      "createWorkflow": "Create new empty workflow",
+      "updateWorkflow": "Update workflow metadata",
+      "deleteWorkflow": "Soft delete workflow",
+      "duplicateWorkflow": "Clone existing workflow"
+    },
+    "queries": {
+      "getWorkflow": "Get single workflow by ID",
+      "listWorkflows": "List workspace workflows with filters",
+      "searchWorkflows": "Search workflows by name"
+    }
+  },
+
+  "prompt": {
+    "mission": "Implement workflow CRUD",
+    "tasks": [
+      "Create workflow mutations",
+      "Build workflow queries",
+      "Add duplicate functionality",
+      "Implement soft delete",
+      "Add permission checks"
+    ],
+    "constraints": [
+      "Check workspace membership",
+      "Check edit permissions",
+      "Soft delete for recovery"
+    ]
+  },
+
+  "outputs": {
+    "files": 1,
+    "mutations": 4,
+    "queries": 3
+  }
+}

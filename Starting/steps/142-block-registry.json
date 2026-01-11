@@ -1,0 +1,59 @@
+{
+  "step": 142,
+  "id": "142-block-registry",
+  "phase": 5,
+  "phaseName": "Block System",
+  "title": "Block Registry",
+  "description": "Create registry for all available blocks",
+  "estimatedMinutes": 35,
+  "priority": "P0",
+  "dependencies": ["141-block-type-system"],
+
+  "objective": {
+    "what": "Create block registry singleton",
+    "why": "Central place to manage block definitions",
+    "outcome": "Registry with all block metadata"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/lib/blocks/block-registry.ts",
+      "src/lib/blocks/block-definitions.ts"
+    ],
+    "registry": {
+      "register": "Add block to registry",
+      "get": "Get block by type",
+      "list": "List all blocks",
+      "getByCategory": "Filter by category"
+    },
+    "metadata": {
+      "type": "Unique block type ID",
+      "name": "Display name",
+      "description": "Block description",
+      "category": "Block category",
+      "icon": "Lucide icon name",
+      "inputs": "Input handle definitions",
+      "outputs": "Output handle definitions",
+      "defaultConfig": "Default configuration"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create block registry",
+    "tasks": [
+      "Create BlockRegistry class",
+      "Define BlockDefinition interface",
+      "Add register/get methods",
+      "Create block definitions file",
+      "Register all block types"
+    ],
+    "constraints": [
+      "Singleton pattern",
+      "Type-safe registration"
+    ]
+  },
+
+  "outputs": {
+    "files": 2
+  }
+}

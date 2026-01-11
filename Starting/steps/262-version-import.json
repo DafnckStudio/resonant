@@ -1,0 +1,55 @@
+{
+  "step": 262,
+  "id": "262-version-import",
+  "phase": 8,
+  "phaseName": "Version Control",
+  "title": "Version Import",
+  "description": "Import workflow versions",
+  "estimatedMinutes": 30,
+  "priority": "P2",
+  "dependencies": ["261-version-export"],
+
+  "objective": {
+    "what": "Import versions from file",
+    "why": "Restore backups, migration",
+    "outcome": "Version import feature"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/lib/versioning/import.ts",
+      "src/components/editor/version-control/import-dialog.tsx"
+    ],
+    "features": {
+      "validation": "Validate import file",
+      "preview": "Preview before import",
+      "conflict": "Handle conflicts",
+      "mapping": "Map references"
+    },
+    "modes": {
+      "append": "Add to existing history",
+      "replace": "Replace entire history",
+      "merge": "Smart merge"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create version import",
+    "tasks": [
+      "Validate import files",
+      "Preview import content",
+      "Handle version conflicts",
+      "Support import modes",
+      "Show import progress"
+    ],
+    "constraints": [
+      "Validate data integrity",
+      "Safe conflict handling",
+      "Clear preview"
+    ]
+  },
+
+  "outputs": {
+    "files": 2
+  }
+}

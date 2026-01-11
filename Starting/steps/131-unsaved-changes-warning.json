@@ -1,0 +1,52 @@
+{
+  "step": 131,
+  "id": "131-unsaved-changes-warning",
+  "phase": 4,
+  "phaseName": "Workflow Editor Core",
+  "title": "Unsaved Changes Warning",
+  "description": "Warn user before leaving with unsaved changes",
+  "estimatedMinutes": 20,
+  "priority": "P1",
+  "dependencies": ["121-save-workflow"],
+
+  "objective": {
+    "what": "Prevent losing unsaved work",
+    "why": "Users shouldn't lose changes accidentally",
+    "outcome": "Browser warning on navigation"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/hooks/use-unsaved-warning.ts"
+    ],
+    "filesToModify": [
+      "src/app/(dashboard)/workflows/[workflowId]/edit/page.tsx"
+    ],
+    "triggers": [
+      "Browser back/forward",
+      "Tab/window close",
+      "Route navigation",
+      "Logout"
+    ]
+  },
+
+  "prompt": {
+    "mission": "Add unsaved warning",
+    "tasks": [
+      "Create useUnsavedWarning hook",
+      "Add beforeunload handler",
+      "Intercept route changes",
+      "Show confirmation dialog",
+      "Track dirty state"
+    ],
+    "constraints": [
+      "Use router beforeunload",
+      "Allow force navigation"
+    ]
+  },
+
+  "outputs": {
+    "files": 1,
+    "filesModified": 1
+  }
+}

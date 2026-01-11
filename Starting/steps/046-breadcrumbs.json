@@ -1,0 +1,49 @@
+{
+  "step": 46,
+  "id": "046-breadcrumbs",
+  "phase": 1,
+  "phaseName": "Core UI & Layout",
+  "title": "Create Breadcrumb Navigation",
+  "description": "Build breadcrumb component for hierarchical navigation",
+  "estimatedMinutes": 20,
+  "priority": "P2",
+  "dependencies": ["025-page-header"],
+
+  "objective": {
+    "what": "Create breadcrumb navigation component",
+    "why": "Users need to understand their location in the hierarchy",
+    "outcome": "Dynamic breadcrumbs based on route"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/components/ui/breadcrumbs.tsx",
+      "src/hooks/use-breadcrumbs.ts"
+    ],
+    "features": {
+      "dynamic": "Auto-generate from route",
+      "clickable": "Navigate to parent levels",
+      "truncation": "Handle long paths",
+      "icons": "Optional icons per level"
+    },
+    "examples": [
+      "Dashboard / Workflows / My Workflow / Edit",
+      "Settings / Team / Invite Member"
+    ]
+  },
+
+  "prompt": {
+    "mission": "Create breadcrumb navigation",
+    "tasks": [
+      "Create Breadcrumbs component",
+      "Build useBreadcrumbs hook for route parsing",
+      "Add path truncation for mobile",
+      "Integrate with page headers"
+    ]
+  },
+
+  "outputs": {
+    "files": 2,
+    "components": ["Breadcrumbs"]
+  }
+}

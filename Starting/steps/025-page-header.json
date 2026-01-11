@@ -1,0 +1,46 @@
+{
+  "step": 25,
+  "id": "025-page-header",
+  "phase": 1,
+  "phaseName": "Core UI & Layout",
+  "title": "Create Page Header Component",
+  "description": "Build reusable page header with title, description, and actions",
+  "estimatedMinutes": 15,
+  "priority": "P0",
+  "dependencies": ["024-theme-provider"],
+
+  "objective": {
+    "what": "Create consistent page header component used across all dashboard pages",
+    "why": "Consistent headers improve UX and reduce code duplication",
+    "outcome": "Reusable PageHeader component with slots for actions"
+  },
+
+  "specifications": {
+    "filesToCreate": ["src/components/layout/page-header.tsx"],
+    "props": {
+      "title": "string - Page title",
+      "description": "string (optional) - Page description",
+      "children": "ReactNode - Action buttons slot",
+      "breadcrumbs": "BreadcrumbItem[] (optional)"
+    },
+    "features": {
+      "responsive": "Stack on mobile, row on desktop",
+      "breadcrumbs": "Optional breadcrumb trail",
+      "actions": "Right-aligned action buttons"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create PageHeader component",
+    "tasks": [
+      "Create PageHeader with title, description, children slots",
+      "Add optional breadcrumbs support",
+      "Make responsive (stack on mobile)",
+      "Export from components/layout/index.ts"
+    ]
+  },
+
+  "outputs": {
+    "files": ["src/components/layout/page-header.tsx"]
+  }
+}

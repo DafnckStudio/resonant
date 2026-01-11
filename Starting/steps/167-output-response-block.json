@@ -1,0 +1,51 @@
+{
+  "step": 167,
+  "id": "167-output-response-block",
+  "phase": 5,
+  "phaseName": "Block System",
+  "title": "Response Output Block",
+  "description": "Create workflow response output block",
+  "estimatedMinutes": 25,
+  "priority": "P0",
+  "dependencies": ["142-block-registry"],
+
+  "objective": {
+    "what": "Create response output block",
+    "why": "Return final workflow results",
+    "outcome": "Workflow output endpoint"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/components/editor/blocks/output/response-block.tsx"
+    ],
+    "config": {
+      "format": "json/text/html",
+      "statusCode": "HTTP status if webhook",
+      "headers": "Response headers"
+    },
+    "inputs": {
+      "data": "Response data"
+    },
+    "outputs": {}
+  },
+
+  "prompt": {
+    "mission": "Create response block",
+    "tasks": [
+      "Create ResponseBlock component",
+      "Add format selector",
+      "Show response preview",
+      "Handle multiple outputs",
+      "Mark as workflow endpoint"
+    ],
+    "constraints": [
+      "Clear terminal node style",
+      "Show final output"
+    ]
+  },
+
+  "outputs": {
+    "files": 1
+  }
+}

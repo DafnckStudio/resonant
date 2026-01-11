@@ -1,0 +1,57 @@
+{
+  "step": 336,
+  "id": "336-activity-feed",
+  "phase": 11,
+  "phaseName": "Dashboard & Analytics",
+  "title": "Activity Feed",
+  "description": "User activity timeline",
+  "estimatedMinutes": 30,
+  "priority": "P2",
+  "dependencies": ["332-event-tracking"],
+
+  "objective": {
+    "what": "Activity feed timeline",
+    "why": "Awareness of changes",
+    "outcome": "Activity visibility"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/components/dashboard/activity-feed.tsx",
+      "src/components/dashboard/activity-item.tsx",
+      "convex/activityFeed.ts"
+    ],
+    "activities": {
+      "workflow": "Workflow created/edited",
+      "execution": "Workflow executed",
+      "collaboration": "Team member joined",
+      "comment": "Comment added"
+    },
+    "features": {
+      "realtime": "Real-time updates",
+      "filter": "Filter by type",
+      "pagination": "Load more",
+      "grouping": "Group by day"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create activity feed",
+    "tasks": [
+      "Build activity feed component",
+      "Create activity item display",
+      "Implement real-time updates",
+      "Add activity type icons",
+      "Group activities by day"
+    ],
+    "constraints": [
+      "Real-time sync",
+      "Efficient loading",
+      "Clear activity types"
+    ]
+  },
+
+  "outputs": {
+    "files": 3
+  }
+}

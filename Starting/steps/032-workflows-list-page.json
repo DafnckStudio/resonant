@@ -1,0 +1,51 @@
+{
+  "step": 32,
+  "id": "032-workflows-list-page",
+  "phase": 1,
+  "phaseName": "Core UI & Layout",
+  "title": "Create Workflows List Page",
+  "description": "Build the workflows listing page with grid/list views and filters",
+  "estimatedMinutes": 35,
+  "priority": "P0",
+  "dependencies": ["031-dashboard-home-page"],
+
+  "objective": {
+    "what": "Create workflows page with card grid, list view toggle, search, and filters",
+    "why": "Main page for browsing and managing user workflows",
+    "outcome": "Working workflows page with view toggle and empty state"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/app/(dashboard)/workflows/page.tsx",
+      "src/components/workflow/workflow-card.tsx",
+      "src/components/workflow/workflow-list.tsx",
+      "src/components/workflow/workflow-filters.tsx",
+      "src/components/workflow/create-workflow-button.tsx"
+    ],
+    "features": {
+      "viewToggle": "Grid / List view",
+      "search": "Search by name",
+      "filters": "Status, date range, tags",
+      "sorting": "Name, date modified, executions",
+      "pagination": "Or infinite scroll"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create workflows list page",
+    "tasks": [
+      "Create workflows page with PageHeader",
+      "Build WorkflowCard for grid view",
+      "Build WorkflowList for list view",
+      "Add view toggle (grid/list)",
+      "Create search and filter components",
+      "Add Create Workflow button"
+    ]
+  },
+
+  "outputs": {
+    "files": 5,
+    "components": ["WorkflowCard", "WorkflowList", "WorkflowFilters"]
+  }
+}

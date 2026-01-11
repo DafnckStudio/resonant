@@ -1,0 +1,57 @@
+{
+  "step": 199,
+  "id": "199-execution-api-routes",
+  "phase": 6,
+  "phaseName": "AI Router & Execution",
+  "title": "Execution API Routes",
+  "description": "API endpoints for workflow execution",
+  "estimatedMinutes": 45,
+  "priority": "P0",
+  "dependencies": ["191-workflow-executor-core", "195-execution-queue"],
+
+  "objective": {
+    "what": "Create execution API",
+    "why": "Trigger executions via API",
+    "outcome": "REST API for execution"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/app/api/execute/[workflowId]/route.ts",
+      "src/app/api/executions/[executionId]/route.ts",
+      "src/app/api/executions/[executionId]/cancel/route.ts",
+      "src/app/api/executions/[executionId]/logs/route.ts"
+    ],
+    "endpoints": {
+      "POST /execute/:id": "Start workflow execution",
+      "GET /executions/:id": "Get execution status",
+      "POST /executions/:id/cancel": "Cancel execution",
+      "GET /executions/:id/logs": "Get execution logs"
+    },
+    "authentication": {
+      "apiKey": "API key authentication",
+      "jwt": "JWT from Clerk",
+      "rateLimit": "Per-user rate limits"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create execution API",
+    "tasks": [
+      "Create execute endpoint",
+      "Add status endpoint",
+      "Implement cancellation",
+      "Add logs endpoint",
+      "Add authentication"
+    ],
+    "constraints": [
+      "Proper error responses",
+      "Rate limiting",
+      "Audit logging"
+    ]
+  },
+
+  "outputs": {
+    "files": 4
+  }
+}

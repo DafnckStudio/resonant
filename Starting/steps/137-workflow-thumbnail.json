@@ -1,0 +1,50 @@
+{
+  "step": 137,
+  "id": "137-workflow-thumbnail",
+  "phase": 4,
+  "phaseName": "Workflow Editor Core",
+  "title": "Workflow Thumbnail Generation",
+  "description": "Generate preview thumbnails of workflows",
+  "estimatedMinutes": 35,
+  "priority": "P2",
+  "dependencies": ["121-save-workflow"],
+
+  "objective": {
+    "what": "Generate workflow preview images",
+    "why": "Visual preview in workflow list",
+    "outcome": "Auto-generated thumbnails"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/lib/editor/thumbnail-generator.ts",
+      "src/hooks/use-workflow-thumbnail.ts"
+    ],
+    "features": {
+      "generate": "Generate on save",
+      "canvas": "Use canvas API",
+      "store": "Store as base64 or file",
+      "display": "Show in workflow cards"
+    }
+  },
+
+  "prompt": {
+    "mission": "Generate thumbnails",
+    "tasks": [
+      "Create ThumbnailGenerator utility",
+      "Capture canvas to image",
+      "Resize to thumbnail size",
+      "Store with workflow",
+      "Show in workflow list",
+      "Add placeholder for empty"
+    ],
+    "constraints": [
+      "Use react-flow getNodes/getViewport",
+      "Max 400x300 px"
+    ]
+  },
+
+  "outputs": {
+    "files": 2
+  }
+}

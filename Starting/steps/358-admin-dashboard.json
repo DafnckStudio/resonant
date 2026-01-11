@@ -1,0 +1,58 @@
+{
+  "step": 358,
+  "id": "358-admin-dashboard",
+  "phase": 11,
+  "phaseName": "Dashboard & Analytics",
+  "title": "Admin Dashboard",
+  "description": "Platform admin dashboard",
+  "estimatedMinutes": 45,
+  "priority": "P2",
+  "dependencies": ["331-analytics-schema", "327-billing-admin"],
+
+  "objective": {
+    "what": "Admin dashboard",
+    "why": "Platform management",
+    "outcome": "Admin visibility"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/app/(admin)/dashboard/page.tsx",
+      "src/components/admin/platform-stats.tsx",
+      "src/components/admin/user-management.tsx",
+      "src/components/admin/system-health.tsx"
+    ],
+    "sections": {
+      "stats": "Platform statistics",
+      "users": "User management",
+      "health": "System health",
+      "revenue": "Revenue metrics"
+    },
+    "metrics": {
+      "totalUsers": "Total users",
+      "activeUsers": "Active users",
+      "revenue": "MRR/ARR",
+      "growth": "Growth rates"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create admin dashboard",
+    "tasks": [
+      "Build admin dashboard page",
+      "Create platform stats",
+      "Add user management",
+      "Show system health",
+      "Display revenue metrics"
+    ],
+    "constraints": [
+      "Admin-only access",
+      "Real-time data",
+      "Actionable metrics"
+    ]
+  },
+
+  "outputs": {
+    "files": 4
+  }
+}

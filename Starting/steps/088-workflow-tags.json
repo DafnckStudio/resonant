@@ -1,0 +1,51 @@
+{
+  "step": 88,
+  "id": "088-workflow-tags",
+  "phase": 3,
+  "phaseName": "Workspace & Projects",
+  "title": "Implement Workflow Tags",
+  "description": "Add tagging system for workflows",
+  "estimatedMinutes": 30,
+  "priority": "P2",
+  "dependencies": ["081-workflow-crud"],
+
+  "objective": {
+    "what": "Add tags for categorizing workflows",
+    "why": "Tags allow flexible organization and filtering",
+    "outcome": "Tag management with colors and filtering"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/components/workflow/tag-input.tsx",
+      "src/components/workflow/tag-badge.tsx",
+      "src/components/workflow/tag-filter.tsx"
+    ],
+    "filesToModify": [
+      "convex/schema.ts",
+      "convex/workflows.ts"
+    ],
+    "features": {
+      "add": "Add tags to workflows",
+      "create": "Create new tags with colors",
+      "filter": "Filter workflows by tag",
+      "manage": "Manage workspace tags"
+    }
+  },
+
+  "prompt": {
+    "mission": "Implement workflow tags",
+    "tasks": [
+      "Add tags array to workflow schema",
+      "Create TagInput component",
+      "Build TagBadge display",
+      "Implement TagFilter for list",
+      "Add tag management"
+    ]
+  },
+
+  "outputs": {
+    "files": 3,
+    "filesModified": 2
+  }
+}

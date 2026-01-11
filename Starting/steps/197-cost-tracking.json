@@ -1,0 +1,57 @@
+{
+  "step": 197,
+  "id": "197-cost-tracking",
+  "phase": 6,
+  "phaseName": "AI Router & Execution",
+  "title": "AI Cost Tracking",
+  "description": "Track and report AI usage costs",
+  "estimatedMinutes": 45,
+  "priority": "P0",
+  "dependencies": ["192-block-executor", "187-model-capabilities"],
+
+  "objective": {
+    "what": "Implement cost tracking",
+    "why": "Usage monitoring and billing",
+    "outcome": "Accurate cost reporting"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/lib/ai/costs/cost-tracker.ts",
+      "src/lib/ai/costs/usage-aggregator.ts",
+      "convex/aiUsage.ts"
+    ],
+    "tracking": {
+      "tokens": "Input and output tokens",
+      "cost": "Cost per request",
+      "model": "Model used",
+      "latency": "Response time"
+    },
+    "aggregation": {
+      "perExecution": "Total cost per execution",
+      "perWorkflow": "Total cost per workflow",
+      "perUser": "User usage summary",
+      "perWorkspace": "Workspace usage"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create cost tracking",
+    "tasks": [
+      "Track token usage per call",
+      "Calculate costs from pricing",
+      "Aggregate by execution/workflow",
+      "Create usage reports",
+      "Add budget alerts"
+    ],
+    "constraints": [
+      "Real-time tracking",
+      "Accurate pricing",
+      "Efficient aggregation"
+    ]
+  },
+
+  "outputs": {
+    "files": 3
+  }
+}

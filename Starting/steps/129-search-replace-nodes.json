@@ -1,0 +1,50 @@
+{
+  "step": 129,
+  "id": "129-search-replace-nodes",
+  "phase": 4,
+  "phaseName": "Workflow Editor Core",
+  "title": "Search and Replace in Editor",
+  "description": "Find and replace nodes and properties",
+  "estimatedMinutes": 35,
+  "priority": "P3",
+  "dependencies": ["120-workflow-state-management"],
+
+  "objective": {
+    "what": "Add search/replace for editor",
+    "why": "Find specific blocks or content",
+    "outcome": "Ctrl+F search in editor"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/components/editor/search/editor-search.tsx",
+      "src/hooks/use-editor-search.ts"
+    ],
+    "features": {
+      "search": "Search node names/types",
+      "navigate": "Jump to found nodes",
+      "highlight": "Highlight matches",
+      "replace": "Replace in properties"
+    }
+  },
+
+  "prompt": {
+    "mission": "Add search in editor",
+    "tasks": [
+      "Create EditorSearch component",
+      "Create useEditorSearch hook",
+      "Search by name/type/content",
+      "Highlight found nodes",
+      "Navigate with Enter",
+      "Add Ctrl+F shortcut"
+    ],
+    "constraints": [
+      "Use shadcn Command",
+      "Don't block canvas"
+    ]
+  },
+
+  "outputs": {
+    "files": 2
+  }
+}

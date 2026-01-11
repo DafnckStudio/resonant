@@ -1,0 +1,56 @@
+{
+  "step": 119,
+  "id": "119-keyboard-shortcuts-editor",
+  "phase": 4,
+  "phaseName": "Workflow Editor Core",
+  "title": "Editor Keyboard Shortcuts",
+  "description": "Add all keyboard shortcuts for editor",
+  "estimatedMinutes": 30,
+  "priority": "P1",
+  "dependencies": ["048-keyboard-shortcuts", "112-toolbar-actions"],
+
+  "objective": {
+    "what": "Implement all editor keyboard shortcuts",
+    "why": "Power users need keyboard efficiency",
+    "outcome": "Complete keyboard control"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/components/editor/shortcuts/editor-shortcuts.tsx"
+    ],
+    "shortcuts": {
+      "Ctrl+S": "Save workflow",
+      "Ctrl+Z": "Undo",
+      "Ctrl+Shift+Z": "Redo",
+      "Ctrl+A": "Select all",
+      "Ctrl+C": "Copy",
+      "Ctrl+V": "Paste",
+      "Ctrl+D": "Duplicate",
+      "Delete": "Delete selected",
+      "Escape": "Deselect all",
+      "Space+drag": "Pan canvas",
+      "+/-": "Zoom in/out",
+      "0": "Reset zoom"
+    }
+  },
+
+  "prompt": {
+    "mission": "Implement editor shortcuts",
+    "tasks": [
+      "Create EditorShortcuts component",
+      "Register all shortcuts",
+      "Handle modifier keys",
+      "Prevent browser defaults",
+      "Add shortcut hints to UI"
+    ],
+    "constraints": [
+      "Use existing hotkeys system",
+      "Document in help modal"
+    ]
+  },
+
+  "outputs": {
+    "files": 1
+  }
+}

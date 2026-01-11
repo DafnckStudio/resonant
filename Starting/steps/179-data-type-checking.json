@@ -1,0 +1,52 @@
+{
+  "step": 179,
+  "id": "179-data-type-checking",
+  "phase": 5,
+  "phaseName": "Block System",
+  "title": "Data Type Checking",
+  "description": "Add type checking for block connections",
+  "estimatedMinutes": 40,
+  "priority": "P1",
+  "dependencies": ["109-edge-creation", "141-block-type-system"],
+
+  "objective": {
+    "what": "Implement connection type checking",
+    "why": "Prevent incompatible block connections",
+    "outcome": "Type-safe connections"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/lib/blocks/type-checker.ts",
+      "src/lib/blocks/type-coercion.ts"
+    ],
+    "dataTypes": [
+      "string", "number", "boolean", "object",
+      "array", "file", "image", "audio", "any"
+    ],
+    "features": {
+      "check": "Validate connection types",
+      "coerce": "Auto-convert compatible types",
+      "warn": "Warning for loose connections"
+    }
+  },
+
+  "prompt": {
+    "mission": "Add type checking",
+    "tasks": [
+      "Define data types",
+      "Create type checker",
+      "Add type coercion",
+      "Show type on handles",
+      "Warn on incompatible"
+    ],
+    "constraints": [
+      "Allow any type as wildcard",
+      "Visual type indicators"
+    ]
+  },
+
+  "outputs": {
+    "files": 2
+  }
+}

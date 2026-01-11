@@ -1,0 +1,56 @@
+{
+  "step": 259,
+  "id": "259-version-tags",
+  "phase": 8,
+  "phaseName": "Version Control",
+  "title": "Version Tags",
+  "description": "Tag important versions",
+  "estimatedMinutes": 25,
+  "priority": "P2",
+  "dependencies": ["254-version-history-panel"],
+
+  "objective": {
+    "what": "Tag versions for quick access",
+    "why": "Mark important milestones",
+    "outcome": "Version tagging system"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/lib/versioning/tags.ts",
+      "src/components/editor/version-control/tag-manager.tsx"
+    ],
+    "features": {
+      "create": "Add tag to version",
+      "colors": "Colored tags",
+      "filter": "Filter by tag",
+      "common": "Pre-defined tags (v1.0, stable)"
+    },
+    "tags": {
+      "release": "Production releases",
+      "milestone": "Project milestones",
+      "backup": "Manual backups",
+      "custom": "User-defined tags"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create version tagging",
+    "tasks": [
+      "Implement tag system",
+      "Create tag UI",
+      "Add color coding",
+      "Filter by tags",
+      "Pre-defined tag templates"
+    ],
+    "constraints": [
+      "Quick tagging",
+      "Visual distinction",
+      "Search integration"
+    ]
+  },
+
+  "outputs": {
+    "files": 2
+  }
+}

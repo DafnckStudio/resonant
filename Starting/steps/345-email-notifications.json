@@ -1,0 +1,57 @@
+{
+  "step": 345,
+  "id": "345-email-notifications",
+  "phase": 11,
+  "phaseName": "Dashboard & Analytics",
+  "title": "Email Notifications",
+  "description": "Email notification system",
+  "estimatedMinutes": 35,
+  "priority": "P2",
+  "dependencies": ["344-notifications-system"],
+
+  "objective": {
+    "what": "Email notifications",
+    "why": "Offline awareness",
+    "outcome": "Email alerts"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/lib/notifications/email.ts",
+      "src/emails/workflow-complete.tsx",
+      "src/emails/workflow-error.tsx",
+      "src/emails/weekly-digest.tsx"
+    ],
+    "emails": {
+      "workflowComplete": "Workflow finished",
+      "workflowError": "Workflow failed",
+      "collaboration": "Team activity",
+      "digest": "Weekly digest"
+    },
+    "features": {
+      "preferences": "Per-type preferences",
+      "unsubscribe": "One-click unsubscribe",
+      "digest": "Digest vs immediate"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create email notifications",
+    "tasks": [
+      "Setup email provider",
+      "Create email templates",
+      "Implement digest emails",
+      "Add preference management",
+      "Include unsubscribe links"
+    ],
+    "constraints": [
+      "Mobile-friendly emails",
+      "CAN-SPAM compliant",
+      "Configurable frequency"
+    ]
+  },
+
+  "outputs": {
+    "files": 4
+  }
+}

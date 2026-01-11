@@ -1,0 +1,56 @@
+{
+  "step": 332,
+  "id": "332-event-tracking",
+  "phase": 11,
+  "phaseName": "Dashboard & Analytics",
+  "title": "Event Tracking",
+  "description": "Track user events and actions",
+  "estimatedMinutes": 35,
+  "priority": "P1",
+  "dependencies": ["331-analytics-schema"],
+
+  "objective": {
+    "what": "Event tracking system",
+    "why": "Data collection for analytics",
+    "outcome": "Comprehensive event tracking"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/lib/analytics/tracker.ts",
+      "src/lib/analytics/events.ts",
+      "src/providers/analytics-provider.tsx"
+    ],
+    "events": {
+      "workflow": "Create/edit/run/delete",
+      "block": "Add/remove/configure",
+      "ai": "AI requests and completions",
+      "collaboration": "Join/leave sessions"
+    },
+    "features": {
+      "batching": "Batch events for efficiency",
+      "offline": "Queue when offline",
+      "context": "Auto-add user context"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create event tracking system",
+    "tasks": [
+      "Build analytics tracker",
+      "Define event types",
+      "Create analytics provider",
+      "Implement event batching",
+      "Add offline queue"
+    ],
+    "constraints": [
+      "Low performance impact",
+      "Reliable delivery",
+      "Privacy aware"
+    ]
+  },
+
+  "outputs": {
+    "files": 3
+  }
+}

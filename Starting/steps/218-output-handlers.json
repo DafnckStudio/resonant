@@ -1,0 +1,61 @@
+{
+  "step": 218,
+  "id": "218-output-handlers",
+  "phase": 6,
+  "phaseName": "AI Router & Execution",
+  "title": "Output Block Handlers",
+  "description": "Execute output blocks (webhook, email, storage)",
+  "estimatedMinutes": 50,
+  "priority": "P1",
+  "dependencies": ["192-block-executor"],
+
+  "objective": {
+    "what": "Implement output block execution",
+    "why": "Send results to external systems",
+    "outcome": "Working output blocks"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/lib/execution/outputs/webhook-sender.ts",
+      "src/lib/execution/outputs/email-sender.ts",
+      "src/lib/execution/outputs/storage-handler.ts"
+    ],
+    "webhookOutput": {
+      "method": "POST/PUT/PATCH",
+      "headers": "Custom headers",
+      "body": "JSON payload",
+      "retry": "Retry on failure"
+    },
+    "emailOutput": {
+      "provider": "Resend or SendGrid",
+      "template": "Email templates",
+      "attachments": "File attachments"
+    },
+    "storageOutput": {
+      "provider": "S3, R2, or Vercel Blob",
+      "format": "JSON, CSV, file",
+      "path": "Custom path pattern"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create output handlers",
+    "tasks": [
+      "Implement webhook sender",
+      "Create email sender",
+      "Add storage handler",
+      "Handle retries",
+      "Log output results"
+    ],
+    "constraints": [
+      "Async execution",
+      "Error handling",
+      "Delivery confirmation"
+    ]
+  },
+
+  "outputs": {
+    "files": 3
+  }
+}

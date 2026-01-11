@@ -1,0 +1,57 @@
+{
+  "step": 349,
+  "id": "349-keyboard-shortcuts",
+  "phase": 11,
+  "phaseName": "Dashboard & Analytics",
+  "title": "Keyboard Shortcuts",
+  "description": "Global keyboard shortcuts",
+  "estimatedMinutes": 30,
+  "priority": "P2",
+  "dependencies": ["348-command-palette"],
+
+  "objective": {
+    "what": "Global shortcuts system",
+    "why": "Power user efficiency",
+    "outcome": "Keyboard navigation"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/lib/shortcuts/shortcuts.ts",
+      "src/hooks/use-shortcuts.ts",
+      "src/components/help/shortcuts-dialog.tsx"
+    ],
+    "shortcuts": {
+      "cmdK": "Open command palette",
+      "cmdN": "New workflow",
+      "cmdS": "Save",
+      "escape": "Close dialogs"
+    },
+    "features": {
+      "global": "Global shortcuts",
+      "contextual": "Context-specific",
+      "customizable": "User customization",
+      "help": "Shortcuts help dialog"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create keyboard shortcuts",
+    "tasks": [
+      "Build shortcuts registry",
+      "Create useShortcuts hook",
+      "Implement global listeners",
+      "Add shortcuts help dialog",
+      "Handle context switching"
+    ],
+    "constraints": [
+      "No conflicts",
+      "Platform-aware",
+      "Discoverable"
+    ]
+  },
+
+  "outputs": {
+    "files": 3
+  }
+}

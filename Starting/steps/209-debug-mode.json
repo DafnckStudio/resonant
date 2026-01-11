@@ -1,0 +1,57 @@
+{
+  "step": 209,
+  "id": "209-debug-mode",
+  "phase": 6,
+  "phaseName": "AI Router & Execution",
+  "title": "Debug Mode Execution",
+  "description": "Step-by-step debugging of workflows",
+  "estimatedMinutes": 55,
+  "priority": "P2",
+  "dependencies": ["203-execution-ui-panel"],
+
+  "objective": {
+    "what": "Implement debug mode",
+    "why": "Step through workflow for debugging",
+    "outcome": "Interactive debugging"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/lib/execution/debug/debug-executor.ts",
+      "src/components/editor/execution/debug-controls.tsx",
+      "src/components/editor/execution/debug-inspector.tsx"
+    ],
+    "features": {
+      "stepThrough": "Execute one block at a time",
+      "breakpoints": "Set breakpoints on blocks",
+      "inspect": "Inspect block inputs/outputs",
+      "modify": "Modify data mid-execution"
+    },
+    "controls": {
+      "step": "Execute next block",
+      "continue": "Run to next breakpoint",
+      "stop": "Stop execution",
+      "restart": "Start over"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create debug mode",
+    "tasks": [
+      "Implement debug executor",
+      "Add breakpoint support",
+      "Create debug controls UI",
+      "Build data inspector",
+      "Add data modification"
+    ],
+    "constraints": [
+      "Clear current position",
+      "Easy navigation",
+      "Preserve state"
+    ]
+  },
+
+  "outputs": {
+    "files": 3
+  }
+}

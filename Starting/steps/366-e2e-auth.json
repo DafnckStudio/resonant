@@ -1,0 +1,57 @@
+{
+  "step": 366,
+  "id": "366-e2e-auth",
+  "phase": 12,
+  "phaseName": "Testing & Polish",
+  "title": "E2E - Authentication",
+  "description": "E2E tests for auth flows",
+  "estimatedMinutes": 35,
+  "priority": "P1",
+  "dependencies": ["361-test-setup"],
+
+  "objective": {
+    "what": "Auth E2E tests",
+    "why": "Auth reliability",
+    "outcome": "Tested auth flows"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "tests/e2e/auth/sign-up.spec.ts",
+      "tests/e2e/auth/sign-in.spec.ts",
+      "tests/e2e/auth/sign-out.spec.ts",
+      "tests/e2e/auth/profile.spec.ts"
+    ],
+    "flows": {
+      "signup": "New user registration",
+      "signin": "User login",
+      "signout": "User logout",
+      "profile": "Profile updates"
+    },
+    "scenarios": {
+      "success": "Happy path",
+      "error": "Error handling",
+      "validation": "Form validation"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create auth E2E tests",
+    "tasks": [
+      "Test signup flow",
+      "Test signin flow",
+      "Test signout flow",
+      "Test profile updates",
+      "Test error scenarios"
+    ],
+    "constraints": [
+      "Playwright tests",
+      "Test mode auth",
+      "Isolated test users"
+    ]
+  },
+
+  "outputs": {
+    "files": 4
+  }
+}

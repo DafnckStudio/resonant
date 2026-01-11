@@ -1,0 +1,57 @@
+{
+  "step": 313,
+  "id": "313-payment-methods",
+  "phase": 10,
+  "phaseName": "Monetization & Billing",
+  "title": "Payment Methods",
+  "description": "Manage payment methods",
+  "estimatedMinutes": 30,
+  "priority": "P1",
+  "dependencies": ["307-billing-page"],
+
+  "objective": {
+    "what": "Manage payment methods",
+    "why": "Payment flexibility",
+    "outcome": "Card management"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/lib/billing/payment-methods.ts",
+      "src/components/billing/payment-method-list.tsx",
+      "src/components/billing/add-payment-method.tsx"
+    ],
+    "features": {
+      "list": "List saved cards",
+      "add": "Add new card",
+      "remove": "Remove card",
+      "default": "Set default card"
+    },
+    "display": {
+      "brand": "Card brand icon",
+      "last4": "Last 4 digits",
+      "expiry": "Expiration date",
+      "default": "Default badge"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create payment method management",
+    "tasks": [
+      "Fetch payment methods from Stripe",
+      "Display card list",
+      "Add new card flow",
+      "Remove card with confirmation",
+      "Set default payment method"
+    ],
+    "constraints": [
+      "PCI compliant",
+      "Use Stripe Elements",
+      "Clear card display"
+    ]
+  },
+
+  "outputs": {
+    "files": 3
+  }
+}

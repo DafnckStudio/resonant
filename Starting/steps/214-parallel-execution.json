@@ -1,0 +1,56 @@
+{
+  "step": 214,
+  "id": "214-parallel-execution",
+  "phase": 6,
+  "phaseName": "AI Router & Execution",
+  "title": "Parallel Branch Execution",
+  "description": "Execute parallel branches efficiently",
+  "estimatedMinutes": 50,
+  "priority": "P1",
+  "dependencies": ["191-workflow-executor-core", "161-logic-merge-block", "162-logic-split-block"],
+
+  "objective": {
+    "what": "Optimize parallel execution",
+    "why": "Faster workflow completion",
+    "outcome": "Efficient parallelism"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/lib/execution/parallel/parallel-executor.ts",
+      "src/lib/execution/parallel/branch-manager.ts"
+    ],
+    "features": {
+      "detection": "Auto-detect parallel paths",
+      "scheduling": "Schedule branches concurrently",
+      "merge": "Merge results at join points",
+      "limits": "Max concurrent branches"
+    },
+    "mergeStrategies": {
+      "waitAll": "Wait for all branches",
+      "first": "Continue on first completion",
+      "majority": "Continue on majority",
+      "custom": "Custom merge logic"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create parallel execution",
+    "tasks": [
+      "Implement branch detection",
+      "Create parallel executor",
+      "Add branch management",
+      "Implement merge strategies",
+      "Handle branch failures"
+    ],
+    "constraints": [
+      "Memory efficient",
+      "Handle unbalanced branches",
+      "Clean cancellation"
+    ]
+  },
+
+  "outputs": {
+    "files": 2
+  }
+}

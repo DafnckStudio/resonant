@@ -1,0 +1,55 @@
+{
+  "step": 35,
+  "id": "035-executions-page",
+  "phase": 1,
+  "phaseName": "Core UI & Layout",
+  "title": "Create Executions History Page",
+  "description": "Build execution history page with status, results, and logs",
+  "estimatedMinutes": 30,
+  "priority": "P1",
+  "dependencies": ["034-templates-page"],
+
+  "objective": {
+    "what": "Create executions page showing all workflow runs with status and details",
+    "why": "Users need to track execution history for debugging and monitoring",
+    "outcome": "Executions table with filtering and drill-down capability"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/app/(dashboard)/executions/page.tsx",
+      "src/components/executions/execution-table.tsx",
+      "src/components/executions/execution-row.tsx",
+      "src/components/executions/execution-status-badge.tsx"
+    ],
+    "columns": [
+      "Workflow name",
+      "Status",
+      "Started",
+      "Duration",
+      "Tokens used",
+      "Triggered by"
+    ],
+    "features": {
+      "filtering": "By status, workflow, date",
+      "sorting": "By date, duration, tokens",
+      "drillDown": "Click to view details"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create executions history page",
+    "tasks": [
+      "Create executions page with table",
+      "Build ExecutionTable component",
+      "Create status badge component",
+      "Add filters and sorting",
+      "Link to execution details"
+    ]
+  },
+
+  "outputs": {
+    "files": 4,
+    "components": ["ExecutionTable", "ExecutionRow", "ExecutionStatusBadge"]
+  }
+}

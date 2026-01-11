@@ -1,0 +1,54 @@
+{
+  "step": 172,
+  "id": "172-human-input-block",
+  "phase": 5,
+  "phaseName": "Block System",
+  "title": "Human Input Block",
+  "description": "Create human input form block",
+  "estimatedMinutes": 40,
+  "priority": "P2",
+  "dependencies": ["171-human-approval-block"],
+
+  "objective": {
+    "what": "Create human input block",
+    "why": "Collect input from users mid-workflow",
+    "outcome": "Dynamic form input"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/components/editor/blocks/human/input-form-block.tsx",
+      "src/components/workflow/input-form-dialog.tsx"
+    ],
+    "config": {
+      "fields": "Form field definitions",
+      "assignee": "Who should fill",
+      "timeout": "Response timeout"
+    },
+    "inputs": {
+      "context": "Context data for form"
+    },
+    "outputs": {
+      "formData": "Submitted form data"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create human input block",
+    "tasks": [
+      "Create InputFormBlock component",
+      "Create form field builder",
+      "Create InputFormDialog",
+      "Send form request notification",
+      "Collect and return data"
+    ],
+    "constraints": [
+      "Dynamic form fields",
+      "Validation support"
+    ]
+  },
+
+  "outputs": {
+    "files": 2
+  }
+}

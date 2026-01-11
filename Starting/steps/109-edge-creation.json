@@ -1,0 +1,55 @@
+{
+  "step": 109,
+  "id": "109-edge-creation",
+  "phase": 4,
+  "phaseName": "Workflow Editor Core",
+  "title": "Implement Edge Creation",
+  "description": "Allow connecting nodes by dragging handles",
+  "estimatedMinutes": 35,
+  "priority": "P0",
+  "dependencies": ["104-custom-edges", "103-custom-node-base"],
+
+  "objective": {
+    "what": "Enable edge creation between nodes",
+    "why": "Connections define workflow data flow",
+    "outcome": "Drag from handle to create connections"
+  },
+
+  "specifications": {
+    "filesToModify": [
+      "src/components/editor/flow-editor.tsx",
+      "src/components/editor/nodes/node-handle.tsx"
+    ],
+    "behavior": {
+      "start": "Drag from output handle",
+      "preview": "Show connection line while dragging",
+      "complete": "Drop on input handle",
+      "validate": "Check type compatibility"
+    },
+    "validation": {
+      "noSelfConnect": "Can't connect to self",
+      "noLoops": "Prevent circular connections",
+      "typeMatch": "Check data type compatibility"
+    }
+  },
+
+  "prompt": {
+    "mission": "Implement edge creation",
+    "tasks": [
+      "Handle onConnect event",
+      "Validate connection rules",
+      "Show preview line while dragging",
+      "Highlight valid drop targets",
+      "Create edge on successful drop",
+      "Show error on invalid connection"
+    ],
+    "constraints": [
+      "Validate before connecting",
+      "Support multiple outputs"
+    ]
+  },
+
+  "outputs": {
+    "filesModified": 2
+  }
+}

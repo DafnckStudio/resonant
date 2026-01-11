@@ -1,0 +1,56 @@
+{
+  "step": 334,
+  "id": "334-stats-cards",
+  "phase": 11,
+  "phaseName": "Dashboard & Analytics",
+  "title": "Stats Cards",
+  "description": "Overview statistics cards",
+  "estimatedMinutes": 30,
+  "priority": "P1",
+  "dependencies": ["333-dashboard-layout"],
+
+  "objective": {
+    "what": "Statistics overview cards",
+    "why": "Quick metrics at glance",
+    "outcome": "Visual stats display"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/components/dashboard/stats-card.tsx",
+      "src/components/dashboard/stats-overview.tsx",
+      "src/lib/analytics/stats.ts"
+    ],
+    "cards": {
+      "workflows": "Total workflows count",
+      "executions": "Executions this month",
+      "aiTokens": "AI tokens used",
+      "collaborators": "Active collaborators"
+    },
+    "features": {
+      "trend": "Trend indicator",
+      "sparkline": "Mini chart",
+      "comparison": "vs last period"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create stats cards",
+    "tasks": [
+      "Build stats card component",
+      "Create stats overview grid",
+      "Add trend indicators",
+      "Include mini sparklines",
+      "Show period comparison"
+    ],
+    "constraints": [
+      "Real-time updates",
+      "Clear visual design",
+      "Meaningful metrics"
+    ]
+  },
+
+  "outputs": {
+    "files": 3
+  }
+}

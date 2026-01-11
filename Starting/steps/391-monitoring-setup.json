@@ -1,0 +1,56 @@
+{
+  "step": 391,
+  "id": "391-monitoring-setup",
+  "phase": 12,
+  "phaseName": "Testing & Polish",
+  "title": "Monitoring Setup",
+  "description": "Set up application monitoring",
+  "estimatedMinutes": 35,
+  "priority": "P1",
+  "dependencies": [],
+
+  "objective": {
+    "what": "Monitoring setup",
+    "why": "Production visibility",
+    "outcome": "Full observability"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/lib/monitoring/sentry.ts",
+      "src/lib/monitoring/analytics.ts",
+      "src/lib/monitoring/logger.ts"
+    ],
+    "monitoring": {
+      "errors": "Error tracking (Sentry)",
+      "analytics": "User analytics",
+      "performance": "Performance monitoring",
+      "logs": "Structured logging"
+    },
+    "alerts": {
+      "errors": "Error rate alerts",
+      "performance": "Performance alerts",
+      "availability": "Uptime alerts"
+    }
+  },
+
+  "prompt": {
+    "mission": "Set up monitoring",
+    "tasks": [
+      "Configure Sentry",
+      "Add analytics tracking",
+      "Set up performance monitoring",
+      "Create structured logging",
+      "Configure alerting"
+    ],
+    "constraints": [
+      "Sentry for errors",
+      "Vercel Analytics",
+      "Privacy-compliant"
+    ]
+  },
+
+  "outputs": {
+    "files": 3
+  }
+}

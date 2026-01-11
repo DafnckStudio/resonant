@@ -1,0 +1,49 @@
+{
+  "step": 68,
+  "id": "068-pending-invites",
+  "phase": 2,
+  "phaseName": "Authentication & Users",
+  "title": "Show Pending Invites",
+  "description": "Display and manage pending team invitations",
+  "estimatedMinutes": 25,
+  "priority": "P2",
+  "dependencies": ["066-invite-system"],
+
+  "objective": {
+    "what": "Show pending invitations in team settings",
+    "why": "Admins need to see and manage pending invites",
+    "outcome": "Pending invites list with resend/revoke options"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/components/settings/pending-invites-list.tsx"
+    ],
+    "filesToModify": [
+      "src/app/(dashboard)/settings/team/page.tsx",
+      "convex/invites.ts"
+    ],
+    "features": {
+      "list": "Show pending invites",
+      "resend": "Resend invitation email",
+      "revoke": "Cancel pending invite",
+      "expire": "Show expiration date"
+    }
+  },
+
+  "prompt": {
+    "mission": "Show pending invites",
+    "tasks": [
+      "Create PendingInvitesList component",
+      "Add query for pending invites",
+      "Implement resend mutation",
+      "Add revoke mutation",
+      "Show expiration status"
+    ]
+  },
+
+  "outputs": {
+    "files": 1,
+    "filesModified": 2
+  }
+}

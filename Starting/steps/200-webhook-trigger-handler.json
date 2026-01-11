@@ -1,0 +1,57 @@
+{
+  "step": 200,
+  "id": "200-webhook-trigger-handler",
+  "phase": 6,
+  "phaseName": "AI Router & Execution",
+  "title": "Webhook Trigger Handler",
+  "description": "Handle incoming webhooks to trigger workflows",
+  "estimatedMinutes": 45,
+  "priority": "P0",
+  "dependencies": ["199-execution-api-routes"],
+
+  "objective": {
+    "what": "Create webhook trigger handler",
+    "why": "External systems can trigger workflows",
+    "outcome": "Working webhook triggers"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/app/api/webhooks/trigger/[webhookId]/route.ts",
+      "src/lib/webhooks/webhook-validator.ts",
+      "src/lib/webhooks/webhook-mapper.ts",
+      "convex/webhookTriggers.ts"
+    ],
+    "features": {
+      "uniqueUrls": "Unique URL per workflow",
+      "secretValidation": "HMAC signature validation",
+      "payloadMapping": "Map webhook data to inputs",
+      "history": "Track webhook calls"
+    },
+    "security": {
+      "hmac": "HMAC-SHA256 signature",
+      "ipWhitelist": "Optional IP filtering",
+      "rateLimit": "Per-webhook rate limits"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create webhook handler",
+    "tasks": [
+      "Create webhook endpoint",
+      "Implement signature validation",
+      "Map payload to workflow inputs",
+      "Queue execution",
+      "Log webhook calls"
+    ],
+    "constraints": [
+      "Fast response times",
+      "Async execution",
+      "Secure validation"
+    ]
+  },
+
+  "outputs": {
+    "files": 4
+  }
+}

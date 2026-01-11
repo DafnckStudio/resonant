@@ -1,0 +1,51 @@
+{
+  "step": 139,
+  "id": "139-editor-performance",
+  "phase": 4,
+  "phaseName": "Workflow Editor Core",
+  "title": "Editor Performance Optimization",
+  "description": "Optimize editor for large workflows",
+  "estimatedMinutes": 45,
+  "priority": "P1",
+  "dependencies": ["120-workflow-state-management"],
+
+  "objective": {
+    "what": "Optimize editor performance",
+    "why": "Handle 100+ node workflows smoothly",
+    "outcome": "60fps with large workflows"
+  },
+
+  "specifications": {
+    "filesToModify": [
+      "src/components/editor/flow-editor.tsx",
+      "src/components/editor/nodes/base-node.tsx"
+    ],
+    "optimizations": {
+      "virtualization": "Only render visible nodes",
+      "memoization": "Memo all components",
+      "batching": "Batch state updates",
+      "debounce": "Debounce expensive ops",
+      "webWorkers": "Offload calculations"
+    }
+  },
+
+  "prompt": {
+    "mission": "Optimize performance",
+    "tasks": [
+      "Profile current performance",
+      "Add React.memo to nodes",
+      "Virtualize off-screen nodes",
+      "Batch state updates",
+      "Debounce validation",
+      "Add performance monitoring"
+    ],
+    "constraints": [
+      "Target 100+ nodes",
+      "Maintain 60fps"
+    ]
+  },
+
+  "outputs": {
+    "filesModified": 2
+  }
+}

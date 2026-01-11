@@ -1,0 +1,59 @@
+{
+  "step": 141,
+  "id": "141-block-type-system",
+  "phase": 5,
+  "phaseName": "Block System",
+  "title": "Block Type System",
+  "description": "Create type definitions for all block types",
+  "estimatedMinutes": 45,
+  "priority": "P0",
+  "dependencies": ["140-phase4-integration"],
+
+  "objective": {
+    "what": "Define type system for all blocks",
+    "why": "Strong typing prevents runtime errors",
+    "outcome": "Complete TypeScript types for blocks"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/types/blocks/index.ts",
+      "src/types/blocks/base-block.ts",
+      "src/types/blocks/input-blocks.ts",
+      "src/types/blocks/ai-blocks.ts",
+      "src/types/blocks/transform-blocks.ts",
+      "src/types/blocks/logic-blocks.ts",
+      "src/types/blocks/output-blocks.ts",
+      "src/types/blocks/utility-blocks.ts"
+    ],
+    "baseTypes": {
+      "BlockType": "Union of all block types",
+      "BlockConfig": "Configuration for each type",
+      "BlockInput": "Input handle definition",
+      "BlockOutput": "Output handle definition",
+      "BlockData": "Runtime data structure"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create block type system",
+    "tasks": [
+      "Define BaseBlock interface",
+      "Create input block types",
+      "Create AI block types",
+      "Create transform block types",
+      "Create logic block types",
+      "Create output block types",
+      "Create utility block types",
+      "Export type union"
+    ],
+    "constraints": [
+      "Use discriminated unions",
+      "Full type safety"
+    ]
+  },
+
+  "outputs": {
+    "files": 8
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "step": 190,
+  "id": "190-api-key-management",
+  "phase": 6,
+  "phaseName": "AI Router & Execution",
+  "title": "API Key Management",
+  "description": "Secure storage and rotation of AI API keys",
+  "estimatedMinutes": 40,
+  "priority": "P0",
+  "dependencies": ["186-provider-registry"],
+
+  "objective": {
+    "what": "Implement API key management",
+    "why": "Secure multi-provider authentication",
+    "outcome": "Secure key storage and access"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/lib/ai/keys/key-manager.ts",
+      "src/lib/ai/keys/key-rotation.ts",
+      "convex/apiKeys.ts"
+    ],
+    "features": {
+      "storage": "Encrypted key storage",
+      "rotation": "Automatic key rotation",
+      "perUser": "User-provided keys option",
+      "validation": "Key validation on save"
+    },
+    "keyTypes": {
+      "platform": "Platform-owned keys (default)",
+      "user": "User brings own keys (BYOK)",
+      "workspace": "Workspace-level keys"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create API key management",
+    "tasks": [
+      "Create secure key storage schema",
+      "Implement encryption at rest",
+      "Add key validation",
+      "Support BYOK model",
+      "Add key rotation"
+    ],
+    "constraints": [
+      "Never log keys",
+      "Encrypt in database",
+      "Audit key access"
+    ]
+  },
+
+  "outputs": {
+    "files": 3
+  }
+}

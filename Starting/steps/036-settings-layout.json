@@ -1,0 +1,53 @@
+{
+  "step": 36,
+  "id": "036-settings-layout",
+  "phase": 1,
+  "phaseName": "Core UI & Layout",
+  "title": "Create Settings Page Layout",
+  "description": "Build settings page structure with tabs navigation",
+  "estimatedMinutes": 20,
+  "priority": "P1",
+  "dependencies": ["035-executions-page"],
+
+  "objective": {
+    "what": "Create settings layout with tab navigation for different settings sections",
+    "why": "Settings need organized sections for profile, billing, team, etc.",
+    "outcome": "Settings layout with tabs similar to DentistryGPT"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/app/(dashboard)/settings/layout.tsx",
+      "src/app/(dashboard)/settings/page.tsx",
+      "src/components/settings/settings-tabs.tsx"
+    ],
+    "tabs": [
+      { "label": "Profile", "href": "/settings" },
+      { "label": "Workspace", "href": "/settings/workspace" },
+      { "label": "Team", "href": "/settings/team" },
+      { "label": "AI Providers", "href": "/settings/ai-providers" },
+      { "label": "Billing", "href": "/settings/billing" },
+      { "label": "API", "href": "/settings/api" }
+    ],
+    "tabStyle": "h-9 p-1 bg-muted/60 (DentistryGPT style)"
+  },
+
+  "prompt": {
+    "mission": "Create settings page layout with tabs",
+    "tasks": [
+      "Create settings layout.tsx",
+      "Build SettingsTabs component",
+      "Style tabs like DentistryGPT",
+      "Create placeholder pages for each tab"
+    ],
+    "constraints": [
+      "Follow DentistryGPT tab styling",
+      "Use nested routing"
+    ]
+  },
+
+  "outputs": {
+    "files": 3,
+    "tabs": 6
+  }
+}

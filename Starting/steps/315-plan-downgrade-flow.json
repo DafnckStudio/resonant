@@ -1,0 +1,57 @@
+{
+  "step": 315,
+  "id": "315-plan-downgrade-flow",
+  "phase": 10,
+  "phaseName": "Monetization & Billing",
+  "title": "Plan Downgrade Flow",
+  "description": "Downgrade subscription plans",
+  "estimatedMinutes": 35,
+  "priority": "P1",
+  "dependencies": ["314-plan-upgrade-flow"],
+
+  "objective": {
+    "what": "Plan downgrade experience",
+    "why": "Retention over cancellation",
+    "outcome": "Graceful downgrades"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/lib/billing/downgrade.ts",
+      "src/components/billing/downgrade-modal.tsx",
+      "src/components/billing/feature-loss-warning.tsx"
+    ],
+    "features": {
+      "warning": "Feature loss warnings",
+      "endOfPeriod": "Downgrade at period end",
+      "retention": "Retention offers",
+      "confirm": "Confirmation required"
+    },
+    "logic": {
+      "timing": "End of billing period",
+      "limits": "Check against new limits",
+      "data": "Data preservation rules",
+      "grace": "Grace period for over-limit"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create plan downgrade flow",
+    "tasks": [
+      "Build downgrade modal",
+      "Show feature loss warnings",
+      "Check limit violations",
+      "Schedule downgrade at period end",
+      "Add retention offer"
+    ],
+    "constraints": [
+      "Clear feature loss communication",
+      "Scheduled at period end",
+      "Retention focus"
+    ]
+  },
+
+  "outputs": {
+    "files": 3
+  }
+}

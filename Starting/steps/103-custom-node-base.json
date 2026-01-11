@@ -1,0 +1,56 @@
+{
+  "step": 103,
+  "id": "103-custom-node-base",
+  "phase": 4,
+  "phaseName": "Workflow Editor Core",
+  "title": "Create Custom Node Base Component",
+  "description": "Build the base custom node component for all block types",
+  "estimatedMinutes": 40,
+  "priority": "P0",
+  "dependencies": ["101-react-flow-setup"],
+
+  "objective": {
+    "what": "Create reusable base node component",
+    "why": "All block types share common structure (header, body, handles)",
+    "outcome": "BaseNode component for inheritance"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/components/editor/nodes/base-node.tsx",
+      "src/components/editor/nodes/node-header.tsx",
+      "src/components/editor/nodes/node-handle.tsx",
+      "src/components/editor/nodes/node-types.ts"
+    ],
+    "structure": {
+      "header": "Icon, label, status indicator",
+      "body": "Block-specific content (slots)",
+      "handles": "Input/output connection points",
+      "footer": "Quick actions, run status"
+    },
+    "features": {
+      "selection": "Selected state styling",
+      "validation": "Error/warning indicators",
+      "status": "Running/complete/error states"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create base node component",
+    "tasks": [
+      "Create BaseNode wrapper component",
+      "Build NodeHeader with icon and label",
+      "Create NodeHandle for connections",
+      "Define node type registry",
+      "Add selection and hover states"
+    ],
+    "constraints": [
+      "Support all block types",
+      "Must be extendable"
+    ]
+  },
+
+  "outputs": {
+    "files": 4
+  }
+}

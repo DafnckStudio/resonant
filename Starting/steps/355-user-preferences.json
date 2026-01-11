@@ -1,0 +1,57 @@
+{
+  "step": 355,
+  "id": "355-user-preferences",
+  "phase": 11,
+  "phaseName": "Dashboard & Analytics",
+  "title": "User Preferences",
+  "description": "User preference settings",
+  "estimatedMinutes": 30,
+  "priority": "P2",
+  "dependencies": ["333-dashboard-layout"],
+
+  "objective": {
+    "what": "User preferences page",
+    "why": "Customizable experience",
+    "outcome": "Personalized settings"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/app/(dashboard)/settings/preferences/page.tsx",
+      "src/components/settings/preferences-form.tsx",
+      "convex/preferences.ts"
+    ],
+    "preferences": {
+      "theme": "Light/dark/system",
+      "language": "UI language",
+      "timezone": "Timezone",
+      "dateFormat": "Date format"
+    },
+    "editor": {
+      "autoSave": "Auto-save interval",
+      "gridSize": "Grid snap size",
+      "animations": "Enable animations",
+      "density": "UI density"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create user preferences",
+    "tasks": [
+      "Build preferences page",
+      "Create preference form",
+      "Implement theme toggle",
+      "Add timezone selector",
+      "Save to user profile"
+    ],
+    "constraints": [
+      "Instant apply",
+      "Persist properly",
+      "Clear categories"
+    ]
+  },
+
+  "outputs": {
+    "files": 3
+  }
+}

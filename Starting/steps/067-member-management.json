@@ -1,0 +1,50 @@
+{
+  "step": 67,
+  "id": "067-member-management",
+  "phase": 2,
+  "phaseName": "Authentication & Users",
+  "title": "Implement Member Management",
+  "description": "Add functionality to manage workspace members",
+  "estimatedMinutes": 35,
+  "priority": "P1",
+  "dependencies": ["066-invite-system"],
+
+  "objective": {
+    "what": "Implement member management for workspaces",
+    "why": "Admins need to manage team member roles and access",
+    "outcome": "Working member list with role changes and removal"
+  },
+
+  "specifications": {
+    "filesToModify": [
+      "src/components/settings/team-members-list.tsx",
+      "src/components/settings/member-role-select.tsx",
+      "convex/workspaceMembers.ts"
+    ],
+    "features": {
+      "list": "Show all members with roles",
+      "changeRole": "Change member role",
+      "remove": "Remove member with confirmation",
+      "transferOwnership": "Transfer ownership to another member"
+    }
+  },
+
+  "prompt": {
+    "mission": "Implement member management",
+    "tasks": [
+      "Wire TeamMembersList to Convex query",
+      "Implement role change mutation",
+      "Add remove member with confirmation",
+      "Create ownership transfer flow",
+      "Apply permission checks"
+    ],
+    "constraints": [
+      "Owner cannot remove self (must transfer first)",
+      "Cannot change role to owner (use transfer)"
+    ]
+  },
+
+  "outputs": {
+    "filesModified": 3
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "step": 274,
+  "id": "274-version-testing",
+  "phase": 8,
+  "phaseName": "Version Control",
+  "title": "Version Control Testing",
+  "description": "Comprehensive version tests",
+  "estimatedMinutes": 45,
+  "priority": "P1",
+  "dependencies": ["271-version-search", "270-version-comparison-page"],
+
+  "objective": {
+    "what": "Test version control",
+    "why": "Ensure reliability",
+    "outcome": "Tested version system"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/lib/versioning/__tests__/auto-save.test.ts",
+      "src/lib/versioning/__tests__/restore.test.ts",
+      "src/lib/versioning/__tests__/diff.test.ts",
+      "e2e/version-control.spec.ts"
+    ],
+    "testCases": {
+      "autoSave": "Auto-save timing and content",
+      "restore": "Restore correctness",
+      "diff": "Diff accuracy",
+      "branching": "Branch operations"
+    },
+    "scenarios": {
+      "concurrent": "Multiple users versioning",
+      "large": "Large workflow versions",
+      "conflict": "Version conflicts"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create version tests",
+    "tasks": [
+      "Unit test auto-save",
+      "Test restore operations",
+      "Test diff algorithm",
+      "E2E version workflows",
+      "Performance tests"
+    ],
+    "constraints": [
+      "High coverage",
+      "Edge cases",
+      "CI-friendly"
+    ]
+  },
+
+  "outputs": {
+    "files": 4
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "step": 342,
+  "id": "342-team-analytics",
+  "phase": 11,
+  "phaseName": "Dashboard & Analytics",
+  "title": "Team Analytics",
+  "description": "Team activity and usage analytics",
+  "estimatedMinutes": 35,
+  "priority": "P2",
+  "dependencies": ["331-analytics-schema"],
+
+  "objective": {
+    "what": "Team analytics dashboard",
+    "why": "Team performance insights",
+    "outcome": "Team visibility"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/app/(dashboard)/analytics/team/page.tsx",
+      "src/components/analytics/team-activity.tsx",
+      "src/components/analytics/member-stats.tsx",
+      "src/lib/analytics/team-stats.ts"
+    ],
+    "metrics": {
+      "activeMembers": "Active team members",
+      "contributions": "Contributions per member",
+      "workflows": "Workflows per member",
+      "collaboration": "Collaboration frequency"
+    },
+    "views": {
+      "overview": "Team overview",
+      "individual": "Individual stats",
+      "comparison": "Member comparison",
+      "trends": "Activity trends"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create team analytics",
+    "tasks": [
+      "Build team analytics page",
+      "Show member activity stats",
+      "Create contribution charts",
+      "Add collaboration metrics",
+      "Display team trends"
+    ],
+    "constraints": [
+      "Privacy-aware metrics",
+      "Fair comparison",
+      "Positive framing"
+    ]
+  },
+
+  "outputs": {
+    "files": 4
+  }
+}

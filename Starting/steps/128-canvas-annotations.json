@@ -1,0 +1,50 @@
+{
+  "step": 128,
+  "id": "128-canvas-annotations",
+  "phase": 4,
+  "phaseName": "Workflow Editor Core",
+  "title": "Canvas Annotations",
+  "description": "Add sticky notes and text annotations to canvas",
+  "estimatedMinutes": 35,
+  "priority": "P3",
+  "dependencies": ["101-react-flow-setup"],
+
+  "objective": {
+    "what": "Add annotations to canvas",
+    "why": "Document workflow sections",
+    "outcome": "Sticky notes and text labels"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/components/editor/annotations/sticky-note.tsx",
+      "src/components/editor/annotations/text-annotation.tsx"
+    ],
+    "features": {
+      "stickyNote": "Colored sticky notes",
+      "textLabel": "Simple text labels",
+      "resize": "Resizable notes",
+      "colors": "Multiple color options"
+    }
+  },
+
+  "prompt": {
+    "mission": "Add canvas annotations",
+    "tasks": [
+      "Create StickyNote component",
+      "Create TextAnnotation component",
+      "Add to block palette",
+      "Make resizable",
+      "Add color picker",
+      "Persist as nodes"
+    ],
+    "constraints": [
+      "Treat as special node type",
+      "Don't connect to workflow"
+    ]
+  },
+
+  "outputs": {
+    "files": 2
+  }
+}

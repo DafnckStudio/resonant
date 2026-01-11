@@ -1,0 +1,57 @@
+{
+  "step": 372,
+  "id": "372-security-testing",
+  "phase": 12,
+  "phaseName": "Testing & Polish",
+  "title": "Security Testing",
+  "description": "Security vulnerability testing",
+  "estimatedMinutes": 45,
+  "priority": "P1",
+  "dependencies": ["361-test-setup"],
+
+  "objective": {
+    "what": "Security tests",
+    "why": "Application security",
+    "outcome": "Secure application"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "tests/security/auth.test.ts",
+      "tests/security/api.test.ts",
+      "tests/security/input.test.ts",
+      "tests/security/deps.test.ts"
+    ],
+    "tests": {
+      "auth": "Authentication bypass",
+      "injection": "SQL/NoSQL injection",
+      "xss": "Cross-site scripting",
+      "csrf": "CSRF protection"
+    },
+    "tools": {
+      "npm": "npm audit",
+      "snyk": "Snyk scanning",
+      "headers": "Security headers"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create security tests",
+    "tasks": [
+      "Test auth security",
+      "Test input sanitization",
+      "Test API security",
+      "Run dependency audit",
+      "Verify security headers"
+    ],
+    "constraints": [
+      "OWASP top 10",
+      "Zero high vulnerabilities",
+      "All inputs validated"
+    ]
+  },
+
+  "outputs": {
+    "files": 4
+  }
+}

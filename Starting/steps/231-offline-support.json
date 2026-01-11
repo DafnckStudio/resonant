@@ -1,0 +1,56 @@
+{
+  "step": 231,
+  "id": "231-offline-support",
+  "phase": 7,
+  "phaseName": "Real-time Collaboration",
+  "title": "Offline Editing Support",
+  "description": "Work offline and sync when reconnected",
+  "estimatedMinutes": 50,
+  "priority": "P1",
+  "dependencies": ["221-yjs-setup"],
+
+  "objective": {
+    "what": "Enable offline editing",
+    "why": "Work without internet connection",
+    "outcome": "Offline-first experience"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/lib/collaboration/offline/offline-manager.ts",
+      "src/lib/collaboration/offline/sync-queue.ts",
+      "src/lib/collaboration/offline/indexeddb-provider.ts"
+    ],
+    "features": {
+      "localStore": "IndexedDB persistence",
+      "queue": "Queue changes while offline",
+      "detection": "Detect online/offline",
+      "sync": "Sync on reconnect"
+    },
+    "ui": {
+      "indicator": "Offline indicator",
+      "pending": "Pending changes count",
+      "syncing": "Syncing status"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create offline support",
+    "tasks": [
+      "Set up IndexedDB provider",
+      "Implement change queue",
+      "Add connection detection",
+      "Handle reconnection sync",
+      "Add status indicators"
+    ],
+    "constraints": [
+      "No data loss",
+      "Automatic sync",
+      "Clear status"
+    ]
+  },
+
+  "outputs": {
+    "files": 3
+  }
+}

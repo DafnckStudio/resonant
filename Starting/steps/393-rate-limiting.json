@@ -1,0 +1,56 @@
+{
+  "step": 393,
+  "id": "393-rate-limiting",
+  "phase": 12,
+  "phaseName": "Testing & Polish",
+  "title": "Rate Limiting",
+  "description": "Implement API rate limiting",
+  "estimatedMinutes": 30,
+  "priority": "P1",
+  "dependencies": [],
+
+  "objective": {
+    "what": "Rate limiting",
+    "why": "Abuse prevention",
+    "outcome": "Protected APIs"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/lib/rate-limit/limiter.ts",
+      "src/lib/rate-limit/middleware.ts",
+      "convex/rateLimits.ts"
+    ],
+    "limits": {
+      "api": "API rate limits",
+      "auth": "Auth rate limits",
+      "ai": "AI request limits",
+      "webhooks": "Webhook limits"
+    },
+    "strategies": {
+      "sliding": "Sliding window",
+      "token": "Token bucket",
+      "fixed": "Fixed window"
+    }
+  },
+
+  "prompt": {
+    "mission": "Add rate limiting",
+    "tasks": [
+      "Implement rate limiter",
+      "Add API middleware",
+      "Configure limits by plan",
+      "Add limit headers",
+      "Handle exceeded limits"
+    ],
+    "constraints": [
+      "Plan-based limits",
+      "Clear error messages",
+      "Header information"
+    ]
+  },
+
+  "outputs": {
+    "files": 3
+  }
+}

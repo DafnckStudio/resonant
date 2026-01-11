@@ -1,0 +1,48 @@
+{
+  "step": 31,
+  "id": "031-dashboard-home-page",
+  "phase": 1,
+  "phaseName": "Core UI & Layout",
+  "title": "Create Dashboard Home Page",
+  "description": "Build the main dashboard overview page with stats and recent activity",
+  "estimatedMinutes": 30,
+  "priority": "P0",
+  "dependencies": ["030-modal-system"],
+
+  "objective": {
+    "what": "Create the dashboard home page with overview cards, recent workflows, and quick actions",
+    "why": "Dashboard home is the first thing users see after login",
+    "outcome": "Working dashboard page with stats cards and recent activity"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/app/(dashboard)/page.tsx",
+      "src/components/dashboard/stats-cards.tsx",
+      "src/components/dashboard/recent-workflows.tsx",
+      "src/components/dashboard/quick-actions.tsx"
+    ],
+    "sections": {
+      "welcome": "Welcome message with user name",
+      "stats": "4 stat cards (workflows, executions, tokens, team)",
+      "recentWorkflows": "Last 5 edited workflows",
+      "quickActions": "Create workflow, browse templates, invite team"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create dashboard home page",
+    "tasks": [
+      "Create (dashboard)/page.tsx",
+      "Build StatsCards component with 4 metrics",
+      "Create RecentWorkflows list component",
+      "Add QuickActions section",
+      "Connect to Convex for real data (or mock initially)"
+    ]
+  },
+
+  "outputs": {
+    "files": 4,
+    "components": ["StatsCards", "RecentWorkflows", "QuickActions"]
+  }
+}

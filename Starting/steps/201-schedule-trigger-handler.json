@@ -1,0 +1,59 @@
+{
+  "step": 201,
+  "id": "201-schedule-trigger-handler",
+  "phase": 6,
+  "phaseName": "AI Router & Execution",
+  "title": "Schedule Trigger Handler",
+  "description": "Cron-based scheduled workflow execution",
+  "estimatedMinutes": 50,
+  "priority": "P1",
+  "dependencies": ["199-execution-api-routes"],
+
+  "objective": {
+    "what": "Implement scheduled triggers",
+    "why": "Run workflows on schedule",
+    "outcome": "Working cron triggers"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/lib/scheduling/scheduler.ts",
+      "src/lib/scheduling/cron-parser.ts",
+      "convex/scheduledTriggers.ts",
+      "convex/crons.ts"
+    ],
+    "features": {
+      "cronSyntax": "Standard cron expression",
+      "timezone": "Timezone support",
+      "nextRun": "Calculate next run time",
+      "history": "Track scheduled runs"
+    },
+    "scheduleTypes": {
+      "interval": "Every X minutes/hours",
+      "daily": "Once per day at time",
+      "weekly": "Specific days of week",
+      "monthly": "Specific day of month",
+      "custom": "Full cron expression"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create schedule handler",
+    "tasks": [
+      "Implement cron parser",
+      "Create scheduler service",
+      "Use Convex crons",
+      "Add timezone handling",
+      "Track schedule history"
+    ],
+    "constraints": [
+      "Accurate timing",
+      "Handle DST changes",
+      "Efficient polling"
+    ]
+  },
+
+  "outputs": {
+    "files": 4
+  }
+}

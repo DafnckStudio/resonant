@@ -1,0 +1,55 @@
+{
+  "step": 245,
+  "id": "245-collaboration-reconnection",
+  "phase": 7,
+  "phaseName": "Real-time Collaboration",
+  "title": "Collaboration Reconnection",
+  "description": "Handle reconnection after disconnect",
+  "estimatedMinutes": 35,
+  "priority": "P1",
+  "dependencies": ["222-collaboration-server", "238-connection-status"],
+
+  "objective": {
+    "what": "Handle reconnection gracefully",
+    "why": "Network interruptions happen",
+    "outcome": "Seamless reconnection"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/lib/collaboration/reconnection/reconnect-manager.ts",
+      "src/lib/collaboration/reconnection/state-recovery.ts"
+    ],
+    "reconnection": {
+      "detection": "Detect connection loss",
+      "backoff": "Exponential backoff retry",
+      "stateSync": "Sync missed changes on reconnect",
+      "conflictMerge": "Merge offline edits"
+    },
+    "recovery": {
+      "pendingChanges": "Queue changes while offline",
+      "syncOnReconnect": "Apply pending when connected",
+      "versionCheck": "Verify document version"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create reconnection handling",
+    "tasks": [
+      "Detect connection loss",
+      "Implement retry with backoff",
+      "Queue changes while offline",
+      "Sync state on reconnect",
+      "Handle version conflicts"
+    ],
+    "constraints": [
+      "No data loss",
+      "Automatic recovery",
+      "User notification"
+    ]
+  },
+
+  "outputs": {
+    "files": 2
+  }
+}

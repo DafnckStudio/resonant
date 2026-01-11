@@ -1,0 +1,51 @@
+{
+  "step": 55,
+  "id": "055-user-context",
+  "phase": 2,
+  "phaseName": "Authentication & Users",
+  "title": "Create User Context Provider",
+  "description": "Build React context for current user data from Convex",
+  "estimatedMinutes": 25,
+  "priority": "P0",
+  "dependencies": ["054-clerk-webhook-handler"],
+
+  "objective": {
+    "what": "Create a user context provider combining Clerk and Convex data",
+    "why": "Components need access to full user data throughout the app",
+    "outcome": "useUser hook providing Clerk auth + Convex user data"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/providers/user-provider.tsx",
+      "src/hooks/use-current-user.ts",
+      "convex/users.ts"
+    ],
+    "features": {
+      "clerkData": "isSignedIn, user from Clerk",
+      "convexData": "Full user record from Convex",
+      "loading": "Loading state while fetching",
+      "sync": "Auto-sync between Clerk and Convex"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create user context provider",
+    "tasks": [
+      "Create UserProvider component",
+      "Add Convex query to fetch user by clerkId",
+      "Create useCurrentUser hook",
+      "Handle loading and error states",
+      "Export typed user interface"
+    ],
+    "constraints": [
+      "Must handle when Convex user doesn't exist yet",
+      "Type-safe with TypeScript"
+    ]
+  },
+
+  "outputs": {
+    "files": 3,
+    "hooks": ["useCurrentUser"]
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "step": 235,
+  "id": "235-share-workflow",
+  "phase": 7,
+  "phaseName": "Real-time Collaboration",
+  "title": "Share Workflow Dialog",
+  "description": "Share workflow with team members",
+  "estimatedMinutes": 45,
+  "priority": "P0",
+  "dependencies": ["088-rbac-system"],
+
+  "objective": {
+    "what": "Create share dialog",
+    "why": "Invite collaborators to workflow",
+    "outcome": "Working share feature"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/components/editor/share/share-dialog.tsx",
+      "src/components/editor/share/invite-input.tsx",
+      "src/components/editor/share/collaborator-list.tsx",
+      "convex/workflowSharing.ts"
+    ],
+    "features": {
+      "invite": "Invite by email",
+      "link": "Shareable link",
+      "roles": "Set permission level",
+      "manage": "Manage collaborators"
+    },
+    "permissions": {
+      "viewer": "Can view only",
+      "editor": "Can edit workflow",
+      "admin": "Full control"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create share dialog",
+    "tasks": [
+      "Build share modal",
+      "Create invite input",
+      "Show collaborator list",
+      "Implement role assignment",
+      "Generate share links"
+    ],
+    "constraints": [
+      "Respect RBAC",
+      "Email invitations",
+      "Link expiration option"
+    ]
+  },
+
+  "outputs": {
+    "files": 4
+  }
+}

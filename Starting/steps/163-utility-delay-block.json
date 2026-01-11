@@ -1,0 +1,52 @@
+{
+  "step": 163,
+  "id": "163-utility-delay-block",
+  "phase": 5,
+  "phaseName": "Block System",
+  "title": "Delay Block",
+  "description": "Create delay/wait block",
+  "estimatedMinutes": 20,
+  "priority": "P1",
+  "dependencies": ["142-block-registry"],
+
+  "objective": {
+    "what": "Create delay block",
+    "why": "Add wait time between steps",
+    "outcome": "Configurable delay"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/components/editor/blocks/utility/delay-block.tsx"
+    ],
+    "config": {
+      "delay": "Delay in ms",
+      "unit": "ms/seconds/minutes"
+    },
+    "inputs": {
+      "input": "Pass-through data"
+    },
+    "outputs": {
+      "output": "Same data after delay"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create delay block",
+    "tasks": [
+      "Create DelayBlock component",
+      "Add duration input",
+      "Add unit selector",
+      "Show countdown during execution",
+      "Pass data through"
+    ],
+    "constraints": [
+      "Max delay limit",
+      "Show remaining time"
+    ]
+  },
+
+  "outputs": {
+    "files": 1
+  }
+}

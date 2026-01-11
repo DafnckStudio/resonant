@@ -1,0 +1,57 @@
+{
+  "step": 348,
+  "id": "348-command-palette",
+  "phase": 11,
+  "phaseName": "Dashboard & Analytics",
+  "title": "Command Palette",
+  "description": "Command palette for quick actions",
+  "estimatedMinutes": 35,
+  "priority": "P2",
+  "dependencies": ["347-search-system"],
+
+  "objective": {
+    "what": "Command palette interface",
+    "why": "Power user efficiency",
+    "outcome": "Quick command access"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/components/command-palette/command-palette.tsx",
+      "src/components/command-palette/command-list.tsx",
+      "src/lib/commands/registry.ts"
+    ],
+    "commands": {
+      "navigation": "Go to pages",
+      "workflows": "Workflow actions",
+      "settings": "Quick settings",
+      "help": "Help and docs"
+    },
+    "features": {
+      "fuzzy": "Fuzzy matching",
+      "recent": "Recent commands",
+      "shortcuts": "Show shortcuts",
+      "nested": "Sub-menus"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create command palette",
+    "tasks": [
+      "Build command palette UI",
+      "Create command registry",
+      "Implement fuzzy search",
+      "Add command categories",
+      "Show keyboard shortcuts"
+    ],
+    "constraints": [
+      "cmdk library",
+      "Fast filtering",
+      "Keyboard-first"
+    ]
+  },
+
+  "outputs": {
+    "files": 3
+  }
+}

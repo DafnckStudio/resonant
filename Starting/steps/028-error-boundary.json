@@ -1,0 +1,50 @@
+{
+  "step": 28,
+  "id": "028-error-boundary",
+  "phase": 1,
+  "phaseName": "Core UI & Layout",
+  "title": "Create Error Boundary Components",
+  "description": "Build error boundary and error display components",
+  "estimatedMinutes": 20,
+  "priority": "P1",
+  "dependencies": ["027-loading-states"],
+
+  "objective": {
+    "what": "Create error boundary wrapper and error display components",
+    "why": "Graceful error handling prevents app crashes and improves UX",
+    "outcome": "Error boundary with fallback UI and error page"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/components/shared/error-boundary.tsx",
+      "src/components/shared/error-display.tsx",
+      "src/app/error.tsx",
+      "src/app/(dashboard)/error.tsx"
+    ],
+    "features": {
+      "ErrorBoundary": "Class component wrapper",
+      "ErrorDisplay": "Friendly error message with retry",
+      "errorPage": "Next.js error page"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create error handling components",
+    "tasks": [
+      "Create ErrorBoundary class component",
+      "Create ErrorDisplay with retry button",
+      "Create app-level error.tsx",
+      "Create dashboard error.tsx"
+    ],
+    "constraints": [
+      "Must use class component for ErrorBoundary",
+      "Include reset functionality"
+    ]
+  },
+
+  "outputs": {
+    "files": 4,
+    "components": ["ErrorBoundary", "ErrorDisplay"]
+  }
+}

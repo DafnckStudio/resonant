@@ -1,0 +1,58 @@
+{
+  "step": 357,
+  "id": "357-webhooks-settings",
+  "phase": 11,
+  "phaseName": "Dashboard & Analytics",
+  "title": "Webhooks Settings",
+  "description": "Webhook configuration UI",
+  "estimatedMinutes": 35,
+  "priority": "P2",
+  "dependencies": ["356-api-keys"],
+
+  "objective": {
+    "what": "Webhook configuration",
+    "why": "External integrations",
+    "outcome": "Webhook management"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/app/(dashboard)/settings/webhooks/page.tsx",
+      "src/components/settings/webhook-list.tsx",
+      "src/components/settings/webhook-form.tsx",
+      "convex/webhooks.ts"
+    ],
+    "features": {
+      "create": "Create webhook endpoint",
+      "events": "Select event types",
+      "test": "Test webhook delivery",
+      "logs": "Delivery logs"
+    },
+    "events": {
+      "workflowRun": "Workflow executed",
+      "workflowComplete": "Workflow completed",
+      "workflowError": "Workflow failed",
+      "memberJoined": "Team member joined"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create webhook settings",
+    "tasks": [
+      "Build webhooks page",
+      "Create webhook form",
+      "Add event selection",
+      "Implement test delivery",
+      "Show delivery logs"
+    ],
+    "constraints": [
+      "Signed payloads",
+      "Retry logic",
+      "Clear event types"
+    ]
+  },
+
+  "outputs": {
+    "files": 4
+  }
+}

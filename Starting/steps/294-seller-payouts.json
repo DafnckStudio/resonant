@@ -1,0 +1,57 @@
+{
+  "step": 294,
+  "id": "294-seller-payouts",
+  "phase": 9,
+  "phaseName": "Templates & Marketplace",
+  "title": "Seller Payouts",
+  "description": "Pay sellers their earnings",
+  "estimatedMinutes": 40,
+  "priority": "P2",
+  "dependencies": ["293-seller-dashboard"],
+
+  "objective": {
+    "what": "Enable seller payouts",
+    "why": "Pay creators their share",
+    "outcome": "Payout system"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/lib/marketplace/payouts.ts",
+      "src/components/marketplace/payout-settings.tsx",
+      "src/app/api/marketplace/payouts/route.ts",
+      "convex/payouts.ts"
+    ],
+    "features": {
+      "connect": "Stripe Connect onboarding",
+      "balance": "Available balance",
+      "history": "Payout history",
+      "schedule": "Payout schedule"
+    },
+    "settings": {
+      "threshold": "Minimum payout",
+      "schedule": "Weekly/monthly",
+      "method": "Bank/Stripe"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create seller payouts",
+    "tasks": [
+      "Integrate Stripe Connect",
+      "Build payout settings",
+      "Track balances",
+      "Process payouts",
+      "Send payout notifications"
+    ],
+    "constraints": [
+      "Accurate accounting",
+      "Platform fee deduction",
+      "Reliable payouts"
+    ]
+  },
+
+  "outputs": {
+    "files": 4
+  }
+}

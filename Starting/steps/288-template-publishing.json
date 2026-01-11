@@ -1,0 +1,56 @@
+{
+  "step": 288,
+  "id": "288-template-publishing",
+  "phase": 9,
+  "phaseName": "Templates & Marketplace",
+  "title": "Template Publishing",
+  "description": "Publish templates to marketplace",
+  "estimatedMinutes": 35,
+  "priority": "P1",
+  "dependencies": ["287-marketplace-schema", "285-my-templates"],
+
+  "objective": {
+    "what": "Publish templates publicly",
+    "why": "Share with community",
+    "outcome": "Publishing workflow"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/lib/templates/publishing.ts",
+      "src/components/templates/publish-dialog.tsx",
+      "convex/marketplaceListings.ts"
+    ],
+    "process": {
+      "review": "Review before publish",
+      "pricing": "Set free or paid",
+      "terms": "Accept terms",
+      "submit": "Submit for review"
+    },
+    "options": {
+      "free": "Free template",
+      "paid": "Set price",
+      "featured": "Apply for featured"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create template publishing",
+    "tasks": [
+      "Build publish dialog",
+      "Add pricing options",
+      "Create review checklist",
+      "Implement submission",
+      "Handle approval flow"
+    ],
+    "constraints": [
+      "Quality standards",
+      "Clear pricing",
+      "Terms acceptance"
+    ]
+  },
+
+  "outputs": {
+    "files": 3
+  }
+}

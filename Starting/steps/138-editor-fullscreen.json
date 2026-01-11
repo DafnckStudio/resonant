@@ -1,0 +1,51 @@
+{
+  "step": 138,
+  "id": "138-editor-fullscreen",
+  "phase": 4,
+  "phaseName": "Workflow Editor Core",
+  "title": "Fullscreen Mode",
+  "description": "Add fullscreen editing mode",
+  "estimatedMinutes": 20,
+  "priority": "P3",
+  "dependencies": ["102-editor-layout"],
+
+  "objective": {
+    "what": "Add fullscreen mode to editor",
+    "why": "Maximum canvas space for large workflows",
+    "outcome": "F11 or button for fullscreen"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/hooks/use-fullscreen.ts"
+    ],
+    "filesToModify": [
+      "src/components/editor/editor-toolbar.tsx"
+    ],
+    "behavior": {
+      "enter": "Hide sidebar, expand canvas",
+      "exit": "ESC or button to exit",
+      "persist": "Remember state"
+    }
+  },
+
+  "prompt": {
+    "mission": "Add fullscreen mode",
+    "tasks": [
+      "Create useFullscreen hook",
+      "Add fullscreen button",
+      "Hide sidebars in fullscreen",
+      "Handle ESC to exit",
+      "Add F11 shortcut"
+    ],
+    "constraints": [
+      "Use Fullscreen API",
+      "Fallback for unsupported"
+    ]
+  },
+
+  "outputs": {
+    "files": 1,
+    "filesModified": 1
+  }
+}

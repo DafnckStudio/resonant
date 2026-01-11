@@ -1,0 +1,55 @@
+{
+  "step": 269,
+  "id": "269-version-storage-stats",
+  "phase": 8,
+  "phaseName": "Version Control",
+  "title": "Version Storage Stats",
+  "description": "Track version storage usage",
+  "estimatedMinutes": 25,
+  "priority": "P3",
+  "dependencies": ["260-version-retention"],
+
+  "objective": {
+    "what": "Show storage statistics",
+    "why": "Understand storage usage",
+    "outcome": "Storage visibility"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/lib/versioning/storage-stats.ts",
+      "src/components/editor/version-control/storage-usage.tsx"
+    ],
+    "metrics": {
+      "total": "Total storage used",
+      "perVersion": "Size per version",
+      "trend": "Storage trend over time",
+      "limit": "Usage vs plan limit"
+    },
+    "display": {
+      "chart": "Storage usage chart",
+      "breakdown": "Per-workflow breakdown",
+      "warnings": "Near limit warnings"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create storage stats",
+    "tasks": [
+      "Calculate storage usage",
+      "Create usage display",
+      "Add trend chart",
+      "Show plan limits",
+      "Add cleanup suggestions"
+    ],
+    "constraints": [
+      "Efficient calculation",
+      "Clear visualization",
+      "Actionable insights"
+    ]
+  },
+
+  "outputs": {
+    "files": 2
+  }
+}

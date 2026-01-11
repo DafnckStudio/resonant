@@ -1,0 +1,57 @@
+{
+  "step": 369,
+  "id": "369-e2e-billing",
+  "phase": 12,
+  "phaseName": "Testing & Polish",
+  "title": "E2E - Billing",
+  "description": "E2E tests for billing flows",
+  "estimatedMinutes": 40,
+  "priority": "P1",
+  "dependencies": ["366-e2e-auth"],
+
+  "objective": {
+    "what": "Billing E2E tests",
+    "why": "Payment reliability",
+    "outcome": "Tested billing flows"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "tests/e2e/billing/checkout.spec.ts",
+      "tests/e2e/billing/subscription.spec.ts",
+      "tests/e2e/billing/portal.spec.ts",
+      "tests/e2e/billing/usage.spec.ts"
+    ],
+    "flows": {
+      "checkout": "Checkout flow",
+      "subscription": "Subscription management",
+      "portal": "Customer portal",
+      "usage": "Usage display"
+    },
+    "stripe": {
+      "testCards": "Test card numbers",
+      "testWebhooks": "Test webhook events",
+      "testMode": "Stripe test mode"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create billing E2E tests",
+    "tasks": [
+      "Test checkout flow",
+      "Test subscription changes",
+      "Test customer portal",
+      "Test usage display",
+      "Use Stripe test mode"
+    ],
+    "constraints": [
+      "Stripe test mode",
+      "Test card numbers",
+      "Webhook simulation"
+    ]
+  },
+
+  "outputs": {
+    "files": 4
+  }
+}

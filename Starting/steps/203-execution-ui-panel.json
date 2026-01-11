@@ -1,0 +1,58 @@
+{
+  "step": 203,
+  "id": "203-execution-ui-panel",
+  "phase": 6,
+  "phaseName": "AI Router & Execution",
+  "title": "Execution Panel UI",
+  "description": "Real-time execution monitoring panel",
+  "estimatedMinutes": 50,
+  "priority": "P0",
+  "dependencies": ["202-execution-ui-runner"],
+
+  "objective": {
+    "what": "Create execution monitoring panel",
+    "why": "Watch execution in real-time",
+    "outcome": "Live execution view"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/components/editor/execution/execution-panel.tsx",
+      "src/components/editor/execution/block-status-overlay.tsx",
+      "src/components/editor/execution/execution-timeline.tsx",
+      "src/components/editor/execution/output-viewer.tsx"
+    ],
+    "features": {
+      "liveStatus": "Real-time status updates",
+      "blockOverlay": "Status overlay on nodes",
+      "timeline": "Execution timeline view",
+      "outputs": "View block outputs"
+    },
+    "panelSections": {
+      "status": "Overall execution status",
+      "progress": "Block-by-block progress",
+      "logs": "Live log stream",
+      "outputs": "Final outputs"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create execution panel",
+    "tasks": [
+      "Build ExecutionPanel component",
+      "Add status overlay to nodes",
+      "Create timeline visualization",
+      "Add output viewer",
+      "Implement live updates"
+    ],
+    "constraints": [
+      "Real-time updates",
+      "Clear status indication",
+      "Collapsible panel"
+    ]
+  },
+
+  "outputs": {
+    "files": 4
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "step": 61,
+  "id": "061-session-management",
+  "phase": 2,
+  "phaseName": "Authentication & Users",
+  "title": "Implement Session Management",
+  "description": "Add session viewing and management features",
+  "estimatedMinutes": 25,
+  "priority": "P2",
+  "dependencies": ["055-user-context"],
+
+  "objective": {
+    "what": "Allow users to view and manage their active sessions",
+    "why": "Security feature for account protection",
+    "outcome": "Session list with ability to revoke sessions"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/app/(dashboard)/settings/security/page.tsx",
+      "src/components/settings/sessions-list.tsx",
+      "src/components/settings/session-item.tsx"
+    ],
+    "features": {
+      "list": "Show all active sessions",
+      "current": "Highlight current session",
+      "revoke": "Sign out other sessions",
+      "info": "Device, location, last active"
+    }
+  },
+
+  "prompt": {
+    "mission": "Implement session management",
+    "tasks": [
+      "Create security settings page",
+      "Build SessionsList component",
+      "Use Clerk sessions API",
+      "Add revoke functionality",
+      "Show session details"
+    ],
+    "constraints": [
+      "Cannot revoke current session",
+      "Confirm before revoking"
+    ]
+  },
+
+  "outputs": {
+    "files": 3,
+    "route": "/settings/security"
+  }
+}

@@ -1,0 +1,114 @@
+{
+  "step": 8,
+  "id": "008-convex-schema-workflows",
+  "phase": 0,
+  "phaseName": "Foundation Setup",
+  "title": "Create Convex Schema - Workflows Table",
+  "description": "Define the workflows table for storing workflow definitions and metadata",
+  "estimatedMinutes": 15,
+  "priority": "P0",
+  "dependencies": ["007-convex-schema-workspaces"],
+
+  "objective": {
+    "what": "Create workflows table to store workflow DAG definitions, nodes, edges, and metadata",
+    "why": "Workflows are the core entity - users create, edit, and execute them",
+    "outcome": "Workflows table with full DAG structure storage and version tracking"
+  },
+
+  "context": {
+    "dataModel": "Workflows contain nodes (blocks) and edges (connections) in React Flow format",
+    "relationships": {
+      "belongsTo": ["workspace"],
+      "hasMany": ["workflowVersions", "executions", "comments"]
+    },
+    "reactFlowIntegration": "Store nodes and edges arrays directly"
+  },
+
+  "specifications": {
+    "filesToModify": [
+      "convex/schema.ts"
+    ],
+    "schema": {
+      "workflows": {
+        "fields": {
+          "workspaceId": "v.id('workspaces') - Parent workspace",
+          "name": "v.string() - Workflow name",
+          "description": "v.optional(v.string()) - Description",
+          "status": "v.union('draft', 'active', 'archived') - Status",
+          "nodes": "v.array(v.object({...})) - React Flow nodes",
+          "edges": "v.array(v.object({...})) - React Flow edges",
+          "variables": "v.optional(v.array(v.object({...}))) - Workflow variables",
+          "settings": "v.optional(v.object({...})) - Workflow settings",
+          "thumbnail": "v.optional(v.string()) - Preview image",
+          "isTemplate": "v.boolean() - Is template flag",
+          "templateCategory": "v.optional(v.string()) - Template category",
+          "tags": "v.optional(v.array(v.string())) - Tags",
+          "lastEditedBy": "v.optional(v.id('users'))",
+          "executionCount": "v.optional(v.number())",
+          "currentVersion": "v.optional(v.number())",
+          "createdAt": "v.number()",
+          "updatedAt": "v.number()"
+        },
+        "indexes": [
+          { "name": "by_workspaceId", "fields": ["workspaceId"] },
+          { "name": "by_workspaceId_status", "fields": ["workspaceId", "status"] },
+          { "name": "by_isTemplate", "fields": ["isTemplate"] },
+          { "name": "by_templateCategory", "fields": ["templateCategory"] }
+        ]
+      }
+    },
+    "nodeSchema": {
+      "id": "v.string()",
+      "type": "v.string() - Block type",
+      "position": "v.object({ x: v.number(), y: v.number() })",
+      "data": "v.any() - Block-specific data",
+      "width": "v.optional(v.number())",
+      "height": "v.optional(v.number())"
+    },
+    "edgeSchema": {
+      "id": "v.string()",
+      "source": "v.string() - Source node ID",
+      "target": "v.string() - Target node ID",
+      "sourceHandle": "v.optional(v.string())",
+      "targetHandle": "v.optional(v.string())",
+      "type": "v.optional(v.string())"
+    }
+  },
+
+  "prompt": {
+    "mission": "Add workflows table to the Convex schema",
+    "tasks": [
+      "Add workflows table with all specified fields",
+      "Define node and edge object schemas for React Flow compatibility",
+      "Add workflow variables array for parameterization",
+      "Include template-related fields for marketplace",
+      "Add all required indexes"
+    ],
+    "constraints": [
+      "Nodes and edges must be compatible with React Flow",
+      "Use v.any() for node data (block-specific)",
+      "Include indexes for common queries"
+    ],
+    "validation": [
+      "Schema pushes without errors",
+      "Table visible in dashboard"
+    ]
+  },
+
+  "validation": {
+    "automated": [
+      "Schema validates",
+      "Array schemas accepted"
+    ],
+    "functional": [
+      "Can store React Flow data structure",
+      "Indexes work for queries"
+    ]
+  },
+
+  "outputs": {
+    "files": ["convex/schema.ts"],
+    "tables": ["workflows"],
+    "indexes": 4
+  }
+}

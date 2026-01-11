@@ -1,0 +1,53 @@
+{
+  "step": 151,
+  "id": "151-ai-embedding-block",
+  "phase": 5,
+  "phaseName": "Block System",
+  "title": "AI Embedding Block",
+  "description": "Create text embedding generation block",
+  "estimatedMinutes": 30,
+  "priority": "P2",
+  "dependencies": ["148-ai-text-generation-block"],
+
+  "objective": {
+    "what": "Create embedding block",
+    "why": "Generate embeddings for similarity search",
+    "outcome": "Vector embeddings for text"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/components/editor/blocks/ai/embedding-block.tsx"
+    ],
+    "config": {
+      "model": "text-embedding-3-small/text-embedding-3-large",
+      "dimensions": "Embedding dimensions"
+    },
+    "inputs": {
+      "text": "Text to embed"
+    },
+    "outputs": {
+      "embedding": "Vector array",
+      "dimensions": "Vector size"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create embedding block",
+    "tasks": [
+      "Create EmbeddingBlock component",
+      "Add model selector",
+      "Show vector dimensions",
+      "Display embedding preview",
+      "Handle batch input"
+    ],
+    "constraints": [
+      "Use OpenAI embeddings",
+      "Support batch processing"
+    ]
+  },
+
+  "outputs": {
+    "files": 1
+  }
+}

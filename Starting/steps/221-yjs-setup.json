@@ -1,0 +1,56 @@
+{
+  "step": 221,
+  "id": "221-yjs-setup",
+  "phase": 7,
+  "phaseName": "Real-time Collaboration",
+  "title": "Yjs CRDT Setup",
+  "description": "Initialize Yjs for real-time sync",
+  "estimatedMinutes": 45,
+  "priority": "P0",
+  "dependencies": ["220-phase6-integration"],
+
+  "objective": {
+    "what": "Set up Yjs CRDT library",
+    "why": "Foundation for real-time collaboration",
+    "outcome": "Working Yjs configuration"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/lib/collaboration/yjs/provider.ts",
+      "src/lib/collaboration/yjs/types.ts",
+      "src/lib/collaboration/yjs/awareness.ts"
+    ],
+    "dependencies": [
+      "yjs",
+      "y-websocket",
+      "y-indexeddb"
+    ],
+    "features": {
+      "crdt": "Conflict-free replicated data types",
+      "awareness": "User presence awareness",
+      "offline": "Offline-first with sync",
+      "history": "Undo/redo support"
+    }
+  },
+
+  "prompt": {
+    "mission": "Set up Yjs",
+    "tasks": [
+      "Install Yjs packages",
+      "Create provider wrapper",
+      "Set up awareness protocol",
+      "Configure offline storage",
+      "Define sync types"
+    ],
+    "constraints": [
+      "TypeScript types",
+      "Clean abstraction",
+      "Error handling"
+    ]
+  },
+
+  "outputs": {
+    "files": 3
+  }
+}

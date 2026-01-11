@@ -1,0 +1,57 @@
+{
+  "step": 331,
+  "id": "331-analytics-schema",
+  "phase": 11,
+  "phaseName": "Dashboard & Analytics",
+  "title": "Analytics Schema",
+  "description": "Database schema for analytics",
+  "estimatedMinutes": 30,
+  "priority": "P0",
+  "dependencies": ["076-workspace-schema"],
+
+  "objective": {
+    "what": "Define analytics data structures",
+    "why": "Foundation for analytics",
+    "outcome": "Analytics schema ready"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "convex/schema.ts (extend)",
+      "convex/analytics.ts"
+    ],
+    "tables": {
+      "analyticsEvents": "Raw event data",
+      "dailyMetrics": "Aggregated daily stats",
+      "workflowStats": "Per-workflow metrics",
+      "userActivity": "User activity tracking"
+    },
+    "fields": {
+      "eventType": "Event type identifier",
+      "userId": "User reference",
+      "workflowId": "Workflow reference",
+      "timestamp": "Event timestamp",
+      "metadata": "Additional event data"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create analytics schema",
+    "tasks": [
+      "Define analytics events table",
+      "Create daily metrics aggregation",
+      "Add workflow statistics table",
+      "User activity tracking table",
+      "Setup proper indexes"
+    ],
+    "constraints": [
+      "Efficient querying",
+      "Time-series optimized",
+      "Privacy compliant"
+    ]
+  },
+
+  "outputs": {
+    "files": 2
+  }
+}

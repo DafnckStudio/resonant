@@ -1,0 +1,56 @@
+{
+  "step": 160,
+  "id": "160-logic-loop-block",
+  "phase": 5,
+  "phaseName": "Block System",
+  "title": "Loop Block",
+  "description": "Create iteration/loop block",
+  "estimatedMinutes": 45,
+  "priority": "P0",
+  "dependencies": ["158-logic-condition-block"],
+
+  "objective": {
+    "what": "Create loop block",
+    "why": "Iterate over arrays/collections",
+    "outcome": "ForEach iteration block"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/components/editor/blocks/logic/loop-block.tsx"
+    ],
+    "config": {
+      "type": "forEach/while/times",
+      "maxIterations": "Safety limit",
+      "parallel": "Parallel execution",
+      "batchSize": "Batch size for parallel"
+    },
+    "inputs": {
+      "items": "Array to iterate"
+    },
+    "outputs": {
+      "item": "Current item (inside loop)",
+      "index": "Current index",
+      "results": "Collected results"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create loop block",
+    "tasks": [
+      "Create LoopBlock component",
+      "Add loop type selector",
+      "Handle loop body subflow",
+      "Support parallel execution",
+      "Collect loop results"
+    ],
+    "constraints": [
+      "Max iteration limit",
+      "Support nested loops"
+    ]
+  },
+
+  "outputs": {
+    "files": 1
+  }
+}

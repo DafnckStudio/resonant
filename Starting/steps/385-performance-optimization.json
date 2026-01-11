@@ -1,0 +1,56 @@
+{
+  "step": 385,
+  "id": "385-performance-optimization",
+  "phase": 12,
+  "phaseName": "Testing & Polish",
+  "title": "Performance Optimization",
+  "description": "Optimize application performance",
+  "estimatedMinutes": 45,
+  "priority": "P1",
+  "dependencies": [],
+
+  "objective": {
+    "what": "Performance optimization",
+    "why": "Fast user experience",
+    "outcome": "Sub-second load times"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/lib/performance/prefetch.ts",
+      "src/lib/performance/cache.ts",
+      "src/components/performance/lazy-load.tsx"
+    ],
+    "optimizations": {
+      "caching": "API response caching",
+      "prefetch": "Route prefetching",
+      "lazy": "Lazy loading",
+      "memoization": "Component memoization"
+    },
+    "metrics": {
+      "ttfb": "Time to First Byte",
+      "fcp": "First Contentful Paint",
+      "tti": "Time to Interactive"
+    }
+  },
+
+  "prompt": {
+    "mission": "Optimize performance",
+    "tasks": [
+      "Implement response caching",
+      "Add route prefetching",
+      "Optimize component rendering",
+      "Add lazy loading",
+      "Profile and fix bottlenecks"
+    ],
+    "constraints": [
+      "LCP < 2.5s",
+      "FID < 100ms",
+      "CLS < 0.1"
+    ]
+  },
+
+  "outputs": {
+    "files": 3
+  }
+}

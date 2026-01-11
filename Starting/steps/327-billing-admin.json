@@ -1,0 +1,58 @@
+{
+  "step": 327,
+  "id": "327-billing-admin",
+  "phase": 10,
+  "phaseName": "Monetization & Billing",
+  "title": "Billing Admin",
+  "description": "Admin billing management",
+  "estimatedMinutes": 40,
+  "priority": "P2",
+  "dependencies": ["306-subscription-management"],
+
+  "objective": {
+    "what": "Admin billing tools",
+    "why": "Support and management",
+    "outcome": "Billing administration"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/app/(admin)/billing/page.tsx",
+      "src/components/admin/subscription-manager.tsx",
+      "src/components/admin/manual-billing-actions.tsx",
+      "convex/adminBilling.ts"
+    ],
+    "features": {
+      "search": "Search customers",
+      "view": "View subscription details",
+      "modify": "Modify subscriptions",
+      "credit": "Apply credits"
+    },
+    "actions": {
+      "upgrade": "Manual upgrade",
+      "extend": "Extend trial",
+      "credit": "Add account credit",
+      "refund": "Process refund"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create billing admin panel",
+    "tasks": [
+      "Customer search",
+      "Subscription detail view",
+      "Manual subscription modifications",
+      "Apply credits/discounts",
+      "Audit log for admin actions"
+    ],
+    "constraints": [
+      "Admin-only access",
+      "Full audit trail",
+      "Confirmation for destructive actions"
+    ]
+  },
+
+  "outputs": {
+    "files": 4
+  }
+}

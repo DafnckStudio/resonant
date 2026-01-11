@@ -1,0 +1,52 @@
+{
+  "step": 59,
+  "id": "059-avatar-upload",
+  "phase": 2,
+  "phaseName": "Authentication & Users",
+  "title": "Implement Avatar Upload",
+  "description": "Add avatar upload functionality using Clerk",
+  "estimatedMinutes": 25,
+  "priority": "P2",
+  "dependencies": ["058-user-profile-update"],
+
+  "objective": {
+    "what": "Allow users to upload custom avatars",
+    "why": "Personalization improves user engagement",
+    "outcome": "Working avatar upload via Clerk"
+  },
+
+  "specifications": {
+    "filesToModify": [
+      "src/components/settings/avatar-upload.tsx"
+    ],
+    "features": {
+      "upload": "Drag and drop or click to upload",
+      "preview": "Show preview before save",
+      "crop": "Optional image cropping",
+      "fallback": "Show initials if no avatar"
+    },
+    "constraints": {
+      "maxSize": "5MB",
+      "formats": ["jpg", "png", "webp"]
+    }
+  },
+
+  "prompt": {
+    "mission": "Implement avatar upload",
+    "tasks": [
+      "Create upload dropzone",
+      "Add file validation",
+      "Implement preview",
+      "Use Clerk updateUserMetadata API",
+      "Handle upload errors"
+    ],
+    "constraints": [
+      "Max 5MB file size",
+      "Support jpg, png, webp only"
+    ]
+  },
+
+  "outputs": {
+    "filesModified": 1
+  }
+}

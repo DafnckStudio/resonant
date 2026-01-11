@@ -1,0 +1,59 @@
+{
+  "step": 233,
+  "id": "233-activity-feed",
+  "phase": 7,
+  "phaseName": "Real-time Collaboration",
+  "title": "Real-time Activity Feed",
+  "description": "Show recent activity in workflow",
+  "estimatedMinutes": 40,
+  "priority": "P2",
+  "dependencies": ["225-presence-awareness"],
+
+  "objective": {
+    "what": "Create activity feed",
+    "why": "Track what others are doing",
+    "outcome": "Live activity stream"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/lib/collaboration/activity/activity-tracker.ts",
+      "src/components/editor/collaboration/activity-feed.tsx",
+      "convex/activityLog.ts"
+    ],
+    "activities": [
+      "User joined editing",
+      "User left",
+      "Node added/deleted",
+      "Connection changed",
+      "Comment added",
+      "Workflow executed"
+    ],
+    "features": {
+      "realtime": "Live activity updates",
+      "filter": "Filter by activity type",
+      "jump": "Jump to activity location",
+      "history": "View past activity"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create activity feed",
+    "tasks": [
+      "Implement activity tracker",
+      "Create activity feed UI",
+      "Store activity log",
+      "Add filtering",
+      "Add jump to location"
+    ],
+    "constraints": [
+      "Efficient storage",
+      "Not overwhelming",
+      "Clear descriptions"
+    ]
+  },
+
+  "outputs": {
+    "files": 3
+  }
+}

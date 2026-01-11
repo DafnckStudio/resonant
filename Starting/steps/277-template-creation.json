@@ -1,0 +1,56 @@
+{
+  "step": 277,
+  "id": "277-template-creation",
+  "phase": 9,
+  "phaseName": "Templates & Marketplace",
+  "title": "Template Creation",
+  "description": "Create templates from workflows",
+  "estimatedMinutes": 35,
+  "priority": "P1",
+  "dependencies": ["276-template-schema"],
+
+  "objective": {
+    "what": "Create templates from workflows",
+    "why": "Reuse and share workflows",
+    "outcome": "Template creation flow"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/lib/templates/create-template.ts",
+      "src/components/templates/create-template-dialog.tsx",
+      "convex/templates.ts"
+    ],
+    "features": {
+      "fromWorkflow": "Create from existing workflow",
+      "metadata": "Add name, description, tags",
+      "thumbnail": "Auto-generate or upload",
+      "variables": "Define template variables"
+    },
+    "options": {
+      "private": "Personal templates",
+      "team": "Team templates",
+      "public": "Public marketplace"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create template creation",
+    "tasks": [
+      "Build creation dialog",
+      "Extract workflow as template",
+      "Add metadata inputs",
+      "Generate thumbnails",
+      "Save to Convex"
+    ],
+    "constraints": [
+      "Clean extraction",
+      "Required metadata",
+      "Valid template"
+    ]
+  },
+
+  "outputs": {
+    "files": 3
+  }
+}

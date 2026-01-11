@@ -1,0 +1,54 @@
+{
+  "step": 168,
+  "id": "168-output-webhook-block",
+  "phase": 5,
+  "phaseName": "Block System",
+  "title": "Webhook Output Block",
+  "description": "Create outgoing webhook block",
+  "estimatedMinutes": 30,
+  "priority": "P1",
+  "dependencies": ["167-output-response-block"],
+
+  "objective": {
+    "what": "Create outgoing webhook block",
+    "why": "Send data to external services",
+    "outcome": "POST to external URL"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/components/editor/blocks/output/webhook-output-block.tsx"
+    ],
+    "config": {
+      "url": "Destination URL",
+      "method": "POST/PUT",
+      "headers": "Request headers",
+      "auth": "Authentication"
+    },
+    "inputs": {
+      "payload": "Data to send"
+    },
+    "outputs": {
+      "response": "Webhook response"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create webhook output block",
+    "tasks": [
+      "Create WebhookOutputBlock component",
+      "Add URL input",
+      "Add headers/auth config",
+      "Show request preview",
+      "Handle response"
+    ],
+    "constraints": [
+      "Support common integrations",
+      "Retry on failure"
+    ]
+  },
+
+  "outputs": {
+    "files": 1
+  }
+}

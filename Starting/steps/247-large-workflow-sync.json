@@ -1,0 +1,55 @@
+{
+  "step": 247,
+  "id": "247-large-workflow-sync",
+  "phase": 7,
+  "phaseName": "Real-time Collaboration",
+  "title": "Large Workflow Sync",
+  "description": "Optimize sync for large workflows",
+  "estimatedMinutes": 40,
+  "priority": "P2",
+  "dependencies": ["244-sync-performance"],
+
+  "objective": {
+    "what": "Handle large workflow sync",
+    "why": "Workflows can grow very large",
+    "outcome": "Scalable collaboration"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/lib/collaboration/large-workflow/chunked-sync.ts",
+      "src/lib/collaboration/large-workflow/viewport-sync.ts"
+    ],
+    "optimizations": {
+      "chunkedLoading": "Load workflow in chunks",
+      "viewportPriority": "Prioritize visible area",
+      "lazySync": "Lazy sync off-screen nodes",
+      "compression": "Compress sync payloads"
+    },
+    "limits": {
+      "maxNodes": "Handle 1000+ nodes",
+      "maxEdges": "Handle 5000+ edges",
+      "maxCollaborators": "Handle 50+ users"
+    }
+  },
+
+  "prompt": {
+    "mission": "Optimize large workflow sync",
+    "tasks": [
+      "Implement chunked loading",
+      "Add viewport-based priority",
+      "Compress sync messages",
+      "Add pagination for history",
+      "Test with large workflows"
+    ],
+    "constraints": [
+      "Sub-second response",
+      "Low memory usage",
+      "Smooth experience"
+    ]
+  },
+
+  "outputs": {
+    "files": 2
+  }
+}

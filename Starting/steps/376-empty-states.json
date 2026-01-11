@@ -1,0 +1,57 @@
+{
+  "step": 376,
+  "id": "376-empty-states",
+  "phase": 12,
+  "phaseName": "Testing & Polish",
+  "title": "Empty States",
+  "description": "Polish empty state displays",
+  "estimatedMinutes": 25,
+  "priority": "P2",
+  "dependencies": [],
+
+  "objective": {
+    "what": "Empty state polish",
+    "why": "Guide new users",
+    "outcome": "Helpful empty states"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/components/ui/empty-states/no-workflows.tsx",
+      "src/components/ui/empty-states/no-templates.tsx",
+      "src/components/ui/empty-states/no-results.tsx",
+      "src/components/ui/empty-state.tsx"
+    ],
+    "states": {
+      "workflows": "No workflows yet",
+      "templates": "No templates",
+      "search": "No search results",
+      "activity": "No recent activity"
+    },
+    "content": {
+      "illustration": "Helpful illustration",
+      "message": "Clear message",
+      "action": "Primary action CTA"
+    }
+  },
+
+  "prompt": {
+    "mission": "Polish empty states",
+    "tasks": [
+      "Create empty state component",
+      "Design workflow empty state",
+      "Add search empty state",
+      "Include action buttons",
+      "Add helpful illustrations"
+    ],
+    "constraints": [
+      "Encouraging tone",
+      "Clear next action",
+      "Consistent design"
+    ]
+  },
+
+  "outputs": {
+    "files": 4
+  }
+}

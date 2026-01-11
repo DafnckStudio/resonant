@@ -1,0 +1,55 @@
+{
+  "step": 106,
+  "id": "106-drag-drop-blocks",
+  "phase": 4,
+  "phaseName": "Workflow Editor Core",
+  "title": "Implement Drag and Drop",
+  "description": "Enable dragging blocks from palette to canvas",
+  "estimatedMinutes": 40,
+  "priority": "P0",
+  "dependencies": ["105-block-palette", "101-react-flow-setup"],
+
+  "objective": {
+    "what": "Implement drag and drop from palette to canvas",
+    "why": "Primary way to add blocks to workflows",
+    "outcome": "Seamless drag-drop block creation"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/components/editor/dnd/drag-overlay.tsx",
+      "src/hooks/use-dnd-block.ts"
+    ],
+    "filesToModify": [
+      "src/components/editor/flow-editor.tsx",
+      "src/components/editor/palette/block-item.tsx"
+    ],
+    "behavior": {
+      "dragStart": "Show ghost preview",
+      "dragOver": "Highlight drop zone",
+      "drop": "Create node at position",
+      "cancel": "ESC to cancel"
+    }
+  },
+
+  "prompt": {
+    "mission": "Implement drag and drop",
+    "tasks": [
+      "Add drag handlers to BlockItem",
+      "Create DragOverlay component",
+      "Handle onDrop in FlowEditor",
+      "Calculate drop position",
+      "Create new node on drop",
+      "Snap to grid if enabled"
+    ],
+    "constraints": [
+      "Use React Flow onDrop",
+      "Support touch devices"
+    ]
+  },
+
+  "outputs": {
+    "files": 2,
+    "filesModified": 2
+  }
+}

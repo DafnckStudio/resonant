@@ -1,0 +1,58 @@
+{
+  "step": 359,
+  "id": "359-dashboard-testing",
+  "phase": 11,
+  "phaseName": "Dashboard & Analytics",
+  "title": "Dashboard Testing",
+  "description": "Dashboard and analytics tests",
+  "estimatedMinutes": 40,
+  "priority": "P1",
+  "dependencies": ["331-analytics-schema", "333-dashboard-layout"],
+
+  "objective": {
+    "what": "Dashboard test suite",
+    "why": "Quality assurance",
+    "outcome": "Tested dashboard"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "tests/dashboard/stats.test.ts",
+      "tests/dashboard/analytics.test.ts",
+      "tests/dashboard/notifications.test.ts",
+      "tests/dashboard/search.test.ts"
+    ],
+    "unitTests": {
+      "stats": "Stats calculations",
+      "events": "Event tracking",
+      "aggregations": "Data aggregations",
+      "exports": "Export generation"
+    },
+    "e2eTests": {
+      "dashboard": "Dashboard loading",
+      "search": "Search functionality",
+      "notifications": "Notification flow",
+      "preferences": "Settings saving"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create dashboard tests",
+    "tasks": [
+      "Test stats calculations",
+      "Test event tracking",
+      "Test search functionality",
+      "Test notifications",
+      "Test preference saving"
+    ],
+    "constraints": [
+      "Comprehensive coverage",
+      "Fast execution",
+      "Reliable tests"
+    ]
+  },
+
+  "outputs": {
+    "files": 4
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "step": 144,
+  "id": "144-webhook-trigger-block",
+  "phase": 5,
+  "phaseName": "Block System",
+  "title": "Webhook Trigger Block",
+  "description": "Create webhook trigger input block",
+  "estimatedMinutes": 40,
+  "priority": "P0",
+  "dependencies": ["143-input-trigger-block"],
+
+  "objective": {
+    "what": "Create webhook trigger block",
+    "why": "Allow external systems to trigger workflows",
+    "outcome": "Webhook endpoint with auth"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/components/editor/blocks/input/webhook-block.tsx",
+      "src/app/api/webhooks/workflow/[workflowId]/route.ts"
+    ],
+    "config": {
+      "method": "GET/POST/PUT",
+      "auth": "API key or none",
+      "headers": "Expected headers"
+    },
+    "outputs": {
+      "body": "Request body",
+      "headers": "Request headers",
+      "query": "Query parameters"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create webhook block",
+    "tasks": [
+      "Create WebhookBlock component",
+      "Generate unique webhook URL",
+      "Create API route handler",
+      "Add authentication option",
+      "Show webhook URL in UI"
+    ],
+    "constraints": [
+      "Secure endpoints",
+      "Rate limiting"
+    ]
+  },
+
+  "outputs": {
+    "files": 2
+  }
+}

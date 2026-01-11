@@ -1,0 +1,56 @@
+{
+  "step": 202,
+  "id": "202-execution-ui-runner",
+  "phase": 6,
+  "phaseName": "AI Router & Execution",
+  "title": "Execution UI - Run Button",
+  "description": "Run workflow from editor UI",
+  "estimatedMinutes": 35,
+  "priority": "P0",
+  "dependencies": ["199-execution-api-routes"],
+
+  "objective": {
+    "what": "Add run functionality to UI",
+    "why": "Test workflows from editor",
+    "outcome": "One-click workflow execution"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/components/editor/execution/run-button.tsx",
+      "src/components/editor/execution/run-config-modal.tsx",
+      "src/hooks/useWorkflowExecution.ts"
+    ],
+    "features": {
+      "runButton": "Prominent run button in toolbar",
+      "configModal": "Configure inputs before run",
+      "validation": "Validate workflow before run",
+      "feedback": "Show execution starting"
+    },
+    "runOptions": {
+      "testRun": "Run with test data",
+      "inputConfig": "Configure manual inputs",
+      "debugMode": "Run in debug mode"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create run UI",
+    "tasks": [
+      "Create RunButton component",
+      "Add run configuration modal",
+      "Create execution hook",
+      "Add pre-run validation",
+      "Show feedback"
+    ],
+    "constraints": [
+      "Prominent placement",
+      "Clear feedback",
+      "Keyboard shortcut (Ctrl+Enter)"
+    ]
+  },
+
+  "outputs": {
+    "files": 3
+  }
+}

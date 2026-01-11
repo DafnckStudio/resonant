@@ -1,0 +1,49 @@
+{
+  "step": 175,
+  "id": "175-block-preview-mode",
+  "phase": 5,
+  "phaseName": "Block System",
+  "title": "Block Preview Mode",
+  "description": "Add preview/test mode for individual blocks",
+  "estimatedMinutes": 40,
+  "priority": "P1",
+  "dependencies": ["174-block-property-editors"],
+
+  "objective": {
+    "what": "Test blocks individually",
+    "why": "Debug and validate before running workflow",
+    "outcome": "Block-level testing"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/components/editor/blocks/block-preview.tsx",
+      "src/hooks/use-block-preview.ts"
+    ],
+    "features": {
+      "testInput": "Provide test input data",
+      "execute": "Run single block",
+      "viewOutput": "See block output",
+      "timing": "Execution time"
+    }
+  },
+
+  "prompt": {
+    "mission": "Add block preview",
+    "tasks": [
+      "Create BlockPreview component",
+      "Add test input editor",
+      "Execute single block",
+      "Show output results",
+      "Display execution time"
+    ],
+    "constraints": [
+      "Isolated execution",
+      "No side effects option"
+    ]
+  },
+
+  "outputs": {
+    "files": 2
+  }
+}

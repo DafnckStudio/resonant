@@ -1,0 +1,57 @@
+{
+  "step": 379,
+  "id": "379-responsive-polish",
+  "phase": 12,
+  "phaseName": "Testing & Polish",
+  "title": "Responsive Polish",
+  "description": "Polish responsive design",
+  "estimatedMinutes": 40,
+  "priority": "P1",
+  "dependencies": [],
+
+  "objective": {
+    "what": "Responsive polish",
+    "why": "Multi-device support",
+    "outcome": "Responsive across devices"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/hooks/use-responsive.ts",
+      "src/components/layout/mobile-nav.tsx",
+      "src/components/layout/responsive-sidebar.tsx"
+    ],
+    "breakpoints": {
+      "mobile": "< 640px",
+      "tablet": "640px - 1024px",
+      "desktop": "1024px - 1440px",
+      "wide": "> 1440px"
+    },
+    "polish": {
+      "sidebar": "Collapsible sidebar",
+      "navigation": "Mobile navigation",
+      "canvas": "Touch-friendly canvas",
+      "forms": "Mobile-optimized forms"
+    }
+  },
+
+  "prompt": {
+    "mission": "Polish responsive design",
+    "tasks": [
+      "Test all breakpoints",
+      "Polish mobile navigation",
+      "Improve tablet experience",
+      "Touch-optimize canvas",
+      "Fix layout issues"
+    ],
+    "constraints": [
+      "Mobile-first approach",
+      "Touch targets 44px+",
+      "No horizontal scroll"
+    ]
+  },
+
+  "outputs": {
+    "files": 3
+  }
+}

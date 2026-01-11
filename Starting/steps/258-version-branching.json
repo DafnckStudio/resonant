@@ -1,0 +1,56 @@
+{
+  "step": 258,
+  "id": "258-version-branching",
+  "phase": 8,
+  "phaseName": "Version Control",
+  "title": "Version Branching",
+  "description": "Create workflow branches",
+  "estimatedMinutes": 40,
+  "priority": "P2",
+  "dependencies": ["256-version-restore"],
+
+  "objective": {
+    "what": "Support workflow branches",
+    "why": "Experiment without risk",
+    "outcome": "Branching capability"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/lib/versioning/branching.ts",
+      "src/components/editor/version-control/branch-dialog.tsx",
+      "convex/branches.ts"
+    ],
+    "features": {
+      "create": "Create branch from version",
+      "name": "Branch naming",
+      "switch": "Switch between branches",
+      "merge": "Merge branches (basic)"
+    },
+    "schema": {
+      "branches": "Branch metadata table",
+      "parentBranch": "Reference to parent",
+      "headVersion": "Current branch head"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create version branching",
+    "tasks": [
+      "Design branch schema",
+      "Create branch from version",
+      "Build branch UI",
+      "Implement branch switching",
+      "Basic merge support"
+    ],
+    "constraints": [
+      "Simple branching model",
+      "Clear branch visualization",
+      "Safe switching"
+    ]
+  },
+
+  "outputs": {
+    "files": 3
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "step": 263,
+  "id": "263-version-comments",
+  "phase": 8,
+  "phaseName": "Version Control",
+  "title": "Version Comments",
+  "description": "Add comments to versions",
+  "estimatedMinutes": 25,
+  "priority": "P3",
+  "dependencies": ["254-version-history-panel"],
+
+  "objective": {
+    "what": "Comment on versions",
+    "why": "Document changes context",
+    "outcome": "Version commenting"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/components/editor/version-control/version-comments.tsx",
+      "convex/versionComments.ts"
+    ],
+    "features": {
+      "add": "Add comment to version",
+      "reply": "Reply to comments",
+      "edit": "Edit own comments",
+      "delete": "Delete comments"
+    },
+    "display": {
+      "inline": "Comments in history",
+      "expandable": "Expand/collapse",
+      "count": "Comment count badge"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create version comments",
+    "tasks": [
+      "Add comment to versions",
+      "Create comments UI",
+      "Support replies",
+      "Edit/delete own",
+      "Display in history"
+    ],
+    "constraints": [
+      "Lightweight",
+      "Real-time sync",
+      "Permission-aware"
+    ]
+  },
+
+  "outputs": {
+    "files": 2
+  }
+}

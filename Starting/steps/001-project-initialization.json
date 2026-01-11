@@ -1,0 +1,121 @@
+{
+  "step": 1,
+  "id": "001-project-initialization",
+  "phase": 0,
+  "phaseName": "Foundation Setup",
+  "title": "Initialize Next.js 16 Project",
+  "description": "Create the base Next.js 16 project with TypeScript, Tailwind CSS 4, and App Router",
+  "estimatedMinutes": 15,
+  "priority": "P0",
+  "dependencies": [],
+
+  "objective": {
+    "what": "Initialize a new Next.js 16 project with TypeScript strict mode, Tailwind CSS 4, and App Router",
+    "why": "Foundation for the entire Resonant.ai application - Next.js 16 provides React 19, Turbopack, and modern features",
+    "outcome": "A running Next.js dev server at localhost:22003 with TypeScript and Tailwind configured"
+  },
+
+  "context": {
+    "projectPath": "/home/hacker/VibeCoding/clients/resonant",
+    "stack": {
+      "framework": "Next.js 16",
+      "language": "TypeScript 5.x strict",
+      "styling": "Tailwind CSS 4",
+      "runtime": "Node.js 20.9+"
+    },
+    "references": [
+      "/home/hacker/.claude/templates/dashboard-reference/",
+      "/home/hacker/VibeCoding/clients/DentistryGPT/"
+    ],
+    "decisions": [
+      "Use pnpm as package manager",
+      "Use src/ directory structure",
+      "Enable Turbopack by default",
+      "Port 22003 for dev server"
+    ]
+  },
+
+  "specifications": {
+    "commands": [
+      "cd /home/hacker/VibeCoding/clients/resonant",
+      "pnpm create next-app@latest . --typescript --tailwind --eslint --app --src-dir --import-alias '@/*' --turbopack"
+    ],
+    "filesToCreate": [
+      "src/app/layout.tsx",
+      "src/app/page.tsx",
+      "src/app/globals.css",
+      "next.config.ts",
+      "tailwind.config.ts",
+      "tsconfig.json",
+      "package.json"
+    ],
+    "configuration": {
+      "nextConfig": {
+        "turbopack": true,
+        "reactCompiler": true,
+        "experimental": {
+          "typedRoutes": true
+        }
+      },
+      "typescript": {
+        "strict": true,
+        "noUncheckedIndexedAccess": true
+      },
+      "port": 22003
+    }
+  },
+
+  "prompt": {
+    "mission": "Initialize the Resonant.ai Next.js 16 project from scratch",
+    "tasks": [
+      "Create Next.js 16 project with pnpm create next-app",
+      "Configure TypeScript with strict mode",
+      "Set up Tailwind CSS 4 with dark mode",
+      "Configure next.config.ts with Turbopack and React Compiler",
+      "Update package.json scripts to use port 22003",
+      "Verify dev server starts successfully"
+    ],
+    "constraints": [
+      "MUST use Next.js 16 (not 15)",
+      "MUST use pnpm (not npm/yarn)",
+      "MUST use src/ directory",
+      "MUST use App Router (not Pages)",
+      "Port MUST be 22003"
+    ],
+    "validation": [
+      "pnpm dev runs without errors",
+      "http://localhost:22003 loads",
+      "TypeScript strict mode enabled",
+      "Tailwind classes work"
+    ]
+  },
+
+  "validation": {
+    "automated": [
+      "pnpm build passes",
+      "pnpm lint passes",
+      "No TypeScript errors"
+    ],
+    "functional": [
+      "Dev server starts on port 22003",
+      "Homepage renders",
+      "Tailwind styles apply"
+    ],
+    "quality": [
+      "tsconfig.json has strict: true",
+      "next.config.ts has turbopack enabled"
+    ]
+  },
+
+  "troubleshooting": {
+    "portInUse": "lsof -ti:22003 | xargs kill -9",
+    "pnpmNotFound": "npm install -g pnpm",
+    "nodeVersion": "nvm use 20 or higher"
+  },
+
+  "outputs": {
+    "files": ["package.json", "next.config.ts", "tsconfig.json", "tailwind.config.ts"],
+    "commands": ["pnpm dev"],
+    "urls": ["http://localhost:22003"]
+  }
+}

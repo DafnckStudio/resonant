@@ -1,0 +1,56 @@
+{
+  "step": 397,
+  "id": "397-production-config",
+  "phase": 12,
+  "phaseName": "Testing & Polish",
+  "title": "Production Configuration",
+  "description": "Configure production environment",
+  "estimatedMinutes": 30,
+  "priority": "P1",
+  "dependencies": [],
+
+  "objective": {
+    "what": "Production config",
+    "why": "Production readiness",
+    "outcome": "Secure production"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/lib/config/environment.ts",
+      ".env.production.example",
+      "vercel.json updates"
+    ],
+    "configuration": {
+      "env": "Environment variables",
+      "secrets": "Secret management",
+      "domains": "Custom domains",
+      "ssl": "SSL certificates"
+    },
+    "security": {
+      "headers": "Security headers",
+      "csp": "Content Security Policy",
+      "cors": "CORS configuration"
+    }
+  },
+
+  "prompt": {
+    "mission": "Configure production",
+    "tasks": [
+      "Set up env validation",
+      "Configure security headers",
+      "Set up CSP",
+      "Configure CORS",
+      "Document deployment"
+    ],
+    "constraints": [
+      "Vercel deployment",
+      "A+ security rating",
+      "Zero secrets in code"
+    ]
+  },
+
+  "outputs": {
+    "files": 3
+  }
+}

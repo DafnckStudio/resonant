@@ -1,0 +1,55 @@
+{
+  "step": 244,
+  "id": "244-sync-performance",
+  "phase": 7,
+  "phaseName": "Real-time Collaboration",
+  "title": "Sync Performance Optimization",
+  "description": "Optimize real-time sync performance",
+  "estimatedMinutes": 45,
+  "priority": "P1",
+  "dependencies": ["224-react-flow-yjs-binding"],
+
+  "objective": {
+    "what": "Optimize sync performance",
+    "why": "Fast and smooth collaboration",
+    "outcome": "Optimized sync"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/lib/collaboration/performance/sync-optimizer.ts",
+      "src/lib/collaboration/performance/batch-updates.ts"
+    ],
+    "optimizations": {
+      "batching": "Batch rapid updates",
+      "throttling": "Throttle cursor updates",
+      "compression": "Compress sync messages",
+      "selective": "Selective sync for large workflows"
+    },
+    "metrics": {
+      "latency": "Measure sync latency",
+      "bandwidth": "Track bandwidth usage",
+      "cpu": "Monitor CPU usage"
+    }
+  },
+
+  "prompt": {
+    "mission": "Optimize sync performance",
+    "tasks": [
+      "Implement update batching",
+      "Add cursor throttling",
+      "Add message compression",
+      "Implement selective sync",
+      "Add performance monitoring"
+    ],
+    "constraints": [
+      "Sub-100ms latency",
+      "Minimal bandwidth",
+      "Smooth experience"
+    ]
+  },
+
+  "outputs": {
+    "files": 2
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "step": 158,
+  "id": "158-logic-condition-block",
+  "phase": 5,
+  "phaseName": "Block System",
+  "title": "Condition Block",
+  "description": "Create conditional branching block",
+  "estimatedMinutes": 40,
+  "priority": "P0",
+  "dependencies": ["142-block-registry"],
+
+  "objective": {
+    "what": "Create condition block",
+    "why": "Branch workflow based on conditions",
+    "outcome": "If/else branching logic"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/components/editor/blocks/logic/condition-block.tsx"
+    ],
+    "config": {
+      "conditions": "Array of condition rules",
+      "defaultBranch": "Default when no match"
+    },
+    "operators": [
+      "equals", "not_equals", "contains",
+      "starts_with", "ends_with", "regex",
+      "greater_than", "less_than", "is_empty",
+      "is_null", "is_true", "is_false"
+    ],
+    "outputs": {
+      "true": "True branch output",
+      "false": "False branch output"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create condition block",
+    "tasks": [
+      "Create ConditionBlock component",
+      "Add condition builder UI",
+      "Support multiple conditions (AND/OR)",
+      "Add operator selector",
+      "Handle multiple output branches"
+    ],
+    "constraints": [
+      "Visual condition builder",
+      "Support complex expressions"
+    ]
+  },
+
+  "outputs": {
+    "files": 1
+  }
+}

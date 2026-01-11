@@ -1,0 +1,56 @@
+{
+  "step": 275,
+  "id": "275-phase8-integration",
+  "phase": 8,
+  "phaseName": "Version Control",
+  "title": "Phase 8 Integration",
+  "description": "Complete version control integration",
+  "estimatedMinutes": 50,
+  "priority": "P0",
+  "dependencies": ["274-version-testing", "268-version-audit-log"],
+
+  "objective": {
+    "what": "Integrate version control",
+    "why": "Milestone validation",
+    "outcome": "Production-ready versioning"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/lib/versioning/index.ts",
+      "docs/version-control-guide.md"
+    ],
+    "integration": {
+      "exports": "Clean public API",
+      "hooks": "React hooks for versioning",
+      "commands": "Command palette integration",
+      "documentation": "User guide"
+    },
+    "validation": {
+      "autoSave": "Reliable auto-save",
+      "restore": "Safe restore",
+      "history": "Complete history",
+      "performance": "Fast operations"
+    }
+  },
+
+  "prompt": {
+    "mission": "Complete Phase 8 integration",
+    "tasks": [
+      "Create unified exports",
+      "Integrate with editor",
+      "Test full workflows",
+      "Document version features",
+      "Prepare for Phase 9"
+    ],
+    "constraints": [
+      "All features working",
+      "No data loss",
+      "Documentation complete"
+    ]
+  },
+
+  "outputs": {
+    "files": 2
+  }
+}

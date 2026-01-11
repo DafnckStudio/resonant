@@ -1,0 +1,58 @@
+{
+  "step": 316,
+  "id": "316-cancellation-flow",
+  "phase": 10,
+  "phaseName": "Monetization & Billing",
+  "title": "Cancellation Flow",
+  "description": "Subscription cancellation with retention",
+  "estimatedMinutes": 40,
+  "priority": "P1",
+  "dependencies": ["306-subscription-management"],
+
+  "objective": {
+    "what": "Cancellation experience",
+    "why": "Minimize churn",
+    "outcome": "Retention-focused cancellation"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/lib/billing/cancellation.ts",
+      "src/components/billing/cancel-flow.tsx",
+      "src/components/billing/retention-offers.tsx",
+      "src/components/billing/exit-survey.tsx"
+    ],
+    "features": {
+      "survey": "Exit survey",
+      "offers": "Retention offers",
+      "pause": "Pause option",
+      "downgrade": "Downgrade suggestion"
+    },
+    "retention": {
+      "discount": "Discount offer",
+      "pause": "Pause subscription",
+      "downgrade": "Suggest cheaper plan",
+      "support": "Offer support call"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create cancellation flow with retention",
+    "tasks": [
+      "Build multi-step cancel flow",
+      "Add exit survey",
+      "Show retention offers",
+      "Implement pause option",
+      "Process cancellation at period end"
+    ],
+    "constraints": [
+      "Multiple retention attempts",
+      "Clear end date",
+      "Exit survey required"
+    ]
+  },
+
+  "outputs": {
+    "files": 4
+  }
+}

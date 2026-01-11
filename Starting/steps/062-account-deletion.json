@@ -1,0 +1,55 @@
+{
+  "step": 62,
+  "id": "062-account-deletion",
+  "phase": 2,
+  "phaseName": "Authentication & Users",
+  "title": "Implement Account Deletion",
+  "description": "Add account deletion flow with confirmation",
+  "estimatedMinutes": 30,
+  "priority": "P2",
+  "dependencies": ["061-session-management"],
+
+  "objective": {
+    "what": "Allow users to delete their account",
+    "why": "GDPR compliance and user rights",
+    "outcome": "Safe account deletion with data cleanup"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/components/settings/delete-account-dialog.tsx"
+    ],
+    "filesToModify": [
+      "src/app/(dashboard)/settings/security/page.tsx",
+      "convex/users.ts"
+    ],
+    "flow": [
+      "User clicks delete account",
+      "Show warning dialog",
+      "Require typing 'DELETE' to confirm",
+      "Soft delete in Convex",
+      "Delete from Clerk",
+      "Redirect to landing"
+    ]
+  },
+
+  "prompt": {
+    "mission": "Implement account deletion",
+    "tasks": [
+      "Create DeleteAccountDialog component",
+      "Require confirmation text input",
+      "Create soft delete mutation",
+      "Handle Clerk user deletion",
+      "Clean up user data in Convex"
+    ],
+    "constraints": [
+      "Must type 'DELETE' to confirm",
+      "Soft delete first, then Clerk"
+    ]
+  },
+
+  "outputs": {
+    "files": 1,
+    "filesModified": 2
+  }
+}

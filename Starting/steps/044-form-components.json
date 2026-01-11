@@ -1,0 +1,56 @@
+{
+  "step": 44,
+  "id": "044-form-components",
+  "phase": 1,
+  "phaseName": "Core UI & Layout",
+  "title": "Create Form Components with React Hook Form",
+  "description": "Build reusable form components integrated with Zod validation",
+  "estimatedMinutes": 40,
+  "priority": "P0",
+  "dependencies": ["002-shadcn-ui-setup"],
+
+  "objective": {
+    "what": "Create form components using react-hook-form and Zod",
+    "why": "Consistent form handling across the application",
+    "outcome": "Form primitives with built-in validation"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/components/forms/form-field.tsx",
+      "src/components/forms/form-input.tsx",
+      "src/components/forms/form-textarea.tsx",
+      "src/components/forms/form-select.tsx",
+      "src/components/forms/form-switch.tsx",
+      "src/components/forms/form-checkbox.tsx",
+      "src/lib/validations/index.ts"
+    ],
+    "dependencies": ["react-hook-form", "@hookform/resolvers", "zod"],
+    "features": {
+      "integration": "shadcn/ui Form components",
+      "validation": "Zod schema validation",
+      "errors": "Error message display",
+      "loading": "Submit loading states"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create form components with validation",
+    "tasks": [
+      "Install react-hook-form and Zod",
+      "Create FormField wrapper component",
+      "Build FormInput, FormTextarea, FormSelect",
+      "Add FormSwitch and FormCheckbox",
+      "Create common validation schemas"
+    ],
+    "constraints": [
+      "Use shadcn/ui Form components",
+      "Type-safe with TypeScript generics"
+    ]
+  },
+
+  "outputs": {
+    "files": 7,
+    "dependencies": 3
+  }
+}

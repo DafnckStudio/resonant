@@ -1,0 +1,58 @@
+{
+  "step": 317,
+  "id": "317-billing-emails",
+  "phase": 10,
+  "phaseName": "Monetization & Billing",
+  "title": "Billing Emails",
+  "description": "Transactional billing emails",
+  "estimatedMinutes": 35,
+  "priority": "P2",
+  "dependencies": ["305-stripe-webhooks"],
+
+  "objective": {
+    "what": "Billing email notifications",
+    "why": "Customer communication",
+    "outcome": "Professional billing emails"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/lib/billing/emails.ts",
+      "src/emails/payment-success.tsx",
+      "src/emails/payment-failed.tsx",
+      "src/emails/subscription-cancelled.tsx"
+    ],
+    "emails": {
+      "success": "Payment successful",
+      "failed": "Payment failed",
+      "cancelled": "Subscription cancelled",
+      "renewed": "Subscription renewed",
+      "trial": "Trial ending soon"
+    },
+    "integration": {
+      "provider": "Resend or SendGrid",
+      "templates": "React Email templates",
+      "triggers": "Webhook triggered"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create billing email system",
+    "tasks": [
+      "Setup email provider",
+      "Create email templates",
+      "Trigger on webhook events",
+      "Include invoice attachment",
+      "Add unsubscribe option"
+    ],
+    "constraints": [
+      "Professional design",
+      "Mobile responsive",
+      "CAN-SPAM compliant"
+    ]
+  },
+
+  "outputs": {
+    "files": 4
+  }
+}

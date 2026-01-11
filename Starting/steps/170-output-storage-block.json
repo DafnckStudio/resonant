@@ -1,0 +1,55 @@
+{
+  "step": 170,
+  "id": "170-output-storage-block",
+  "phase": 5,
+  "phaseName": "Block System",
+  "title": "Storage Output Block",
+  "description": "Create file storage output block",
+  "estimatedMinutes": 30,
+  "priority": "P2",
+  "dependencies": ["167-output-response-block"],
+
+  "objective": {
+    "what": "Create storage output block",
+    "why": "Save files to storage",
+    "outcome": "Upload to Convex/S3"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/components/editor/blocks/output/storage-block.tsx"
+    ],
+    "config": {
+      "destination": "convex/s3/r2",
+      "path": "File path/key",
+      "contentType": "MIME type"
+    },
+    "inputs": {
+      "content": "File content",
+      "filename": "File name"
+    },
+    "outputs": {
+      "url": "Stored file URL",
+      "id": "Storage ID"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create storage block",
+    "tasks": [
+      "Create StorageBlock component",
+      "Add destination selector",
+      "Handle different content types",
+      "Return file URL",
+      "Show upload progress"
+    ],
+    "constraints": [
+      "Use Convex files",
+      "Support binary"
+    ]
+  },
+
+  "outputs": {
+    "files": 1
+  }
+}

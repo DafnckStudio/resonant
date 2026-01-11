@@ -1,0 +1,62 @@
+{
+  "step": 217,
+  "id": "217-variable-resolution",
+  "phase": 6,
+  "phaseName": "AI Router & Execution",
+  "title": "Runtime Variable Resolution",
+  "description": "Resolve variables during execution",
+  "estimatedMinutes": 45,
+  "priority": "P0",
+  "dependencies": ["178-variable-interpolation", "192-block-executor"],
+
+  "objective": {
+    "what": "Implement runtime variable resolution",
+    "why": "Dynamic data flow between blocks",
+    "outcome": "Working variable system"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/lib/execution/variables/variable-resolver.ts",
+      "src/lib/execution/variables/context-builder.ts",
+      "src/lib/execution/variables/transform-functions.ts"
+    ],
+    "resolution": {
+      "blockOutputs": "{{blockId.output}}",
+      "nested": "{{blockId.output.field.subfield}}",
+      "array": "{{blockId.output[0].field}}",
+      "functions": "{{uppercase(blockId.output)}}"
+    },
+    "functions": [
+      "uppercase",
+      "lowercase",
+      "trim",
+      "length",
+      "first",
+      "last",
+      "join",
+      "split",
+      "default"
+    ]
+  },
+
+  "prompt": {
+    "mission": "Create variable resolution",
+    "tasks": [
+      "Implement variable resolver",
+      "Build execution context",
+      "Support nested paths",
+      "Add transform functions",
+      "Handle missing values"
+    ],
+    "constraints": [
+      "Safe property access",
+      "Clear error messages",
+      "Performance optimized"
+    ]
+  },
+
+  "outputs": {
+    "files": 3
+  }
+}

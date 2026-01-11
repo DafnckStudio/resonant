@@ -1,0 +1,61 @@
+{
+  "step": 69,
+  "id": "069-user-activity-log",
+  "phase": 2,
+  "phaseName": "Authentication & Users",
+  "title": "Create User Activity Log",
+  "description": "Track and display user activity in workspace",
+  "estimatedMinutes": 35,
+  "priority": "P2",
+  "dependencies": ["055-user-context"],
+
+  "objective": {
+    "what": "Create activity log for workspace actions",
+    "why": "Audit trail for security and accountability",
+    "outcome": "Activity feed showing recent actions"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/components/activity/activity-feed.tsx",
+      "src/components/activity/activity-item.tsx",
+      "convex/activityLog.ts"
+    ],
+    "filesToModify": [
+      "convex/schema.ts"
+    ],
+    "schema": {
+      "activityLogs": {
+        "workspaceId": "Id<workspaces>",
+        "userId": "Id<users>",
+        "action": "string",
+        "resourceType": "workflow | template | member | settings",
+        "resourceId": "string",
+        "metadata": "object",
+        "createdAt": "number"
+      }
+    },
+    "actions": [
+      "workflow.created", "workflow.updated", "workflow.deleted",
+      "workflow.executed", "member.invited", "member.removed",
+      "settings.updated"
+    ]
+  },
+
+  "prompt": {
+    "mission": "Create activity log",
+    "tasks": [
+      "Add activityLogs table to schema",
+      "Create log activity mutation",
+      "Build ActivityFeed component",
+      "Add ActivityItem with action formatting",
+      "Query recent activities"
+    ]
+  },
+
+  "outputs": {
+    "files": 3,
+    "filesModified": 1,
+    "schemaTable": "activityLogs"
+  }
+}

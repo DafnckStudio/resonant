@@ -1,0 +1,55 @@
+{
+  "step": 343,
+  "id": "343-export-analytics",
+  "phase": 11,
+  "phaseName": "Dashboard & Analytics",
+  "title": "Export Analytics",
+  "description": "Export analytics data",
+  "estimatedMinutes": 25,
+  "priority": "P2",
+  "dependencies": ["338-workflow-analytics"],
+
+  "objective": {
+    "what": "Analytics export functionality",
+    "why": "External analysis",
+    "outcome": "Data portability"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/lib/analytics/export.ts",
+      "src/components/analytics/export-dialog.tsx"
+    ],
+    "formats": {
+      "csv": "CSV export",
+      "json": "JSON export",
+      "pdf": "PDF report"
+    },
+    "options": {
+      "dateRange": "Select date range",
+      "metrics": "Select metrics",
+      "format": "Choose format",
+      "schedule": "Scheduled exports"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create analytics export",
+    "tasks": [
+      "Build export dialog",
+      "Implement CSV export",
+      "Add JSON export",
+      "Generate PDF reports",
+      "Setup scheduled exports"
+    ],
+    "constraints": [
+      "Fast generation",
+      "Complete data",
+      "Proper formatting"
+    ]
+  },
+
+  "outputs": {
+    "files": 2
+  }
+}

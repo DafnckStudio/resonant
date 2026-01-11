@@ -1,0 +1,61 @@
+{
+  "step": 120,
+  "id": "120-workflow-state-management",
+  "phase": 4,
+  "phaseName": "Workflow Editor Core",
+  "title": "Workflow State Management",
+  "description": "Create workflow editor state store",
+  "estimatedMinutes": 45,
+  "priority": "P0",
+  "dependencies": ["101-react-flow-setup"],
+
+  "objective": {
+    "what": "Create centralized state for workflow editor",
+    "why": "Complex state needs proper management",
+    "outcome": "Zustand store for workflow state"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/stores/workflow-editor-store.ts",
+      "src/hooks/use-workflow-editor.ts"
+    ],
+    "state": {
+      "nodes": "All workflow nodes",
+      "edges": "All workflow edges",
+      "selectedNodes": "Currently selected nodes",
+      "selectedEdges": "Currently selected edges",
+      "clipboard": "Copied nodes/edges",
+      "history": "Undo/redo history",
+      "viewport": "Current pan/zoom",
+      "isDirty": "Unsaved changes flag"
+    },
+    "actions": [
+      "setNodes", "setEdges",
+      "addNode", "updateNode", "deleteNode",
+      "addEdge", "deleteEdge",
+      "setSelection", "clearSelection",
+      "undo", "redo", "save"
+    ]
+  },
+
+  "prompt": {
+    "mission": "Create workflow state store",
+    "tasks": [
+      "Create Zustand store",
+      "Define state shape",
+      "Add all actions",
+      "Create useWorkflowEditor hook",
+      "Add computed values",
+      "Handle persistence"
+    ],
+    "constraints": [
+      "Use Zustand with immer",
+      "Type-safe actions"
+    ]
+  },
+
+  "outputs": {
+    "files": 2
+  }
+}

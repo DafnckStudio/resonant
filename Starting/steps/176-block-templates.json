@@ -1,0 +1,52 @@
+{
+  "step": 176,
+  "id": "176-block-templates",
+  "phase": 5,
+  "phaseName": "Block System",
+  "title": "Block Templates",
+  "description": "Pre-configured block templates",
+  "estimatedMinutes": 35,
+  "priority": "P2",
+  "dependencies": ["142-block-registry"],
+
+  "objective": {
+    "what": "Create block templates",
+    "why": "Quick start with common configurations",
+    "outcome": "Template library for blocks"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/lib/blocks/templates/index.ts",
+      "src/lib/blocks/templates/ai-templates.ts",
+      "src/lib/blocks/templates/integration-templates.ts",
+      "src/components/editor/palette/template-palette.tsx"
+    ],
+    "templates": {
+      "summarize": "Summarize text AI block",
+      "translate": "Translation AI block",
+      "analyze": "Sentiment analysis",
+      "slack": "Slack notification",
+      "email": "Email notification"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create block templates",
+    "tasks": [
+      "Define template structure",
+      "Create AI templates",
+      "Create integration templates",
+      "Add to palette",
+      "Allow saving custom templates"
+    ],
+    "constraints": [
+      "Pre-filled configs",
+      "Easy customization"
+    ]
+  },
+
+  "outputs": {
+    "files": 4
+  }
+}

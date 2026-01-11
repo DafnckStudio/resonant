@@ -1,0 +1,59 @@
+{
+  "step": 13,
+  "id": "013-convex-schema-ai-providers",
+  "phase": 0,
+  "phaseName": "Foundation Setup",
+  "title": "Create Convex Schema - AI Provider Configs Table",
+  "description": "Define aiProviderConfigs table for workspace-level AI provider settings",
+  "estimatedMinutes": 10,
+  "priority": "P0",
+  "dependencies": ["012-convex-schema-comments"],
+
+  "objective": {
+    "what": "Create aiProviderConfigs table for storing workspace AI provider API keys and settings",
+    "why": "Multi-AI support requires storing credentials per workspace",
+    "outcome": "AI configs table with encrypted key storage"
+  },
+
+  "specifications": {
+    "filesToModify": ["convex/schema.ts"],
+    "schema": {
+      "aiProviderConfigs": {
+        "fields": {
+          "workspaceId": "v.id('workspaces')",
+          "provider": "v.union('anthropic', 'openai', 'google', 'meta')",
+          "apiKey": "v.string() - Encrypted API key",
+          "isEnabled": "v.boolean()",
+          "isDefault": "v.boolean()",
+          "modelPreferences": "v.optional(v.array(v.string()))",
+          "rateLimits": "v.optional(v.object({...}))",
+          "createdAt": "v.number()",
+          "updatedAt": "v.number()"
+        },
+        "indexes": [
+          { "name": "by_workspaceId", "fields": ["workspaceId"] },
+          { "name": "by_workspaceId_provider", "fields": ["workspaceId", "provider"] },
+          { "name": "by_workspaceId_isDefault", "fields": ["workspaceId", "isDefault"] }
+        ]
+      }
+    }
+  },
+
+  "prompt": {
+    "mission": "Add AI provider configuration table",
+    "tasks": [
+      "Add aiProviderConfigs table",
+      "Include provider union type for supported providers",
+      "Add model preferences and rate limits"
+    ],
+    "constraints": [
+      "API keys must be encrypted before storage",
+      "Support anthropic, openai, google, meta providers"
+    ]
+  },
+
+  "outputs": {
+    "tables": ["aiProviderConfigs"],
+    "indexes": 3
+  }
+}

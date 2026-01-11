@@ -1,0 +1,66 @@
+{
+  "step": 48,
+  "id": "048-keyboard-shortcuts",
+  "phase": 1,
+  "phaseName": "Core UI & Layout",
+  "title": "Implement Global Keyboard Shortcuts",
+  "description": "Add keyboard shortcuts system for power users",
+  "estimatedMinutes": 25,
+  "priority": "P2",
+  "dependencies": ["045-command-palette"],
+
+  "objective": {
+    "what": "Create a global keyboard shortcuts system",
+    "why": "Power users expect keyboard navigation for efficiency",
+    "outcome": "Consistent keyboard shortcuts across the application"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/hooks/use-hotkeys.ts",
+      "src/components/shortcuts/shortcuts-provider.tsx",
+      "src/components/shortcuts/shortcuts-help-dialog.tsx",
+      "src/lib/shortcuts.ts"
+    ],
+    "shortcuts": {
+      "global": {
+        "⌘K": "Command palette",
+        "⌘/": "Show shortcuts help",
+        "⌘N": "New workflow",
+        "⌘S": "Save (in editor)"
+      },
+      "navigation": {
+        "G then H": "Go to home",
+        "G then W": "Go to workflows",
+        "G then T": "Go to templates",
+        "G then S": "Go to settings"
+      },
+      "editor": {
+        "⌘Z": "Undo",
+        "⌘⇧Z": "Redo",
+        "Delete": "Delete selected",
+        "⌘D": "Duplicate selected"
+      }
+    }
+  },
+
+  "prompt": {
+    "mission": "Implement keyboard shortcuts system",
+    "tasks": [
+      "Create useHotkeys hook",
+      "Build ShortcutsProvider context",
+      "Create shortcuts help dialog (⌘/)",
+      "Define shortcuts registry",
+      "Add visual hints for shortcuts"
+    ],
+    "constraints": [
+      "Support both Mac and Windows",
+      "Allow disabling in inputs/textareas"
+    ]
+  },
+
+  "outputs": {
+    "files": 4,
+    "shortcuts": 12
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "step": 228,
+  "id": "228-online-users-panel",
+  "phase": 7,
+  "phaseName": "Real-time Collaboration",
+  "title": "Online Users Panel",
+  "description": "Show who is currently editing",
+  "estimatedMinutes": 35,
+  "priority": "P1",
+  "dependencies": ["225-presence-awareness"],
+
+  "objective": {
+    "what": "Create online users panel",
+    "why": "See all collaborators at a glance",
+    "outcome": "User presence list"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/components/editor/collaboration/online-users.tsx",
+      "src/components/editor/collaboration/user-avatar-stack.tsx"
+    ],
+    "features": {
+      "avatars": "Stack of user avatars",
+      "count": "Number of online users",
+      "list": "Expandable user list",
+      "follow": "Follow user's view"
+    },
+    "display": {
+      "collapsed": "Avatar stack with +N",
+      "expanded": "Full list with names",
+      "status": "Active/Idle indicator"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create users panel",
+    "tasks": [
+      "Build avatar stack component",
+      "Create expandable list",
+      "Add follow functionality",
+      "Show activity status",
+      "Handle overflow"
+    ],
+    "constraints": [
+      "Compact design",
+      "Clear indication",
+      "Easy to expand"
+    ]
+  },
+
+  "outputs": {
+    "files": 2
+  }
+}

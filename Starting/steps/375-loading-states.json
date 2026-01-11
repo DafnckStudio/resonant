@@ -1,0 +1,58 @@
+{
+  "step": 375,
+  "id": "375-loading-states",
+  "phase": 12,
+  "phaseName": "Testing & Polish",
+  "title": "Loading States",
+  "description": "Polish loading states and skeletons",
+  "estimatedMinutes": 30,
+  "priority": "P2",
+  "dependencies": [],
+
+  "objective": {
+    "what": "Loading state polish",
+    "why": "Better perceived performance",
+    "outcome": "Smooth loading experience"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/components/ui/skeletons/workflow-skeleton.tsx",
+      "src/components/ui/skeletons/dashboard-skeleton.tsx",
+      "src/components/ui/skeletons/settings-skeleton.tsx",
+      "src/components/ui/loading-overlay.tsx"
+    ],
+    "patterns": {
+      "skeleton": "Skeleton placeholders",
+      "spinner": "Loading spinners",
+      "progress": "Progress indicators",
+      "shimmer": "Shimmer effects"
+    },
+    "states": {
+      "initial": "Initial load",
+      "navigation": "Page transitions",
+      "action": "Action feedback",
+      "streaming": "AI streaming"
+    }
+  },
+
+  "prompt": {
+    "mission": "Polish loading states",
+    "tasks": [
+      "Create skeleton components",
+      "Add page loading states",
+      "Improve action feedback",
+      "Add progress indicators",
+      "Polish transitions"
+    ],
+    "constraints": [
+      "Content-shaped skeletons",
+      "Consistent patterns",
+      "No layout shift"
+    ]
+  },
+
+  "outputs": {
+    "files": 4
+  }
+}

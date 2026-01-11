@@ -1,0 +1,56 @@
+{
+  "step": 295,
+  "id": "295-template-updates",
+  "phase": 9,
+  "phaseName": "Templates & Marketplace",
+  "title": "Template Updates",
+  "description": "Update published templates",
+  "estimatedMinutes": 30,
+  "priority": "P2",
+  "dependencies": ["286-template-editing"],
+
+  "objective": {
+    "what": "Update published templates",
+    "why": "Improve and fix templates",
+    "outcome": "Template versioning"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/lib/templates/updates.ts",
+      "src/components/templates/update-dialog.tsx"
+    ],
+    "features": {
+      "newVersion": "Publish new version",
+      "changelog": "Version changelog",
+      "notify": "Notify buyers",
+      "backwards": "Backwards compatibility"
+    },
+    "process": {
+      "draft": "Create update draft",
+      "review": "Review changes",
+      "publish": "Publish update",
+      "rollback": "Rollback if needed"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create template updates",
+    "tasks": [
+      "Implement version updates",
+      "Add changelog support",
+      "Notify existing buyers",
+      "Handle backwards compat",
+      "Enable rollback"
+    ],
+    "constraints": [
+      "Non-breaking updates",
+      "Clear changelogs",
+      "User notification"
+    ]
+  },
+
+  "outputs": {
+    "files": 2
+  }
+}

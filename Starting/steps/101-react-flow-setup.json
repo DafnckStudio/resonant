@@ -1,0 +1,52 @@
+{
+  "step": 101,
+  "id": "101-react-flow-setup",
+  "phase": 4,
+  "phaseName": "Workflow Editor Core",
+  "title": "Setup React Flow",
+  "description": "Install and configure React Flow for workflow editor",
+  "estimatedMinutes": 25,
+  "priority": "P0",
+  "dependencies": ["050-phase1-integration"],
+
+  "objective": {
+    "what": "Install React Flow and create base configuration",
+    "why": "React Flow is the foundation for the visual workflow editor",
+    "outcome": "Working React Flow instance with custom styling"
+  },
+
+  "specifications": {
+    "dependencies": ["@xyflow/react"],
+    "filesToCreate": [
+      "src/components/editor/flow-editor.tsx",
+      "src/components/editor/flow-styles.css"
+    ],
+    "configuration": {
+      "fitView": true,
+      "snapToGrid": true,
+      "gridSize": 20,
+      "minZoom": 0.1,
+      "maxZoom": 2
+    }
+  },
+
+  "prompt": {
+    "mission": "Setup React Flow",
+    "tasks": [
+      "Install @xyflow/react package",
+      "Create FlowEditor base component",
+      "Configure React Flow options",
+      "Add custom CSS for dark mode",
+      "Setup viewport controls"
+    ],
+    "constraints": [
+      "Use @xyflow/react (v12+)",
+      "Support both light and dark modes"
+    ]
+  },
+
+  "outputs": {
+    "files": 2,
+    "dependencies": 1
+  }
+}

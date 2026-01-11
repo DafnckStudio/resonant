@@ -1,0 +1,85 @@
+{
+  "step": 20,
+  "id": "020-git-setup",
+  "phase": 0,
+  "phaseName": "Foundation Setup",
+  "title": "Initialize Git Repository",
+  "description": "Set up Git with proper .gitignore, branch structure, and initial commit",
+  "estimatedMinutes": 10,
+  "priority": "P0",
+  "dependencies": ["019-eslint-prettier"],
+
+  "objective": {
+    "what": "Initialize Git repository with proper configuration for the project",
+    "why": "Version control is essential from day one for tracking changes",
+    "outcome": "Git initialized with main branch and pushed to GitHub"
+  },
+
+  "specifications": {
+    "commands": [
+      "git init",
+      "git add -A",
+      "git commit -m 'chore: initial project setup'",
+      "git branch -M main",
+      "git remote add origin https://github.com/DafnckStudio/resonant.git",
+      "git push -u origin main"
+    ],
+    "filesToModify": [".gitignore"],
+    "gitignoreAdditions": [
+      "# IDE",
+      ".idea/",
+      ".vscode/",
+      "",
+      "# Testing",
+      "coverage/",
+      "playwright-report/",
+      "",
+      "# Convex",
+      ".convex/",
+      "",
+      "# Misc",
+      "*.tsbuildinfo",
+      ".vercel"
+    ],
+    "gitConfig": {
+      "user.email": "studio@dafnck.com",
+      "user.name": "DafnckStudio"
+    },
+    "branches": {
+      "main": "Production",
+      "develop": "Integration (to create later)"
+    }
+  },
+
+  "prompt": {
+    "mission": "Initialize Git for Resonant.ai project",
+    "tasks": [
+      "Update .gitignore with all patterns",
+      "Set git config email to studio@dafnck.com",
+      "Initialize repository",
+      "Create initial commit",
+      "Push to GitHub remote"
+    ],
+    "constraints": [
+      "Email MUST be studio@dafnck.com",
+      "NEVER commit .env.local",
+      "NEVER commit node_modules"
+    ]
+  },
+
+  "validation": {
+    "automated": [
+      "git status clean",
+      "Remote configured"
+    ],
+    "functional": [
+      "Can push to GitHub",
+      "No secrets in repo"
+    ]
+  },
+
+  "outputs": {
+    "files": [".gitignore"],
+    "remote": "https://github.com/DafnckStudio/resonant.git"
+  }
+}

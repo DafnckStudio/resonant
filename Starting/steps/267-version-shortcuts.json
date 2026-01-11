@@ -1,0 +1,54 @@
+{
+  "step": 267,
+  "id": "267-version-shortcuts",
+  "phase": 8,
+  "phaseName": "Version Control",
+  "title": "Version Shortcuts",
+  "description": "Keyboard shortcuts for versions",
+  "estimatedMinutes": 20,
+  "priority": "P3",
+  "dependencies": ["253-manual-save-version"],
+
+  "objective": {
+    "what": "Add version shortcuts",
+    "why": "Faster workflow",
+    "outcome": "Keyboard shortcuts"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/lib/versioning/shortcuts.ts"
+    ],
+    "shortcuts": {
+      "save": "Ctrl+S - Save version",
+      "history": "Ctrl+H - Open history",
+      "undo": "Ctrl+Z - Undo (version level)",
+      "compare": "Ctrl+D - Compare versions"
+    },
+    "integration": {
+      "commandPalette": "Add to command palette",
+      "help": "Show in help",
+      "customizable": "User-customizable"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create version shortcuts",
+    "tasks": [
+      "Define keyboard shortcuts",
+      "Integrate with editor",
+      "Add to command palette",
+      "Document shortcuts",
+      "Allow customization"
+    ],
+    "constraints": [
+      "Non-conflicting",
+      "Cross-platform",
+      "Discoverable"
+    ]
+  },
+
+  "outputs": {
+    "files": 1
+  }
+}

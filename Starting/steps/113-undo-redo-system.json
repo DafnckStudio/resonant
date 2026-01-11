@@ -1,0 +1,54 @@
+{
+  "step": 113,
+  "id": "113-undo-redo-system",
+  "phase": 4,
+  "phaseName": "Workflow Editor Core",
+  "title": "Implement Undo/Redo System",
+  "description": "Build history stack for undo/redo operations",
+  "estimatedMinutes": 45,
+  "priority": "P0",
+  "dependencies": ["108-node-deletion", "110-edge-deletion"],
+
+  "objective": {
+    "what": "Create undo/redo history system",
+    "why": "Users need to revert mistakes",
+    "outcome": "Full history with Ctrl+Z/Ctrl+Shift+Z"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/hooks/use-history.ts",
+      "src/lib/editor/history-manager.ts"
+    ],
+    "features": {
+      "stack": "Limited history stack (50 items)",
+      "merge": "Merge rapid changes",
+      "persist": "Optional persist to storage"
+    },
+    "trackedActions": [
+      "addNode", "deleteNode", "moveNode",
+      "addEdge", "deleteEdge",
+      "updateNodeData", "bulkOperation"
+    ]
+  },
+
+  "prompt": {
+    "mission": "Implement undo/redo",
+    "tasks": [
+      "Create HistoryManager class",
+      "Create useHistory hook",
+      "Track node/edge changes",
+      "Implement undo function",
+      "Implement redo function",
+      "Add keyboard shortcuts"
+    ],
+    "constraints": [
+      "Limit stack size",
+      "Handle bulk operations"
+    ]
+  },
+
+  "outputs": {
+    "files": 2
+  }
+}

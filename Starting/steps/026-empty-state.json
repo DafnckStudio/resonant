@@ -1,0 +1,45 @@
+{
+  "step": 26,
+  "id": "026-empty-state",
+  "phase": 1,
+  "phaseName": "Core UI & Layout",
+  "title": "Create Empty State Component",
+  "description": "Build reusable empty state for lists and pages without data",
+  "estimatedMinutes": 15,
+  "priority": "P1",
+  "dependencies": ["025-page-header"],
+
+  "objective": {
+    "what": "Create empty state component with icon, title, description, and CTA",
+    "why": "Empty states guide users on what to do when there's no data",
+    "outcome": "Reusable EmptyState component for workflows, templates, etc."
+  },
+
+  "specifications": {
+    "filesToCreate": ["src/components/shared/empty-state.tsx"],
+    "props": {
+      "icon": "LucideIcon",
+      "title": "string",
+      "description": "string",
+      "action": "{ label: string, onClick: () => void } (optional)"
+    },
+    "variants": {
+      "default": "Centered with icon",
+      "compact": "Smaller for inline use"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create EmptyState component",
+    "tasks": [
+      "Create EmptyState with icon, title, description",
+      "Add optional action button",
+      "Create default and compact variants",
+      "Style for dark mode"
+    ]
+  },
+
+  "outputs": {
+    "files": ["src/components/shared/empty-state.tsx"]
+  }
+}

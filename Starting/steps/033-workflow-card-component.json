@@ -1,0 +1,50 @@
+{
+  "step": 33,
+  "id": "033-workflow-card-component",
+  "phase": 1,
+  "phaseName": "Core UI & Layout",
+  "title": "Design Workflow Card Component",
+  "description": "Create detailed workflow card with thumbnail, stats, and actions",
+  "estimatedMinutes": 25,
+  "priority": "P0",
+  "dependencies": ["032-workflows-list-page"],
+
+  "objective": {
+    "what": "Create polished workflow card showing thumbnail, name, status, stats, and actions",
+    "why": "Cards are the primary way users interact with workflows in grid view",
+    "outcome": "Beautiful workflow card with hover effects and dropdown menu"
+  },
+
+  "specifications": {
+    "filesToModify": ["src/components/workflow/workflow-card.tsx"],
+    "cardContent": {
+      "thumbnail": "Preview image or generated placeholder",
+      "name": "Workflow name",
+      "status": "Draft / Active / Archived badge",
+      "stats": "Block count, execution count",
+      "lastEdited": "Relative time",
+      "actions": "Edit, Duplicate, Delete, Archive"
+    },
+    "interactions": {
+      "click": "Navigate to editor",
+      "hover": "Show action buttons",
+      "dropdown": "More actions menu"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create detailed WorkflowCard component",
+    "tasks": [
+      "Design card with thumbnail area",
+      "Add status badge component",
+      "Show stats (blocks, executions)",
+      "Add hover effect with action buttons",
+      "Create dropdown menu for more actions",
+      "Handle click to navigate to editor"
+    ]
+  },
+
+  "outputs": {
+    "files": ["src/components/workflow/workflow-card.tsx"]
+  }
+}

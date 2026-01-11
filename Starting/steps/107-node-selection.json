@@ -1,0 +1,55 @@
+{
+  "step": 107,
+  "id": "107-node-selection",
+  "phase": 4,
+  "phaseName": "Workflow Editor Core",
+  "title": "Implement Node Selection",
+  "description": "Add single and multi-select for nodes",
+  "estimatedMinutes": 30,
+  "priority": "P0",
+  "dependencies": ["103-custom-node-base"],
+
+  "objective": {
+    "what": "Implement node selection system",
+    "why": "Users need to select nodes for editing and bulk operations",
+    "outcome": "Single click and marquee selection"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/components/editor/selection/selection-box.tsx",
+      "src/hooks/use-selection.ts"
+    ],
+    "filesToModify": [
+      "src/components/editor/flow-editor.tsx",
+      "src/components/editor/nodes/base-node.tsx"
+    ],
+    "features": {
+      "single": "Click to select one",
+      "multi": "Shift+click to add",
+      "marquee": "Drag to select area",
+      "selectAll": "Ctrl+A"
+    }
+  },
+
+  "prompt": {
+    "mission": "Implement node selection",
+    "tasks": [
+      "Handle single click select",
+      "Add shift+click multi-select",
+      "Create marquee selection box",
+      "Style selected state",
+      "Add select all shortcut",
+      "Track selection in state"
+    ],
+    "constraints": [
+      "Use React Flow selection API",
+      "Visual feedback on select"
+    ]
+  },
+
+  "outputs": {
+    "files": 2,
+    "filesModified": 2
+  }
+}

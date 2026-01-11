@@ -1,0 +1,56 @@
+{
+  "step": 283,
+  "id": "283-template-search",
+  "phase": 9,
+  "phaseName": "Templates & Marketplace",
+  "title": "Template Search",
+  "description": "Search templates by various criteria",
+  "estimatedMinutes": 30,
+  "priority": "P1",
+  "dependencies": ["280-template-gallery"],
+
+  "objective": {
+    "what": "Search templates",
+    "why": "Find specific templates",
+    "outcome": "Template search"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/lib/templates/search.ts",
+      "src/components/templates/template-search.tsx"
+    ],
+    "searchFields": {
+      "name": "Template name",
+      "description": "Description text",
+      "tags": "Tags and keywords",
+      "author": "Author name"
+    },
+    "features": {
+      "fullText": "Full-text search",
+      "autocomplete": "Search suggestions",
+      "filters": "Combined with filters",
+      "recent": "Recent searches"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create template search",
+    "tasks": [
+      "Implement search logic",
+      "Build search UI",
+      "Add autocomplete",
+      "Combine with filters",
+      "Track recent searches"
+    ],
+    "constraints": [
+      "Fast results",
+      "Relevant ranking",
+      "Typo tolerance"
+    ]
+  },
+
+  "outputs": {
+    "files": 2
+  }
+}

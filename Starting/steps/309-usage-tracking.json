@@ -1,0 +1,57 @@
+{
+  "step": 309,
+  "id": "309-usage-tracking",
+  "phase": 10,
+  "phaseName": "Monetization & Billing",
+  "title": "Usage Tracking",
+  "description": "Track feature usage",
+  "estimatedMinutes": 35,
+  "priority": "P1",
+  "dependencies": ["306-subscription-management"],
+
+  "objective": {
+    "what": "Track usage metrics",
+    "why": "Enforce limits and billing",
+    "outcome": "Usage monitoring"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/lib/billing/usage-tracker.ts",
+      "src/lib/billing/meters.ts",
+      "convex/usageTracking.ts"
+    ],
+    "metrics": {
+      "workflows": "Workflows created",
+      "executions": "Workflow executions",
+      "aiTokens": "AI tokens used",
+      "storage": "Storage used"
+    },
+    "tracking": {
+      "increment": "Increment counters",
+      "period": "Per billing period",
+      "realtime": "Real-time updates",
+      "history": "Usage history"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create usage tracking",
+    "tasks": [
+      "Define usage meters",
+      "Track increments",
+      "Reset per period",
+      "Store usage history",
+      "Real-time queries"
+    ],
+    "constraints": [
+      "Accurate counting",
+      "Efficient storage",
+      "Period alignment"
+    ]
+  },
+
+  "outputs": {
+    "files": 3
+  }
+}

@@ -1,0 +1,109 @@
+{
+  "step": 10,
+  "id": "010-convex-schema-executions",
+  "phase": 0,
+  "phaseName": "Foundation Setup",
+  "title": "Create Convex Schema - Executions Table",
+  "description": "Define executions table for workflow run tracking and results",
+  "estimatedMinutes": 15,
+  "priority": "P0",
+  "dependencies": ["009-convex-schema-versions"],
+
+  "objective": {
+    "what": "Create executions table to track workflow runs with status, inputs, outputs, and metrics",
+    "why": "Execution tracking enables debugging, analytics, and usage billing",
+    "outcome": "Executions table with block-level results and token usage"
+  },
+
+  "context": {
+    "dataModel": "Executions track each workflow run with block-by-block results",
+    "features": ["Real-time status", "Block results", "Error tracking", "Token usage"]
+  },
+
+  "specifications": {
+    "filesToModify": [
+      "convex/schema.ts"
+    ],
+    "schema": {
+      "executions": {
+        "fields": {
+          "workflowId": "v.id('workflows')",
+          "workspaceId": "v.id('workspaces')",
+          "triggeredBy": "v.id('users')",
+          "status": "v.union('pending', 'running', 'completed', 'failed', 'cancelled')",
+          "inputs": "v.optional(v.any()) - Initial inputs",
+          "outputs": "v.optional(v.any()) - Final outputs",
+          "blockResults": "v.optional(v.array(v.object({...}))) - Per-block results",
+          "error": "v.optional(v.object({...})) - Error details",
+          "metrics": "v.optional(v.object({...})) - Performance metrics",
+          "totalTokens": "v.optional(v.number())",
+          "totalCost": "v.optional(v.number())",
+          "startedAt": "v.optional(v.number())",
+          "completedAt": "v.optional(v.number())",
+          "createdAt": "v.number()"
+        },
+        "indexes": [
+          { "name": "by_workflowId", "fields": ["workflowId"] },
+          { "name": "by_workspaceId", "fields": ["workspaceId"] },
+          { "name": "by_triggeredBy", "fields": ["triggeredBy"] },
+          { "name": "by_status", "fields": ["status"] },
+          { "name": "by_workflowId_status", "fields": ["workflowId", "status"] }
+        ]
+      }
+    },
+    "blockResultSchema": {
+      "blockId": "v.string()",
+      "blockType": "v.string()",
+      "status": "v.string()",
+      "input": "v.optional(v.any())",
+      "output": "v.optional(v.any())",
+      "error": "v.optional(v.string())",
+      "duration": "v.optional(v.number())",
+      "tokens": "v.optional(v.number())",
+      "provider": "v.optional(v.string())"
+    },
+    "metricsSchema": {
+      "totalDuration": "v.number()",
+      "blockCount": "v.number()",
+      "aiCallCount": "v.number()",
+      "retryCount": "v.optional(v.number())"
+    }
+  },
+
+  "prompt": {
+    "mission": "Add executions table for workflow run tracking",
+    "tasks": [
+      "Add executions table with status tracking",
+      "Define blockResults array for per-block outputs",
+      "Include metrics for performance tracking",
+      "Add token/cost tracking fields",
+      "Create indexes for common queries"
+    ],
+    "constraints": [
+      "Status must be one of defined states",
+      "Include both workflow and workspace IDs",
+      "Track token usage for billing"
+    ],
+    "validation": [
+      "Schema pushes successfully",
+      "Can track execution progress"
+    ]
+  },
+
+  "validation": {
+    "automated": [
+      "Schema validates",
+      "Status union types accepted"
+    ],
+    "functional": [
+      "Can create executions",
+      "Status updates work"
+    ]
+  },
+
+  "outputs": {
+    "files": ["convex/schema.ts"],
+    "tables": ["executions"],
+    "indexes": 5
+  }
+}

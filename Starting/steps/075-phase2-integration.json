@@ -1,0 +1,70 @@
+{
+  "step": 75,
+  "id": "075-phase2-integration",
+  "phase": 2,
+  "phaseName": "Authentication & Users",
+  "title": "Phase 2 Integration & Testing",
+  "description": "Integrate all auth components and verify complete flow",
+  "estimatedMinutes": 45,
+  "priority": "P0",
+  "dependencies": ["074-auth-hooks"],
+
+  "objective": {
+    "what": "Test complete authentication and user management flow",
+    "why": "Ensure all auth components work together",
+    "outcome": "Fully functional auth system ready for Phase 3"
+  },
+
+  "specifications": {
+    "testCases": [
+      "New user sign up → onboarding → dashboard",
+      "Existing user sign in → dashboard",
+      "Protected route redirect",
+      "Team invite → accept → workspace",
+      "Role-based UI visibility",
+      "Profile update",
+      "Session management",
+      "Sign out flow"
+    ],
+    "validation": {
+      "signUp": "New user can create account",
+      "signIn": "Existing user can log in",
+      "onboarding": "New users go through onboarding",
+      "protection": "Protected routes redirect",
+      "invites": "Team invites work end-to-end",
+      "permissions": "RBAC correctly restricts actions"
+    }
+  },
+
+  "prompt": {
+    "mission": "Complete Phase 2 integration",
+    "tasks": [
+      "Test sign up flow end-to-end",
+      "Test sign in flow",
+      "Verify onboarding redirect",
+      "Test team invite acceptance",
+      "Verify role-based UI",
+      "Test profile updates",
+      "Fix any integration issues"
+    ],
+    "validation": [
+      "npm run build passes",
+      "All auth flows work",
+      "Webhook syncs correctly",
+      "Permissions enforced"
+    ]
+  },
+
+  "outputs": {
+    "milestone": "Phase 2 Complete",
+    "readyFor": "Phase 3: Workspace & Projects",
+    "deliverables": [
+      "Working Clerk authentication",
+      "User sync to Convex",
+      "Onboarding flow",
+      "Team invites",
+      "RBAC system",
+      "Notification system"
+    ]
+  }
+}

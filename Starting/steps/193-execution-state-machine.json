@@ -1,0 +1,69 @@
+{
+  "step": 193,
+  "id": "193-execution-state-machine",
+  "phase": 6,
+  "phaseName": "AI Router & Execution",
+  "title": "Execution State Machine",
+  "description": "Track and manage execution states",
+  "estimatedMinutes": 45,
+  "priority": "P0",
+  "dependencies": ["191-workflow-executor-core"],
+
+  "objective": {
+    "what": "Implement execution state machine",
+    "why": "Track workflow and block states accurately",
+    "outcome": "Reliable state tracking"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/lib/execution/state-machine.ts",
+      "src/lib/execution/states.ts"
+    ],
+    "workflowStates": [
+      "pending",
+      "running",
+      "paused",
+      "waiting_approval",
+      "completed",
+      "failed",
+      "cancelled"
+    ],
+    "blockStates": [
+      "pending",
+      "queued",
+      "running",
+      "completed",
+      "failed",
+      "skipped"
+    ],
+    "transitions": {
+      "start": "pending → running",
+      "pause": "running → paused",
+      "resume": "paused → running",
+      "complete": "running → completed",
+      "fail": "running → failed",
+      "cancel": "* → cancelled"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create state machine",
+    "tasks": [
+      "Define state types",
+      "Implement state transitions",
+      "Add transition validation",
+      "Emit state events",
+      "Persist state changes"
+    ],
+    "constraints": [
+      "No invalid transitions",
+      "Atomic state changes",
+      "Event emission on change"
+    ]
+  },
+
+  "outputs": {
+    "files": 2
+  }
+}

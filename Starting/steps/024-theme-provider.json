@@ -1,0 +1,52 @@
+{
+  "step": 24,
+  "id": "024-theme-provider",
+  "phase": 1,
+  "phaseName": "Core UI & Layout",
+  "title": "Implement Theme Provider",
+  "description": "Set up next-themes for dark/light/system theme support",
+  "estimatedMinutes": 15,
+  "priority": "P1",
+  "dependencies": ["023-workspace-selector"],
+
+  "objective": {
+    "what": "Configure theme provider with dark mode as default",
+    "why": "Users expect theme customization, and dark mode is our default",
+    "outcome": "Working theme toggle with persisted preference"
+  },
+
+  "specifications": {
+    "commands": ["pnpm add next-themes"],
+    "filesToCreate": [
+      "src/providers/theme-provider.tsx",
+      "src/components/shared/theme-toggle.tsx"
+    ],
+    "filesToModify": ["src/app/layout.tsx"],
+    "config": {
+      "attribute": "class",
+      "defaultTheme": "dark",
+      "enableSystem": true,
+      "disableTransitionOnChange": true
+    }
+  },
+
+  "prompt": {
+    "mission": "Set up theme provider for Resonant.ai",
+    "tasks": [
+      "Install next-themes",
+      "Create ThemeProvider wrapper",
+      "Set dark as default theme",
+      "Create ThemeToggle button component",
+      "Add toggle to sidebar footer or settings"
+    ],
+    "constraints": [
+      "Dark mode MUST be default",
+      "Use class-based theme switching",
+      "Persist preference in localStorage"
+    ]
+  },
+
+  "outputs": {
+    "files": ["src/providers/theme-provider.tsx", "src/components/shared/theme-toggle.tsx"]
+  }
+}

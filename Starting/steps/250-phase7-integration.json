@@ -1,0 +1,56 @@
+{
+  "step": 250,
+  "id": "250-phase7-integration",
+  "phase": 7,
+  "phaseName": "Real-time Collaboration",
+  "title": "Phase 7 Integration",
+  "description": "Complete collaboration integration",
+  "estimatedMinutes": 60,
+  "priority": "P0",
+  "dependencies": ["249-collaboration-testing", "248-collaboration-permissions-sync"],
+
+  "objective": {
+    "what": "Integrate all collaboration features",
+    "why": "Milestone validation",
+    "outcome": "Production-ready collaboration"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/lib/collaboration/index.ts",
+      "docs/collaboration-guide.md"
+    ],
+    "integration": {
+      "exports": "Clean public API",
+      "hooks": "React hooks for collaboration",
+      "providers": "Context providers",
+      "documentation": "Usage guide"
+    },
+    "validation": {
+      "multiUser": "3+ users editing",
+      "performance": "Sub-100ms sync",
+      "reliability": "No data loss",
+      "offline": "Offline capability"
+    }
+  },
+
+  "prompt": {
+    "mission": "Complete Phase 7 integration",
+    "tasks": [
+      "Create unified exports",
+      "Test multi-user scenarios",
+      "Verify performance targets",
+      "Document collaboration API",
+      "Prepare for Phase 8"
+    ],
+    "constraints": [
+      "All features working",
+      "Performance targets met",
+      "Documentation complete"
+    ]
+  },
+
+  "outputs": {
+    "files": 2
+  }
+}

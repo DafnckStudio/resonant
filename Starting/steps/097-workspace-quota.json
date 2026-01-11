@@ -1,0 +1,51 @@
+{
+  "step": 97,
+  "id": "097-workspace-quota",
+  "phase": 3,
+  "phaseName": "Workspace & Projects",
+  "title": "Implement Workspace Usage Quotas",
+  "description": "Add usage limits based on subscription plan",
+  "estimatedMinutes": 35,
+  "priority": "P1",
+  "dependencies": ["014-convex-schema-usage"],
+
+  "objective": {
+    "what": "Implement usage quotas for workspaces",
+    "why": "Enforce plan limits on workflows and executions",
+    "outcome": "Quota checking with upgrade prompts"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/components/workspace/usage-quota.tsx",
+      "src/components/workspace/upgrade-prompt.tsx",
+      "src/hooks/use-quota.ts",
+      "convex/lib/quotas.ts"
+    ],
+    "quotas": {
+      "free": { "workflows": 3, "executions": 100, "members": 1 },
+      "pro": { "workflows": -1, "executions": 5000, "members": 5 },
+      "team": { "workflows": -1, "executions": 25000, "members": 20 },
+      "enterprise": { "workflows": -1, "executions": -1, "members": -1 }
+    }
+  },
+
+  "prompt": {
+    "mission": "Implement workspace quotas",
+    "tasks": [
+      "Create quota definitions",
+      "Build useQuota hook",
+      "Create UsageQuota display component",
+      "Build UpgradePrompt modal",
+      "Check quotas before create actions"
+    ],
+    "constraints": [
+      "-1 means unlimited",
+      "Show warning at 80% usage"
+    ]
+  },
+
+  "outputs": {
+    "files": 4
+  }
+}

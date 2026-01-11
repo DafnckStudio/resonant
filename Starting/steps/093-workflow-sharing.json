@@ -1,0 +1,59 @@
+{
+  "step": 93,
+  "id": "093-workflow-sharing",
+  "phase": 3,
+  "phaseName": "Workspace & Projects",
+  "title": "Implement Workflow Sharing",
+  "description": "Add workflow sharing with other users",
+  "estimatedMinutes": 35,
+  "priority": "P2",
+  "dependencies": ["081-workflow-crud", "065-role-based-access"],
+
+  "objective": {
+    "what": "Allow sharing workflows with specific users",
+    "why": "Collaboration requires sharing workflows",
+    "outcome": "Share dialog with permission levels"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/components/workflow/share-workflow-dialog.tsx",
+      "src/components/workflow/share-link.tsx",
+      "convex/workflowShares.ts"
+    ],
+    "filesToModify": [
+      "convex/schema.ts"
+    ],
+    "schema": {
+      "workflowShares": {
+        "workflowId": "Id<workflows>",
+        "userId": "Id<users>",
+        "permission": "view | edit",
+        "sharedBy": "Id<users>",
+        "createdAt": "number"
+      }
+    },
+    "features": {
+      "invite": "Share with workspace members",
+      "permission": "View or edit access",
+      "link": "Shareable link (view only)"
+    }
+  },
+
+  "prompt": {
+    "mission": "Implement workflow sharing",
+    "tasks": [
+      "Add workflowShares table",
+      "Create ShareWorkflowDialog",
+      "Build user selection",
+      "Implement permission levels",
+      "Create shareable link feature"
+    ]
+  },
+
+  "outputs": {
+    "files": 3,
+    "filesModified": 1,
+    "schemaTable": "workflowShares"
+  }
+}

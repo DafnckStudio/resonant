@@ -1,0 +1,60 @@
+{
+  "step": 219,
+  "id": "219-execution-events",
+  "phase": 6,
+  "phaseName": "AI Router & Execution",
+  "title": "Execution Event System",
+  "description": "Real-time execution events via WebSocket",
+  "estimatedMinutes": 45,
+  "priority": "P0",
+  "dependencies": ["193-execution-state-machine"],
+
+  "objective": {
+    "what": "Create execution event system",
+    "why": "Real-time UI updates",
+    "outcome": "Live execution events"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/lib/execution/events/event-emitter.ts",
+      "src/lib/execution/events/event-types.ts",
+      "src/hooks/useExecutionEvents.ts"
+    ],
+    "events": [
+      "execution:started",
+      "execution:block:started",
+      "execution:block:completed",
+      "execution:block:failed",
+      "execution:stream:token",
+      "execution:paused",
+      "execution:resumed",
+      "execution:completed",
+      "execution:failed"
+    ],
+    "delivery": {
+      "realtime": "Convex real-time subscriptions",
+      "polling": "Fallback polling"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create event system",
+    "tasks": [
+      "Define event types",
+      "Create event emitter",
+      "Implement event hooks",
+      "Add Convex subscriptions",
+      "Handle reconnection"
+    ],
+    "constraints": [
+      "Low latency",
+      "Reliable delivery",
+      "Connection recovery"
+    ]
+  },
+
+  "outputs": {
+    "files": 3
+  }
+}

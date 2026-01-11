@@ -1,0 +1,53 @@
+{
+  "step": 108,
+  "id": "108-node-deletion",
+  "phase": 4,
+  "phaseName": "Workflow Editor Core",
+  "title": "Implement Node Deletion",
+  "description": "Add delete functionality for nodes",
+  "estimatedMinutes": 25,
+  "priority": "P0",
+  "dependencies": ["107-node-selection"],
+
+  "objective": {
+    "what": "Allow users to delete nodes",
+    "why": "Users need to remove unwanted blocks",
+    "outcome": "Delete via keyboard and context menu"
+  },
+
+  "specifications": {
+    "filesToModify": [
+      "src/components/editor/flow-editor.tsx",
+      "src/components/editor/nodes/base-node.tsx"
+    ],
+    "methods": {
+      "keyboard": "Delete/Backspace key",
+      "button": "X button on node hover",
+      "contextMenu": "Right-click delete option"
+    },
+    "behavior": {
+      "confirm": "Confirm if connected",
+      "cascade": "Remove connected edges",
+      "undo": "Support undo action"
+    }
+  },
+
+  "prompt": {
+    "mission": "Implement node deletion",
+    "tasks": [
+      "Add Delete key handler",
+      "Add delete button to node",
+      "Remove edges on node delete",
+      "Add confirmation for connected nodes",
+      "Prepare for undo integration"
+    ],
+    "constraints": [
+      "Remove all connected edges",
+      "Support bulk delete"
+    ]
+  },
+
+  "outputs": {
+    "filesModified": 2
+  }
+}

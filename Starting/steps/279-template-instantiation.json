@@ -1,0 +1,56 @@
+{
+  "step": 279,
+  "id": "279-template-instantiation",
+  "phase": 9,
+  "phaseName": "Templates & Marketplace",
+  "title": "Template Instantiation",
+  "description": "Create workflow from template",
+  "estimatedMinutes": 35,
+  "priority": "P1",
+  "dependencies": ["278-template-variables"],
+
+  "objective": {
+    "what": "Instantiate templates",
+    "why": "Use templates to create workflows",
+    "outcome": "Template-to-workflow flow"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/lib/templates/instantiate.ts",
+      "src/components/templates/use-template-dialog.tsx"
+    ],
+    "features": {
+      "preview": "Preview before creating",
+      "variables": "Fill in variables",
+      "customize": "Customize options",
+      "create": "Create new workflow"
+    },
+    "process": {
+      "validate": "Validate inputs",
+      "substitute": "Replace variables",
+      "create": "Create workflow",
+      "redirect": "Open in editor"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create template instantiation",
+    "tasks": [
+      "Build use template dialog",
+      "Variable input form",
+      "Replace placeholders",
+      "Create workflow",
+      "Handle errors"
+    ],
+    "constraints": [
+      "Valid substitution",
+      "Clear preview",
+      "Quick creation"
+    ]
+  },
+
+  "outputs": {
+    "files": 2
+  }
+}

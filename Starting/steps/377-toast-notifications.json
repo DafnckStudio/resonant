@@ -1,0 +1,57 @@
+{
+  "step": 377,
+  "id": "377-toast-notifications",
+  "phase": 12,
+  "phaseName": "Testing & Polish",
+  "title": "Toast Notifications",
+  "description": "Polish toast notification system",
+  "estimatedMinutes": 25,
+  "priority": "P2",
+  "dependencies": [],
+
+  "objective": {
+    "what": "Toast system polish",
+    "why": "Action feedback",
+    "outcome": "Polished notifications"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/lib/toast/toast-manager.ts",
+      "src/components/ui/toast-custom.tsx",
+      "src/hooks/use-toast-actions.ts"
+    ],
+    "types": {
+      "success": "Success messages",
+      "error": "Error messages",
+      "info": "Info messages",
+      "promise": "Promise toasts"
+    },
+    "features": {
+      "action": "Action buttons",
+      "dismiss": "Auto-dismiss",
+      "stack": "Stack multiple",
+      "undo": "Undo actions"
+    }
+  },
+
+  "prompt": {
+    "mission": "Polish toast system",
+    "tasks": [
+      "Standardize toast types",
+      "Add action buttons",
+      "Implement undo patterns",
+      "Polish animations",
+      "Add promise toasts"
+    ],
+    "constraints": [
+      "Sonner library",
+      "Consistent timing",
+      "Accessible"
+    ]
+  },
+
+  "outputs": {
+    "files": 3
+  }
+}

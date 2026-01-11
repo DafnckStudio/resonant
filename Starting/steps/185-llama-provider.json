@@ -1,0 +1,59 @@
+{
+  "step": 185,
+  "id": "185-llama-provider",
+  "phase": 6,
+  "phaseName": "AI Router & Execution",
+  "title": "Llama Provider Implementation",
+  "description": "Implement Llama API integration via hosted providers",
+  "estimatedMinutes": 40,
+  "priority": "P1",
+  "dependencies": ["181-ai-provider-types"],
+
+  "objective": {
+    "what": "Create Llama provider",
+    "why": "Cost-effective open-source model option",
+    "outcome": "Working Llama integration"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/lib/ai/providers/llama.ts",
+      "src/lib/ai/providers/llama-models.ts"
+    ],
+    "models": [
+      "llama-3.1-405b",
+      "llama-3.1-70b",
+      "llama-3.1-8b"
+    ],
+    "hosts": {
+      "together": "Together.ai API",
+      "groq": "Groq for fast inference",
+      "replicate": "Replicate API"
+    },
+    "features": {
+      "text": "Text generation",
+      "streaming": "Stream responses",
+      "costEffective": "Lower cost per token"
+    }
+  },
+
+  "prompt": {
+    "mission": "Implement Llama provider",
+    "tasks": [
+      "Create LlamaProvider class",
+      "Support multiple hosts",
+      "Implement text generation",
+      "Add streaming support",
+      "Handle host failover"
+    ],
+    "constraints": [
+      "Abstract host differences",
+      "Support Groq for speed",
+      "Cost optimization"
+    ]
+  },
+
+  "outputs": {
+    "files": 2
+  }
+}

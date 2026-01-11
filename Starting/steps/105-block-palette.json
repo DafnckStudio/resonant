@@ -1,0 +1,59 @@
+{
+  "step": 105,
+  "id": "105-block-palette",
+  "phase": 4,
+  "phaseName": "Workflow Editor Core",
+  "title": "Create Block Palette Component",
+  "description": "Build the sidebar palette with available blocks",
+  "estimatedMinutes": 45,
+  "priority": "P0",
+  "dependencies": ["102-editor-layout"],
+
+  "objective": {
+    "what": "Create block palette in left sidebar",
+    "why": "Users need to browse and add blocks to workflows",
+    "outcome": "Searchable, categorized block palette"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/components/editor/palette/block-palette.tsx",
+      "src/components/editor/palette/block-category.tsx",
+      "src/components/editor/palette/block-item.tsx",
+      "src/components/editor/palette/palette-search.tsx"
+    ],
+    "categories": [
+      "Input (triggers, webhooks)",
+      "AI (generation, analysis)",
+      "Transform (text, data)",
+      "Logic (conditions, loops)",
+      "Output (publish, export)",
+      "Utility (delay, merge)"
+    ],
+    "features": {
+      "search": "Filter blocks by name",
+      "drag": "Drag to canvas",
+      "preview": "Hover for description"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create block palette",
+    "tasks": [
+      "Create BlockPalette container",
+      "Build BlockCategory accordion",
+      "Create draggable BlockItem",
+      "Add PaletteSearch filter",
+      "Group blocks by category",
+      "Add block descriptions and icons"
+    ],
+    "constraints": [
+      "Use Lucide icons",
+      "Match shadcn/ui style"
+    ]
+  },
+
+  "outputs": {
+    "files": 4
+  }
+}

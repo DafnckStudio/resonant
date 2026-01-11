@@ -1,0 +1,86 @@
+{
+  "step": 16,
+  "id": "016-clerk-convex-integration",
+  "phase": 0,
+  "phaseName": "Foundation Setup",
+  "title": "Integrate Clerk with Convex",
+  "description": "Set up Clerk webhook to sync users with Convex and configure ConvexProviderWithClerk",
+  "estimatedMinutes": 25,
+  "priority": "P0",
+  "dependencies": ["015-clerk-setup"],
+
+  "objective": {
+    "what": "Configure Clerk webhook to create/update users in Convex and wrap providers correctly",
+    "why": "User data must be synced to Convex for queries and Clerk auth must work with Convex",
+    "outcome": "Users automatically created in Convex when signing up via Clerk"
+  },
+
+  "specifications": {
+    "commands": [
+      "pnpm add svix"
+    ],
+    "filesToCreate": [
+      "src/app/api/webhooks/clerk/route.ts",
+      "convex/users.ts",
+      "convex/http.ts"
+    ],
+    "filesToModify": [
+      "src/providers/convex-provider.tsx",
+      ".env.local"
+    ],
+    "envVariables": {
+      "CLERK_WEBHOOK_SECRET": "whsec_xxx"
+    },
+    "webhookEvents": [
+      "user.created",
+      "user.updated",
+      "user.deleted"
+    ],
+    "convexUserFunctions": {
+      "createUser": "Internal mutation for webhook",
+      "updateUser": "Internal mutation for webhook",
+      "deleteUser": "Internal mutation for webhook",
+      "getUserByClerkId": "Query by Clerk ID",
+      "getCurrentUser": "Query current authenticated user"
+    },
+    "providerCode": "\"use client\";\n\nimport { ClerkProvider, useAuth } from \"@clerk/nextjs\";\nimport { ConvexProviderWithClerk } from \"convex/react-clerk\";\nimport { ConvexReactClient } from \"convex/react\";\n\nconst convex = new ConvexReactClient(process.env.NEXT_PUBLIC_CONVEX_URL!);\n\nexport function Providers({ children }: { children: React.ReactNode }) {\n  return (\n    <ClerkProvider>\n      <ConvexProviderWithClerk client={convex} useAuth={useAuth}>\n        {children}\n      </ConvexProviderWithClerk>\n    </ClerkProvider>\n  );\n}"
+  },
+
+  "prompt": {
+    "mission": "Integrate Clerk authentication with Convex backend",
+    "tasks": [
+      "Create webhook route at /api/webhooks/clerk",
+      "Verify webhook signatures using svix",
+      "Create Convex mutations for user sync",
+      "Update provider to use ConvexProviderWithClerk",
+      "Create getUserByClerkId and getCurrentUser queries",
+      "Test user creation on sign-up"
+    ],
+    "constraints": [
+      "Webhook MUST verify svix signatures",
+      "Use internal mutations (not public)",
+      "Handle all Clerk user events"
+    ],
+    "validation": [
+      "Webhook receives events",
+      "User created in Convex on sign-up",
+      "getCurrentUser returns user data"
+    ]
+  },
+
+  "validation": {
+    "automated": [
+      "Webhook signature verification works",
+      "Convex functions deploy"
+    ],
+    "functional": [
+      "New sign-up creates Convex user",
+      "User data accessible in app"
+    ]
+  },
+
+  "outputs": {
+    "files": ["src/app/api/webhooks/clerk/route.ts", "convex/users.ts"],
+    "convexFunctions": ["createUser", "updateUser", "getCurrentUser"]
+  }
+}

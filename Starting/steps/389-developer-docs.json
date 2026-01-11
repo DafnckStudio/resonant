@@ -1,0 +1,57 @@
+{
+  "step": 389,
+  "id": "389-developer-docs",
+  "phase": 12,
+  "phaseName": "Testing & Polish",
+  "title": "Developer Documentation",
+  "description": "Create developer setup documentation",
+  "estimatedMinutes": 30,
+  "priority": "P2",
+  "dependencies": [],
+
+  "objective": {
+    "what": "Developer docs",
+    "why": "Team onboarding",
+    "outcome": "Easy setup"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "README.md updates",
+      "CONTRIBUTING.md",
+      "docs/ARCHITECTURE.md",
+      "docs/DEPLOYMENT.md"
+    ],
+    "documentation": {
+      "setup": "Local setup guide",
+      "architecture": "Architecture overview",
+      "conventions": "Code conventions",
+      "deployment": "Deployment guide"
+    },
+    "guides": {
+      "features": "Adding features",
+      "testing": "Testing guide",
+      "debugging": "Debugging tips"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create dev docs",
+    "tasks": [
+      "Write setup guide",
+      "Document architecture",
+      "Add contribution guide",
+      "Create deployment docs",
+      "Include troubleshooting"
+    ],
+    "constraints": [
+      "Clear step-by-step",
+      "Include prerequisites",
+      "Keep updated"
+    ]
+  },
+
+  "outputs": {
+    "files": 4
+  }
+}

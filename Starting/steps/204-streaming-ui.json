@@ -1,0 +1,56 @@
+{
+  "step": 204,
+  "id": "204-streaming-ui",
+  "phase": 6,
+  "phaseName": "AI Router & Execution",
+  "title": "Streaming Output UI",
+  "description": "Display streaming AI responses in UI",
+  "estimatedMinutes": 40,
+  "priority": "P0",
+  "dependencies": ["194-streaming-responses", "203-execution-ui-panel"],
+
+  "objective": {
+    "what": "Show streaming responses in UI",
+    "why": "Real-time feedback during AI generation",
+    "outcome": "Live streaming display"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/components/editor/execution/streaming-output.tsx",
+      "src/components/editor/execution/token-stream.tsx",
+      "src/hooks/useStreamingOutput.ts"
+    ],
+    "features": {
+      "tokenByToken": "Show tokens as received",
+      "cursor": "Animated typing cursor",
+      "highlight": "Highlight active block",
+      "scroll": "Auto-scroll to bottom"
+    },
+    "display": {
+      "text": "Plain text streaming",
+      "markdown": "Rendered markdown",
+      "code": "Syntax highlighted code"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create streaming UI",
+    "tasks": [
+      "Create StreamingOutput component",
+      "Implement token-by-token display",
+      "Add typing cursor animation",
+      "Support markdown rendering",
+      "Add syntax highlighting"
+    ],
+    "constraints": [
+      "Smooth animation",
+      "Low CPU usage",
+      "Handle fast streams"
+    ]
+  },
+
+  "outputs": {
+    "files": 3
+  }
+}

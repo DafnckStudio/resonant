@@ -1,0 +1,58 @@
+{
+  "step": 289,
+  "id": "289-marketplace-browse",
+  "phase": 9,
+  "phaseName": "Templates & Marketplace",
+  "title": "Marketplace Browse",
+  "description": "Browse marketplace listings",
+  "estimatedMinutes": 40,
+  "priority": "P1",
+  "dependencies": ["288-template-publishing"],
+
+  "objective": {
+    "what": "Create marketplace browsing",
+    "why": "Discover paid templates",
+    "outcome": "Marketplace page"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/app/(dashboard)/marketplace/page.tsx",
+      "src/components/marketplace/marketplace-grid.tsx",
+      "src/components/marketplace/listing-card.tsx",
+      "src/hooks/useMarketplace.ts"
+    ],
+    "features": {
+      "featured": "Featured templates",
+      "trending": "Trending templates",
+      "new": "New releases",
+      "categories": "Browse by category"
+    },
+    "display": {
+      "price": "Price badge",
+      "rating": "Average rating",
+      "sales": "Sales count",
+      "preview": "Quick preview"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create marketplace browsing",
+    "tasks": [
+      "Build marketplace page",
+      "Create listing grid",
+      "Add featured section",
+      "Show trending templates",
+      "Implement filtering"
+    ],
+    "constraints": [
+      "Attractive display",
+      "Fast loading",
+      "Clear pricing"
+    ]
+  },
+
+  "outputs": {
+    "files": 4
+  }
+}

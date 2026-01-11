@@ -1,0 +1,57 @@
+{
+  "step": 299,
+  "id": "299-marketplace-testing",
+  "phase": 9,
+  "phaseName": "Templates & Marketplace",
+  "title": "Marketplace Testing",
+  "description": "Test templates and marketplace",
+  "estimatedMinutes": 45,
+  "priority": "P1",
+  "dependencies": ["294-seller-payouts", "292-template-reviews"],
+
+  "objective": {
+    "what": "Test marketplace features",
+    "why": "Ensure reliability",
+    "outcome": "Tested marketplace"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/lib/templates/__tests__/templates.test.ts",
+      "src/lib/marketplace/__tests__/purchases.test.ts",
+      "src/lib/marketplace/__tests__/payouts.test.ts",
+      "e2e/marketplace.spec.ts"
+    ],
+    "testCases": {
+      "templates": "Create, edit, publish",
+      "purchases": "Buy flow, access",
+      "payouts": "Balance, payouts",
+      "reviews": "Submit, display"
+    },
+    "e2e": {
+      "fullFlow": "End-to-end purchase",
+      "sellerFlow": "Seller onboarding",
+      "searchBrowse": "Search and browse"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create marketplace tests",
+    "tasks": [
+      "Unit test templates",
+      "Test purchase flow",
+      "Test payout logic",
+      "E2E marketplace tests",
+      "Payment edge cases"
+    ],
+    "constraints": [
+      "High coverage",
+      "Payment safety",
+      "CI-friendly"
+    ]
+  },
+
+  "outputs": {
+    "files": 4
+  }
+}

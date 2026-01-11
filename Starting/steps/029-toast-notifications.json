@@ -1,0 +1,49 @@
+{
+  "step": 29,
+  "id": "029-toast-notifications",
+  "phase": 1,
+  "phaseName": "Core UI & Layout",
+  "title": "Set Up Toast Notifications",
+  "description": "Configure Sonner for toast notifications throughout the app",
+  "estimatedMinutes": 15,
+  "priority": "P1",
+  "dependencies": ["028-error-boundary"],
+
+  "objective": {
+    "what": "Set up Sonner toast notifications with custom styling",
+    "why": "Toasts provide feedback for user actions and system events",
+    "outcome": "Working toast system with success, error, info variants"
+  },
+
+  "specifications": {
+    "filesToModify": ["src/app/layout.tsx"],
+    "filesToCreate": ["src/lib/toast.ts"],
+    "config": {
+      "position": "bottom-right",
+      "theme": "dark",
+      "richColors": true,
+      "closeButton": true
+    },
+    "helpers": {
+      "showSuccess": "Success toast",
+      "showError": "Error toast",
+      "showInfo": "Info toast",
+      "showLoading": "Loading toast with promise"
+    }
+  },
+
+  "prompt": {
+    "mission": "Configure toast notification system",
+    "tasks": [
+      "Add Sonner to root layout",
+      "Configure for dark theme",
+      "Create toast helper functions",
+      "Style to match Resonant design"
+    ]
+  },
+
+  "outputs": {
+    "files": ["src/lib/toast.ts"],
+    "helpers": ["showSuccess", "showError", "showInfo", "showLoading"]
+  }
+}

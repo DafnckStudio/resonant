@@ -1,0 +1,48 @@
+{
+  "step": 57,
+  "id": "057-onboarding-redirect",
+  "phase": 2,
+  "phaseName": "Authentication & Users",
+  "title": "Implement Onboarding Redirect Logic",
+  "description": "Add logic to redirect new users to onboarding",
+  "estimatedMinutes": 20,
+  "priority": "P1",
+  "dependencies": ["056-onboarding-flow"],
+
+  "objective": {
+    "what": "Redirect new users to onboarding flow",
+    "why": "First-time users should complete onboarding before dashboard",
+    "outcome": "Automatic redirect based on onboarding status"
+  },
+
+  "specifications": {
+    "filesToModify": [
+      "src/app/(dashboard)/layout.tsx",
+      "convex/users.ts"
+    ],
+    "filesToCreate": [
+      "src/hooks/use-onboarding-status.ts"
+    ],
+    "logic": {
+      "check": "Query user.hasCompletedOnboarding",
+      "redirect": "If false, redirect to /onboarding",
+      "mark": "Set hasCompletedOnboarding true after finish"
+    }
+  },
+
+  "prompt": {
+    "mission": "Implement onboarding redirect",
+    "tasks": [
+      "Add hasCompletedOnboarding field to user schema",
+      "Create useOnboardingStatus hook",
+      "Add redirect logic in dashboard layout",
+      "Create mutation to mark onboarding complete",
+      "Test redirect flow"
+    ]
+  },
+
+  "outputs": {
+    "files": 1,
+    "filesModified": 2
+  }
+}

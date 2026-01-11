@@ -1,0 +1,56 @@
+{
+  "step": 174,
+  "id": "174-block-property-editors",
+  "phase": 5,
+  "phaseName": "Block System",
+  "title": "Block Property Editors",
+  "description": "Create specialized property editors for blocks",
+  "estimatedMinutes": 50,
+  "priority": "P0",
+  "dependencies": ["111-properties-panel", "173-block-config-schemas"],
+
+  "objective": {
+    "what": "Create custom property editors",
+    "why": "Better UX for complex configurations",
+    "outcome": "Specialized editors for each block"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/components/editor/properties/editors/model-selector.tsx",
+      "src/components/editor/properties/editors/prompt-editor.tsx",
+      "src/components/editor/properties/editors/condition-editor.tsx",
+      "src/components/editor/properties/editors/json-editor.tsx",
+      "src/components/editor/properties/editors/code-editor.tsx",
+      "src/components/editor/properties/editors/cron-editor.tsx"
+    ],
+    "editors": {
+      "modelSelector": "AI model dropdown",
+      "promptEditor": "Prompt with variables",
+      "conditionEditor": "Visual condition builder",
+      "jsonEditor": "JSON with validation",
+      "codeEditor": "Monaco code editor",
+      "cronEditor": "Visual cron builder"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create property editors",
+    "tasks": [
+      "Create ModelSelector with provider icons",
+      "Create PromptEditor with syntax",
+      "Create ConditionEditor visual builder",
+      "Create JsonEditor with Monaco",
+      "Create CodeEditor with lint",
+      "Create CronEditor with preview"
+    ],
+    "constraints": [
+      "Consistent styling",
+      "Good DX"
+    ]
+  },
+
+  "outputs": {
+    "files": 6
+  }
+}

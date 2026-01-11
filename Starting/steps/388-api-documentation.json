@@ -1,0 +1,56 @@
+{
+  "step": 388,
+  "id": "388-api-documentation",
+  "phase": 12,
+  "phaseName": "Testing & Polish",
+  "title": "API Documentation",
+  "description": "Create comprehensive API documentation",
+  "estimatedMinutes": 40,
+  "priority": "P2",
+  "dependencies": [],
+
+  "objective": {
+    "what": "API documentation",
+    "why": "Developer experience",
+    "outcome": "Complete API docs"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/app/docs/api/page.tsx",
+      "src/lib/docs/openapi.ts",
+      "src/components/docs/api-reference.tsx"
+    ],
+    "documentation": {
+      "endpoints": "All API endpoints",
+      "schemas": "Request/response schemas",
+      "auth": "Authentication guide",
+      "examples": "Code examples"
+    },
+    "formats": {
+      "openapi": "OpenAPI spec",
+      "interactive": "Interactive docs",
+      "sdks": "SDK examples"
+    }
+  },
+
+  "prompt": {
+    "mission": "Document APIs",
+    "tasks": [
+      "Generate OpenAPI spec",
+      "Create interactive docs",
+      "Add code examples",
+      "Document authentication",
+      "Include error codes"
+    ],
+    "constraints": [
+      "OpenAPI 3.0",
+      "Interactive playground",
+      "Copy-paste examples"
+    ]
+  },
+
+  "outputs": {
+    "files": 3
+  }
+}

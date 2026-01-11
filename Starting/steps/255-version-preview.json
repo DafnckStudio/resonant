@@ -1,0 +1,55 @@
+{
+  "step": 255,
+  "id": "255-version-preview",
+  "phase": 8,
+  "phaseName": "Version Control",
+  "title": "Version Preview",
+  "description": "Preview past versions",
+  "estimatedMinutes": 35,
+  "priority": "P1",
+  "dependencies": ["254-version-history-panel"],
+
+  "objective": {
+    "what": "Preview workflow versions",
+    "why": "See before restoring",
+    "outcome": "Version preview mode"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/components/editor/version-control/version-preview.tsx",
+      "src/lib/versioning/preview-mode.ts"
+    ],
+    "features": {
+      "readOnly": "Read-only view mode",
+      "fullView": "Full workflow preview",
+      "compare": "Side-by-side current",
+      "metadata": "Version details"
+    },
+    "ui": {
+      "banner": "Preview mode banner",
+      "exit": "Exit preview button",
+      "restore": "Restore this version"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create version preview",
+    "tasks": [
+      "Build preview mode",
+      "Show read-only workflow",
+      "Add preview banner",
+      "Enable quick restore",
+      "Exit preview cleanly"
+    ],
+    "constraints": [
+      "Clear preview state",
+      "No accidental edits",
+      "Fast loading"
+    ]
+  },
+
+  "outputs": {
+    "files": 2
+  }
+}

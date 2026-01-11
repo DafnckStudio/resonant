@@ -1,0 +1,60 @@
+{
+  "step": 207,
+  "id": "207-human-approval-flow",
+  "phase": 6,
+  "phaseName": "AI Router & Execution",
+  "title": "Human Approval Flow",
+  "description": "Pause execution for human approval",
+  "estimatedMinutes": 60,
+  "priority": "P1",
+  "dependencies": ["193-execution-state-machine", "171-human-approval-block"],
+
+  "objective": {
+    "what": "Implement human-in-the-loop",
+    "why": "Human oversight for critical decisions",
+    "outcome": "Working approval flow"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/lib/execution/human/approval-handler.ts",
+      "src/lib/execution/human/approval-notifications.ts",
+      "src/app/(dashboard)/approvals/page.tsx",
+      "src/components/approvals/approval-card.tsx",
+      "src/components/approvals/approval-detail.tsx",
+      "convex/approvals.ts"
+    ],
+    "flow": {
+      "pause": "Execution pauses at approval block",
+      "notify": "Notify approvers",
+      "review": "Approvers review data",
+      "decision": "Approve or reject",
+      "resume": "Continue or stop execution"
+    },
+    "notifications": {
+      "email": "Email notification",
+      "inApp": "In-app notification",
+      "slack": "Slack integration (future)"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create approval flow",
+    "tasks": [
+      "Implement approval handler",
+      "Create approvals page",
+      "Build approval UI cards",
+      "Add notification system",
+      "Handle approval/rejection"
+    ],
+    "constraints": [
+      "Timeout handling",
+      "Multiple approvers",
+      "Audit trail"
+    ]
+  },
+
+  "outputs": {
+    "files": 6
+  }
+}

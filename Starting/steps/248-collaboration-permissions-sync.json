@@ -1,0 +1,55 @@
+{
+  "step": 248,
+  "id": "248-collaboration-permissions-sync",
+  "phase": 7,
+  "phaseName": "Real-time Collaboration",
+  "title": "Collaboration Permissions Sync",
+  "description": "Real-time permission updates",
+  "estimatedMinutes": 30,
+  "priority": "P2",
+  "dependencies": ["235-share-workflow", "236-invitation-system"],
+
+  "objective": {
+    "what": "Sync permission changes",
+    "why": "Permissions can change mid-session",
+    "outcome": "Real-time access control"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/lib/collaboration/permissions/permission-sync.ts",
+      "src/lib/collaboration/permissions/access-enforcer.ts"
+    ],
+    "sync": {
+      "roleChanges": "Sync role updates instantly",
+      "revocation": "Handle access revocation",
+      "promotion": "Handle role promotion",
+      "broadcast": "Broadcast permission changes"
+    },
+    "enforcement": {
+      "clientSide": "Disable UI for restricted",
+      "serverSide": "Validate all operations",
+      "graceful": "Handle mid-edit revocation"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create permission sync",
+    "tasks": [
+      "Sync permission changes",
+      "Handle access revocation",
+      "Update UI in real-time",
+      "Validate server-side",
+      "Graceful degradation"
+    ],
+    "constraints": [
+      "Immediate enforcement",
+      "No data loss on revoke",
+      "Clear user feedback"
+    ]
+  },
+
+  "outputs": {
+    "files": 2
+  }
+}

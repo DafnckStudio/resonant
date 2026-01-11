@@ -1,0 +1,57 @@
+{
+  "step": 383,
+  "id": "383-copy-messaging",
+  "phase": 12,
+  "phaseName": "Testing & Polish",
+  "title": "Copy & Messaging",
+  "description": "Review and polish all UI copy",
+  "estimatedMinutes": 35,
+  "priority": "P2",
+  "dependencies": [],
+
+  "objective": {
+    "what": "Copy review",
+    "why": "Clear communication",
+    "outcome": "Consistent messaging"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/lib/copy/strings.ts",
+      "src/lib/copy/errors.ts",
+      "src/lib/copy/tooltips.ts"
+    ],
+    "review": {
+      "buttons": "Button labels",
+      "headings": "Page headings",
+      "descriptions": "Descriptions",
+      "errors": "Error messages"
+    },
+    "consistency": {
+      "tone": "Brand voice",
+      "terminology": "Consistent terms",
+      "formatting": "Text formatting",
+      "capitalization": "Capitalization rules"
+    }
+  },
+
+  "prompt": {
+    "mission": "Polish all copy",
+    "tasks": [
+      "Audit all UI copy",
+      "Centralize string constants",
+      "Improve error messages",
+      "Add helpful tooltips",
+      "Ensure consistency"
+    ],
+    "constraints": [
+      "Professional tone",
+      "Action-oriented CTAs",
+      "Clear and concise"
+    ]
+  },
+
+  "outputs": {
+    "files": 3
+  }
+}

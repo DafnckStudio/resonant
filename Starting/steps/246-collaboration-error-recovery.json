@@ -1,0 +1,55 @@
+{
+  "step": 246,
+  "id": "246-collaboration-error-recovery",
+  "phase": 7,
+  "phaseName": "Real-time Collaboration",
+  "title": "Collaboration Error Recovery",
+  "description": "Recover from collaboration errors",
+  "estimatedMinutes": 30,
+  "priority": "P2",
+  "dependencies": ["245-collaboration-reconnection"],
+
+  "objective": {
+    "what": "Handle collaboration errors",
+    "why": "Robust error handling",
+    "outcome": "Resilient collaboration"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/lib/collaboration/errors/error-handler.ts",
+      "src/components/editor/collaboration/error-recovery-dialog.tsx"
+    ],
+    "errorTypes": {
+      "syncError": "Document sync failures",
+      "versionMismatch": "Version conflicts",
+      "permissionDenied": "Access errors",
+      "serverError": "Server failures"
+    },
+    "recovery": {
+      "retry": "Automatic retry for transient",
+      "reload": "Force reload for severe",
+      "manual": "Manual resolution dialog"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create error recovery",
+    "tasks": [
+      "Categorize error types",
+      "Implement auto-retry",
+      "Create recovery dialog",
+      "Add error logging",
+      "Notify affected users"
+    ],
+    "constraints": [
+      "Graceful degradation",
+      "Clear user feedback",
+      "No silent failures"
+    ]
+  },
+
+  "outputs": {
+    "files": 2
+  }
+}

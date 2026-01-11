@@ -1,0 +1,62 @@
+{
+  "step": 196,
+  "id": "196-execution-logging",
+  "phase": 6,
+  "phaseName": "AI Router & Execution",
+  "title": "Execution Logging System",
+  "description": "Comprehensive execution logs",
+  "estimatedMinutes": 40,
+  "priority": "P0",
+  "dependencies": ["191-workflow-executor-core"],
+
+  "objective": {
+    "what": "Create execution logging",
+    "why": "Debug and audit executions",
+    "outcome": "Complete execution history"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/lib/execution/logging/execution-logger.ts",
+      "src/lib/execution/logging/log-formatter.ts",
+      "convex/executionLogs.ts"
+    ],
+    "logLevels": [
+      "debug",
+      "info",
+      "warn",
+      "error"
+    ],
+    "logTypes": {
+      "execution": "Workflow execution events",
+      "block": "Block-level events",
+      "ai": "AI provider calls",
+      "error": "Error details"
+    },
+    "retention": {
+      "free": "7 days",
+      "pro": "30 days",
+      "enterprise": "90 days"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create logging system",
+    "tasks": [
+      "Create log schema",
+      "Implement execution logger",
+      "Add log formatting",
+      "Implement retention policies",
+      "Add log search"
+    ],
+    "constraints": [
+      "Structured logs",
+      "Efficient storage",
+      "PII handling"
+    ]
+  },
+
+  "outputs": {
+    "files": 3
+  }
+}

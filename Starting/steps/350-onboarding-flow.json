@@ -1,0 +1,60 @@
+{
+  "step": 350,
+  "id": "350-onboarding-flow",
+  "phase": 11,
+  "phaseName": "Dashboard & Analytics",
+  "title": "Onboarding Flow",
+  "description": "New user onboarding experience",
+  "estimatedMinutes": 45,
+  "priority": "P1",
+  "dependencies": ["333-dashboard-layout"],
+
+  "objective": {
+    "what": "User onboarding flow",
+    "why": "User activation",
+    "outcome": "Guided onboarding"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/app/(onboarding)/page.tsx",
+      "src/components/onboarding/onboarding-wizard.tsx",
+      "src/components/onboarding/onboarding-step.tsx",
+      "src/components/onboarding/onboarding-checklist.tsx",
+      "convex/onboarding.ts"
+    ],
+    "steps": {
+      "welcome": "Welcome screen",
+      "profile": "Complete profile",
+      "workspace": "Create workspace",
+      "firstWorkflow": "Create first workflow",
+      "invite": "Invite team (optional)"
+    },
+    "features": {
+      "skip": "Skip steps option",
+      "progress": "Progress indicator",
+      "resume": "Resume where left off",
+      "celebrate": "Completion celebration"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create onboarding flow",
+    "tasks": [
+      "Build onboarding wizard",
+      "Create step components",
+      "Track onboarding progress",
+      "Add skip option",
+      "Celebrate completion"
+    ],
+    "constraints": [
+      "Short and focused",
+      "Skippable steps",
+      "Clear value prop"
+    ]
+  },
+
+  "outputs": {
+    "files": 5
+  }
+}

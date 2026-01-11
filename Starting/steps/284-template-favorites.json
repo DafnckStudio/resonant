@@ -1,0 +1,56 @@
+{
+  "step": 284,
+  "id": "284-template-favorites",
+  "phase": 9,
+  "phaseName": "Templates & Marketplace",
+  "title": "Template Favorites",
+  "description": "Save favorite templates",
+  "estimatedMinutes": 20,
+  "priority": "P2",
+  "dependencies": ["280-template-gallery"],
+
+  "objective": {
+    "what": "Save favorite templates",
+    "why": "Quick access to preferred",
+    "outcome": "Favorites feature"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/lib/templates/favorites.ts",
+      "src/components/templates/favorites-list.tsx",
+      "convex/templateFavorites.ts"
+    ],
+    "features": {
+      "add": "Add to favorites",
+      "remove": "Remove from favorites",
+      "list": "View favorites list",
+      "organize": "Organize favorites"
+    },
+    "ui": {
+      "button": "Heart icon toggle",
+      "page": "Favorites page",
+      "count": "Favorites count"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create template favorites",
+    "tasks": [
+      "Add favorite mutation",
+      "Create favorites list",
+      "Build toggle button",
+      "Add favorites page",
+      "Show favorite count"
+    ],
+    "constraints": [
+      "Instant toggle",
+      "Persistent storage",
+      "Easy access"
+    ]
+  },
+
+  "outputs": {
+    "files": 3
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "step": 133,
+  "id": "133-editor-error-boundary",
+  "phase": 4,
+  "phaseName": "Workflow Editor Core",
+  "title": "Editor Error Boundary",
+  "description": "Add error boundary for editor crashes",
+  "estimatedMinutes": 20,
+  "priority": "P1",
+  "dependencies": ["102-editor-layout"],
+
+  "objective": {
+    "what": "Catch and handle editor errors",
+    "why": "Prevent full app crash on errors",
+    "outcome": "Graceful error handling"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/components/editor/error/editor-error-boundary.tsx",
+      "src/components/editor/error/editor-error-fallback.tsx"
+    ],
+    "features": {
+      "catch": "Catch render errors",
+      "fallback": "Show error UI",
+      "recover": "Try to recover state",
+      "report": "Report error to logging"
+    }
+  },
+
+  "prompt": {
+    "mission": "Add error boundary",
+    "tasks": [
+      "Create EditorErrorBoundary",
+      "Create EditorErrorFallback",
+      "Try to recover workflow state",
+      "Add retry button",
+      "Log error details"
+    ],
+    "constraints": [
+      "Use react-error-boundary",
+      "Preserve unsaved work if possible"
+    ]
+  },
+
+  "outputs": {
+    "files": 2
+  }
+}

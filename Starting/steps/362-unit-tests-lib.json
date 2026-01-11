@@ -1,0 +1,57 @@
+{
+  "step": 362,
+  "id": "362-unit-tests-lib",
+  "phase": 12,
+  "phaseName": "Testing & Polish",
+  "title": "Unit Tests - Lib",
+  "description": "Unit tests for library functions",
+  "estimatedMinutes": 45,
+  "priority": "P1",
+  "dependencies": ["361-test-setup"],
+
+  "objective": {
+    "what": "Library unit tests",
+    "why": "Core logic testing",
+    "outcome": "Tested utilities"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "tests/lib/workflow.test.ts",
+      "tests/lib/blocks.test.ts",
+      "tests/lib/ai-router.test.ts",
+      "tests/lib/billing.test.ts"
+    ],
+    "coverage": {
+      "workflow": "Workflow utilities",
+      "blocks": "Block operations",
+      "ai": "AI router logic",
+      "billing": "Billing calculations"
+    },
+    "patterns": {
+      "arrange": "Setup test data",
+      "act": "Execute function",
+      "assert": "Verify results"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create library unit tests",
+    "tasks": [
+      "Test workflow utilities",
+      "Test block operations",
+      "Test AI router logic",
+      "Test billing calculations",
+      "Achieve >80% coverage"
+    ],
+    "constraints": [
+      "Pure function focus",
+      "Edge case coverage",
+      "Fast execution"
+    ]
+  },
+
+  "outputs": {
+    "files": 4
+  }
+}

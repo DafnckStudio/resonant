@@ -1,0 +1,53 @@
+{
+  "step": 71,
+  "id": "071-notification-settings",
+  "phase": 2,
+  "phaseName": "Authentication & Users",
+  "title": "Create Notification Settings",
+  "description": "Build notification preferences UI",
+  "estimatedMinutes": 25,
+  "priority": "P2",
+  "dependencies": ["070-notification-system"],
+
+  "objective": {
+    "what": "Create notification preferences settings",
+    "why": "Users need control over what notifications they receive",
+    "outcome": "Toggle settings for each notification type"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/app/(dashboard)/settings/notifications/page.tsx",
+      "src/components/settings/notification-settings-form.tsx"
+    ],
+    "settings": {
+      "email": {
+        "executionComplete": "boolean",
+        "executionFailed": "boolean",
+        "weeklyDigest": "boolean"
+      },
+      "inApp": {
+        "invites": "boolean",
+        "executions": "boolean",
+        "mentions": "boolean",
+        "announcements": "boolean"
+      }
+    }
+  },
+
+  "prompt": {
+    "mission": "Create notification settings",
+    "tasks": [
+      "Create notifications settings page",
+      "Build NotificationSettingsForm",
+      "Add toggle for each notification type",
+      "Group by email/in-app",
+      "Save to user preferences"
+    ]
+  },
+
+  "outputs": {
+    "files": 2,
+    "route": "/settings/notifications"
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "step": 114,
+  "id": "114-zoom-controls",
+  "phase": 4,
+  "phaseName": "Workflow Editor Core",
+  "title": "Implement Zoom Controls",
+  "description": "Add zoom functionality to canvas",
+  "estimatedMinutes": 25,
+  "priority": "P1",
+  "dependencies": ["101-react-flow-setup"],
+
+  "objective": {
+    "what": "Add zoom controls to editor",
+    "why": "Users need to navigate large workflows",
+    "outcome": "Zoom in/out, fit view, reset"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/components/editor/controls/zoom-controls.tsx"
+    ],
+    "features": {
+      "wheel": "Mouse wheel zoom",
+      "pinch": "Touch pinch zoom",
+      "buttons": "Zoom +/- buttons",
+      "fit": "Fit all nodes",
+      "reset": "Reset to 100%"
+    },
+    "limits": {
+      "min": "0.1 (10%)",
+      "max": "2 (200%)",
+      "step": "0.1"
+    }
+  },
+
+  "prompt": {
+    "mission": "Implement zoom controls",
+    "tasks": [
+      "Create ZoomControls component",
+      "Add zoom in/out buttons",
+      "Add fit view button",
+      "Add zoom percentage display",
+      "Handle mouse wheel",
+      "Handle pinch gesture"
+    ],
+    "constraints": [
+      "Use React Flow zoom API",
+      "Respect min/max limits"
+    ]
+  },
+
+  "outputs": {
+    "files": 1
+  }
+}

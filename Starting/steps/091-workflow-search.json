@@ -1,0 +1,46 @@
+{
+  "step": 91,
+  "id": "091-workflow-search",
+  "phase": 3,
+  "phaseName": "Workspace & Projects",
+  "title": "Implement Workflow Search",
+  "description": "Add full-text search for workflows",
+  "estimatedMinutes": 30,
+  "priority": "P1",
+  "dependencies": ["047-search-component", "081-workflow-crud"],
+
+  "objective": {
+    "what": "Implement search functionality for workflows",
+    "why": "Users need to find workflows quickly",
+    "outcome": "Search by name, description, and tags"
+  },
+
+  "specifications": {
+    "filesToModify": [
+      "src/components/search/global-search.tsx",
+      "convex/workflows.ts"
+    ],
+    "searchFields": ["name", "description", "tags"],
+    "features": {
+      "instant": "Search as you type",
+      "highlight": "Highlight matching text",
+      "recent": "Show recent searches",
+      "filters": "Filter by folder, tag, status"
+    }
+  },
+
+  "prompt": {
+    "mission": "Implement workflow search",
+    "tasks": [
+      "Create searchWorkflows query",
+      "Wire to GlobalSearch component",
+      "Add search to workflows page",
+      "Implement result highlighting",
+      "Add search filters"
+    ]
+  },
+
+  "outputs": {
+    "filesModified": 2
+  }
+}

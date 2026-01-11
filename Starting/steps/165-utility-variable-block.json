@@ -1,0 +1,53 @@
+{
+  "step": 165,
+  "id": "165-utility-variable-block",
+  "phase": 5,
+  "phaseName": "Block System",
+  "title": "Variable Block",
+  "description": "Create variable set/get block",
+  "estimatedMinutes": 30,
+  "priority": "P1",
+  "dependencies": ["142-block-registry"],
+
+  "objective": {
+    "what": "Create variable block",
+    "why": "Store and retrieve values during execution",
+    "outcome": "Workflow-scoped variables"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/components/editor/blocks/utility/variable-set-block.tsx",
+      "src/components/editor/blocks/utility/variable-get-block.tsx"
+    ],
+    "config": {
+      "name": "Variable name",
+      "scope": "execution/workflow"
+    },
+    "setInputs": {
+      "value": "Value to store"
+    },
+    "getOutputs": {
+      "value": "Stored value"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create variable blocks",
+    "tasks": [
+      "Create VariableSetBlock component",
+      "Create VariableGetBlock component",
+      "Implement variable storage",
+      "Show defined variables",
+      "Autocomplete variable names"
+    ],
+    "constraints": [
+      "Type-safe variables",
+      "Clear scope indication"
+    ]
+  },
+
+  "outputs": {
+    "files": 2
+  }
+}

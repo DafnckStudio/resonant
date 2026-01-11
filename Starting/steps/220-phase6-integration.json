@@ -1,0 +1,79 @@
+{
+  "step": 220,
+  "id": "220-phase6-integration",
+  "phase": 6,
+  "phaseName": "AI Router & Execution",
+  "title": "Phase 6 Integration & Testing",
+  "description": "Test complete AI router and execution engine",
+  "estimatedMinutes": 90,
+  "priority": "P0",
+  "dependencies": ["219-execution-events"],
+
+  "objective": {
+    "what": "Test complete execution system",
+    "why": "Ensure reliable workflow execution",
+    "outcome": "Production-ready execution engine"
+  },
+
+  "specifications": {
+    "testCases": [
+      "Execute simple linear workflow",
+      "Execute parallel branches",
+      "Execute conditional routing",
+      "Execute loops with arrays",
+      "Stream AI responses in real-time",
+      "Human approval pause/resume",
+      "Error handling and retry",
+      "Cost tracking accuracy",
+      "Multi-provider fallback"
+    ],
+    "validation": {
+      "providers": "All AI providers work",
+      "routing": "Smart routing selects correctly",
+      "fallback": "Fallback works on failure",
+      "execution": "Complete workflows execute",
+      "events": "Real-time events stream",
+      "costs": "Cost tracking accurate"
+    }
+  },
+
+  "prompt": {
+    "mission": "Complete Phase 6 integration",
+    "tasks": [
+      "Test all AI providers",
+      "Test intelligent routing",
+      "Test fallback mechanism",
+      "Test workflow execution",
+      "Test streaming responses",
+      "Test error handling",
+      "Test human-in-loop",
+      "Test cost tracking"
+    ],
+    "validation": [
+      "npm run build passes",
+      "All providers functional",
+      "Execution completes",
+      "Events stream correctly"
+    ]
+  },
+
+  "outputs": {
+    "milestone": "Phase 6 Complete",
+    "readyFor": "Phase 7: Real-time Collaboration",
+    "deliverables": [
+      "AI provider integrations (Claude, GPT, Gemini, Llama)",
+      "Provider registry and capabilities",
+      "Intelligent model router",
+      "Fallback mechanism",
+      "Workflow execution engine",
+      "Block executors for all types",
+      "Execution state machine",
+      "Streaming response handling",
+      "Execution queue and logging",
+      "Cost and budget tracking",
+      "Human-in-the-loop flows",
+      "Debug mode",
+      "Execution history UI"
+    ]
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "step": 328,
+  "id": "328-billing-analytics",
+  "phase": 10,
+  "phaseName": "Monetization & Billing",
+  "title": "Billing Analytics",
+  "description": "Revenue and billing metrics",
+  "estimatedMinutes": 35,
+  "priority": "P2",
+  "dependencies": ["306-subscription-management"],
+
+  "objective": {
+    "what": "Billing analytics dashboard",
+    "why": "Business insights",
+    "outcome": "Revenue visibility"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/lib/billing/analytics.ts",
+      "src/components/admin/revenue-chart.tsx",
+      "src/components/admin/billing-metrics.tsx"
+    ],
+    "metrics": {
+      "mrr": "Monthly Recurring Revenue",
+      "arr": "Annual Recurring Revenue",
+      "churn": "Churn rate",
+      "ltv": "Lifetime value"
+    },
+    "charts": {
+      "revenue": "Revenue over time",
+      "subscriptions": "Active subscriptions",
+      "planMix": "Plan distribution",
+      "churnTrend": "Churn trend"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create billing analytics",
+    "tasks": [
+      "Calculate MRR/ARR",
+      "Track churn rate",
+      "Revenue trend charts",
+      "Plan distribution pie chart",
+      "Export analytics data"
+    ],
+    "constraints": [
+      "Real-time calculations",
+      "Historical trends",
+      "Exportable data"
+    ]
+  },
+
+  "outputs": {
+    "files": 3
+  }
+}

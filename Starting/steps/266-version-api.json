@@ -1,0 +1,55 @@
+{
+  "step": 266,
+  "id": "266-version-api",
+  "phase": 8,
+  "phaseName": "Version Control",
+  "title": "Version Control API",
+  "description": "REST API for versions",
+  "estimatedMinutes": 35,
+  "priority": "P2",
+  "dependencies": ["264-version-rollback"],
+
+  "objective": {
+    "what": "Create version API",
+    "why": "Programmatic access",
+    "outcome": "Version REST API"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/app/api/workflows/[id]/versions/route.ts",
+      "src/app/api/workflows/[id]/versions/[versionId]/route.ts"
+    ],
+    "endpoints": {
+      "listVersions": "GET /versions",
+      "getVersion": "GET /versions/:id",
+      "createVersion": "POST /versions",
+      "restoreVersion": "POST /versions/:id/restore"
+    },
+    "responses": {
+      "pagination": "Paginated version list",
+      "filters": "Filter by date/author",
+      "includes": "Include metadata option"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create version API",
+    "tasks": [
+      "Implement version endpoints",
+      "Add pagination",
+      "Support filtering",
+      "Include restore endpoint",
+      "Document API"
+    ],
+    "constraints": [
+      "RESTful design",
+      "Proper auth",
+      "Rate limited"
+    ]
+  },
+
+  "outputs": {
+    "files": 2
+  }
+}

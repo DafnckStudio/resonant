@@ -1,0 +1,65 @@
+{
+  "step": 70,
+  "id": "070-notification-system",
+  "phase": 2,
+  "phaseName": "Authentication & Users",
+  "title": "Create In-App Notification System",
+  "description": "Build notification center for user alerts",
+  "estimatedMinutes": 40,
+  "priority": "P1",
+  "dependencies": ["069-user-activity-log"],
+
+  "objective": {
+    "what": "Create in-app notification system",
+    "why": "Users need to be alerted about important events",
+    "outcome": "Notification bell with dropdown and unread count"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/components/notifications/notification-bell.tsx",
+      "src/components/notifications/notification-dropdown.tsx",
+      "src/components/notifications/notification-item.tsx",
+      "convex/notifications.ts"
+    ],
+    "filesToModify": [
+      "convex/schema.ts"
+    ],
+    "schema": {
+      "notifications": {
+        "userId": "Id<users>",
+        "type": "invite | execution | mention | system",
+        "title": "string",
+        "message": "string",
+        "link": "string",
+        "read": "boolean",
+        "createdAt": "number"
+      }
+    },
+    "types": [
+      "invite.received",
+      "execution.completed",
+      "execution.failed",
+      "mention.workflow",
+      "system.announcement"
+    ]
+  },
+
+  "prompt": {
+    "mission": "Create notification system",
+    "tasks": [
+      "Add notifications table to schema",
+      "Create NotificationBell with unread count",
+      "Build NotificationDropdown",
+      "Add NotificationItem component",
+      "Implement mark as read mutations",
+      "Add real-time updates with Convex"
+    ]
+  },
+
+  "outputs": {
+    "files": 4,
+    "filesModified": 1,
+    "schemaTable": "notifications"
+  }
+}

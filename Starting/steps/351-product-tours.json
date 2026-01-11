@@ -1,0 +1,58 @@
+{
+  "step": 351,
+  "id": "351-product-tours",
+  "phase": 11,
+  "phaseName": "Dashboard & Analytics",
+  "title": "Product Tours",
+  "description": "Interactive product tours",
+  "estimatedMinutes": 35,
+  "priority": "P2",
+  "dependencies": ["350-onboarding-flow"],
+
+  "objective": {
+    "what": "Interactive feature tours",
+    "why": "Feature discovery",
+    "outcome": "Guided feature learning"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/components/tours/tour-provider.tsx",
+      "src/components/tours/tour-step.tsx",
+      "src/components/tours/tour-tooltip.tsx",
+      "src/lib/tours/tour-definitions.ts"
+    ],
+    "tours": {
+      "editor": "Workflow editor tour",
+      "blocks": "Block library tour",
+      "ai": "AI features tour",
+      "collaboration": "Collaboration tour"
+    },
+    "features": {
+      "spotlight": "Element spotlight",
+      "step": "Step-by-step guidance",
+      "skip": "Skip tour option",
+      "restart": "Restart tour"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create product tours",
+    "tasks": [
+      "Build tour provider",
+      "Create tour step component",
+      "Add element spotlighting",
+      "Implement tour navigation",
+      "Track tour completion"
+    ],
+    "constraints": [
+      "Non-blocking",
+      "Easily dismissible",
+      "Context-aware"
+    ]
+  },
+
+  "outputs": {
+    "files": 4
+  }
+}

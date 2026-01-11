@@ -1,0 +1,49 @@
+{
+  "step": 52,
+  "id": "052-sign-in-page",
+  "phase": 2,
+  "phaseName": "Authentication & Users",
+  "title": "Create Sign In Page",
+  "description": "Build sign-in page with Clerk SignIn component",
+  "estimatedMinutes": 15,
+  "priority": "P0",
+  "dependencies": ["051-clerk-middleware"],
+
+  "objective": {
+    "what": "Create sign-in page using Clerk SignIn component",
+    "why": "Users need to authenticate to access the dashboard",
+    "outcome": "Styled sign-in page matching Resonant branding"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/app/(auth)/sign-in/[[...sign-in]]/page.tsx",
+      "src/app/(auth)/layout.tsx"
+    ],
+    "features": {
+      "socialLogin": ["Google", "GitHub"],
+      "email": "Email/password authentication",
+      "redirect": "Redirect to dashboard after login"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create sign-in page",
+    "tasks": [
+      "Create auth layout with centered content",
+      "Create sign-in page with catch-all route",
+      "Configure Clerk SignIn component",
+      "Style to match Resonant design",
+      "Add logo and branding"
+    ],
+    "constraints": [
+      "Use catch-all route pattern [[...sign-in]]",
+      "Center content on page"
+    ]
+  },
+
+  "outputs": {
+    "files": 2,
+    "route": "/sign-in"
+  }
+}

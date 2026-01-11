@@ -1,0 +1,49 @@
+{
+  "step": 90,
+  "id": "090-favorite-workflows",
+  "phase": 3,
+  "phaseName": "Workspace & Projects",
+  "title": "Implement Favorite Workflows",
+  "description": "Allow users to favorite/star workflows",
+  "estimatedMinutes": 25,
+  "priority": "P2",
+  "dependencies": ["081-workflow-crud"],
+
+  "objective": {
+    "what": "Add favorite/star functionality for workflows",
+    "why": "Users want quick access to important workflows",
+    "outcome": "Star button and favorites section"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/components/workflow/favorite-button.tsx",
+      "src/components/workflow/favorite-workflows.tsx"
+    ],
+    "filesToModify": [
+      "src/components/workflow/workflow-card.tsx",
+      "convex/workflows.ts"
+    ],
+    "features": {
+      "toggle": "Click to favorite/unfavorite",
+      "display": "Show favorites section",
+      "filter": "Filter to show only favorites"
+    }
+  },
+
+  "prompt": {
+    "mission": "Implement favorite workflows",
+    "tasks": [
+      "Create FavoriteButton component",
+      "Add toggle mutation",
+      "Build FavoriteWorkflows section",
+      "Add to workflow cards",
+      "Show in sidebar favorites"
+    ]
+  },
+
+  "outputs": {
+    "files": 2,
+    "filesModified": 2
+  }
+}

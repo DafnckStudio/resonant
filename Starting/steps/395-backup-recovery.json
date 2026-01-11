@@ -1,0 +1,56 @@
+{
+  "step": 395,
+  "id": "395-backup-recovery",
+  "phase": 12,
+  "phaseName": "Testing & Polish",
+  "title": "Backup & Recovery",
+  "description": "Implement data backup strategies",
+  "estimatedMinutes": 30,
+  "priority": "P1",
+  "dependencies": [],
+
+  "objective": {
+    "what": "Backup system",
+    "why": "Data protection",
+    "outcome": "Recoverable data"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "convex/backups.ts",
+      "src/lib/backup/export.ts",
+      "src/lib/backup/restore.ts"
+    ],
+    "backup": {
+      "automatic": "Automatic backups",
+      "manual": "Manual exports",
+      "incremental": "Incremental backups",
+      "retention": "Retention policy"
+    },
+    "recovery": {
+      "restore": "Data restoration",
+      "pointInTime": "Point-in-time recovery",
+      "verification": "Backup verification"
+    }
+  },
+
+  "prompt": {
+    "mission": "Implement backups",
+    "tasks": [
+      "Configure Convex backups",
+      "Add export functionality",
+      "Implement restore process",
+      "Set retention policies",
+      "Add recovery testing"
+    ],
+    "constraints": [
+      "Convex backup features",
+      "GDPR data portability",
+      "Regular verification"
+    ]
+  },
+
+  "outputs": {
+    "files": 3
+  }
+}

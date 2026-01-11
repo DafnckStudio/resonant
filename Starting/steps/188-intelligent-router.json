@@ -1,0 +1,59 @@
+{
+  "step": 188,
+  "id": "188-intelligent-router",
+  "phase": 6,
+  "phaseName": "AI Router & Execution",
+  "title": "Intelligent Model Router",
+  "description": "Smart routing to select optimal model",
+  "estimatedMinutes": 60,
+  "priority": "P0",
+  "dependencies": ["187-model-capabilities"],
+
+  "objective": {
+    "what": "Create intelligent model router",
+    "why": "Optimize cost, speed, and quality",
+    "outcome": "Smart model selection"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/lib/ai/router/intelligent-router.ts",
+      "src/lib/ai/router/routing-rules.ts",
+      "src/lib/ai/router/cost-optimizer.ts"
+    ],
+    "routingFactors": {
+      "taskType": "Text, vision, code, etc.",
+      "complexity": "Simple vs complex tasks",
+      "budget": "Cost constraints",
+      "speed": "Latency requirements",
+      "quality": "Quality requirements"
+    },
+    "strategies": {
+      "cheapest": "Lowest cost model",
+      "fastest": "Lowest latency model",
+      "best": "Highest quality model",
+      "balanced": "Optimal cost/quality",
+      "custom": "User-defined rules"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create intelligent router",
+    "tasks": [
+      "Implement routing algorithm",
+      "Add task complexity analysis",
+      "Create cost optimization",
+      "Add latency optimization",
+      "Support custom rules"
+    ],
+    "constraints": [
+      "Fast routing decisions",
+      "Respect user preferences",
+      "Log routing decisions"
+    ]
+  },
+
+  "outputs": {
+    "files": 3
+  }
+}

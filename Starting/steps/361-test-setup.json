@@ -1,0 +1,58 @@
+{
+  "step": 361,
+  "id": "361-test-setup",
+  "phase": 12,
+  "phaseName": "Testing & Polish",
+  "title": "Test Setup",
+  "description": "Configure testing infrastructure",
+  "estimatedMinutes": 35,
+  "priority": "P0",
+  "dependencies": [],
+
+  "objective": {
+    "what": "Setup testing framework",
+    "why": "Quality foundation",
+    "outcome": "Testing ready"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "vitest.config.ts",
+      "playwright.config.ts",
+      "tests/setup.ts",
+      "tests/utils/test-helpers.ts"
+    ],
+    "frameworks": {
+      "unit": "Vitest for unit tests",
+      "e2e": "Playwright for E2E",
+      "component": "Testing Library",
+      "convex": "Convex test utilities"
+    },
+    "configuration": {
+      "coverage": "Code coverage setup",
+      "ci": "CI integration",
+      "reporters": "Test reporters",
+      "mocks": "Mock setup"
+    }
+  },
+
+  "prompt": {
+    "mission": "Setup testing infrastructure",
+    "tasks": [
+      "Configure Vitest",
+      "Setup Playwright",
+      "Create test utilities",
+      "Add coverage reporting",
+      "Setup CI test runners"
+    ],
+    "constraints": [
+      "Fast execution",
+      "Isolated tests",
+      "Good coverage"
+    ]
+  },
+
+  "outputs": {
+    "files": 4
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "step": 352,
+  "id": "352-help-center",
+  "phase": 11,
+  "phaseName": "Dashboard & Analytics",
+  "title": "Help Center",
+  "description": "In-app help and documentation",
+  "estimatedMinutes": 35,
+  "priority": "P2",
+  "dependencies": ["333-dashboard-layout"],
+
+  "objective": {
+    "what": "In-app help center",
+    "why": "Self-service support",
+    "outcome": "Accessible help"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/components/help/help-button.tsx",
+      "src/components/help/help-panel.tsx",
+      "src/components/help/help-article.tsx",
+      "src/lib/help/articles.ts"
+    ],
+    "content": {
+      "gettingStarted": "Quick start guides",
+      "features": "Feature documentation",
+      "faq": "Frequently asked",
+      "troubleshooting": "Common issues"
+    },
+    "features": {
+      "search": "Search help articles",
+      "contextual": "Context-aware help",
+      "videos": "Video tutorials",
+      "contact": "Contact support"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create help center",
+    "tasks": [
+      "Build help button component",
+      "Create slide-out help panel",
+      "Add article search",
+      "Show contextual help",
+      "Include support contact"
+    ],
+    "constraints": [
+      "Quick access",
+      "Searchable content",
+      "Contextual suggestions"
+    ]
+  },
+
+  "outputs": {
+    "files": 4
+  }
+}

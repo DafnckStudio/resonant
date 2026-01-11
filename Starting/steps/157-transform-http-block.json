@@ -1,0 +1,60 @@
+{
+  "step": 157,
+  "id": "157-transform-http-block",
+  "phase": 5,
+  "phaseName": "Block System",
+  "title": "HTTP Request Block",
+  "description": "Create HTTP/API request block",
+  "estimatedMinutes": 40,
+  "priority": "P0",
+  "dependencies": ["154-transform-text-block"],
+
+  "objective": {
+    "what": "Create HTTP request block",
+    "why": "Call external APIs and services",
+    "outcome": "Full HTTP client block"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/components/editor/blocks/transform/http-block.tsx"
+    ],
+    "config": {
+      "url": "Request URL",
+      "method": "GET/POST/PUT/DELETE/PATCH",
+      "headers": "Request headers",
+      "body": "Request body",
+      "timeout": "Request timeout",
+      "auth": "Auth type (none/basic/bearer/api-key)"
+    },
+    "inputs": {
+      "url": "Dynamic URL",
+      "body": "Dynamic body"
+    },
+    "outputs": {
+      "status": "Status code",
+      "headers": "Response headers",
+      "body": "Response body"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create HTTP block",
+    "tasks": [
+      "Create HttpBlock component",
+      "Add method selector",
+      "Add headers editor",
+      "Add body editor with types",
+      "Add authentication options",
+      "Show response preview"
+    ],
+    "constraints": [
+      "Support all auth types",
+      "Handle binary responses"
+    ]
+  },
+
+  "outputs": {
+    "files": 1
+  }
+}

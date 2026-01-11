@@ -1,0 +1,55 @@
+{
+  "step": 285,
+  "id": "285-my-templates",
+  "phase": 9,
+  "phaseName": "Templates & Marketplace",
+  "title": "My Templates",
+  "description": "Personal templates management",
+  "estimatedMinutes": 30,
+  "priority": "P1",
+  "dependencies": ["277-template-creation"],
+
+  "objective": {
+    "what": "Manage personal templates",
+    "why": "Organize own templates",
+    "outcome": "My templates page"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/app/(dashboard)/templates/mine/page.tsx",
+      "src/components/templates/my-template-list.tsx"
+    ],
+    "features": {
+      "list": "List own templates",
+      "edit": "Edit template metadata",
+      "delete": "Delete templates",
+      "publish": "Publish to marketplace"
+    },
+    "management": {
+      "draft": "Draft templates",
+      "published": "Published templates",
+      "analytics": "Usage statistics"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create my templates page",
+    "tasks": [
+      "Build my templates page",
+      "List personal templates",
+      "Add edit/delete actions",
+      "Show draft vs published",
+      "Display usage stats"
+    ],
+    "constraints": [
+      "Clear organization",
+      "Quick actions",
+      "Status visibility"
+    ]
+  },
+
+  "outputs": {
+    "files": 2
+  }
+}

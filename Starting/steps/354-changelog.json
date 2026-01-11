@@ -1,0 +1,57 @@
+{
+  "step": 354,
+  "id": "354-changelog",
+  "phase": 11,
+  "phaseName": "Dashboard & Analytics",
+  "title": "Changelog",
+  "description": "Product changelog and updates",
+  "estimatedMinutes": 25,
+  "priority": "P3",
+  "dependencies": ["344-notifications-system"],
+
+  "objective": {
+    "what": "Product changelog",
+    "why": "Feature awareness",
+    "outcome": "Update communication"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/components/changelog/changelog-dialog.tsx",
+      "src/components/changelog/changelog-entry.tsx",
+      "src/lib/changelog/entries.ts"
+    ],
+    "content": {
+      "new": "New features",
+      "improved": "Improvements",
+      "fixed": "Bug fixes",
+      "coming": "Coming soon"
+    },
+    "features": {
+      "badge": "New badge indicator",
+      "modal": "Changelog modal",
+      "history": "Full history",
+      "filter": "Filter by type"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create changelog",
+    "tasks": [
+      "Build changelog dialog",
+      "Create entry components",
+      "Add new feature badges",
+      "Show update history",
+      "Track seen updates"
+    ],
+    "constraints": [
+      "Visual appeal",
+      "Easy scanning",
+      "New indicator"
+    ]
+  },
+
+  "outputs": {
+    "files": 3
+  }
+}

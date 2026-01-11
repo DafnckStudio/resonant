@@ -1,0 +1,51 @@
+{
+  "step": 136,
+  "id": "136-editor-stats-bar",
+  "phase": 4,
+  "phaseName": "Workflow Editor Core",
+  "title": "Editor Status Bar",
+  "description": "Add status bar to editor bottom",
+  "estimatedMinutes": 25,
+  "priority": "P2",
+  "dependencies": ["102-editor-layout"],
+
+  "objective": {
+    "what": "Add status bar to editor",
+    "why": "Show workflow info and status",
+    "outcome": "Information bar at bottom"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/components/editor/status/status-bar.tsx"
+    ],
+    "info": {
+      "nodeCount": "Number of nodes",
+      "edgeCount": "Number of connections",
+      "selected": "Selected count",
+      "zoom": "Current zoom level",
+      "position": "Cursor position",
+      "saveStatus": "Last saved time"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create status bar",
+    "tasks": [
+      "Create StatusBar component",
+      "Show node/edge counts",
+      "Show selection count",
+      "Show zoom level",
+      "Show save status",
+      "Add to editor layout"
+    ],
+    "constraints": [
+      "Minimal height",
+      "Update in real-time"
+    ]
+  },
+
+  "outputs": {
+    "files": 1
+  }
+}

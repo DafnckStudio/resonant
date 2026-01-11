@@ -1,0 +1,55 @@
+{
+  "step": 264,
+  "id": "264-version-rollback",
+  "phase": 8,
+  "phaseName": "Version Control",
+  "title": "Version Rollback",
+  "description": "Rollback with undo capability",
+  "estimatedMinutes": 30,
+  "priority": "P1",
+  "dependencies": ["256-version-restore"],
+
+  "objective": {
+    "what": "Safe rollback with undo",
+    "why": "Recover from bad restores",
+    "outcome": "Rollback with safety net"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/lib/versioning/rollback.ts",
+      "src/components/editor/version-control/rollback-toast.tsx"
+    ],
+    "features": {
+      "undo": "Undo recent rollback",
+      "window": "Undo window (5 min)",
+      "toast": "Undo toast notification",
+      "history": "Rollback history log"
+    },
+    "safety": {
+      "preRollback": "Save current state",
+      "undoStack": "Track rollback history",
+      "expiry": "Undo window expiry"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create safe rollback",
+    "tasks": [
+      "Implement rollback logic",
+      "Add undo capability",
+      "Create undo toast",
+      "Track rollback history",
+      "Handle expiry"
+    ],
+    "constraints": [
+      "Quick undo access",
+      "Limited undo window",
+      "Clear feedback"
+    ]
+  },
+
+  "outputs": {
+    "files": 2
+  }
+}

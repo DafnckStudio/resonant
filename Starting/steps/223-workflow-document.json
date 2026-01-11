@@ -1,0 +1,57 @@
+{
+  "step": 223,
+  "id": "223-workflow-document",
+  "phase": 7,
+  "phaseName": "Real-time Collaboration",
+  "title": "Collaborative Workflow Document",
+  "description": "Yjs document structure for workflows",
+  "estimatedMinutes": 50,
+  "priority": "P0",
+  "dependencies": ["221-yjs-setup"],
+
+  "objective": {
+    "what": "Define Yjs document structure",
+    "why": "Sync workflow data collaboratively",
+    "outcome": "Collaborative workflow model"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/lib/collaboration/documents/workflow-doc.ts",
+      "src/lib/collaboration/documents/node-map.ts",
+      "src/lib/collaboration/documents/edge-map.ts"
+    ],
+    "structure": {
+      "nodes": "Y.Map<NodeId, YNode>",
+      "edges": "Y.Map<EdgeId, YEdge>",
+      "metadata": "Y.Map for workflow metadata",
+      "selection": "Y.Array for selected items"
+    },
+    "operations": {
+      "addNode": "Atomic node addition",
+      "updateNode": "Partial node update",
+      "deleteNode": "Node and edge cleanup",
+      "moveNode": "Position update"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create workflow document",
+    "tasks": [
+      "Define Yjs document structure",
+      "Create node operations",
+      "Create edge operations",
+      "Add metadata handling",
+      "Implement selection sync"
+    ],
+    "constraints": [
+      "Conflict resolution",
+      "Atomic operations",
+      "Type safety"
+    ]
+  },
+
+  "outputs": {
+    "files": 3
+  }
+}

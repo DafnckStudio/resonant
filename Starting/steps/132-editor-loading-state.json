@@ -1,0 +1,50 @@
+{
+  "step": 132,
+  "id": "132-editor-loading-state",
+  "phase": 4,
+  "phaseName": "Workflow Editor Core",
+  "title": "Editor Loading States",
+  "description": "Add loading skeletons and states to editor",
+  "estimatedMinutes": 25,
+  "priority": "P1",
+  "dependencies": ["122-load-workflow"],
+
+  "objective": {
+    "what": "Add loading states to editor",
+    "why": "Better UX during data loading",
+    "outcome": "Skeleton loaders for all parts"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/components/editor/loading/editor-skeleton.tsx",
+      "src/components/editor/loading/palette-skeleton.tsx",
+      "src/components/editor/loading/canvas-skeleton.tsx"
+    ],
+    "states": {
+      "loading": "Initial load skeleton",
+      "saving": "Save progress indicator",
+      "error": "Error state with retry"
+    }
+  },
+
+  "prompt": {
+    "mission": "Add loading states",
+    "tasks": [
+      "Create EditorSkeleton component",
+      "Create PaletteSkeleton",
+      "Create CanvasSkeleton",
+      "Add saving indicator",
+      "Add error state",
+      "Handle retry"
+    ],
+    "constraints": [
+      "Use shadcn Skeleton",
+      "Match actual layout"
+    ]
+  },
+
+  "outputs": {
+    "files": 3
+  }
+}

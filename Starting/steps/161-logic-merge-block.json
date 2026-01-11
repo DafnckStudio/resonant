@@ -1,0 +1,54 @@
+{
+  "step": 161,
+  "id": "161-logic-merge-block",
+  "phase": 5,
+  "phaseName": "Block System",
+  "title": "Merge Block",
+  "description": "Create merge/join block for parallel branches",
+  "estimatedMinutes": 30,
+  "priority": "P0",
+  "dependencies": ["158-logic-condition-block"],
+
+  "objective": {
+    "what": "Create merge block",
+    "why": "Combine multiple parallel branches",
+    "outcome": "Wait for all or first"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/components/editor/blocks/logic/merge-block.tsx"
+    ],
+    "config": {
+      "mode": "all/any/count",
+      "count": "Number to wait for",
+      "timeout": "Wait timeout"
+    },
+    "inputs": {
+      "input1": "First branch",
+      "input2": "Second branch"
+    },
+    "outputs": {
+      "merged": "Merged results array"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create merge block",
+    "tasks": [
+      "Create MergeBlock component",
+      "Add merge mode selector",
+      "Handle dynamic inputs",
+      "Support timeout",
+      "Collect all results"
+    ],
+    "constraints": [
+      "Dynamic input handles",
+      "Handle partial completion"
+    ]
+  },
+
+  "outputs": {
+    "files": 1
+  }
+}

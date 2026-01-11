@@ -1,0 +1,64 @@
+{
+  "step": 49,
+  "id": "049-responsive-layout",
+  "phase": 1,
+  "phaseName": "Core UI & Layout",
+  "title": "Implement Responsive Layout",
+  "description": "Add mobile and tablet responsive design to all layouts",
+  "estimatedMinutes": 40,
+  "priority": "P1",
+  "dependencies": ["021-app-shell-layout", "022-sidebar-navigation"],
+
+  "objective": {
+    "what": "Make the dashboard fully responsive across devices",
+    "why": "Users access workflows from various devices",
+    "outcome": "Mobile-first responsive layout with collapsible sidebar"
+  },
+
+  "specifications": {
+    "filesToModify": [
+      "src/components/layout/app-shell.tsx",
+      "src/components/layout/sidebar.tsx",
+      "src/components/layout/page-header.tsx"
+    ],
+    "filesToCreate": [
+      "src/components/layout/mobile-nav.tsx",
+      "src/hooks/use-media-query.ts",
+      "src/hooks/use-sidebar.ts"
+    ],
+    "breakpoints": {
+      "sm": "640px",
+      "md": "768px",
+      "lg": "1024px",
+      "xl": "1280px"
+    },
+    "behaviors": {
+      "mobile": "Sidebar hidden, hamburger menu, sheet navigation",
+      "tablet": "Collapsed sidebar with icons only",
+      "desktop": "Full sidebar with labels"
+    }
+  },
+
+  "prompt": {
+    "mission": "Implement responsive layout",
+    "tasks": [
+      "Create MobileNav component with Sheet",
+      "Add useSidebar hook for state management",
+      "Implement sidebar collapse toggle",
+      "Create useMediaQuery hook",
+      "Add responsive classes to all layouts",
+      "Test on mobile, tablet, desktop"
+    ],
+    "constraints": [
+      "Mobile-first approach",
+      "Smooth animations for transitions",
+      "Persist sidebar state in localStorage"
+    ]
+  },
+
+  "outputs": {
+    "files": 3,
+    "filesModified": 3,
+    "hooks": ["useMediaQuery", "useSidebar"]
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "step": 256,
+  "id": "256-version-restore",
+  "phase": 8,
+  "phaseName": "Version Control",
+  "title": "Version Restore",
+  "description": "Restore workflow to past version",
+  "estimatedMinutes": 30,
+  "priority": "P1",
+  "dependencies": ["255-version-preview"],
+
+  "objective": {
+    "what": "Restore past versions",
+    "why": "Undo unwanted changes",
+    "outcome": "Version restoration"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/lib/versioning/restore.ts",
+      "src/components/editor/version-control/restore-dialog.tsx"
+    ],
+    "options": {
+      "replace": "Replace current workflow",
+      "duplicate": "Create new workflow",
+      "branch": "Create version branch"
+    },
+    "safety": {
+      "confirmation": "Confirm restore",
+      "backup": "Auto-save current first",
+      "notification": "Notify collaborators"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create version restore",
+    "tasks": [
+      "Implement restore logic",
+      "Create confirmation dialog",
+      "Backup current before restore",
+      "Support restore options",
+      "Notify collaborators"
+    ],
+    "constraints": [
+      "Safe restoration",
+      "Clear confirmation",
+      "No data loss"
+    ]
+  },
+
+  "outputs": {
+    "files": 2
+  }
+}

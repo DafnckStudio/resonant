@@ -1,0 +1,63 @@
+{
+  "step": 65,
+  "id": "065-role-based-access",
+  "phase": 2,
+  "phaseName": "Authentication & Users",
+  "title": "Implement Role-Based Access Control",
+  "description": "Create RBAC system for workspace permissions",
+  "estimatedMinutes": 40,
+  "priority": "P0",
+  "dependencies": ["064-protected-routes"],
+
+  "objective": {
+    "what": "Implement role-based access control system",
+    "why": "Team workspaces need permission management",
+    "outcome": "Working RBAC with owner/admin/editor/viewer roles"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/lib/permissions.ts",
+      "src/hooks/use-permissions.ts",
+      "convex/lib/permissions.ts"
+    ],
+    "roles": [
+      { "id": "owner", "level": 100, "canDelete": true },
+      { "id": "admin", "level": 80, "canManageMembers": true },
+      { "id": "editor", "level": 50, "canEditWorkflows": true },
+      { "id": "viewer", "level": 10, "canView": true }
+    ],
+    "permissions": [
+      "workspace:delete",
+      "workspace:settings",
+      "members:invite",
+      "members:remove",
+      "members:changeRole",
+      "workflows:create",
+      "workflows:edit",
+      "workflows:delete",
+      "workflows:run"
+    ]
+  },
+
+  "prompt": {
+    "mission": "Implement RBAC system",
+    "tasks": [
+      "Define role hierarchy",
+      "Create permission mappings",
+      "Build usePermissions hook",
+      "Add Convex permission checks",
+      "Create hasPermission utility"
+    ],
+    "constraints": [
+      "Owner cannot be demoted",
+      "At least one owner required"
+    ]
+  },
+
+  "outputs": {
+    "files": 3,
+    "roles": 4,
+    "permissions": 9
+  }
+}

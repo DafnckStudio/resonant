@@ -1,0 +1,100 @@
+{
+  "step": 3,
+  "id": "003-fonts-configuration",
+  "phase": 0,
+  "phaseName": "Foundation Setup",
+  "title": "Configure Inter and Space Mono Fonts",
+  "description": "Set up Inter as primary font and Space Mono for monospace using next/font",
+  "estimatedMinutes": 10,
+  "priority": "P0",
+  "dependencies": ["002-shadcn-ui-setup"],
+
+  "objective": {
+    "what": "Configure Inter and Space Mono fonts using next/font/google for optimal loading",
+    "why": "Consistent typography is essential for the Resonant brand - Inter for readability, Space Mono for code",
+    "outcome": "Fonts properly loaded with CSS variables --font-sans and --font-mono"
+  },
+
+  "context": {
+    "designSystem": {
+      "primaryFont": "Inter (sans-serif)",
+      "monoFont": "Space Mono (monospace)",
+      "usage": {
+        "inter": "All body text, headings, UI elements",
+        "spaceMono": "Code blocks, workflow IDs, technical data"
+      }
+    }
+  },
+
+  "specifications": {
+    "filesToModify": [
+      "src/app/layout.tsx",
+      "tailwind.config.ts"
+    ],
+    "fontConfig": {
+      "inter": {
+        "subsets": ["latin"],
+        "variable": "--font-sans",
+        "display": "swap"
+      },
+      "spaceMono": {
+        "subsets": ["latin"],
+        "weight": ["400", "700"],
+        "variable": "--font-mono",
+        "display": "swap"
+      }
+    },
+    "tailwindExtend": {
+      "fontFamily": {
+        "sans": ["var(--font-sans)", "Inter", "system-ui", "sans-serif"],
+        "mono": ["var(--font-mono)", "Space Mono", "monospace"]
+      }
+    },
+    "codeExample": {
+      "layout": "import { Inter, Space_Mono } from 'next/font/google'\n\nconst inter = Inter({ subsets: ['latin'], variable: '--font-sans' })\nconst spaceMono = Space_Mono({ subsets: ['latin'], weight: ['400', '700'], variable: '--font-mono' })\n\nexport default function RootLayout({ children }) {\n  return (\n    <html lang=\"en\" className={`${inter.variable} ${spaceMono.variable}`}>\n      <body className=\"font-sans\">{children}</body>\n    </html>\n  )\n}"
+    }
+  },
+
+  "prompt": {
+    "mission": "Configure custom fonts for Resonant.ai using next/font",
+    "tasks": [
+      "Import Inter and Space_Mono from next/font/google",
+      "Configure font variables --font-sans and --font-mono",
+      "Apply font variables to html element className",
+      "Extend tailwind.config.ts fontFamily",
+      "Set body to use font-sans by default"
+    ],
+    "constraints": [
+      "MUST use next/font (not CDN or local files)",
+      "MUST set display: swap for performance",
+      "Inter for sans-serif, Space Mono for monospace",
+      "Variables must match shadcn/ui expectations"
+    ],
+    "validation": [
+      "Inter renders for body text",
+      "Space Mono renders for .font-mono elements",
+      "No FOUT (Flash of Unstyled Text)"
+    ]
+  },
+
+  "validation": {
+    "automated": [
+      "No font loading errors in console",
+      "pnpm build passes"
+    ],
+    "functional": [
+      "Text renders in Inter",
+      "Code blocks render in Space Mono",
+      "Font weights work (400, 500, 600, 700)"
+    ],
+    "quality": [
+      "CSS variables set correctly",
+      "Tailwind config extended properly"
+    ]
+  },
+
+  "outputs": {
+    "files": ["src/app/layout.tsx", "tailwind.config.ts"],
+    "cssVariables": ["--font-sans", "--font-mono"]
+  }
+}

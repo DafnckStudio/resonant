@@ -1,0 +1,57 @@
+{
+  "step": 346,
+  "id": "346-notification-preferences",
+  "phase": 11,
+  "phaseName": "Dashboard & Analytics",
+  "title": "Notification Preferences",
+  "description": "Notification settings page",
+  "estimatedMinutes": 25,
+  "priority": "P2",
+  "dependencies": ["344-notifications-system", "345-email-notifications"],
+
+  "objective": {
+    "what": "Notification preferences UI",
+    "why": "User control",
+    "outcome": "Customizable notifications"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/app/(dashboard)/settings/notifications/page.tsx",
+      "src/components/settings/notification-settings.tsx",
+      "convex/notificationPreferences.ts"
+    ],
+    "settings": {
+      "inApp": "In-app notification toggles",
+      "email": "Email notification toggles",
+      "frequency": "Digest frequency",
+      "quiet": "Quiet hours"
+    },
+    "categories": {
+      "workflow": "Workflow notifications",
+      "team": "Team notifications",
+      "billing": "Billing notifications",
+      "marketing": "Product updates"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create notification preferences",
+    "tasks": [
+      "Build preferences page",
+      "Create toggle groups",
+      "Add frequency selector",
+      "Implement quiet hours",
+      "Save preferences to Convex"
+    ],
+    "constraints": [
+      "Clear categories",
+      "Easy toggles",
+      "Instant save"
+    ]
+  },
+
+  "outputs": {
+    "files": 3
+  }
+}

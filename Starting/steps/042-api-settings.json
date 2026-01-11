@@ -1,0 +1,50 @@
+{
+  "step": 42,
+  "id": "042-api-settings",
+  "phase": 1,
+  "phaseName": "Core UI & Layout",
+  "title": "Create API Settings Page",
+  "description": "Build API key management page for developer access",
+  "estimatedMinutes": 25,
+  "priority": "P2",
+  "dependencies": ["041-billing-settings"],
+
+  "objective": {
+    "what": "Create API settings page for managing API keys",
+    "why": "Developers need programmatic access to workflows",
+    "outcome": "API key list with create, revoke, and copy functionality"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/app/(dashboard)/settings/api/page.tsx",
+      "src/components/settings/api-key-list.tsx",
+      "src/components/settings/create-api-key-dialog.tsx",
+      "src/components/settings/api-key-row.tsx"
+    ],
+    "features": {
+      "list": "List all API keys",
+      "create": "Generate new API key with name and scopes",
+      "copy": "Copy key to clipboard (show once)",
+      "revoke": "Revoke/delete key",
+      "scopes": "Define access scopes"
+    },
+    "scopes": ["workflows:read", "workflows:write", "executions:read", "executions:write"]
+  },
+
+  "prompt": {
+    "mission": "Create API settings page",
+    "tasks": [
+      "Create API settings page",
+      "Build ApiKeyList component",
+      "Create CreateApiKeyDialog",
+      "Add copy-to-clipboard functionality",
+      "Implement key revocation with confirmation"
+    ]
+  },
+
+  "outputs": {
+    "files": 4,
+    "components": ["ApiKeyList", "CreateApiKeyDialog", "ApiKeyRow"]
+  }
+}

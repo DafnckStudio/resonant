@@ -1,0 +1,58 @@
+{
+  "step": 353,
+  "id": "353-feedback-system",
+  "phase": 11,
+  "phaseName": "Dashboard & Analytics",
+  "title": "Feedback System",
+  "description": "User feedback collection",
+  "estimatedMinutes": 30,
+  "priority": "P2",
+  "dependencies": ["332-event-tracking"],
+
+  "objective": {
+    "what": "Feedback collection system",
+    "why": "Product improvement",
+    "outcome": "User feedback loop"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/components/feedback/feedback-button.tsx",
+      "src/components/feedback/feedback-dialog.tsx",
+      "src/components/feedback/nps-survey.tsx",
+      "convex/feedback.ts"
+    ],
+    "types": {
+      "bug": "Bug report",
+      "feature": "Feature request",
+      "feedback": "General feedback",
+      "nps": "NPS survey"
+    },
+    "features": {
+      "screenshot": "Attach screenshot",
+      "context": "Auto-attach context",
+      "rating": "Satisfaction rating",
+      "followUp": "Follow-up option"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create feedback system",
+    "tasks": [
+      "Build feedback button",
+      "Create feedback dialog",
+      "Add screenshot capture",
+      "Implement NPS survey",
+      "Store feedback in Convex"
+    ],
+    "constraints": [
+      "Low friction",
+      "Optional details",
+      "Context capture"
+    ]
+  },
+
+  "outputs": {
+    "files": 4
+  }
+}

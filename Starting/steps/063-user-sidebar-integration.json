@@ -1,0 +1,47 @@
+{
+  "step": 63,
+  "id": "063-user-sidebar-integration",
+  "phase": 2,
+  "phaseName": "Authentication & Users",
+  "title": "Integrate User into Sidebar",
+  "description": "Add UserButton and user info to sidebar",
+  "estimatedMinutes": 20,
+  "priority": "P0",
+  "dependencies": ["055-user-context", "022-sidebar-navigation"],
+
+  "objective": {
+    "what": "Add user button and info to sidebar bottom",
+    "why": "Users need quick access to profile and sign out",
+    "outcome": "Clerk UserButton integrated in sidebar"
+  },
+
+  "specifications": {
+    "filesToModify": [
+      "src/components/layout/sidebar.tsx"
+    ],
+    "filesToCreate": [
+      "src/components/layout/user-nav.tsx"
+    ],
+    "features": {
+      "userButton": "Clerk UserButton with custom menu",
+      "userInfo": "Name and email display",
+      "menuItems": ["Profile", "Settings", "Sign out"]
+    }
+  },
+
+  "prompt": {
+    "mission": "Integrate user into sidebar",
+    "tasks": [
+      "Create UserNav component",
+      "Add Clerk UserButton at sidebar bottom",
+      "Show user name and email",
+      "Add custom menu items",
+      "Handle collapsed state"
+    ]
+  },
+
+  "outputs": {
+    "files": 1,
+    "filesModified": 1
+  }
+}

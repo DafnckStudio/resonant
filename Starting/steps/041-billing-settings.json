@@ -1,0 +1,58 @@
+{
+  "step": 41,
+  "id": "041-billing-settings",
+  "phase": 1,
+  "phaseName": "Core UI & Layout",
+  "title": "Create Billing Settings Page",
+  "description": "Build billing settings page with Stripe integration placeholder",
+  "estimatedMinutes": 30,
+  "priority": "P1",
+  "dependencies": ["040-ai-providers-settings"],
+
+  "objective": {
+    "what": "Create billing settings page with subscription plans and usage display",
+    "why": "Users need to manage their subscription and view usage",
+    "outcome": "Billing page with plan display, usage meters, and upgrade options"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/app/(dashboard)/settings/billing/page.tsx",
+      "src/components/settings/subscription-card.tsx",
+      "src/components/settings/usage-display.tsx",
+      "src/components/settings/plan-comparison.tsx"
+    ],
+    "plans": [
+      { "id": "free", "name": "Free", "price": 0, "workflows": 3, "executions": 100 },
+      { "id": "pro", "name": "Pro", "price": 29, "workflows": "unlimited", "executions": 5000 },
+      { "id": "team", "name": "Team", "price": 79, "workflows": "unlimited", "executions": 25000 },
+      { "id": "enterprise", "name": "Enterprise", "price": "custom", "workflows": "unlimited", "executions": "unlimited" }
+    ],
+    "features": {
+      "currentPlan": "Display current subscription",
+      "usage": "Show executions used vs limit",
+      "upgrade": "Upgrade plan CTA",
+      "portal": "Link to Stripe customer portal"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create billing settings page",
+    "tasks": [
+      "Create billing page with current plan",
+      "Build SubscriptionCard component",
+      "Create UsageDisplay with progress bars",
+      "Add plan comparison table",
+      "Add upgrade button (Stripe placeholder)"
+    ],
+    "constraints": [
+      "Stripe integration is placeholder for now",
+      "Show mock data until connected"
+    ]
+  },
+
+  "outputs": {
+    "files": 4,
+    "components": ["SubscriptionCard", "UsageDisplay", "PlanComparison"]
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "step": 80,
+  "id": "080-workspace-delete",
+  "phase": 3,
+  "phaseName": "Workspace & Projects",
+  "title": "Implement Workspace Deletion",
+  "description": "Add workspace deletion with confirmation",
+  "estimatedMinutes": 25,
+  "priority": "P2",
+  "dependencies": ["079-workspace-settings-update"],
+
+  "objective": {
+    "what": "Allow workspace owners to delete workspaces",
+    "why": "Users need to clean up unused workspaces",
+    "outcome": "Safe workspace deletion with data cleanup"
+  },
+
+  "specifications": {
+    "filesToModify": [
+      "src/components/settings/danger-zone.tsx",
+      "convex/workspaces.ts"
+    ],
+    "flow": [
+      "Click delete in danger zone",
+      "Show confirmation dialog",
+      "Type workspace name to confirm",
+      "Soft delete workspace",
+      "Redirect to another workspace"
+    ],
+    "cleanup": [
+      "Mark workspace as deleted",
+      "Mark all workflows as deleted",
+      "Keep data for 30 days (soft delete)"
+    ]
+  },
+
+  "prompt": {
+    "mission": "Implement workspace deletion",
+    "tasks": [
+      "Wire DangerZone delete button",
+      "Require typing workspace name",
+      "Create soft delete mutation",
+      "Clean up related data",
+      "Redirect to next workspace"
+    ],
+    "constraints": [
+      "Only owner can delete",
+      "Cannot delete if only workspace",
+      "Soft delete for recovery period"
+    ]
+  },
+
+  "outputs": {
+    "filesModified": 2,
+    "mutations": ["deleteWorkspace"]
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "step": 54,
+  "id": "054-clerk-webhook-handler",
+  "phase": 2,
+  "phaseName": "Authentication & Users",
+  "title": "Create Clerk Webhook Handler",
+  "description": "Build webhook endpoint to sync Clerk users with Convex",
+  "estimatedMinutes": 30,
+  "priority": "P0",
+  "dependencies": ["016-clerk-convex-integration"],
+
+  "objective": {
+    "what": "Create webhook handler to sync Clerk users to Convex",
+    "why": "User data must be synchronized between Clerk and Convex",
+    "outcome": "Automatic user creation/update in Convex on Clerk events"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/app/api/webhooks/clerk/route.ts",
+      "convex/users.ts"
+    ],
+    "events": [
+      "user.created",
+      "user.updated",
+      "user.deleted"
+    ],
+    "mutations": {
+      "createUser": "Create user in Convex",
+      "updateUser": "Update user data",
+      "deleteUser": "Soft delete user"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create Clerk webhook handler",
+    "tasks": [
+      "Create webhook API route",
+      "Verify webhook signature with svix",
+      "Handle user.created event",
+      "Handle user.updated event",
+      "Handle user.deleted event",
+      "Create Convex mutations for users"
+    ],
+    "constraints": [
+      "Must verify webhook signature",
+      "Use httpAction for Convex mutations"
+    ]
+  },
+
+  "outputs": {
+    "files": 2,
+    "endpoint": "/api/webhooks/clerk"
+  }
+}

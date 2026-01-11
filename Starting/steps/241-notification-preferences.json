@@ -1,0 +1,56 @@
+{
+  "step": 241,
+  "id": "241-notification-preferences",
+  "phase": 7,
+  "phaseName": "Real-time Collaboration",
+  "title": "Notification Preferences",
+  "description": "User notification settings",
+  "estimatedMinutes": 30,
+  "priority": "P2",
+  "dependencies": ["240-collaboration-notifications"],
+
+  "objective": {
+    "what": "Create notification settings",
+    "why": "Let users control notifications",
+    "outcome": "Configurable notifications"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/app/(dashboard)/settings/notifications/page.tsx",
+      "src/components/settings/notification-preferences.tsx"
+    ],
+    "settings": {
+      "channels": "Enable/disable channels",
+      "types": "Enable/disable by type",
+      "frequency": "Immediate vs digest",
+      "quiet": "Quiet hours"
+    },
+    "options": {
+      "comments": "On/off for comments",
+      "mentions": "On/off for mentions",
+      "executions": "On/off for executions",
+      "invitations": "On/off for invitations"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create notification settings",
+    "tasks": [
+      "Build settings page",
+      "Create preference toggles",
+      "Add digest options",
+      "Implement quiet hours",
+      "Save preferences"
+    ],
+    "constraints": [
+      "Respect user choices",
+      "Sensible defaults",
+      "Per-workflow option"
+    ]
+  },
+
+  "outputs": {
+    "files": 2
+  }
+}

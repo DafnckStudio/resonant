@@ -1,0 +1,57 @@
+{
+  "step": 238,
+  "id": "238-connection-status",
+  "phase": 7,
+  "phaseName": "Real-time Collaboration",
+  "title": "Connection Status Indicator",
+  "description": "Show real-time connection status",
+  "estimatedMinutes": 30,
+  "priority": "P0",
+  "dependencies": ["222-collaboration-server"],
+
+  "objective": {
+    "what": "Show connection status",
+    "why": "Know when syncing works",
+    "outcome": "Clear status indicator"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/lib/collaboration/connection/connection-monitor.ts",
+      "src/components/editor/collaboration/connection-status.tsx"
+    ],
+    "states": [
+      "connected",
+      "connecting",
+      "disconnected",
+      "syncing",
+      "offline"
+    ],
+    "features": {
+      "indicator": "Visual status indicator",
+      "tooltip": "Connection details",
+      "retry": "Manual retry button",
+      "latency": "Show latency"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create connection status",
+    "tasks": [
+      "Monitor connection state",
+      "Create status indicator",
+      "Show sync progress",
+      "Add retry functionality",
+      "Display latency"
+    ],
+    "constraints": [
+      "Unobtrusive design",
+      "Accurate status",
+      "Quick updates"
+    ]
+  },
+
+  "outputs": {
+    "files": 2
+  }
+}

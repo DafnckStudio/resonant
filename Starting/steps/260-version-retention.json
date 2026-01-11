@@ -1,0 +1,55 @@
+{
+  "step": 260,
+  "id": "260-version-retention",
+  "phase": 8,
+  "phaseName": "Version Control",
+  "title": "Version Retention Policy",
+  "description": "Manage version storage limits",
+  "estimatedMinutes": 25,
+  "priority": "P2",
+  "dependencies": ["252-auto-save-versions"],
+
+  "objective": {
+    "what": "Control version retention",
+    "why": "Manage storage costs",
+    "outcome": "Smart retention policy"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/lib/versioning/retention.ts",
+      "convex/retentionPolicy.ts"
+    ],
+    "policies": {
+      "timeLimit": "Keep versions for X days",
+      "countLimit": "Keep last N versions",
+      "sizeLimit": "Max storage per workflow",
+      "preservation": "Never delete tagged/manual"
+    },
+    "cleanup": {
+      "scheduled": "Periodic cleanup job",
+      "onDemand": "Manual cleanup option",
+      "preview": "Preview before delete"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create retention policy",
+    "tasks": [
+      "Define retention rules",
+      "Implement cleanup logic",
+      "Preserve important versions",
+      "Create cleanup job",
+      "Add user settings"
+    ],
+    "constraints": [
+      "Never lose important data",
+      "Configurable limits",
+      "Plan-based limits"
+    ]
+  },
+
+  "outputs": {
+    "files": 2
+  }
+}

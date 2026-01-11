@@ -1,0 +1,62 @@
+{
+  "step": 116,
+  "id": "116-context-menu",
+  "phase": 4,
+  "phaseName": "Workflow Editor Core",
+  "title": "Create Context Menu",
+  "description": "Add right-click context menu to canvas and nodes",
+  "estimatedMinutes": 35,
+  "priority": "P1",
+  "dependencies": ["107-node-selection"],
+
+  "objective": {
+    "what": "Create context menus for editor",
+    "why": "Quick access to actions via right-click",
+    "outcome": "Context menus for canvas, nodes, edges"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/components/editor/menus/canvas-context-menu.tsx",
+      "src/components/editor/menus/node-context-menu.tsx",
+      "src/components/editor/menus/edge-context-menu.tsx"
+    ],
+    "canvasMenu": [
+      "Add block (opens palette)",
+      "Paste",
+      "Select all",
+      "Fit view"
+    ],
+    "nodeMenu": [
+      "Edit",
+      "Duplicate",
+      "Copy",
+      "Delete",
+      "Disconnect all"
+    ],
+    "edgeMenu": [
+      "Delete",
+      "Add label"
+    ]
+  },
+
+  "prompt": {
+    "mission": "Create context menus",
+    "tasks": [
+      "Create CanvasContextMenu",
+      "Create NodeContextMenu",
+      "Create EdgeContextMenu",
+      "Handle right-click events",
+      "Position menu at cursor",
+      "Close on click outside"
+    ],
+    "constraints": [
+      "Use shadcn ContextMenu",
+      "Keyboard accessible"
+    ]
+  },
+
+  "outputs": {
+    "files": 3
+  }
+}

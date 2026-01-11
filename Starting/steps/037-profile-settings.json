@@ -1,0 +1,47 @@
+{
+  "step": 37,
+  "id": "037-profile-settings",
+  "phase": 1,
+  "phaseName": "Core UI & Layout",
+  "title": "Create Profile Settings Page",
+  "description": "Build profile settings with avatar, name, and preferences",
+  "estimatedMinutes": 25,
+  "priority": "P1",
+  "dependencies": ["036-settings-layout"],
+
+  "objective": {
+    "what": "Create profile settings page for editing user information",
+    "why": "Users need to manage their profile and preferences",
+    "outcome": "Profile form with avatar upload and preferences"
+  },
+
+  "specifications": {
+    "filesToModify": ["src/app/(dashboard)/settings/page.tsx"],
+    "filesToCreate": [
+      "src/components/settings/profile-form.tsx",
+      "src/components/settings/avatar-upload.tsx",
+      "src/components/settings/preferences-form.tsx"
+    ],
+    "sections": {
+      "profile": "Name, email (from Clerk)",
+      "avatar": "Upload or change avatar",
+      "preferences": "Theme, default AI provider, notifications"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create profile settings page",
+    "tasks": [
+      "Create ProfileForm component",
+      "Add AvatarUpload component",
+      "Create PreferencesForm for settings",
+      "Connect to Convex for saving",
+      "Use Clerk UserProfile for some fields"
+    ]
+  },
+
+  "outputs": {
+    "files": 3,
+    "components": ["ProfileForm", "AvatarUpload", "PreferencesForm"]
+  }
+}

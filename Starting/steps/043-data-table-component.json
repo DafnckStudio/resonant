@@ -1,0 +1,58 @@
+{
+  "step": 43,
+  "id": "043-data-table-component",
+  "phase": 1,
+  "phaseName": "Core UI & Layout",
+  "title": "Create Reusable Data Table Component",
+  "description": "Build a flexible data table with sorting, filtering, and pagination",
+  "estimatedMinutes": 45,
+  "priority": "P0",
+  "dependencies": ["030-modal-system"],
+
+  "objective": {
+    "what": "Create a reusable data table component using TanStack Table",
+    "why": "Multiple pages need tabular data display (executions, team, usage)",
+    "outcome": "Flexible DataTable component with full features"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/components/ui/data-table.tsx",
+      "src/components/ui/data-table-pagination.tsx",
+      "src/components/ui/data-table-toolbar.tsx",
+      "src/components/ui/data-table-column-header.tsx",
+      "src/components/ui/data-table-faceted-filter.tsx"
+    ],
+    "dependencies": ["@tanstack/react-table"],
+    "features": {
+      "sorting": "Column sorting (asc/desc)",
+      "filtering": "Global search + column filters",
+      "pagination": "Page size selection + navigation",
+      "selection": "Row selection with checkbox",
+      "columnVisibility": "Toggle columns"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create reusable DataTable component",
+    "tasks": [
+      "Install @tanstack/react-table",
+      "Create base DataTable component",
+      "Add DataTablePagination",
+      "Create DataTableToolbar with search",
+      "Add DataTableColumnHeader for sorting",
+      "Create DataTableFacetedFilter for status/type"
+    ],
+    "constraints": [
+      "Follow shadcn/ui data-table pattern",
+      "Support generic column definitions",
+      "Mobile responsive"
+    ]
+  },
+
+  "outputs": {
+    "files": 5,
+    "dependencies": 1,
+    "reusableIn": ["executions", "team-members", "usage-records", "templates"]
+  }
+}

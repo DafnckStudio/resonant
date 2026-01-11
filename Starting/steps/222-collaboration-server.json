@@ -1,0 +1,56 @@
+{
+  "step": 222,
+  "id": "222-collaboration-server",
+  "phase": 7,
+  "phaseName": "Real-time Collaboration",
+  "title": "Collaboration WebSocket Server",
+  "description": "WebSocket server for Yjs synchronization",
+  "estimatedMinutes": 60,
+  "priority": "P0",
+  "dependencies": ["221-yjs-setup"],
+
+  "objective": {
+    "what": "Create collaboration server",
+    "why": "Sync workflow state between clients",
+    "outcome": "Working sync server"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/lib/collaboration/server/ws-server.ts",
+      "src/lib/collaboration/server/room-manager.ts",
+      "src/lib/collaboration/server/persistence.ts"
+    ],
+    "features": {
+      "rooms": "Per-workflow rooms",
+      "sync": "Real-time state sync",
+      "persistence": "Save to Convex",
+      "recovery": "Reconnection handling"
+    },
+    "architecture": {
+      "websocket": "y-websocket protocol",
+      "rooms": "workflow-{id} room names",
+      "auth": "Clerk JWT validation"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create sync server",
+    "tasks": [
+      "Set up WebSocket server",
+      "Implement room management",
+      "Add persistence layer",
+      "Handle authentication",
+      "Add reconnection"
+    ],
+    "constraints": [
+      "Scalable architecture",
+      "Secure connections",
+      "Efficient sync"
+    ]
+  },
+
+  "outputs": {
+    "files": 3
+  }
+}

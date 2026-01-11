@@ -1,0 +1,57 @@
+{
+  "step": 308,
+  "id": "308-pricing-page",
+  "phase": 10,
+  "phaseName": "Monetization & Billing",
+  "title": "Pricing Page",
+  "description": "Public pricing page",
+  "estimatedMinutes": 35,
+  "priority": "P1",
+  "dependencies": ["302-pricing-plans"],
+
+  "objective": {
+    "what": "Create pricing page",
+    "why": "Convert visitors",
+    "outcome": "Marketing pricing page"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/app/(marketing)/pricing/page.tsx",
+      "src/components/pricing/pricing-table.tsx",
+      "src/components/pricing/plan-comparison.tsx",
+      "src/components/pricing/faq-section.tsx"
+    ],
+    "sections": {
+      "plans": "Plan comparison table",
+      "features": "Feature comparison",
+      "faq": "Pricing FAQ",
+      "cta": "Call to action"
+    },
+    "design": {
+      "toggle": "Monthly/annual toggle",
+      "highlight": "Highlight popular plan",
+      "savings": "Show annual savings"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create pricing page",
+    "tasks": [
+      "Build pricing layout",
+      "Create plan cards",
+      "Add feature comparison",
+      "Include FAQ section",
+      "Monthly/annual toggle"
+    ],
+    "constraints": [
+      "Clear value prop",
+      "Easy comparison",
+      "Strong CTAs"
+    ]
+  },
+
+  "outputs": {
+    "files": 4
+  }
+}

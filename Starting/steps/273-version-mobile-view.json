@@ -1,0 +1,54 @@
+{
+  "step": 273,
+  "id": "273-version-mobile-view",
+  "phase": 8,
+  "phaseName": "Version Control",
+  "title": "Version Mobile View",
+  "description": "Mobile-optimized version UI",
+  "estimatedMinutes": 25,
+  "priority": "P3",
+  "dependencies": ["254-version-history-panel"],
+
+  "objective": {
+    "what": "Mobile version view",
+    "why": "Review on mobile",
+    "outcome": "Responsive version UI"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/components/editor/version-control/mobile-version-panel.tsx"
+    ],
+    "features": {
+      "list": "Compact version list",
+      "preview": "Mobile preview mode",
+      "actions": "Quick actions (restore, tag)",
+      "gestures": "Swipe gestures"
+    },
+    "responsive": {
+      "breakpoints": "Mobile/tablet/desktop",
+      "layout": "Stacked on mobile",
+      "touch": "Touch-friendly controls"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create mobile version view",
+    "tasks": [
+      "Build responsive layout",
+      "Create compact list",
+      "Add touch gestures",
+      "Optimize for small screens",
+      "Test on devices"
+    ],
+    "constraints": [
+      "Touch-friendly",
+      "Fast on mobile",
+      "Readable content"
+    ]
+  },
+
+  "outputs": {
+    "files": 1
+  }
+}

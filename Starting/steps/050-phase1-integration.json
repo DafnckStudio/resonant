@@ -1,0 +1,68 @@
+{
+  "step": 50,
+  "id": "050-phase1-integration",
+  "phase": 1,
+  "phaseName": "Core UI & Layout",
+  "title": "Phase 1 Integration & Testing",
+  "description": "Integrate all UI components and verify complete layout",
+  "estimatedMinutes": 45,
+  "priority": "P0",
+  "dependencies": ["049-responsive-layout"],
+
+  "objective": {
+    "what": "Integrate all Phase 1 components into a cohesive UI",
+    "why": "Ensure all components work together before Phase 2",
+    "outcome": "Fully functional dashboard shell ready for features"
+  },
+
+  "specifications": {
+    "tasks": [
+      "Wire up all navigation links",
+      "Connect sidebar to all routes",
+      "Test all settings tabs",
+      "Verify responsive behavior",
+      "Test theme switching",
+      "Verify error boundaries",
+      "Test command palette",
+      "Check keyboard shortcuts"
+    ],
+    "validation": {
+      "navigation": "All routes accessible",
+      "responsive": "Works on mobile/tablet/desktop",
+      "theme": "Light/dark theme works",
+      "errors": "Error boundaries catch errors",
+      "loading": "Loading states display correctly"
+    }
+  },
+
+  "prompt": {
+    "mission": "Complete Phase 1 integration",
+    "tasks": [
+      "Connect all sidebar navigation links",
+      "Wire up settings tab routing",
+      "Test complete navigation flow",
+      "Verify all components render",
+      "Fix any integration issues",
+      "Run build and fix errors"
+    ],
+    "validation": [
+      "npm run build passes",
+      "All pages render without errors",
+      "Navigation works end-to-end",
+      "Responsive design verified"
+    ]
+  },
+
+  "outputs": {
+    "milestone": "Phase 1 Complete",
+    "readyFor": "Phase 2: Authentication & Users",
+    "deliverables": [
+      "Dashboard shell with sidebar",
+      "All settings pages",
+      "Reusable UI components",
+      "Responsive layout",
+      "Command palette",
+      "Keyboard shortcuts"
+    ]
+  }
+}

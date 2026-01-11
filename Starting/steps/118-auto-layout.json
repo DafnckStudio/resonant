@@ -1,0 +1,54 @@
+{
+  "step": 118,
+  "id": "118-auto-layout",
+  "phase": 4,
+  "phaseName": "Workflow Editor Core",
+  "title": "Implement Auto Layout",
+  "description": "Add automatic layout algorithms",
+  "estimatedMinutes": 40,
+  "priority": "P2",
+  "dependencies": ["103-custom-node-base", "104-custom-edges"],
+
+  "objective": {
+    "what": "Add auto-layout functionality",
+    "why": "Organize messy workflows automatically",
+    "outcome": "Multiple layout algorithms"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/lib/editor/layout-algorithms.ts",
+      "src/components/editor/toolbar/layout-menu.tsx"
+    ],
+    "algorithms": {
+      "horizontal": "Left to right flow",
+      "vertical": "Top to bottom flow",
+      "radial": "Radial from center",
+      "force": "Force-directed layout"
+    },
+    "options": {
+      "spacing": "Node spacing",
+      "animate": "Animate transition"
+    }
+  },
+
+  "prompt": {
+    "mission": "Implement auto layout",
+    "tasks": [
+      "Create layout algorithms",
+      "Add horizontal LR layout",
+      "Add vertical TB layout",
+      "Create LayoutMenu dropdown",
+      "Animate layout transition",
+      "Add to toolbar"
+    ],
+    "constraints": [
+      "Use dagre or elkjs",
+      "Smooth animation"
+    ]
+  },
+
+  "outputs": {
+    "files": 2
+  }
+}

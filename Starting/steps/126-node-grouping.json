@@ -1,0 +1,51 @@
+{
+  "step": 126,
+  "id": "126-node-grouping",
+  "phase": 4,
+  "phaseName": "Workflow Editor Core",
+  "title": "Node Grouping",
+  "description": "Group nodes into collapsible containers",
+  "estimatedMinutes": 45,
+  "priority": "P2",
+  "dependencies": ["107-node-selection"],
+
+  "objective": {
+    "what": "Enable grouping nodes together",
+    "why": "Organize complex workflows",
+    "outcome": "Collapsible groups with labels"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/components/editor/nodes/group-node.tsx",
+      "src/hooks/use-node-grouping.ts"
+    ],
+    "features": {
+      "create": "Select nodes → Group (Ctrl+G)",
+      "ungroup": "Select group → Ungroup",
+      "collapse": "Collapse to single node",
+      "expand": "Expand to show children",
+      "label": "Editable group label"
+    }
+  },
+
+  "prompt": {
+    "mission": "Implement node grouping",
+    "tasks": [
+      "Create GroupNode component",
+      "Create useNodeGrouping hook",
+      "Handle group creation",
+      "Implement collapse/expand",
+      "Move children with group",
+      "Style group container"
+    ],
+    "constraints": [
+      "Maintain internal edges",
+      "Update external edge targets"
+    ]
+  },
+
+  "outputs": {
+    "files": 2
+  }
+}

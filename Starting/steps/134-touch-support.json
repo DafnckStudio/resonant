@@ -1,0 +1,54 @@
+{
+  "step": 134,
+  "id": "134-touch-support",
+  "phase": 4,
+  "phaseName": "Workflow Editor Core",
+  "title": "Touch Device Support",
+  "description": "Optimize editor for touch devices",
+  "estimatedMinutes": 35,
+  "priority": "P2",
+  "dependencies": ["101-react-flow-setup"],
+
+  "objective": {
+    "what": "Make editor work on tablets",
+    "why": "Support iPad and tablet users",
+    "outcome": "Touch gestures working"
+  },
+
+  "specifications": {
+    "filesToModify": [
+      "src/components/editor/flow-editor.tsx"
+    ],
+    "filesToCreate": [
+      "src/hooks/use-touch-gestures.ts"
+    ],
+    "gestures": {
+      "tap": "Select node",
+      "doubleTap": "Edit node",
+      "longPress": "Context menu",
+      "twoFingerPan": "Pan canvas",
+      "pinch": "Zoom in/out"
+    }
+  },
+
+  "prompt": {
+    "mission": "Add touch support",
+    "tasks": [
+      "Create useTouchGestures hook",
+      "Handle tap to select",
+      "Handle long press for menu",
+      "Handle pinch to zoom",
+      "Handle two-finger pan",
+      "Larger touch targets"
+    ],
+    "constraints": [
+      "Don't break mouse",
+      "Minimum 44px touch targets"
+    ]
+  },
+
+  "outputs": {
+    "files": 1,
+    "filesModified": 1
+  }
+}

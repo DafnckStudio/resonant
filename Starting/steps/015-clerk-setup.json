@@ -1,0 +1,90 @@
+{
+  "step": 15,
+  "id": "015-clerk-setup",
+  "phase": 0,
+  "phaseName": "Foundation Setup",
+  "title": "Initialize Clerk Authentication",
+  "description": "Set up Clerk for authentication with Next.js 16 middleware",
+  "estimatedMinutes": 20,
+  "priority": "P0",
+  "dependencies": ["014-convex-schema-usage"],
+
+  "objective": {
+    "what": "Configure Clerk authentication with proxy.ts middleware and auth provider",
+    "why": "Authentication is required for all protected routes and user identification",
+    "outcome": "Clerk working with sign-in/sign-up pages and route protection"
+  },
+
+  "context": {
+    "nextjs16": "Use proxy.ts instead of middleware.ts",
+    "references": [
+      "/home/hacker/VibeCoding/clients/DentistryGPT/proxy.ts"
+    ]
+  },
+
+  "specifications": {
+    "commands": [
+      "pnpm add @clerk/nextjs"
+    ],
+    "filesToCreate": [
+      "src/proxy.ts",
+      "src/app/(auth)/sign-in/[[...sign-in]]/page.tsx",
+      "src/app/(auth)/sign-up/[[...sign-up]]/page.tsx",
+      "src/app/(auth)/layout.tsx"
+    ],
+    "filesToModify": [
+      ".env.local"
+    ],
+    "envVariables": {
+      "NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY": "pk_test_xxx",
+      "CLERK_SECRET_KEY": "sk_test_xxx",
+      "NEXT_PUBLIC_CLERK_SIGN_IN_URL": "/sign-in",
+      "NEXT_PUBLIC_CLERK_SIGN_UP_URL": "/sign-up",
+      "NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL": "/dashboard",
+      "NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL": "/onboarding"
+    },
+    "proxyConfig": {
+      "publicRoutes": ["/", "/sign-in(.*)", "/sign-up(.*)", "/api/webhooks(.*)"],
+      "protectedRoutes": ["/dashboard(.*)", "/settings(.*)", "/workspace(.*)"]
+    }
+  },
+
+  "prompt": {
+    "mission": "Set up Clerk authentication for Resonant.ai",
+    "tasks": [
+      "Install @clerk/nextjs package",
+      "Create proxy.ts for Next.js 16 middleware",
+      "Configure public and protected routes",
+      "Create sign-in and sign-up pages",
+      "Add ClerkProvider to root layout",
+      "Set up environment variables"
+    ],
+    "constraints": [
+      "MUST use proxy.ts (not middleware.ts) for Next.js 16",
+      "Sign-in/sign-up must be catch-all routes",
+      "Dashboard routes must be protected"
+    ],
+    "validation": [
+      "Sign-in page loads",
+      "Protected routes redirect to sign-in",
+      "User session works"
+    ]
+  },
+
+  "validation": {
+    "automated": [
+      "Build passes",
+      "No TypeScript errors"
+    ],
+    "functional": [
+      "/sign-in renders Clerk UI",
+      "/dashboard redirects if not signed in",
+      "Sign in/out flow works"
+    ]
+  },
+
+  "outputs": {
+    "files": ["src/proxy.ts", "src/app/(auth)/**"],
+    "envVars": 6
+  }
+}

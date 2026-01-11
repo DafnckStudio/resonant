@@ -1,0 +1,53 @@
+{
+  "step": 143,
+  "id": "143-input-trigger-block",
+  "phase": 5,
+  "phaseName": "Block System",
+  "title": "Manual Trigger Block",
+  "description": "Create manual trigger input block",
+  "estimatedMinutes": 30,
+  "priority": "P0",
+  "dependencies": ["142-block-registry", "103-custom-node-base"],
+
+  "objective": {
+    "what": "Create manual trigger block",
+    "why": "Entry point for manual workflow execution",
+    "outcome": "Trigger block with run button"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/components/editor/blocks/input/trigger-block.tsx"
+    ],
+    "config": {
+      "name": "Workflow trigger name",
+      "description": "Trigger description"
+    },
+    "outputs": {
+      "trigger": "Trigger event data"
+    },
+    "features": {
+      "runButton": "Button to trigger workflow",
+      "inputData": "Optional input JSON"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create trigger block",
+    "tasks": [
+      "Create TriggerBlock component",
+      "Extend BaseNode",
+      "Add run button",
+      "Add input data field",
+      "Register with registry"
+    ],
+    "constraints": [
+      "Only one per workflow",
+      "Clear visual distinction"
+    ]
+  },
+
+  "outputs": {
+    "files": 1
+  }
+}

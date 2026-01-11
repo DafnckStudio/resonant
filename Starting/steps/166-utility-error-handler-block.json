@@ -1,0 +1,54 @@
+{
+  "step": 166,
+  "id": "166-utility-error-handler-block",
+  "phase": 5,
+  "phaseName": "Block System",
+  "title": "Error Handler Block",
+  "description": "Create try/catch error handling block",
+  "estimatedMinutes": 35,
+  "priority": "P1",
+  "dependencies": ["142-block-registry"],
+
+  "objective": {
+    "what": "Create error handler block",
+    "why": "Handle errors gracefully in workflows",
+    "outcome": "Try/catch error handling"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/components/editor/blocks/utility/error-handler-block.tsx"
+    ],
+    "config": {
+      "retries": "Retry count",
+      "retryDelay": "Delay between retries",
+      "fallback": "Fallback value on error"
+    },
+    "inputs": {
+      "input": "Data to process"
+    },
+    "outputs": {
+      "success": "Success output",
+      "error": "Error output branch"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create error handler block",
+    "tasks": [
+      "Create ErrorHandlerBlock component",
+      "Add retry configuration",
+      "Handle error branch routing",
+      "Add fallback value option",
+      "Show error details"
+    ],
+    "constraints": [
+      "Catch all error types",
+      "Provide error details"
+    ]
+  },
+
+  "outputs": {
+    "files": 1
+  }
+}

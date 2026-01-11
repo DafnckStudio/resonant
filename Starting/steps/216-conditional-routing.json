@@ -1,0 +1,56 @@
+{
+  "step": 216,
+  "id": "216-conditional-routing",
+  "phase": 6,
+  "phaseName": "AI Router & Execution",
+  "title": "Conditional Routing Execution",
+  "description": "Execute conditional branching logic",
+  "estimatedMinutes": 40,
+  "priority": "P0",
+  "dependencies": ["192-block-executor", "158-logic-condition-block", "159-logic-switch-block"],
+
+  "objective": {
+    "what": "Implement conditional execution",
+    "why": "Dynamic workflow paths",
+    "outcome": "Working conditionals"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/lib/execution/conditionals/condition-evaluator.ts",
+      "src/lib/execution/conditionals/expression-parser.ts"
+    ],
+    "conditions": {
+      "comparison": "==, !=, >, <, >=, <=",
+      "logical": "AND, OR, NOT",
+      "contains": "String/array contains",
+      "regex": "Regular expression match",
+      "empty": "Is null/empty check"
+    },
+    "expressions": {
+      "simple": "{{value}} == 'test'",
+      "complex": "({{a}} > 10 AND {{b}} != null)",
+      "nested": "{{data.items.length}} > 0"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create conditional routing",
+    "tasks": [
+      "Implement condition evaluator",
+      "Create expression parser",
+      "Support all operators",
+      "Handle nested paths",
+      "Add type coercion"
+    ],
+    "constraints": [
+      "Safe expression eval",
+      "Clear true/false paths",
+      "Error on invalid"
+    ]
+  },
+
+  "outputs": {
+    "files": 2
+  }
+}

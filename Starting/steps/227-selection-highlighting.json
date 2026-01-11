@@ -1,0 +1,56 @@
+{
+  "step": 227,
+  "id": "227-selection-highlighting",
+  "phase": 7,
+  "phaseName": "Real-time Collaboration",
+  "title": "Collaborative Selection Highlighting",
+  "description": "Highlight nodes selected by collaborators",
+  "estimatedMinutes": 35,
+  "priority": "P1",
+  "dependencies": ["225-presence-awareness"],
+
+  "objective": {
+    "what": "Show others' selections",
+    "why": "Avoid editing conflicts",
+    "outcome": "Visible selection indicators"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/components/editor/collaboration/selection-highlight.tsx",
+      "src/lib/collaboration/selection/selection-manager.ts"
+    ],
+    "features": {
+      "outline": "Colored border on selected nodes",
+      "badge": "Who is selecting indicator",
+      "multiple": "Handle multiple selectors",
+      "lock": "Optional soft lock"
+    },
+    "styling": {
+      "border": "User color border",
+      "thickness": "2px outline",
+      "avatar": "Small avatar in corner",
+      "tooltip": "User name on hover"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create selection highlighting",
+    "tasks": [
+      "Create highlight component",
+      "Show user colors",
+      "Add user badges",
+      "Handle overlapping selections",
+      "Create selection manager"
+    ],
+    "constraints": [
+      "Clear visibility",
+      "Don't obscure content",
+      "Handle many users"
+    ]
+  },
+
+  "outputs": {
+    "files": 2
+  }
+}

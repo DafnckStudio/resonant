@@ -1,0 +1,56 @@
+{
+  "step": 242,
+  "id": "242-real-time-chat",
+  "phase": 7,
+  "phaseName": "Real-time Collaboration",
+  "title": "In-Editor Chat",
+  "description": "Real-time chat in workflow editor",
+  "estimatedMinutes": 50,
+  "priority": "P3",
+  "dependencies": ["222-collaboration-server"],
+
+  "objective": {
+    "what": "Add real-time chat",
+    "why": "Quick communication while editing",
+    "outcome": "In-editor messaging"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/lib/collaboration/chat/chat-manager.ts",
+      "src/components/editor/collaboration/chat-panel.tsx",
+      "src/components/editor/collaboration/chat-message.tsx"
+    ],
+    "features": {
+      "realtime": "Real-time messages",
+      "typing": "Typing indicators",
+      "history": "Message history",
+      "mentions": "@mention users"
+    },
+    "display": {
+      "panel": "Collapsible side panel",
+      "compact": "Compact message view",
+      "timestamps": "Relative timestamps"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create in-editor chat",
+    "tasks": [
+      "Build chat manager",
+      "Create chat panel UI",
+      "Implement real-time sync",
+      "Add typing indicators",
+      "Store chat history"
+    ],
+    "constraints": [
+      "Lightweight",
+      "Collapsible",
+      "Per-workflow chat"
+    ]
+  },
+
+  "outputs": {
+    "files": 3
+  }
+}

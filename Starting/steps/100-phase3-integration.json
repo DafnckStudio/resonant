@@ -1,0 +1,69 @@
+{
+  "step": 100,
+  "id": "100-phase3-integration",
+  "phase": 3,
+  "phaseName": "Workspace & Projects",
+  "title": "Phase 3 Integration & Testing",
+  "description": "Integrate all workspace and project features",
+  "estimatedMinutes": 45,
+  "priority": "P0",
+  "dependencies": ["099-leave-workspace"],
+
+  "objective": {
+    "what": "Test complete workspace and workflow management",
+    "why": "Ensure all features work together",
+    "outcome": "Fully functional workspace and workflow system"
+  },
+
+  "specifications": {
+    "testCases": [
+      "Create workspace → switch → delete",
+      "Create workflow → edit → duplicate → delete",
+      "Organize workflows in folders",
+      "Share workflow with team member",
+      "Import/export workflow",
+      "Dashboard stats accuracy",
+      "Quota enforcement"
+    ],
+    "validation": {
+      "workspace": "CRUD operations work",
+      "workflow": "CRUD operations work",
+      "organization": "Folders and tags work",
+      "sharing": "Permissions enforced",
+      "quotas": "Limits enforced correctly"
+    }
+  },
+
+  "prompt": {
+    "mission": "Complete Phase 3 integration",
+    "tasks": [
+      "Test workspace CRUD flow",
+      "Test workflow CRUD flow",
+      "Verify folder organization",
+      "Test sharing permissions",
+      "Verify quota enforcement",
+      "Check dashboard accuracy",
+      "Fix any integration issues"
+    ],
+    "validation": [
+      "npm run build passes",
+      "All CRUD operations work",
+      "Permissions correctly enforced",
+      "Quotas properly checked"
+    ]
+  },
+
+  "outputs": {
+    "milestone": "Phase 3 Complete",
+    "readyFor": "Phase 4: Workflow Editor Core",
+    "deliverables": [
+      "Workspace management",
+      "Workflow CRUD",
+      "Folder organization",
+      "Tagging system",
+      "Sharing & permissions",
+      "Usage quotas",
+      "Dashboard overview"
+    ]
+  }
+}

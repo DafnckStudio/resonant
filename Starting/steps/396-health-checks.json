@@ -1,0 +1,55 @@
+{
+  "step": 396,
+  "id": "396-health-checks",
+  "phase": 12,
+  "phaseName": "Testing & Polish",
+  "title": "Health Checks",
+  "description": "Implement health check endpoints",
+  "estimatedMinutes": 20,
+  "priority": "P2",
+  "dependencies": [],
+
+  "objective": {
+    "what": "Health checks",
+    "why": "System monitoring",
+    "outcome": "Reliable uptime"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/app/api/health/route.ts",
+      "src/lib/health/checks.ts"
+    ],
+    "endpoints": {
+      "liveness": "/api/health",
+      "readiness": "/api/health/ready",
+      "dependencies": "/api/health/deps"
+    },
+    "checks": {
+      "database": "Convex connectivity",
+      "auth": "Clerk connectivity",
+      "ai": "AI provider status",
+      "stripe": "Stripe connectivity"
+    }
+  },
+
+  "prompt": {
+    "mission": "Add health checks",
+    "tasks": [
+      "Create health endpoint",
+      "Add dependency checks",
+      "Implement readiness probe",
+      "Add status page data",
+      "Configure monitoring"
+    ],
+    "constraints": [
+      "Fast response times",
+      "Detailed status",
+      "No auth required"
+    ]
+  },
+
+  "outputs": {
+    "files": 2
+  }
+}

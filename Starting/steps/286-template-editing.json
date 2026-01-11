@@ -1,0 +1,55 @@
+{
+  "step": 286,
+  "id": "286-template-editing",
+  "phase": 9,
+  "phaseName": "Templates & Marketplace",
+  "title": "Template Editing",
+  "description": "Edit existing templates",
+  "estimatedMinutes": 30,
+  "priority": "P1",
+  "dependencies": ["285-my-templates"],
+
+  "objective": {
+    "what": "Edit template metadata and content",
+    "why": "Update and improve templates",
+    "outcome": "Template editing flow"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/app/(dashboard)/templates/[id]/edit/page.tsx",
+      "src/components/templates/template-editor.tsx"
+    ],
+    "editable": {
+      "metadata": "Name, description, tags",
+      "variables": "Template variables",
+      "thumbnail": "Preview image",
+      "pricing": "Pricing tier"
+    },
+    "features": {
+      "preview": "Live preview",
+      "validation": "Validate changes",
+      "versioning": "Template versions"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create template editing",
+    "tasks": [
+      "Build edit page",
+      "Create editor form",
+      "Add live preview",
+      "Validate changes",
+      "Save updates"
+    ],
+    "constraints": [
+      "Preserve existing data",
+      "Clear validation",
+      "Auto-save draft"
+    ]
+  },
+
+  "outputs": {
+    "files": 2
+  }
+}

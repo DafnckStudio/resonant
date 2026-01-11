@@ -1,0 +1,62 @@
+{
+  "step": 87,
+  "id": "087-folder-organization",
+  "phase": 3,
+  "phaseName": "Workspace & Projects",
+  "title": "Implement Workflow Folders",
+  "description": "Add folder organization for workflows",
+  "estimatedMinutes": 40,
+  "priority": "P2",
+  "dependencies": ["083-workflows-list"],
+
+  "objective": {
+    "what": "Add folder system for organizing workflows",
+    "why": "Users with many workflows need organization",
+    "outcome": "Folder tree with drag-drop organization"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/components/workflow/folder-tree.tsx",
+      "src/components/workflow/folder-item.tsx",
+      "src/components/workflow/create-folder-dialog.tsx",
+      "convex/folders.ts"
+    ],
+    "filesToModify": [
+      "convex/schema.ts"
+    ],
+    "schema": {
+      "folders": {
+        "workspaceId": "Id<workspaces>",
+        "name": "string",
+        "parentId": "Id<folders> | null",
+        "color": "string",
+        "order": "number"
+      }
+    },
+    "features": {
+      "create": "Create folders",
+      "nest": "Nested folder structure",
+      "move": "Drag workflows into folders",
+      "rename": "Rename folders",
+      "delete": "Delete (move contents up)"
+    }
+  },
+
+  "prompt": {
+    "mission": "Implement folder organization",
+    "tasks": [
+      "Add folders table to schema",
+      "Create FolderTree component",
+      "Build CreateFolderDialog",
+      "Implement folder CRUD mutations",
+      "Add drag-drop for workflow organization"
+    ]
+  },
+
+  "outputs": {
+    "files": 4,
+    "filesModified": 1,
+    "schemaTable": "folders"
+  }
+}

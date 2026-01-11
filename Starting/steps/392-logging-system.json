@@ -1,0 +1,56 @@
+{
+  "step": 392,
+  "id": "392-logging-system",
+  "phase": 12,
+  "phaseName": "Testing & Polish",
+  "title": "Logging System",
+  "description": "Implement structured logging",
+  "estimatedMinutes": 25,
+  "priority": "P2",
+  "dependencies": [],
+
+  "objective": {
+    "what": "Logging system",
+    "why": "Debugging capability",
+    "outcome": "Queryable logs"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/lib/logging/logger.ts",
+      "src/lib/logging/context.ts",
+      "src/lib/logging/transports.ts"
+    ],
+    "features": {
+      "structured": "JSON logging",
+      "context": "Request context",
+      "levels": "Log levels",
+      "sampling": "Log sampling"
+    },
+    "integration": {
+      "convex": "Convex action logs",
+      "api": "API request logs",
+      "errors": "Error logs"
+    }
+  },
+
+  "prompt": {
+    "mission": "Implement logging",
+    "tasks": [
+      "Create logging utility",
+      "Add request context",
+      "Configure log levels",
+      "Implement transports",
+      "Add log sampling"
+    ],
+    "constraints": [
+      "Structured JSON",
+      "Correlation IDs",
+      "Cost-effective"
+    ]
+  },
+
+  "outputs": {
+    "files": 3
+  }
+}

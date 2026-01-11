@@ -1,0 +1,99 @@
+{
+  "step": 5,
+  "id": "005-convex-initialization",
+  "phase": 0,
+  "phaseName": "Foundation Setup",
+  "title": "Initialize Convex Backend",
+  "description": "Set up Convex as the real-time backend with initial project configuration",
+  "estimatedMinutes": 15,
+  "priority": "P0",
+  "dependencies": ["004-directory-structure"],
+
+  "objective": {
+    "what": "Initialize Convex backend and configure it with the Next.js project",
+    "why": "Convex provides real-time data sync essential for collaborative workflow editing",
+    "outcome": "Convex initialized and connected to the Next.js app with ConvexProvider"
+  },
+
+  "context": {
+    "stack": {
+      "backend": "Convex",
+      "features": ["Real-time sync", "Type-safe queries", "Automatic caching"]
+    },
+    "references": [
+      "/home/hacker/VibeCoding/clients/DentistryGPT/convex/"
+    ]
+  },
+
+  "specifications": {
+    "commands": [
+      "pnpm add convex",
+      "npx convex init"
+    ],
+    "filesToCreate": [
+      "convex/_generated/api.d.ts",
+      "convex/_generated/server.d.ts",
+      "convex/schema.ts",
+      "convex/tsconfig.json",
+      "src/providers/convex-provider.tsx"
+    ],
+    "filesToModify": [
+      "src/app/layout.tsx",
+      ".env.local"
+    ],
+    "envVariables": {
+      "CONVEX_DEPLOYMENT": "dev:resonant-xxx",
+      "NEXT_PUBLIC_CONVEX_URL": "https://xxx.convex.cloud"
+    },
+    "providerCode": "\"use client\";\n\nimport { ConvexProvider, ConvexReactClient } from \"convex/react\";\nimport { ReactNode } from \"react\";\n\nconst convex = new ConvexReactClient(process.env.NEXT_PUBLIC_CONVEX_URL!);\n\nexport function ConvexClientProvider({ children }: { children: ReactNode }) {\n  return <ConvexProvider client={convex}>{children}</ConvexProvider>;\n}"
+  },
+
+  "prompt": {
+    "mission": "Initialize Convex backend for Resonant.ai",
+    "tasks": [
+      "Install convex package with pnpm",
+      "Run npx convex init to create project",
+      "Create ConvexClientProvider in src/providers/",
+      "Wrap app with ConvexClientProvider in layout.tsx",
+      "Add Convex env variables to .env.local",
+      "Start convex dev server and verify connection"
+    ],
+    "constraints": [
+      "Use pnpm (not npm)",
+      "Provider must be marked 'use client'",
+      "Environment variables must be in .env.local"
+    ],
+    "validation": [
+      "npx convex dev starts without errors",
+      "Convex dashboard accessible",
+      "No hydration errors"
+    ]
+  },
+
+  "validation": {
+    "automated": [
+      "convex/_generated/ files created",
+      "No TypeScript errors"
+    ],
+    "functional": [
+      "Convex dev server runs",
+      "Dashboard shows project",
+      "useQuery hook works"
+    ],
+    "quality": [
+      "Provider properly typed",
+      "Env variables configured"
+    ]
+  },
+
+  "troubleshooting": {
+    "authError": "Run npx convex logout && npx convex login",
+    "connectionError": "Check NEXT_PUBLIC_CONVEX_URL matches dashboard",
+    "hydrationError": "Ensure ConvexProvider has 'use client' directive"
+  },
+
+  "outputs": {
+    "files": ["convex/", "src/providers/convex-provider.tsx"],
+    "envVars": ["CONVEX_DEPLOYMENT", "NEXT_PUBLIC_CONVEX_URL"]
+  }
+}

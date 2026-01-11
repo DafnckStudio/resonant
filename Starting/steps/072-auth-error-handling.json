@@ -1,0 +1,50 @@
+{
+  "step": 72,
+  "id": "072-auth-error-handling",
+  "phase": 2,
+  "phaseName": "Authentication & Users",
+  "title": "Implement Auth Error Handling",
+  "description": "Add comprehensive auth error handling",
+  "estimatedMinutes": 25,
+  "priority": "P1",
+  "dependencies": ["051-clerk-middleware"],
+
+  "objective": {
+    "what": "Handle authentication errors gracefully",
+    "why": "Users need clear feedback when auth fails",
+    "outcome": "User-friendly auth error pages and messages"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/app/(auth)/auth-error/page.tsx",
+      "src/components/auth/auth-error-message.tsx"
+    ],
+    "filesToModify": [
+      "src/app/(dashboard)/layout.tsx"
+    ],
+    "errors": {
+      "sessionExpired": "Session has expired, please sign in again",
+      "unauthorized": "You don't have permission to access this resource",
+      "networkError": "Unable to verify authentication, please check your connection",
+      "tokenInvalid": "Authentication token is invalid"
+    }
+  },
+
+  "prompt": {
+    "mission": "Implement auth error handling",
+    "tasks": [
+      "Create auth-error page",
+      "Build AuthErrorMessage component",
+      "Handle session expiration",
+      "Add retry mechanism",
+      "Redirect appropriately"
+    ]
+  },
+
+  "outputs": {
+    "files": 2,
+    "filesModified": 1,
+    "route": "/auth-error"
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "step": 211,
+  "id": "211-timeout-handling",
+  "phase": 6,
+  "phaseName": "AI Router & Execution",
+  "title": "Execution Timeout Handling",
+  "description": "Handle execution timeouts",
+  "estimatedMinutes": 35,
+  "priority": "P1",
+  "dependencies": ["210-error-handling-execution"],
+
+  "objective": {
+    "what": "Implement timeout handling",
+    "why": "Prevent infinite executions",
+    "outcome": "Bounded execution times"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/lib/execution/timeout/timeout-manager.ts",
+      "src/lib/execution/timeout/timeout-config.ts"
+    ],
+    "timeouts": {
+      "block": "Per-block timeout (default 60s)",
+      "ai": "AI call timeout (default 120s)",
+      "workflow": "Total workflow timeout",
+      "human": "Human action timeout"
+    },
+    "actions": {
+      "warn": "Warning before timeout",
+      "extend": "Option to extend",
+      "cancel": "Cancel on timeout",
+      "retry": "Retry on timeout"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create timeout handling",
+    "tasks": [
+      "Implement timeout manager",
+      "Add configurable timeouts",
+      "Create timeout warnings",
+      "Handle timeout gracefully",
+      "Support timeout extension"
+    ],
+    "constraints": [
+      "Accurate timing",
+      "Clean cancellation",
+      "Resource cleanup"
+    ]
+  },
+
+  "outputs": {
+    "files": 2
+  }
+}

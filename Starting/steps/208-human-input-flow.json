@@ -1,0 +1,59 @@
+{
+  "step": 208,
+  "id": "208-human-input-flow",
+  "phase": 6,
+  "phaseName": "AI Router & Execution",
+  "title": "Human Input Flow",
+  "description": "Pause for human data input",
+  "estimatedMinutes": 50,
+  "priority": "P1",
+  "dependencies": ["207-human-approval-flow", "172-human-input-block"],
+
+  "objective": {
+    "what": "Implement human input collection",
+    "why": "Collect data mid-workflow",
+    "outcome": "Working input forms"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/lib/execution/human/input-handler.ts",
+      "src/components/approvals/input-form-renderer.tsx",
+      "src/components/approvals/input-field.tsx"
+    ],
+    "features": {
+      "formSchema": "Dynamic form from block config",
+      "validation": "Input validation",
+      "submission": "Submit and resume",
+      "timeout": "Optional timeout"
+    },
+    "fieldTypes": [
+      "text",
+      "textarea",
+      "number",
+      "select",
+      "checkbox",
+      "file"
+    ]
+  },
+
+  "prompt": {
+    "mission": "Create input flow",
+    "tasks": [
+      "Create input handler",
+      "Build dynamic form renderer",
+      "Add field components",
+      "Implement validation",
+      "Handle submission"
+    ],
+    "constraints": [
+      "Schema-driven forms",
+      "Accessible inputs",
+      "Mobile friendly"
+    ]
+  },
+
+  "outputs": {
+    "files": 3
+  }
+}

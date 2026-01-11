@@ -1,0 +1,57 @@
+{
+  "step": 370,
+  "id": "370-performance-testing",
+  "phase": 12,
+  "phaseName": "Testing & Polish",
+  "title": "Performance Testing",
+  "description": "Performance and load testing",
+  "estimatedMinutes": 45,
+  "priority": "P1",
+  "dependencies": ["361-test-setup"],
+
+  "objective": {
+    "what": "Performance tests",
+    "why": "Speed and scalability",
+    "outcome": "Performance verified"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "tests/performance/canvas.test.ts",
+      "tests/performance/large-workflows.test.ts",
+      "tests/performance/api.test.ts",
+      "scripts/load-test.ts"
+    ],
+    "metrics": {
+      "fps": "Canvas frame rate",
+      "ttfb": "Time to first byte",
+      "lcp": "Largest contentful paint",
+      "memory": "Memory usage"
+    },
+    "scenarios": {
+      "large": "1000+ node workflows",
+      "concurrent": "Multiple users",
+      "rapid": "Rapid operations"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create performance tests",
+    "tasks": [
+      "Test canvas performance",
+      "Test large workflow handling",
+      "Test API response times",
+      "Create load test script",
+      "Set performance budgets"
+    ],
+    "constraints": [
+      "60fps minimum",
+      "<3s LCP",
+      "Memory limits"
+    ]
+  },
+
+  "outputs": {
+    "files": 4
+  }
+}

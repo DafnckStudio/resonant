@@ -1,0 +1,56 @@
+{
+  "step": 381,
+  "id": "381-typography-polish",
+  "phase": 12,
+  "phaseName": "Testing & Polish",
+  "title": "Typography Polish",
+  "description": "Polish typography system",
+  "estimatedMinutes": 25,
+  "priority": "P2",
+  "dependencies": [],
+
+  "objective": {
+    "what": "Typography polish",
+    "why": "Visual consistency",
+    "outcome": "Perfect typography"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/styles/typography.css",
+      "src/lib/typography/scale.ts"
+    ],
+    "polish": {
+      "scale": "Type scale consistency",
+      "spacing": "Line height/letter spacing",
+      "weights": "Font weight usage",
+      "truncation": "Text truncation"
+    },
+    "consistency": {
+      "headings": "Heading hierarchy",
+      "body": "Body text",
+      "labels": "Form labels",
+      "captions": "Captions/hints"
+    }
+  },
+
+  "prompt": {
+    "mission": "Polish typography",
+    "tasks": [
+      "Audit type scale",
+      "Fix inconsistencies",
+      "Improve line heights",
+      "Polish truncation",
+      "Verify font loading"
+    ],
+    "constraints": [
+      "Inter + Space Mono",
+      "Consistent scale",
+      "Good readability"
+    ]
+  },
+
+  "outputs": {
+    "files": 2
+  }
+}

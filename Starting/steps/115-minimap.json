@@ -1,0 +1,52 @@
+{
+  "step": 115,
+  "id": "115-minimap",
+  "phase": 4,
+  "phaseName": "Workflow Editor Core",
+  "title": "Add Minimap Component",
+  "description": "Add minimap for workflow navigation",
+  "estimatedMinutes": 20,
+  "priority": "P2",
+  "dependencies": ["101-react-flow-setup"],
+
+  "objective": {
+    "what": "Add minimap to editor",
+    "why": "Overview of large workflows",
+    "outcome": "Clickable minimap in corner"
+  },
+
+  "specifications": {
+    "filesToModify": [
+      "src/components/editor/flow-editor.tsx"
+    ],
+    "filesToCreate": [
+      "src/components/editor/controls/custom-minimap.tsx"
+    ],
+    "features": {
+      "overview": "Show all nodes",
+      "viewport": "Show current viewport",
+      "click": "Click to navigate",
+      "toggle": "Show/hide toggle"
+    }
+  },
+
+  "prompt": {
+    "mission": "Add minimap",
+    "tasks": [
+      "Add React Flow MiniMap",
+      "Custom node colors by type",
+      "Add toggle visibility",
+      "Position in corner",
+      "Style for dark/light mode"
+    ],
+    "constraints": [
+      "Use React Flow MiniMap",
+      "Match app theme"
+    ]
+  },
+
+  "outputs": {
+    "files": 1,
+    "filesModified": 1
+  }
+}

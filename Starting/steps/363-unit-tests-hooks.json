@@ -1,0 +1,57 @@
+{
+  "step": 363,
+  "id": "363-unit-tests-hooks",
+  "phase": 12,
+  "phaseName": "Testing & Polish",
+  "title": "Unit Tests - Hooks",
+  "description": "Unit tests for React hooks",
+  "estimatedMinutes": 40,
+  "priority": "P1",
+  "dependencies": ["361-test-setup"],
+
+  "objective": {
+    "what": "React hook tests",
+    "why": "Hook reliability",
+    "outcome": "Tested hooks"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "tests/hooks/use-workflow.test.ts",
+      "tests/hooks/use-blocks.test.ts",
+      "tests/hooks/use-ai.test.ts",
+      "tests/hooks/use-collaboration.test.ts"
+    ],
+    "hooks": {
+      "workflow": "useWorkflow, useWorkflowState",
+      "blocks": "useBlock, useBlockConfig",
+      "ai": "useAI, useAIStream",
+      "collaboration": "useCollaboration, usePresence"
+    },
+    "patterns": {
+      "renderHook": "Testing Library renderHook",
+      "act": "State updates",
+      "waitFor": "Async operations"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create hook unit tests",
+    "tasks": [
+      "Test workflow hooks",
+      "Test block hooks",
+      "Test AI hooks",
+      "Test collaboration hooks",
+      "Test edge cases"
+    ],
+    "constraints": [
+      "Isolated hook tests",
+      "Mock dependencies",
+      "Async handling"
+    ]
+  },
+
+  "outputs": {
+    "files": 4
+  }
+}

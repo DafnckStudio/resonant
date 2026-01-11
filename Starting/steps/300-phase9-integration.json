@@ -1,0 +1,57 @@
+{
+  "step": 300,
+  "id": "300-phase9-integration",
+  "phase": 9,
+  "phaseName": "Templates & Marketplace",
+  "title": "Phase 9 Integration",
+  "description": "Complete templates and marketplace",
+  "estimatedMinutes": 50,
+  "priority": "P0",
+  "dependencies": ["299-marketplace-testing", "297-template-recommendations"],
+
+  "objective": {
+    "what": "Integrate templates and marketplace",
+    "why": "Milestone validation",
+    "outcome": "Production-ready marketplace"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/lib/templates/index.ts",
+      "src/lib/marketplace/index.ts",
+      "docs/marketplace-guide.md"
+    ],
+    "integration": {
+      "templates": "Template system complete",
+      "marketplace": "Marketplace operational",
+      "payments": "Payments working",
+      "documentation": "User guides"
+    },
+    "validation": {
+      "create": "Create templates",
+      "publish": "Publish to marketplace",
+      "purchase": "Complete purchases",
+      "payouts": "Process payouts"
+    }
+  },
+
+  "prompt": {
+    "mission": "Complete Phase 9 integration",
+    "tasks": [
+      "Create unified exports",
+      "Test full flows",
+      "Verify payments",
+      "Document features",
+      "Prepare for Phase 10"
+    ],
+    "constraints": [
+      "All features working",
+      "Payments secure",
+      "Documentation complete"
+    ]
+  },
+
+  "outputs": {
+    "files": 3
+  }
+}

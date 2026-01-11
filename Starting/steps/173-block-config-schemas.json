@@ -1,0 +1,53 @@
+{
+  "step": 173,
+  "id": "173-block-config-schemas",
+  "phase": 5,
+  "phaseName": "Block System",
+  "title": "Block Configuration Schemas",
+  "description": "Create Zod schemas for all block configs",
+  "estimatedMinutes": 40,
+  "priority": "P0",
+  "dependencies": ["141-block-type-system"],
+
+  "objective": {
+    "what": "Define validation schemas for all blocks",
+    "why": "Type-safe config validation",
+    "outcome": "Zod schemas for every block type"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/lib/blocks/schemas/index.ts",
+      "src/lib/blocks/schemas/input-schemas.ts",
+      "src/lib/blocks/schemas/ai-schemas.ts",
+      "src/lib/blocks/schemas/transform-schemas.ts",
+      "src/lib/blocks/schemas/logic-schemas.ts",
+      "src/lib/blocks/schemas/output-schemas.ts"
+    ],
+    "features": {
+      "validation": "Runtime validation",
+      "typeInference": "TypeScript types from schemas",
+      "defaults": "Default values",
+      "transforms": "Value transformations"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create block schemas",
+    "tasks": [
+      "Create schema for each block type",
+      "Add validation rules",
+      "Define default values",
+      "Export TypeScript types",
+      "Add to block registry"
+    ],
+    "constraints": [
+      "Use Zod",
+      "Complete coverage"
+    ]
+  },
+
+  "outputs": {
+    "files": 6
+  }
+}

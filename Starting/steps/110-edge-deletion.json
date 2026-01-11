@@ -1,0 +1,47 @@
+{
+  "step": 110,
+  "id": "110-edge-deletion",
+  "phase": 4,
+  "phaseName": "Workflow Editor Core",
+  "title": "Implement Edge Deletion",
+  "description": "Allow removing connections between nodes",
+  "estimatedMinutes": 20,
+  "priority": "P0",
+  "dependencies": ["109-edge-creation"],
+
+  "objective": {
+    "what": "Enable edge deletion",
+    "why": "Users need to modify connections",
+    "outcome": "Click or select to delete edges"
+  },
+
+  "specifications": {
+    "filesToModify": [
+      "src/components/editor/flow-editor.tsx",
+      "src/components/editor/edges/base-edge.tsx"
+    ],
+    "methods": {
+      "click": "Click edge then Delete key",
+      "button": "Delete button on edge hover",
+      "contextMenu": "Right-click delete"
+    }
+  },
+
+  "prompt": {
+    "mission": "Implement edge deletion",
+    "tasks": [
+      "Add edge selection",
+      "Handle Delete key for edges",
+      "Add delete button on hover",
+      "Update edge styles on select"
+    ],
+    "constraints": [
+      "Visual feedback on hover",
+      "Support bulk edge delete"
+    ]
+  },
+
+  "outputs": {
+    "filesModified": 2
+  }
+}

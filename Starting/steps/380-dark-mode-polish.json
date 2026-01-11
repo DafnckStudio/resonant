@@ -1,0 +1,55 @@
+{
+  "step": 380,
+  "id": "380-dark-mode-polish",
+  "phase": 12,
+  "phaseName": "Testing & Polish",
+  "title": "Dark Mode Polish",
+  "description": "Polish dark mode implementation",
+  "estimatedMinutes": 30,
+  "priority": "P2",
+  "dependencies": [],
+
+  "objective": {
+    "what": "Dark mode polish",
+    "why": "Theme consistency",
+    "outcome": "Perfect dark mode"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/styles/dark-mode-fixes.css",
+      "src/lib/theme/colors.ts"
+    ],
+    "checks": {
+      "contrast": "Color contrast",
+      "images": "Image adaptation",
+      "shadows": "Shadow adjustments",
+      "borders": "Border visibility"
+    },
+    "polish": {
+      "consistency": "Consistent colors",
+      "transitions": "Theme transitions",
+      "system": "System preference"
+    }
+  },
+
+  "prompt": {
+    "mission": "Polish dark mode",
+    "tasks": [
+      "Audit all components",
+      "Fix contrast issues",
+      "Adjust images/icons",
+      "Polish shadows",
+      "Test system toggle"
+    ],
+    "constraints": [
+      "4.5:1 contrast ratio",
+      "Smooth transitions",
+      "System preference"
+    ]
+  },
+
+  "outputs": {
+    "files": 2
+  }
+}

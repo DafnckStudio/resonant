@@ -1,0 +1,57 @@
+{
+  "step": 224,
+  "id": "224-react-flow-yjs-binding",
+  "phase": 7,
+  "phaseName": "Real-time Collaboration",
+  "title": "React Flow Yjs Binding",
+  "description": "Bind React Flow to Yjs document",
+  "estimatedMinutes": 60,
+  "priority": "P0",
+  "dependencies": ["223-workflow-document"],
+
+  "objective": {
+    "what": "Connect React Flow to Yjs",
+    "why": "Real-time canvas sync",
+    "outcome": "Collaborative editor"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/lib/collaboration/bindings/react-flow-binding.ts",
+      "src/lib/collaboration/bindings/node-sync.ts",
+      "src/lib/collaboration/bindings/edge-sync.ts",
+      "src/hooks/useCollaborativeFlow.ts"
+    ],
+    "features": {
+      "nodeSync": "Sync node positions and data",
+      "edgeSync": "Sync edge connections",
+      "bidirectional": "UI changes sync to Yjs",
+      "optimistic": "Optimistic updates"
+    },
+    "events": {
+      "onNodesChange": "Sync to Yjs",
+      "onEdgesChange": "Sync to Yjs",
+      "yjsChange": "Update React Flow"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create React Flow binding",
+    "tasks": [
+      "Implement node synchronization",
+      "Implement edge synchronization",
+      "Create bidirectional binding",
+      "Handle concurrent edits",
+      "Create collaborative hook"
+    ],
+    "constraints": [
+      "No flicker",
+      "Handle rapid changes",
+      "Memory efficient"
+    ]
+  },
+
+  "outputs": {
+    "files": 4
+  }
+}

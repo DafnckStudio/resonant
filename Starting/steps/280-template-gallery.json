@@ -1,0 +1,57 @@
+{
+  "step": 280,
+  "id": "280-template-gallery",
+  "phase": 9,
+  "phaseName": "Templates & Marketplace",
+  "title": "Template Gallery",
+  "description": "Browse and discover templates",
+  "estimatedMinutes": 40,
+  "priority": "P1",
+  "dependencies": ["279-template-instantiation"],
+
+  "objective": {
+    "what": "Create template gallery",
+    "why": "Discover templates easily",
+    "outcome": "Template browsing UI"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/app/(dashboard)/templates/page.tsx",
+      "src/components/templates/template-grid.tsx",
+      "src/components/templates/template-card.tsx",
+      "src/hooks/useTemplates.ts"
+    ],
+    "features": {
+      "grid": "Template grid layout",
+      "categories": "Filter by category",
+      "search": "Search templates",
+      "sort": "Sort by popularity/date"
+    },
+    "display": {
+      "thumbnail": "Visual preview",
+      "metadata": "Name, author, stats",
+      "actions": "Use, preview, favorite"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create template gallery",
+    "tasks": [
+      "Build gallery page",
+      "Create template grid",
+      "Add category filters",
+      "Implement search",
+      "Add sorting options"
+    ],
+    "constraints": [
+      "Fast loading",
+      "Responsive grid",
+      "Clear navigation"
+    ]
+  },
+
+  "outputs": {
+    "files": 4
+  }
+}

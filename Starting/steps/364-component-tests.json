@@ -1,0 +1,58 @@
+{
+  "step": 364,
+  "id": "364-component-tests",
+  "phase": 12,
+  "phaseName": "Testing & Polish",
+  "title": "Component Tests",
+  "description": "React component tests",
+  "estimatedMinutes": 50,
+  "priority": "P1",
+  "dependencies": ["361-test-setup"],
+
+  "objective": {
+    "what": "Component tests",
+    "why": "UI reliability",
+    "outcome": "Tested components"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "tests/components/workflow-canvas.test.tsx",
+      "tests/components/block-node.test.tsx",
+      "tests/components/sidebar.test.tsx",
+      "tests/components/settings.test.tsx"
+    ],
+    "components": {
+      "canvas": "WorkflowCanvas rendering",
+      "blocks": "Block components",
+      "navigation": "Sidebar, header",
+      "forms": "Settings forms"
+    },
+    "testing": {
+      "render": "Component rendering",
+      "interaction": "User interactions",
+      "state": "State changes",
+      "accessibility": "A11y checks"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create component tests",
+    "tasks": [
+      "Test WorkflowCanvas",
+      "Test block components",
+      "Test navigation",
+      "Test forms",
+      "Include a11y tests"
+    ],
+    "constraints": [
+      "Testing Library",
+      "User-centric tests",
+      "No implementation details"
+    ]
+  },
+
+  "outputs": {
+    "files": 4
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "step": 251,
+  "id": "251-version-history-schema",
+  "phase": 8,
+  "phaseName": "Version Control",
+  "title": "Version History Schema",
+  "description": "Database schema for version history",
+  "estimatedMinutes": 25,
+  "priority": "P0",
+  "dependencies": ["250-phase7-integration"],
+
+  "objective": {
+    "what": "Create version history schema",
+    "why": "Track workflow changes over time",
+    "outcome": "Version tracking foundation"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "convex/schema/versions.ts"
+    ],
+    "tables": {
+      "workflowVersions": "Version snapshots",
+      "versionMetadata": "Version info, author, message",
+      "versionDiffs": "Changes between versions"
+    },
+    "fields": {
+      "versionNumber": "Auto-increment per workflow",
+      "snapshot": "Full workflow state",
+      "parentVersion": "Previous version reference",
+      "author": "Who created this version"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create version history schema",
+    "tasks": [
+      "Define workflowVersions table",
+      "Add version metadata",
+      "Create diff storage",
+      "Add indexes for queries",
+      "Plan retention policy"
+    ],
+    "constraints": [
+      "Efficient storage",
+      "Fast queries",
+      "Convex patterns"
+    ]
+  },
+
+  "outputs": {
+    "files": 1
+  }
+}

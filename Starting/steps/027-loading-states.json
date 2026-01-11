@@ -1,0 +1,51 @@
+{
+  "step": 27,
+  "id": "027-loading-states",
+  "phase": 1,
+  "phaseName": "Core UI & Layout",
+  "title": "Create Loading State Components",
+  "description": "Build skeleton loaders and spinner components for loading states",
+  "estimatedMinutes": 20,
+  "priority": "P1",
+  "dependencies": ["026-empty-state"],
+
+  "objective": {
+    "what": "Create loading skeletons and spinners for various UI elements",
+    "why": "Loading states improve perceived performance and UX",
+    "outcome": "Set of loading components for cards, lists, pages"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/components/shared/loading-spinner.tsx",
+      "src/components/shared/skeleton-card.tsx",
+      "src/components/shared/skeleton-list.tsx",
+      "src/components/shared/page-loading.tsx"
+    ],
+    "components": {
+      "LoadingSpinner": "Animated spinner with sizes",
+      "SkeletonCard": "Card placeholder skeleton",
+      "SkeletonList": "List items skeleton",
+      "PageLoading": "Full page loading state"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create loading state components",
+    "tasks": [
+      "Create LoadingSpinner with sm/md/lg sizes",
+      "Create SkeletonCard for workflow cards",
+      "Create SkeletonList for table/list views",
+      "Create PageLoading for route transitions"
+    ],
+    "constraints": [
+      "Use shadcn Skeleton component as base",
+      "Animate with pulse effect"
+    ]
+  },
+
+  "outputs": {
+    "files": 4,
+    "components": ["LoadingSpinner", "SkeletonCard", "SkeletonList", "PageLoading"]
+  }
+}

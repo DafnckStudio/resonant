@@ -1,0 +1,60 @@
+{
+  "step": 181,
+  "id": "181-ai-provider-types",
+  "phase": 6,
+  "phaseName": "AI Router & Execution",
+  "title": "AI Provider Type System",
+  "description": "Define TypeScript types for AI providers",
+  "estimatedMinutes": 30,
+  "priority": "P0",
+  "dependencies": ["180-phase5-integration"],
+
+  "objective": {
+    "what": "Create type definitions for AI providers",
+    "why": "Type-safe multi-provider support",
+    "outcome": "Complete AI provider type system"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/lib/ai/types/index.ts",
+      "src/lib/ai/types/providers.ts",
+      "src/lib/ai/types/models.ts",
+      "src/lib/ai/types/requests.ts",
+      "src/lib/ai/types/responses.ts"
+    ],
+    "providers": {
+      "anthropic": "Claude 3.5 Sonnet, Claude 3 Opus, Claude 3 Haiku",
+      "openai": "GPT-4o, GPT-4 Turbo, GPT-3.5 Turbo",
+      "google": "Gemini 1.5 Pro, Gemini 1.5 Flash",
+      "meta": "Llama 3.1 405B, Llama 3.1 70B"
+    },
+    "types": {
+      "AIProvider": "Provider enum",
+      "AIModel": "Model definitions with capabilities",
+      "AIRequest": "Unified request interface",
+      "AIResponse": "Unified response interface",
+      "StreamChunk": "Streaming chunk type"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create AI provider types",
+    "tasks": [
+      "Define AIProvider enum",
+      "Create AIModel interface with capabilities",
+      "Define request/response types",
+      "Add streaming types",
+      "Export all types"
+    ],
+    "constraints": [
+      "Support all 4 providers",
+      "Include model capabilities",
+      "Type-safe configuration"
+    ]
+  },
+
+  "outputs": {
+    "files": 5
+  }
+}

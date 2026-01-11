@@ -1,0 +1,56 @@
+{
+  "step": 398,
+  "id": "398-launch-checklist",
+  "phase": 12,
+  "phaseName": "Testing & Polish",
+  "title": "Launch Checklist",
+  "description": "Complete pre-launch checklist",
+  "estimatedMinutes": 45,
+  "priority": "P1",
+  "dependencies": [],
+
+  "objective": {
+    "what": "Launch checklist",
+    "why": "Launch readiness",
+    "outcome": "Ready to launch"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "docs/LAUNCH_CHECKLIST.md",
+      "scripts/pre-launch-check.ts"
+    ],
+    "checklist": {
+      "security": "Security audit passed",
+      "performance": "Performance targets met",
+      "accessibility": "WCAG compliance",
+      "legal": "Legal pages complete"
+    },
+    "verification": {
+      "tests": "All tests passing",
+      "monitoring": "Monitoring active",
+      "backups": "Backups configured",
+      "docs": "Documentation complete"
+    }
+  },
+
+  "prompt": {
+    "mission": "Complete checklist",
+    "tasks": [
+      "Create launch checklist",
+      "Run security audit",
+      "Verify performance",
+      "Check accessibility",
+      "Verify all integrations"
+    ],
+    "constraints": [
+      "All items verified",
+      "Documented evidence",
+      "Stakeholder sign-off"
+    ]
+  },
+
+  "outputs": {
+    "files": 2
+  }
+}

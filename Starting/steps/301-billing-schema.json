@@ -1,0 +1,55 @@
+{
+  "step": 301,
+  "id": "301-billing-schema",
+  "phase": 10,
+  "phaseName": "Monetization & Billing",
+  "title": "Billing Schema",
+  "description": "Database schema for billing",
+  "estimatedMinutes": 25,
+  "priority": "P0",
+  "dependencies": ["300-phase9-integration"],
+
+  "objective": {
+    "what": "Create billing schema",
+    "why": "Foundation for subscriptions",
+    "outcome": "Billing data model"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "convex/schema/billing.ts"
+    ],
+    "tables": {
+      "subscriptions": "User subscriptions",
+      "invoices": "Invoice records",
+      "usageRecords": "Usage tracking",
+      "paymentMethods": "Saved payment methods"
+    },
+    "fields": {
+      "stripeIds": "Stripe references",
+      "planId": "Subscription plan",
+      "status": "Active/canceled/past_due",
+      "period": "Billing period"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create billing schema",
+    "tasks": [
+      "Define subscriptions table",
+      "Add invoices table",
+      "Create usage tracking",
+      "Plan relationships",
+      "Add indexes"
+    ],
+    "constraints": [
+      "Stripe integration",
+      "Accurate tracking",
+      "Convex patterns"
+    ]
+  },
+
+  "outputs": {
+    "files": 1
+  }
+}

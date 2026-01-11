@@ -1,0 +1,57 @@
+{
+  "step": 368,
+  "id": "368-e2e-collaboration",
+  "phase": 12,
+  "phaseName": "Testing & Polish",
+  "title": "E2E - Collaboration",
+  "description": "E2E tests for collaboration",
+  "estimatedMinutes": 45,
+  "priority": "P1",
+  "dependencies": ["367-e2e-workflow"],
+
+  "objective": {
+    "what": "Collaboration E2E tests",
+    "why": "Multi-user reliability",
+    "outcome": "Tested collaboration"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "tests/e2e/collaboration/presence.spec.ts",
+      "tests/e2e/collaboration/sync.spec.ts",
+      "tests/e2e/collaboration/cursors.spec.ts",
+      "tests/e2e/collaboration/conflicts.spec.ts"
+    ],
+    "scenarios": {
+      "presence": "Multi-user presence",
+      "sync": "Real-time sync",
+      "cursors": "Cursor sharing",
+      "conflicts": "Conflict resolution"
+    },
+    "setup": {
+      "multiContext": "Multiple browser contexts",
+      "users": "Multiple test users",
+      "timing": "Synchronized actions"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create collaboration E2E tests",
+    "tasks": [
+      "Test presence indicators",
+      "Test real-time sync",
+      "Test cursor sharing",
+      "Test conflict handling",
+      "Multi-user scenarios"
+    ],
+    "constraints": [
+      "Multiple browsers",
+      "Real-time verification",
+      "Race conditions"
+    ]
+  },
+
+  "outputs": {
+    "files": 4
+  }
+}

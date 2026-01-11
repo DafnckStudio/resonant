@@ -1,0 +1,52 @@
+{
+  "step": 145,
+  "id": "145-schedule-trigger-block",
+  "phase": 5,
+  "phaseName": "Block System",
+  "title": "Schedule Trigger Block",
+  "description": "Create scheduled/cron trigger block",
+  "estimatedMinutes": 35,
+  "priority": "P1",
+  "dependencies": ["143-input-trigger-block"],
+
+  "objective": {
+    "what": "Create schedule trigger block",
+    "why": "Run workflows on a schedule",
+    "outcome": "Cron-based scheduling"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/components/editor/blocks/input/schedule-block.tsx",
+      "convex/schedules.ts"
+    ],
+    "config": {
+      "cron": "Cron expression",
+      "timezone": "Timezone",
+      "enabled": "Active toggle"
+    },
+    "outputs": {
+      "scheduledTime": "Scheduled trigger time",
+      "runNumber": "Sequential run number"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create schedule block",
+    "tasks": [
+      "Create ScheduleBlock component",
+      "Add cron expression input",
+      "Add visual cron builder",
+      "Create Convex scheduled function",
+      "Show next run time"
+    ],
+    "constraints": [
+      "Use Convex crons",
+      "Validate cron syntax"
+    ]
+  },
+
+  "outputs": {
+    "files": 2
+  }
+}

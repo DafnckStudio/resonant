@@ -1,0 +1,46 @@
+{
+  "step": 74,
+  "id": "074-auth-hooks",
+  "phase": 2,
+  "phaseName": "Authentication & Users",
+  "title": "Create Authentication Utility Hooks",
+  "description": "Build reusable auth hooks for common patterns",
+  "estimatedMinutes": 30,
+  "priority": "P1",
+  "dependencies": ["055-user-context", "065-role-based-access"],
+
+  "objective": {
+    "what": "Create utility hooks for authentication patterns",
+    "why": "DRY principle - common auth patterns should be reusable",
+    "outcome": "Set of auth hooks for components"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/hooks/use-auth.ts",
+      "src/hooks/use-workspace-auth.ts",
+      "src/hooks/use-can.ts"
+    ],
+    "hooks": {
+      "useAuth": "isSignedIn, isLoaded, signOut",
+      "useWorkspaceAuth": "currentWorkspace, workspaceRole, switchWorkspace",
+      "useCan": "Permission check hook (can('workflows:create'))"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create auth utility hooks",
+    "tasks": [
+      "Create useAuth hook wrapping Clerk",
+      "Build useWorkspaceAuth for workspace context",
+      "Create useCan for permission checks",
+      "Add TypeScript overloads for type safety",
+      "Export from hooks index"
+    ]
+  },
+
+  "outputs": {
+    "files": 3,
+    "hooks": ["useAuth", "useWorkspaceAuth", "useCan"]
+  }
+}

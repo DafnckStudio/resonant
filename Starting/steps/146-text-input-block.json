@@ -1,0 +1,51 @@
+{
+  "step": 146,
+  "id": "146-text-input-block",
+  "phase": 5,
+  "phaseName": "Block System",
+  "title": "Text Input Block",
+  "description": "Create text/prompt input block",
+  "estimatedMinutes": 25,
+  "priority": "P0",
+  "dependencies": ["142-block-registry"],
+
+  "objective": {
+    "what": "Create text input block",
+    "why": "Allow manual text/prompt input",
+    "outcome": "Configurable text input"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/components/editor/blocks/input/text-input-block.tsx"
+    ],
+    "config": {
+      "defaultText": "Default text value",
+      "placeholder": "Placeholder text",
+      "multiline": "Single/multiline toggle",
+      "maxLength": "Character limit"
+    },
+    "outputs": {
+      "text": "The input text"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create text input block",
+    "tasks": [
+      "Create TextInputBlock component",
+      "Add text area with config",
+      "Support variable interpolation",
+      "Add character count",
+      "Register with registry"
+    ],
+    "constraints": [
+      "Support markdown preview",
+      "Syntax highlighting for prompts"
+    ]
+  },
+
+  "outputs": {
+    "files": 1
+  }
+}

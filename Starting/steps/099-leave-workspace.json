@@ -1,0 +1,53 @@
+{
+  "step": 99,
+  "id": "099-leave-workspace",
+  "phase": 3,
+  "phaseName": "Workspace & Projects",
+  "title": "Implement Leave Workspace",
+  "description": "Allow members to leave workspaces",
+  "estimatedMinutes": 20,
+  "priority": "P2",
+  "dependencies": ["067-member-management"],
+
+  "objective": {
+    "what": "Allow non-owner members to leave workspaces",
+    "why": "Users need to manage their workspace memberships",
+    "outcome": "Leave button with confirmation"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/components/settings/leave-workspace-dialog.tsx"
+    ],
+    "filesToModify": [
+      "src/app/(dashboard)/settings/workspace/page.tsx",
+      "convex/workspaceMembers.ts"
+    ],
+    "flow": [
+      "User clicks leave workspace",
+      "Show confirmation dialog",
+      "Remove from workspace",
+      "Redirect to another workspace"
+    ]
+  },
+
+  "prompt": {
+    "mission": "Implement leave workspace",
+    "tasks": [
+      "Create LeaveWorkspaceDialog",
+      "Add leave mutation",
+      "Handle owner case (cannot leave)",
+      "Redirect after leaving",
+      "Send notification"
+    ],
+    "constraints": [
+      "Owners cannot leave (must transfer first)",
+      "Confirm before leaving"
+    ]
+  },
+
+  "outputs": {
+    "files": 1,
+    "filesModified": 2
+  }
+}

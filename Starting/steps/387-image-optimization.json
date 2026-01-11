@@ -1,0 +1,55 @@
+{
+  "step": 387,
+  "id": "387-image-optimization",
+  "phase": 12,
+  "phaseName": "Testing & Polish",
+  "title": "Image Optimization",
+  "description": "Optimize all images and assets",
+  "estimatedMinutes": 25,
+  "priority": "P2",
+  "dependencies": [],
+
+  "objective": {
+    "what": "Image optimization",
+    "why": "Fast media loading",
+    "outcome": "Optimized assets"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/components/ui/optimized-image.tsx",
+      "src/lib/images/loader.ts"
+    ],
+    "optimizations": {
+      "formats": "WebP/AVIF conversion",
+      "sizing": "Responsive sizes",
+      "lazy": "Lazy loading",
+      "placeholder": "Blur placeholders"
+    },
+    "assets": {
+      "icons": "SVG optimization",
+      "logos": "Logo optimization",
+      "backgrounds": "Background images"
+    }
+  },
+
+  "prompt": {
+    "mission": "Optimize images",
+    "tasks": [
+      "Audit all images",
+      "Implement next/image everywhere",
+      "Add blur placeholders",
+      "Optimize SVG icons",
+      "Configure image CDN"
+    ],
+    "constraints": [
+      "next/image component",
+      "WebP with fallbacks",
+      "Proper sizing"
+    ]
+  },
+
+  "outputs": {
+    "files": 2
+  }
+}

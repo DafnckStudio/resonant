@@ -1,0 +1,53 @@
+{
+  "step": 399,
+  "id": "399-final-review",
+  "phase": 12,
+  "phaseName": "Testing & Polish",
+  "title": "Final Review",
+  "description": "Complete final code review",
+  "estimatedMinutes": 60,
+  "priority": "P1",
+  "dependencies": [],
+
+  "objective": {
+    "what": "Final review",
+    "why": "Quality assurance",
+    "outcome": "Production quality"
+  },
+
+  "specifications": {
+    "filesToCreate": [],
+    "review": {
+      "code": "Code quality review",
+      "security": "Security review",
+      "performance": "Performance review",
+      "ux": "UX review"
+    },
+    "validation": {
+      "tests": "Test coverage",
+      "types": "Type safety",
+      "lint": "Lint cleanliness",
+      "build": "Build success"
+    }
+  },
+
+  "prompt": {
+    "mission": "Final review",
+    "tasks": [
+      "Review all code",
+      "Check test coverage",
+      "Verify security measures",
+      "Validate performance",
+      "Fix any remaining issues"
+    ],
+    "constraints": [
+      "100% TypeScript",
+      "No lint warnings",
+      "All tests passing"
+    ]
+  },
+
+  "outputs": {
+    "files": 0
+  }
+}

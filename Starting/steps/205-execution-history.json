@@ -1,0 +1,60 @@
+{
+  "step": 205,
+  "id": "205-execution-history",
+  "phase": 6,
+  "phaseName": "AI Router & Execution",
+  "title": "Execution History Page",
+  "description": "View past workflow executions",
+  "estimatedMinutes": 45,
+  "priority": "P1",
+  "dependencies": ["196-execution-logging"],
+
+  "objective": {
+    "what": "Create execution history view",
+    "why": "Review past executions",
+    "outcome": "Complete execution history"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/app/(dashboard)/workflows/[id]/executions/page.tsx",
+      "src/components/executions/execution-list.tsx",
+      "src/components/executions/execution-detail.tsx",
+      "src/components/executions/execution-filters.tsx"
+    ],
+    "features": {
+      "list": "Paginated execution list",
+      "filters": "Filter by status, date, trigger",
+      "detail": "Detailed execution view",
+      "replay": "Re-run past execution"
+    },
+    "columns": [
+      "Started at",
+      "Duration",
+      "Status",
+      "Trigger type",
+      "Cost",
+      "Actions"
+    ]
+  },
+
+  "prompt": {
+    "mission": "Create history page",
+    "tasks": [
+      "Create executions page",
+      "Build execution list",
+      "Add filter controls",
+      "Create detail view",
+      "Add pagination"
+    ],
+    "constraints": [
+      "Fast loading",
+      "Clear status display",
+      "Sortable columns"
+    ]
+  },
+
+  "outputs": {
+    "files": 4
+  }
+}

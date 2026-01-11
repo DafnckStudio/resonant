@@ -1,0 +1,57 @@
+{
+  "step": 312,
+  "id": "312-invoice-management",
+  "phase": 10,
+  "phaseName": "Monetization & Billing",
+  "title": "Invoice Management",
+  "description": "View and download invoices",
+  "estimatedMinutes": 30,
+  "priority": "P2",
+  "dependencies": ["307-billing-page"],
+
+  "objective": {
+    "what": "Display invoices",
+    "why": "Financial records",
+    "outcome": "Invoice access"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/lib/billing/invoices.ts",
+      "src/components/billing/invoice-list.tsx",
+      "src/components/billing/invoice-row.tsx"
+    ],
+    "features": {
+      "list": "List all invoices",
+      "download": "Download PDF",
+      "status": "Payment status",
+      "details": "Invoice details"
+    },
+    "display": {
+      "date": "Invoice date",
+      "amount": "Amount",
+      "status": "Paid/pending/failed",
+      "actions": "Download/view"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create invoice management",
+    "tasks": [
+      "Fetch invoices from Stripe",
+      "Build invoice list",
+      "Enable PDF download",
+      "Show payment status",
+      "Link to details"
+    ],
+    "constraints": [
+      "Accurate data",
+      "Fast loading",
+      "Easy download"
+    ]
+  },
+
+  "outputs": {
+    "files": 3
+  }
+}

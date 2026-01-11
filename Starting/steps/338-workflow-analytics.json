@@ -1,0 +1,57 @@
+{
+  "step": 338,
+  "id": "338-workflow-analytics",
+  "phase": 11,
+  "phaseName": "Dashboard & Analytics",
+  "title": "Workflow Analytics",
+  "description": "Individual workflow analytics",
+  "estimatedMinutes": 40,
+  "priority": "P1",
+  "dependencies": ["331-analytics-schema"],
+
+  "objective": {
+    "what": "Per-workflow analytics",
+    "why": "Workflow optimization",
+    "outcome": "Workflow insights"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/components/workflow/analytics-panel.tsx",
+      "src/components/workflow/execution-history.tsx",
+      "src/components/workflow/performance-chart.tsx",
+      "src/lib/analytics/workflow-stats.ts"
+    ],
+    "metrics": {
+      "executions": "Total executions",
+      "successRate": "Success rate",
+      "avgDuration": "Average duration",
+      "errorRate": "Error rate"
+    },
+    "charts": {
+      "timeline": "Executions over time",
+      "duration": "Duration distribution",
+      "errors": "Error breakdown"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create workflow analytics",
+    "tasks": [
+      "Build analytics panel",
+      "Show execution history",
+      "Create performance charts",
+      "Calculate success rates",
+      "Display error breakdown"
+    ],
+    "constraints": [
+      "Real-time updates",
+      "Historical data",
+      "Actionable insights"
+    ]
+  },
+
+  "outputs": {
+    "files": 4
+  }
+}

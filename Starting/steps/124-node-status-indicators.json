@@ -1,0 +1,54 @@
+{
+  "step": 124,
+  "id": "124-node-status-indicators",
+  "phase": 4,
+  "phaseName": "Workflow Editor Core",
+  "title": "Node Status Indicators",
+  "description": "Show execution status on nodes",
+  "estimatedMinutes": 30,
+  "priority": "P1",
+  "dependencies": ["103-custom-node-base"],
+
+  "objective": {
+    "what": "Add status indicators to nodes",
+    "why": "Show execution state visually",
+    "outcome": "Visual status on each node"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/components/editor/nodes/node-status-badge.tsx"
+    ],
+    "filesToModify": [
+      "src/components/editor/nodes/base-node.tsx"
+    ],
+    "statuses": {
+      "idle": "Default state",
+      "pending": "Waiting to run",
+      "running": "Currently executing",
+      "success": "Completed successfully",
+      "error": "Failed with error",
+      "skipped": "Skipped by condition"
+    }
+  },
+
+  "prompt": {
+    "mission": "Add status indicators",
+    "tasks": [
+      "Create NodeStatusBadge component",
+      "Add status to node data",
+      "Style each status state",
+      "Add animated running state",
+      "Show error tooltip on error"
+    ],
+    "constraints": [
+      "Use color + icon",
+      "Accessible colors"
+    ]
+  },
+
+  "outputs": {
+    "files": 1,
+    "filesModified": 1
+  }
+}

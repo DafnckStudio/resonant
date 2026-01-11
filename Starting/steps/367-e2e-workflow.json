@@ -1,0 +1,57 @@
+{
+  "step": 367,
+  "id": "367-e2e-workflow",
+  "phase": 12,
+  "phaseName": "Testing & Polish",
+  "title": "E2E - Workflow",
+  "description": "E2E tests for workflow editor",
+  "estimatedMinutes": 50,
+  "priority": "P1",
+  "dependencies": ["366-e2e-auth"],
+
+  "objective": {
+    "what": "Workflow E2E tests",
+    "why": "Core feature reliability",
+    "outcome": "Tested workflow flows"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "tests/e2e/workflow/create.spec.ts",
+      "tests/e2e/workflow/edit.spec.ts",
+      "tests/e2e/workflow/run.spec.ts",
+      "tests/e2e/workflow/blocks.spec.ts"
+    ],
+    "flows": {
+      "create": "Create new workflow",
+      "edit": "Edit workflow",
+      "run": "Execute workflow",
+      "blocks": "Block operations"
+    },
+    "interactions": {
+      "dragDrop": "Drag and drop blocks",
+      "connect": "Connect blocks",
+      "configure": "Configure settings"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create workflow E2E tests",
+    "tasks": [
+      "Test workflow creation",
+      "Test workflow editing",
+      "Test workflow execution",
+      "Test block operations",
+      "Test connections"
+    ],
+    "constraints": [
+      "Canvas interactions",
+      "Async operations",
+      "State verification"
+    ]
+  },
+
+  "outputs": {
+    "files": 4
+  }
+}

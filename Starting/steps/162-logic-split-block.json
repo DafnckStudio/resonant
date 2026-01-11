@@ -1,0 +1,52 @@
+{
+  "step": 162,
+  "id": "162-logic-split-block",
+  "phase": 5,
+  "phaseName": "Block System",
+  "title": "Split Block",
+  "description": "Create split block for parallel execution",
+  "estimatedMinutes": 25,
+  "priority": "P1",
+  "dependencies": ["161-logic-merge-block"],
+
+  "objective": {
+    "what": "Create split block",
+    "why": "Execute multiple branches in parallel",
+    "outcome": "Fan-out to parallel paths"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/components/editor/blocks/logic/split-block.tsx"
+    ],
+    "config": {
+      "branches": "Number of branches"
+    },
+    "inputs": {
+      "input": "Data to split"
+    },
+    "outputs": {
+      "branch1": "First parallel branch",
+      "branch2": "Second parallel branch"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create split block",
+    "tasks": [
+      "Create SplitBlock component",
+      "Add branch count control",
+      "Dynamic output handles",
+      "Pass data to all branches",
+      "Visual parallel indicator"
+    ],
+    "constraints": [
+      "Pair with merge block",
+      "Clear parallel visualization"
+    ]
+  },
+
+  "outputs": {
+    "files": 1
+  }
+}

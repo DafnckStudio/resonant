@@ -1,0 +1,57 @@
+{
+  "step": 282,
+  "id": "282-template-categories",
+  "phase": 9,
+  "phaseName": "Templates & Marketplace",
+  "title": "Template Categories",
+  "description": "Category management for templates",
+  "estimatedMinutes": 25,
+  "priority": "P2",
+  "dependencies": ["280-template-gallery"],
+
+  "objective": {
+    "what": "Organize templates by category",
+    "why": "Easy discovery",
+    "outcome": "Category system"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/lib/templates/categories.ts",
+      "src/components/templates/category-nav.tsx"
+    ],
+    "categories": {
+      "marketing": "Marketing automation",
+      "content": "Content creation",
+      "data": "Data processing",
+      "integration": "API integrations",
+      "custom": "User-created"
+    },
+    "features": {
+      "hierarchy": "Parent/child categories",
+      "icons": "Category icons",
+      "counts": "Template counts",
+      "featured": "Featured categories"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create template categories",
+    "tasks": [
+      "Define category structure",
+      "Create category navigation",
+      "Add category icons",
+      "Show template counts",
+      "Support hierarchy"
+    ],
+    "constraints": [
+      "Clear hierarchy",
+      "Visual distinction",
+      "Fast filtering"
+    ]
+  },
+
+  "outputs": {
+    "files": 2
+  }
+}

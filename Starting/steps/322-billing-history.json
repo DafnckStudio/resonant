@@ -1,0 +1,57 @@
+{
+  "step": 322,
+  "id": "322-billing-history",
+  "phase": 10,
+  "phaseName": "Monetization & Billing",
+  "title": "Billing History",
+  "description": "Complete billing history view",
+  "estimatedMinutes": 25,
+  "priority": "P2",
+  "dependencies": ["312-invoice-management"],
+
+  "objective": {
+    "what": "Billing history page",
+    "why": "Financial transparency",
+    "outcome": "Complete billing records"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/app/(dashboard)/settings/billing/history/page.tsx",
+      "src/components/billing/billing-history-table.tsx",
+      "src/components/billing/billing-export.tsx"
+    ],
+    "features": {
+      "list": "All transactions",
+      "filter": "Filter by date/type",
+      "export": "Export to CSV",
+      "details": "Transaction details"
+    },
+    "display": {
+      "date": "Transaction date",
+      "type": "Payment/refund/credit",
+      "amount": "Amount charged",
+      "status": "Success/failed/pending"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create billing history page",
+    "tasks": [
+      "Fetch all billing events",
+      "Display in sortable table",
+      "Add date range filter",
+      "Export to CSV option",
+      "Transaction detail modal"
+    ],
+    "constraints": [
+      "Complete history",
+      "Fast loading",
+      "Exportable"
+    ]
+  },
+
+  "outputs": {
+    "files": 3
+  }
+}

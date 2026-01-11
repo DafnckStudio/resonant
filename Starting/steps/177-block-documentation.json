@@ -1,0 +1,50 @@
+{
+  "step": 177,
+  "id": "177-block-documentation",
+  "phase": 5,
+  "phaseName": "Block System",
+  "title": "Block Documentation",
+  "description": "In-editor block documentation",
+  "estimatedMinutes": 30,
+  "priority": "P2",
+  "dependencies": ["142-block-registry"],
+
+  "objective": {
+    "what": "Add documentation to blocks",
+    "why": "Help users understand block usage",
+    "outcome": "Inline help and examples"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/components/editor/help/block-docs.tsx",
+      "src/lib/blocks/documentation.ts"
+    ],
+    "features": {
+      "description": "Block description",
+      "inputs": "Input documentation",
+      "outputs": "Output documentation",
+      "examples": "Usage examples",
+      "tips": "Best practices"
+    }
+  },
+
+  "prompt": {
+    "mission": "Add block documentation",
+    "tasks": [
+      "Create documentation structure",
+      "Write docs for each block",
+      "Create BlockDocs component",
+      "Add help button to nodes",
+      "Show inline tips"
+    ],
+    "constraints": [
+      "Concise docs",
+      "Include examples"
+    ]
+  },
+
+  "outputs": {
+    "files": 2
+  }
+}

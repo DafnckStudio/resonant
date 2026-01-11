@@ -1,0 +1,55 @@
+{
+  "step": 117,
+  "id": "117-copy-paste",
+  "phase": 4,
+  "phaseName": "Workflow Editor Core",
+  "title": "Implement Copy/Paste",
+  "description": "Add copy/paste functionality for nodes",
+  "estimatedMinutes": 35,
+  "priority": "P1",
+  "dependencies": ["107-node-selection", "113-undo-redo-system"],
+
+  "objective": {
+    "what": "Implement copy/paste for nodes",
+    "why": "Users need to duplicate and reuse blocks",
+    "outcome": "Ctrl+C/V with position offset"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/hooks/use-clipboard.ts",
+      "src/lib/editor/clipboard-manager.ts"
+    ],
+    "features": {
+      "copy": "Ctrl+C selected nodes",
+      "cut": "Ctrl+X cut nodes",
+      "paste": "Ctrl+V with offset",
+      "duplicate": "Ctrl+D in place"
+    },
+    "behavior": {
+      "edges": "Copy edges between selected nodes",
+      "offset": "Paste with position offset",
+      "ids": "Generate new unique IDs"
+    }
+  },
+
+  "prompt": {
+    "mission": "Implement copy/paste",
+    "tasks": [
+      "Create ClipboardManager",
+      "Create useClipboard hook",
+      "Handle Ctrl+C copy",
+      "Handle Ctrl+X cut",
+      "Handle Ctrl+V paste",
+      "Handle Ctrl+D duplicate"
+    ],
+    "constraints": [
+      "Generate new IDs",
+      "Preserve internal edges"
+    ]
+  },
+
+  "outputs": {
+    "files": 2
+  }
+}

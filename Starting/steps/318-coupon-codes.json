@@ -1,0 +1,58 @@
+{
+  "step": 318,
+  "id": "318-coupon-codes",
+  "phase": 10,
+  "phaseName": "Monetization & Billing",
+  "title": "Coupon Codes",
+  "description": "Discount and coupon system",
+  "estimatedMinutes": 35,
+  "priority": "P2",
+  "dependencies": ["304-checkout-flow"],
+
+  "objective": {
+    "what": "Coupon code system",
+    "why": "Marketing promotions",
+    "outcome": "Discount capabilities"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/lib/billing/coupons.ts",
+      "src/components/billing/coupon-input.tsx",
+      "src/components/billing/coupon-display.tsx",
+      "convex/coupons.ts"
+    ],
+    "features": {
+      "apply": "Apply coupon at checkout",
+      "validate": "Validate coupon code",
+      "display": "Show discount amount",
+      "remove": "Remove applied coupon"
+    },
+    "types": {
+      "percent": "Percentage discount",
+      "fixed": "Fixed amount discount",
+      "trial": "Extended trial",
+      "firstMonth": "First month free"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create coupon code system",
+    "tasks": [
+      "Build coupon input component",
+      "Validate against Stripe",
+      "Apply discount to checkout",
+      "Show savings display",
+      "Handle coupon errors"
+    ],
+    "constraints": [
+      "Stripe coupon integration",
+      "Real-time validation",
+      "Clear savings display"
+    ]
+  },
+
+  "outputs": {
+    "files": 4
+  }
+}

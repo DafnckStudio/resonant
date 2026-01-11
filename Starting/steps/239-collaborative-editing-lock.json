@@ -1,0 +1,55 @@
+{
+  "step": 239,
+  "id": "239-collaborative-editing-lock",
+  "phase": 7,
+  "phaseName": "Real-time Collaboration",
+  "title": "Soft Edit Locks",
+  "description": "Prevent simultaneous property editing",
+  "estimatedMinutes": 40,
+  "priority": "P2",
+  "dependencies": ["225-presence-awareness"],
+
+  "objective": {
+    "what": "Implement soft locks",
+    "why": "Avoid property edit conflicts",
+    "outcome": "Conflict-free property editing"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/lib/collaboration/locks/lock-manager.ts",
+      "src/lib/collaboration/locks/lock-indicator.tsx"
+    ],
+    "features": {
+      "acquire": "Acquire lock on focus",
+      "release": "Release on blur",
+      "timeout": "Auto-release timeout",
+      "indicator": "Show who is editing"
+    },
+    "behavior": {
+      "soft": "Can override if needed",
+      "timeout": "30 second timeout",
+      "warning": "Warn before override"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create soft locks",
+    "tasks": [
+      "Implement lock manager",
+      "Track property locks",
+      "Add lock indicators",
+      "Handle timeouts",
+      "Allow override"
+    ],
+    "constraints": [
+      "Non-blocking",
+      "Clear indication",
+      "Auto-release"
+    ]
+  },
+
+  "outputs": {
+    "files": 2
+  }
+}

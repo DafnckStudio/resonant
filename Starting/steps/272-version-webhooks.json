@@ -1,0 +1,56 @@
+{
+  "step": 272,
+  "id": "272-version-webhooks",
+  "phase": 8,
+  "phaseName": "Version Control",
+  "title": "Version Webhooks",
+  "description": "Webhooks for version events",
+  "estimatedMinutes": 30,
+  "priority": "P3",
+  "dependencies": ["265-version-notifications"],
+
+  "objective": {
+    "what": "Version event webhooks",
+    "why": "External integrations",
+    "outcome": "Webhook notifications"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/lib/versioning/webhooks.ts",
+      "src/components/settings/version-webhooks.tsx"
+    ],
+    "events": {
+      "version.created": "New version saved",
+      "version.restored": "Version restored",
+      "version.tagged": "Version tagged",
+      "branch.created": "Branch created"
+    },
+    "configuration": {
+      "url": "Webhook URL",
+      "events": "Select events",
+      "secret": "Signing secret",
+      "retry": "Retry on failure"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create version webhooks",
+    "tasks": [
+      "Define webhook events",
+      "Build webhook sender",
+      "Create configuration UI",
+      "Add signature verification",
+      "Implement retry logic"
+    ],
+    "constraints": [
+      "Reliable delivery",
+      "Secure signatures",
+      "Configurable"
+    ]
+  },
+
+  "outputs": {
+    "files": 2
+  }
+}

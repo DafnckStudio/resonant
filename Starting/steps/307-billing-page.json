@@ -1,0 +1,57 @@
+{
+  "step": 307,
+  "id": "307-billing-page",
+  "phase": 10,
+  "phaseName": "Monetization & Billing",
+  "title": "Billing Page",
+  "description": "User billing settings page",
+  "estimatedMinutes": 40,
+  "priority": "P1",
+  "dependencies": ["306-subscription-management"],
+
+  "objective": {
+    "what": "Create billing page",
+    "why": "Self-service billing UI",
+    "outcome": "Billing settings"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/app/(dashboard)/settings/billing/page.tsx",
+      "src/components/billing/billing-overview.tsx",
+      "src/components/billing/plan-card.tsx",
+      "src/components/billing/usage-summary.tsx"
+    ],
+    "sections": {
+      "currentPlan": "Current plan details",
+      "usage": "Usage summary",
+      "invoices": "Invoice history",
+      "payment": "Payment method"
+    },
+    "actions": {
+      "upgrade": "Upgrade CTA",
+      "managePortal": "Open Stripe portal",
+      "downloadInvoice": "Download invoices"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create billing page",
+    "tasks": [
+      "Build billing page layout",
+      "Show current plan",
+      "Display usage stats",
+      "List invoices",
+      "Portal integration"
+    ],
+    "constraints": [
+      "Clear information",
+      "Easy navigation",
+      "Quick actions"
+    ]
+  },
+
+  "outputs": {
+    "files": 4
+  }
+}

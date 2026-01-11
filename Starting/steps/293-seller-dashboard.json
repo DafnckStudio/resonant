@@ -1,0 +1,58 @@
+{
+  "step": 293,
+  "id": "293-seller-dashboard",
+  "phase": 9,
+  "phaseName": "Templates & Marketplace",
+  "title": "Seller Dashboard",
+  "description": "Dashboard for template sellers",
+  "estimatedMinutes": 45,
+  "priority": "P2",
+  "dependencies": ["290-template-purchase", "292-template-reviews"],
+
+  "objective": {
+    "what": "Create seller dashboard",
+    "why": "Track sales and earnings",
+    "outcome": "Seller analytics"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/app/(dashboard)/marketplace/seller/page.tsx",
+      "src/components/marketplace/seller-stats.tsx",
+      "src/components/marketplace/sales-chart.tsx",
+      "src/hooks/useSellerStats.ts"
+    ],
+    "metrics": {
+      "sales": "Total sales",
+      "revenue": "Total revenue",
+      "downloads": "Download count",
+      "ratings": "Average rating"
+    },
+    "features": {
+      "charts": "Sales over time",
+      "topTemplates": "Best sellers",
+      "reviews": "Recent reviews",
+      "payouts": "Payout history"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create seller dashboard",
+    "tasks": [
+      "Build seller page",
+      "Create stats cards",
+      "Add sales chart",
+      "Show top templates",
+      "Display payout info"
+    ],
+    "constraints": [
+      "Accurate data",
+      "Real-time updates",
+      "Actionable insights"
+    ]
+  },
+
+  "outputs": {
+    "files": 4
+  }
+}

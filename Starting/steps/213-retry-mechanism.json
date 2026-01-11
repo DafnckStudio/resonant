@@ -1,0 +1,61 @@
+{
+  "step": 213,
+  "id": "213-retry-mechanism",
+  "phase": 6,
+  "phaseName": "AI Router & Execution",
+  "title": "Automatic Retry Mechanism",
+  "description": "Automatic retry for failed blocks",
+  "estimatedMinutes": 35,
+  "priority": "P1",
+  "dependencies": ["210-error-handling-execution"],
+
+  "objective": {
+    "what": "Implement retry mechanism",
+    "why": "Handle transient failures",
+    "outcome": "Resilient execution"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/lib/execution/retry/retry-handler.ts",
+      "src/lib/execution/retry/backoff-strategies.ts"
+    ],
+    "configuration": {
+      "maxRetries": "Maximum retry attempts",
+      "backoff": "Backoff strategy",
+      "retryOn": "Error types to retry"
+    },
+    "backoffStrategies": {
+      "fixed": "Fixed delay between retries",
+      "linear": "Linearly increasing delay",
+      "exponential": "Exponential backoff",
+      "jitter": "Add random jitter"
+    },
+    "retryableErrors": [
+      "NetworkError",
+      "RateLimitError",
+      "TimeoutError",
+      "ServiceUnavailable"
+    ]
+  },
+
+  "prompt": {
+    "mission": "Create retry mechanism",
+    "tasks": [
+      "Implement retry handler",
+      "Add backoff strategies",
+      "Define retryable errors",
+      "Track retry attempts",
+      "Add retry UI feedback"
+    ],
+    "constraints": [
+      "Configurable per block",
+      "Avoid infinite retries",
+      "Log retry attempts"
+    ]
+  },
+
+  "outputs": {
+    "files": 2
+  }
+}

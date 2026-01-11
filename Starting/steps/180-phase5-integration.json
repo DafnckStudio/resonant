@@ -1,0 +1,76 @@
+{
+  "step": 180,
+  "id": "180-phase5-integration",
+  "phase": 5,
+  "phaseName": "Block System",
+  "title": "Phase 5 Integration & Testing",
+  "description": "Test complete block system",
+  "estimatedMinutes": 60,
+  "priority": "P0",
+  "dependencies": ["179-data-type-checking"],
+
+  "objective": {
+    "what": "Test all block types",
+    "why": "Ensure all blocks work correctly",
+    "outcome": "Complete block library"
+  },
+
+  "specifications": {
+    "testCases": [
+      "Add each block type to workflow",
+      "Configure block properties",
+      "Connect blocks with valid types",
+      "Test variable interpolation",
+      "Preview block execution",
+      "Test human approval flow",
+      "Validate block schemas"
+    ],
+    "validation": {
+      "blocks": "All block types render",
+      "properties": "Config editors work",
+      "connections": "Type checking works",
+      "variables": "Interpolation works",
+      "preview": "Block preview executes"
+    }
+  },
+
+  "prompt": {
+    "mission": "Complete Phase 5 integration",
+    "tasks": [
+      "Test all input blocks",
+      "Test all AI blocks",
+      "Test all transform blocks",
+      "Test all logic blocks",
+      "Test all output blocks",
+      "Test human-in-loop blocks",
+      "Test variable system",
+      "Test type checking"
+    ],
+    "validation": [
+      "npm run build passes",
+      "All blocks functional",
+      "Property editors work",
+      "Connections validate"
+    ]
+  },
+
+  "outputs": {
+    "milestone": "Phase 5 Complete",
+    "readyFor": "Phase 6: AI Router & Execution",
+    "deliverables": [
+      "Complete block type system",
+      "Block registry",
+      "Input blocks (trigger, webhook, schedule, text, file)",
+      "AI blocks (text, image, vision, embedding, STT, TTS)",
+      "Transform blocks (text, JSON, code, HTTP)",
+      "Logic blocks (condition, switch, loop, merge, split)",
+      "Utility blocks (delay, log, variable, error)",
+      "Output blocks (response, webhook, email, storage)",
+      "Human blocks (approval, input form)",
+      "Block schemas and validation",
+      "Property editors",
+      "Variable interpolation",
+      "Data type checking"
+    ]
+  }
+}

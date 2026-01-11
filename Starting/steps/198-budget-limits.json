@@ -1,0 +1,61 @@
+{
+  "step": 198,
+  "id": "198-budget-limits",
+  "phase": 6,
+  "phaseName": "AI Router & Execution",
+  "title": "Budget Limits & Alerts",
+  "description": "Set and enforce usage limits",
+  "estimatedMinutes": 40,
+  "priority": "P1",
+  "dependencies": ["197-cost-tracking"],
+
+  "objective": {
+    "what": "Implement budget controls",
+    "why": "Prevent unexpected AI costs",
+    "outcome": "Cost control system"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/lib/ai/costs/budget-manager.ts",
+      "src/lib/ai/costs/alerts.ts",
+      "convex/budgets.ts"
+    ],
+    "limits": {
+      "daily": "Daily spending limit",
+      "monthly": "Monthly spending limit",
+      "perExecution": "Max per workflow run",
+      "perWorkspace": "Workspace total limit"
+    },
+    "alerts": {
+      "threshold": "Alert at percentage",
+      "email": "Email notifications",
+      "inApp": "In-app warnings"
+    },
+    "actions": {
+      "warn": "Show warning, continue",
+      "pause": "Pause execution",
+      "block": "Block new executions"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create budget limits",
+    "tasks": [
+      "Create budget schema",
+      "Implement limit checking",
+      "Add alert thresholds",
+      "Create notification system",
+      "Add enforcement actions"
+    ],
+    "constraints": [
+      "Real-time checking",
+      "Graceful enforcement",
+      "User override option"
+    ]
+  },
+
+  "outputs": {
+    "files": 3
+  }
+}

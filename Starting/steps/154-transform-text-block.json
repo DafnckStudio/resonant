@@ -1,0 +1,53 @@
+{
+  "step": 154,
+  "id": "154-transform-text-block",
+  "phase": 5,
+  "phaseName": "Block System",
+  "title": "Text Transform Block",
+  "description": "Create text transformation block",
+  "estimatedMinutes": 30,
+  "priority": "P0",
+  "dependencies": ["142-block-registry"],
+
+  "objective": {
+    "what": "Create text transform block",
+    "why": "Manipulate text without AI",
+    "outcome": "Text operations block"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/components/editor/blocks/transform/text-transform-block.tsx"
+    ],
+    "operations": [
+      "uppercase", "lowercase", "titlecase",
+      "trim", "replace", "split", "join",
+      "substring", "regex", "template"
+    ],
+    "inputs": {
+      "text": "Input text"
+    },
+    "outputs": {
+      "result": "Transformed text"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create text transform block",
+    "tasks": [
+      "Create TextTransformBlock component",
+      "Add operation selector",
+      "Add operation parameters",
+      "Preview transformation",
+      "Chain multiple operations"
+    ],
+    "constraints": [
+      "Support regex",
+      "Template literals"
+    ]
+  },
+
+  "outputs": {
+    "files": 1
+  }
+}

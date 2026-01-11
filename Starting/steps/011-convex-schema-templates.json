@@ -1,0 +1,55 @@
+{
+  "step": 11,
+  "id": "011-convex-schema-templates",
+  "phase": 0,
+  "phaseName": "Foundation Setup",
+  "title": "Create Convex Schema - Block Templates Table",
+  "description": "Define blockTemplates table for reusable block configurations",
+  "estimatedMinutes": 10,
+  "priority": "P1",
+  "dependencies": ["010-convex-schema-executions"],
+
+  "objective": {
+    "what": "Create blockTemplates table for storing reusable block configurations",
+    "why": "Templates enable quick workflow building and marketplace sharing",
+    "outcome": "BlockTemplates table with category and usage tracking"
+  },
+
+  "specifications": {
+    "filesToModify": ["convex/schema.ts"],
+    "schema": {
+      "blockTemplates": {
+        "fields": {
+          "name": "v.string()",
+          "description": "v.optional(v.string())",
+          "type": "v.string() - Block type",
+          "config": "v.any() - Default configuration",
+          "category": "v.string() - Template category",
+          "isPublic": "v.boolean()",
+          "createdBy": "v.optional(v.id('users'))",
+          "usageCount": "v.optional(v.number())",
+          "createdAt": "v.number()"
+        },
+        "indexes": [
+          { "name": "by_type", "fields": ["type"] },
+          { "name": "by_category", "fields": ["category"] },
+          { "name": "by_isPublic", "fields": ["isPublic"] }
+        ]
+      }
+    }
+  },
+
+  "prompt": {
+    "mission": "Add blockTemplates table for reusable blocks",
+    "tasks": [
+      "Add blockTemplates table to schema",
+      "Include configuration storage with v.any()",
+      "Add indexes for filtering"
+    ]
+  },
+
+  "outputs": {
+    "tables": ["blockTemplates"],
+    "indexes": 3
+  }
+}

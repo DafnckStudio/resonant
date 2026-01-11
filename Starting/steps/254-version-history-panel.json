@@ -1,0 +1,56 @@
+{
+  "step": 254,
+  "id": "254-version-history-panel",
+  "phase": 8,
+  "phaseName": "Version Control",
+  "title": "Version History Panel",
+  "description": "UI for browsing version history",
+  "estimatedMinutes": 40,
+  "priority": "P1",
+  "dependencies": ["253-manual-save-version"],
+
+  "objective": {
+    "what": "Create version history UI",
+    "why": "Browse past versions easily",
+    "outcome": "Version history panel"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/components/editor/version-control/version-history-panel.tsx",
+      "src/components/editor/version-control/version-list-item.tsx",
+      "src/hooks/useVersionHistory.ts"
+    ],
+    "features": {
+      "list": "Scrollable version list",
+      "timeline": "Visual timeline",
+      "filter": "Filter by date/author",
+      "search": "Search versions"
+    },
+    "display": {
+      "metadata": "Date, author, message",
+      "preview": "Thumbnail preview",
+      "badges": "Auto-save vs manual"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create version history panel",
+    "tasks": [
+      "Build version list",
+      "Add timeline visualization",
+      "Implement filtering",
+      "Show version metadata",
+      "Add search functionality"
+    ],
+    "constraints": [
+      "Virtualized list",
+      "Fast loading",
+      "Compact design"
+    ]
+  },
+
+  "outputs": {
+    "files": 3
+  }
+}

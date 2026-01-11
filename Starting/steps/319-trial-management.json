@@ -1,0 +1,57 @@
+{
+  "step": 319,
+  "id": "319-trial-management",
+  "phase": 10,
+  "phaseName": "Monetization & Billing",
+  "title": "Trial Management",
+  "description": "Free trial period handling",
+  "estimatedMinutes": 35,
+  "priority": "P1",
+  "dependencies": ["306-subscription-management"],
+
+  "objective": {
+    "what": "Trial period management",
+    "why": "User acquisition",
+    "outcome": "Trial-to-paid conversion"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/lib/billing/trial.ts",
+      "src/components/billing/trial-banner.tsx",
+      "src/components/billing/trial-end-modal.tsx"
+    ],
+    "features": {
+      "start": "Start free trial",
+      "countdown": "Trial countdown display",
+      "reminder": "Trial ending reminders",
+      "convert": "Convert to paid"
+    },
+    "notifications": {
+      "day7": "7 days left",
+      "day3": "3 days left",
+      "day1": "1 day left",
+      "ended": "Trial ended"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create trial management",
+    "tasks": [
+      "Track trial start/end",
+      "Show trial countdown banner",
+      "Send reminder emails",
+      "Trial end modal with upgrade CTA",
+      "Handle trial expiration"
+    ],
+    "constraints": [
+      "Clear countdown display",
+      "Non-intrusive reminders",
+      "Smooth conversion flow"
+    ]
+  },
+
+  "outputs": {
+    "files": 3
+  }
+}

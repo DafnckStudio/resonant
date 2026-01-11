@@ -1,0 +1,58 @@
+{
+  "step": 320,
+  "id": "320-team-billing",
+  "phase": 10,
+  "phaseName": "Monetization & Billing",
+  "title": "Team Billing",
+  "description": "Team and seat-based billing",
+  "estimatedMinutes": 45,
+  "priority": "P1",
+  "dependencies": ["306-subscription-management"],
+
+  "objective": {
+    "what": "Team subscription billing",
+    "why": "B2B revenue",
+    "outcome": "Seat-based billing"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/lib/billing/team-billing.ts",
+      "src/components/billing/seat-management.tsx",
+      "src/components/billing/team-billing-summary.tsx",
+      "convex/teamBilling.ts"
+    ],
+    "features": {
+      "seats": "Seat count management",
+      "add": "Add team members",
+      "remove": "Remove team members",
+      "prorate": "Prorated seat charges"
+    },
+    "pricing": {
+      "perSeat": "Per-seat pricing",
+      "tiered": "Tiered discounts",
+      "minimum": "Minimum seats",
+      "annual": "Annual commitment discount"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create team billing system",
+    "tasks": [
+      "Track seat count",
+      "Add/remove seats with proration",
+      "Show team billing summary",
+      "Handle seat limit enforcement",
+      "Volume discounts for large teams"
+    ],
+    "constraints": [
+      "Clear per-seat costs",
+      "Instant seat addition",
+      "End-of-period seat removal"
+    ]
+  },
+
+  "outputs": {
+    "files": 4
+  }
+}

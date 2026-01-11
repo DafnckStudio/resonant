@@ -1,0 +1,59 @@
+{
+  "step": 22,
+  "id": "022-sidebar-navigation",
+  "phase": 1,
+  "phaseName": "Core UI & Layout",
+  "title": "Implement Sidebar Navigation Items",
+  "description": "Create navigation items for dashboard, workflows, templates, settings",
+  "estimatedMinutes": 20,
+  "priority": "P0",
+  "dependencies": ["021-app-shell-layout"],
+
+  "objective": {
+    "what": "Build the sidebar navigation with all main sections and active states",
+    "why": "Navigation enables users to move between different sections of the app",
+    "outcome": "Complete sidebar nav with icons, labels, and route highlighting"
+  },
+
+  "specifications": {
+    "filesToModify": ["src/components/layout/sidebar-nav.tsx"],
+    "filesToCreate": ["src/config/navigation.ts"],
+    "navigationItems": [
+      { "label": "Dashboard", "href": "/dashboard", "icon": "LayoutDashboard" },
+      { "label": "Workflows", "href": "/workflows", "icon": "Workflow" },
+      { "label": "Templates", "href": "/templates", "icon": "Layout" },
+      { "label": "Executions", "href": "/executions", "icon": "Play" },
+      { "label": "Analytics", "href": "/analytics", "icon": "BarChart3" },
+      { "label": "Team", "href": "/team", "icon": "Users" },
+      { "label": "Settings", "href": "/settings", "icon": "Settings" }
+    ],
+    "features": {
+      "activeState": "Highlight current route",
+      "collapsedMode": "Show only icons",
+      "tooltips": "Show label on hover in collapsed mode",
+      "badges": "Optional notification badges"
+    }
+  },
+
+  "prompt": {
+    "mission": "Build sidebar navigation component",
+    "tasks": [
+      "Create navigation config with routes and icons",
+      "Build NavItem component with active state",
+      "Add Lucide icons for each item",
+      "Implement collapsed mode (icons only)",
+      "Add tooltips for collapsed state",
+      "Highlight current route"
+    ],
+    "constraints": [
+      "ONLY use Lucide icons",
+      "Use usePathname for active detection",
+      "Must work in both expanded and collapsed modes"
+    ]
+  },
+
+  "outputs": {
+    "files": ["src/config/navigation.ts", "src/components/layout/sidebar-nav.tsx"],
+    "navItems": 7
+  }
+}

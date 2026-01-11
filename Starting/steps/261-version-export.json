@@ -1,0 +1,56 @@
+{
+  "step": 261,
+  "id": "261-version-export",
+  "phase": 8,
+  "phaseName": "Version Control",
+  "title": "Version Export",
+  "description": "Export workflow versions",
+  "estimatedMinutes": 30,
+  "priority": "P2",
+  "dependencies": ["254-version-history-panel"],
+
+  "objective": {
+    "what": "Export versions to file",
+    "why": "Backup and portability",
+    "outcome": "Version export feature"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/lib/versioning/export.ts",
+      "src/components/editor/version-control/export-dialog.tsx"
+    ],
+    "formats": {
+      "json": "Full JSON export",
+      "yaml": "Human-readable YAML",
+      "zip": "Bundle with assets",
+      "snapshot": "Single version snapshot"
+    },
+    "options": {
+      "single": "Export one version",
+      "range": "Export version range",
+      "all": "Export full history",
+      "metadata": "Include/exclude metadata"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create version export",
+    "tasks": [
+      "Implement export formats",
+      "Create export dialog",
+      "Support version selection",
+      "Bundle assets option",
+      "Add progress indicator"
+    ],
+    "constraints": [
+      "Standard formats",
+      "Complete data export",
+      "Re-importable"
+    ]
+  },
+
+  "outputs": {
+    "files": 2
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "step": 234,
+  "id": "234-follow-user",
+  "phase": 7,
+  "phaseName": "Real-time Collaboration",
+  "title": "Follow User Feature",
+  "description": "Follow another user's viewport",
+  "estimatedMinutes": 35,
+  "priority": "P2",
+  "dependencies": ["225-presence-awareness", "228-online-users-panel"],
+
+  "objective": {
+    "what": "Implement follow user",
+    "why": "View what collaborator sees",
+    "outcome": "Follow viewport feature"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/lib/collaboration/follow/follow-manager.ts",
+      "src/components/editor/collaboration/follow-indicator.tsx"
+    ],
+    "features": {
+      "follow": "Lock viewport to user",
+      "sync": "Sync zoom and pan",
+      "indicator": "Show who you're following",
+      "unfollow": "Easy to unfollow"
+    },
+    "triggers": {
+      "click": "Click avatar to follow",
+      "auto": "Auto-follow on mention",
+      "escape": "Escape to unfollow"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create follow feature",
+    "tasks": [
+      "Implement follow manager",
+      "Sync viewport position",
+      "Create follow indicator",
+      "Add follow controls",
+      "Handle unfollow"
+    ],
+    "constraints": [
+      "Smooth viewport sync",
+      "Clear indication",
+      "Easy to exit"
+    ]
+  },
+
+  "outputs": {
+    "files": 2
+  }
+}

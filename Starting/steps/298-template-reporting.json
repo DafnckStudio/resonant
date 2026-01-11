@@ -1,0 +1,57 @@
+{
+  "step": 298,
+  "id": "298-template-reporting",
+  "phase": 9,
+  "phaseName": "Templates & Marketplace",
+  "title": "Template Reporting",
+  "description": "Report problematic templates",
+  "estimatedMinutes": 25,
+  "priority": "P3",
+  "dependencies": ["289-marketplace-browse"],
+
+  "objective": {
+    "what": "Allow reporting templates",
+    "why": "Maintain quality",
+    "outcome": "Report system"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/lib/templates/reporting.ts",
+      "src/components/templates/report-dialog.tsx",
+      "convex/templateReports.ts"
+    ],
+    "reasons": {
+      "inappropriate": "Inappropriate content",
+      "broken": "Doesn't work",
+      "misleading": "Misleading description",
+      "copyright": "Copyright violation"
+    },
+    "process": {
+      "submit": "Submit report",
+      "review": "Admin review",
+      "action": "Take action",
+      "notify": "Notify reporter"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create template reporting",
+    "tasks": [
+      "Build report dialog",
+      "Define report reasons",
+      "Store reports",
+      "Admin review queue",
+      "Notify on resolution"
+    ],
+    "constraints": [
+      "Easy reporting",
+      "Fair process",
+      "Quick resolution"
+    ]
+  },
+
+  "outputs": {
+    "files": 3
+  }
+}

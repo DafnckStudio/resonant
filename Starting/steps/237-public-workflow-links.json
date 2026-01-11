@@ -1,0 +1,56 @@
+{
+  "step": 237,
+  "id": "237-public-workflow-links",
+  "phase": 7,
+  "phaseName": "Real-time Collaboration",
+  "title": "Public Workflow Links",
+  "description": "Create view-only public links",
+  "estimatedMinutes": 40,
+  "priority": "P2",
+  "dependencies": ["235-share-workflow"],
+
+  "objective": {
+    "what": "Enable public sharing",
+    "why": "Share workflows publicly",
+    "outcome": "Public viewing links"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/app/public/workflow/[shareId]/page.tsx",
+      "src/components/public/public-workflow-viewer.tsx",
+      "convex/publicLinks.ts"
+    ],
+    "features": {
+      "link": "Generate public link",
+      "viewer": "Read-only viewer",
+      "embed": "Embeddable iframe",
+      "analytics": "Track views"
+    },
+    "options": {
+      "password": "Optional password",
+      "expiry": "Expiration date",
+      "allowFork": "Allow forking"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create public links",
+    "tasks": [
+      "Generate secure share IDs",
+      "Create public viewer page",
+      "Build read-only viewer",
+      "Add sharing options",
+      "Track view analytics"
+    ],
+    "constraints": [
+      "No auth required",
+      "Read-only only",
+      "Revocable links"
+    ]
+  },
+
+  "outputs": {
+    "files": 3
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "step": 257,
+  "id": "257-version-diff",
+  "phase": 8,
+  "phaseName": "Version Control",
+  "title": "Version Diff",
+  "description": "Compare versions visually",
+  "estimatedMinutes": 45,
+  "priority": "P2",
+  "dependencies": ["255-version-preview"],
+
+  "objective": {
+    "what": "Show version differences",
+    "why": "Understand what changed",
+    "outcome": "Visual diff viewer"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/lib/versioning/diff-engine.ts",
+      "src/components/editor/version-control/diff-viewer.tsx",
+      "src/components/editor/version-control/diff-legend.tsx"
+    ],
+    "diffTypes": {
+      "added": "New nodes/edges (green)",
+      "removed": "Deleted items (red)",
+      "modified": "Changed items (yellow)",
+      "moved": "Repositioned items (blue)"
+    },
+    "views": {
+      "visual": "Overlay on workflow",
+      "list": "List of changes",
+      "sideBySide": "Two versions side by side"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create version diff viewer",
+    "tasks": [
+      "Build diff algorithm",
+      "Highlight changes visually",
+      "Create change list",
+      "Support side-by-side view",
+      "Add diff legend"
+    ],
+    "constraints": [
+      "Clear visualization",
+      "Performant for large diffs",
+      "Color-blind friendly"
+    ]
+  },
+
+  "outputs": {
+    "files": 3
+  }
+}

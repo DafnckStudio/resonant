@@ -1,0 +1,63 @@
+{
+  "step": 360,
+  "id": "360-phase11-integration",
+  "phase": 11,
+  "phaseName": "Dashboard & Analytics",
+  "title": "Phase 11 Integration",
+  "description": "Complete dashboard integration",
+  "estimatedMinutes": 60,
+  "priority": "P0",
+  "dependencies": [
+    "331-analytics-schema",
+    "333-dashboard-layout",
+    "344-notifications-system",
+    "347-search-system",
+    "350-onboarding-flow",
+    "359-dashboard-testing"
+  ],
+
+  "objective": {
+    "what": "Integrate all dashboard components",
+    "why": "Phase 11 completion",
+    "outcome": "Complete dashboard experience"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/lib/dashboard/index.ts",
+      "docs/DASHBOARD.md"
+    ],
+    "integration": {
+      "exports": "Unified dashboard exports",
+      "providers": "Dashboard providers",
+      "hooks": "Custom dashboard hooks"
+    },
+    "verification": {
+      "layout": "Dashboard layout complete",
+      "analytics": "Analytics working",
+      "notifications": "Notifications functional",
+      "search": "Search operational"
+    }
+  },
+
+  "prompt": {
+    "mission": "Complete Phase 11 integration",
+    "tasks": [
+      "Create unified exports",
+      "Verify all dashboard features",
+      "Test analytics flows",
+      "Verify notifications",
+      "Document dashboard system"
+    ],
+    "constraints": [
+      "All features functional",
+      "Performance optimized",
+      "Documentation complete"
+    ]
+  },
+
+  "outputs": {
+    "files": 2,
+    "milestone": "Phase 11 Complete - Dashboard & Analytics"
+  }
+}

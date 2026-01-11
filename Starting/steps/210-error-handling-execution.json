@@ -1,0 +1,60 @@
+{
+  "step": 210,
+  "id": "210-error-handling-execution",
+  "phase": 6,
+  "phaseName": "AI Router & Execution",
+  "title": "Execution Error Handling",
+  "description": "Graceful error handling during execution",
+  "estimatedMinutes": 45,
+  "priority": "P0",
+  "dependencies": ["192-block-executor", "166-utility-error-handler-block"],
+
+  "objective": {
+    "what": "Implement robust error handling",
+    "why": "Graceful failure and recovery",
+    "outcome": "Resilient execution"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/lib/execution/errors/error-handler.ts",
+      "src/lib/execution/errors/error-types.ts",
+      "src/lib/execution/errors/recovery-strategies.ts"
+    ],
+    "errorTypes": [
+      "BlockExecutionError",
+      "AIProviderError",
+      "TimeoutError",
+      "ValidationError",
+      "NetworkError",
+      "RateLimitError"
+    ],
+    "strategies": {
+      "retry": "Retry with backoff",
+      "fallback": "Use fallback value",
+      "skip": "Skip and continue",
+      "stop": "Stop execution",
+      "errorHandler": "Use error handler block"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create error handling",
+    "tasks": [
+      "Define error types",
+      "Implement error handler",
+      "Add recovery strategies",
+      "Support error handler blocks",
+      "Add error notifications"
+    ],
+    "constraints": [
+      "Preserve execution state",
+      "Clear error messages",
+      "Recovery options"
+    ]
+  },
+
+  "outputs": {
+    "files": 3
+  }
+}

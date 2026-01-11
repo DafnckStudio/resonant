@@ -1,0 +1,58 @@
+{
+  "step": 374,
+  "id": "374-error-handling",
+  "phase": 12,
+  "phaseName": "Testing & Polish",
+  "title": "Error Handling",
+  "description": "Comprehensive error handling",
+  "estimatedMinutes": 40,
+  "priority": "P1",
+  "dependencies": [],
+
+  "objective": {
+    "what": "Error handling polish",
+    "why": "Graceful failures",
+    "outcome": "Robust error handling"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/lib/errors/error-handler.ts",
+      "src/lib/errors/error-types.ts",
+      "src/components/errors/error-boundary-global.tsx",
+      "src/components/errors/error-fallback.tsx"
+    ],
+    "handling": {
+      "boundaries": "React error boundaries",
+      "api": "API error handling",
+      "async": "Async error catching",
+      "convex": "Convex error handling"
+    },
+    "ux": {
+      "messages": "User-friendly messages",
+      "retry": "Retry options",
+      "report": "Error reporting",
+      "recovery": "Auto recovery"
+    }
+  },
+
+  "prompt": {
+    "mission": "Polish error handling",
+    "tasks": [
+      "Create error handler",
+      "Add global error boundary",
+      "Improve error messages",
+      "Add retry mechanisms",
+      "Setup error reporting"
+    ],
+    "constraints": [
+      "No raw errors shown",
+      "Actionable messages",
+      "Recovery options"
+    ]
+  },
+
+  "outputs": {
+    "files": 4
+  }
+}

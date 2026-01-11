@@ -1,0 +1,47 @@
+{
+  "step": 86,
+  "id": "086-workflow-settings",
+  "phase": 3,
+  "phaseName": "Workspace & Projects",
+  "title": "Create Workflow Settings Page",
+  "description": "Build workflow-specific settings page",
+  "estimatedMinutes": 30,
+  "priority": "P2",
+  "dependencies": ["085-workflow-details-page"],
+
+  "objective": {
+    "what": "Create settings page for individual workflows",
+    "why": "Users need to configure workflow-specific options",
+    "outcome": "Settings page with configuration options"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/app/(dashboard)/workflows/[workflowId]/settings/page.tsx",
+      "src/components/workflow/workflow-settings-form.tsx"
+    ],
+    "sections": {
+      "general": "Name, description, tags",
+      "execution": "Default timeout, retry settings",
+      "notifications": "Notify on completion/failure",
+      "danger": "Delete workflow"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create workflow settings page",
+    "tasks": [
+      "Create settings route",
+      "Build WorkflowSettingsForm",
+      "Add general settings section",
+      "Add execution config section",
+      "Add notification settings",
+      "Add delete option"
+    ]
+  },
+
+  "outputs": {
+    "files": 2,
+    "route": "/workflows/[workflowId]/settings"
+  }
+}

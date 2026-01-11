@@ -1,0 +1,52 @@
+{
+  "step": 125,
+  "id": "125-edge-labels",
+  "phase": 4,
+  "phaseName": "Workflow Editor Core",
+  "title": "Edge Labels Component",
+  "description": "Add editable labels to edges",
+  "estimatedMinutes": 25,
+  "priority": "P2",
+  "dependencies": ["104-custom-edges"],
+
+  "objective": {
+    "what": "Add labels to edges",
+    "why": "Document data flow between nodes",
+    "outcome": "Editable edge labels"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/components/editor/edges/edge-label.tsx"
+    ],
+    "filesToModify": [
+      "src/components/editor/edges/base-edge.tsx"
+    ],
+    "features": {
+      "add": "Double-click to add label",
+      "edit": "Click to edit",
+      "delete": "Clear to remove",
+      "position": "Centered on edge"
+    }
+  },
+
+  "prompt": {
+    "mission": "Add edge labels",
+    "tasks": [
+      "Create EdgeLabel component",
+      "Add label to edge data",
+      "Handle double-click to add",
+      "Make label editable",
+      "Position on edge center"
+    ],
+    "constraints": [
+      "Use EdgeLabelRenderer",
+      "Don't block clicks"
+    ]
+  },
+
+  "outputs": {
+    "files": 1,
+    "filesModified": 1
+  }
+}

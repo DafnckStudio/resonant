@@ -1,0 +1,59 @@
+{
+  "step": 240,
+  "id": "240-collaboration-notifications",
+  "phase": 7,
+  "phaseName": "Real-time Collaboration",
+  "title": "Collaboration Notifications",
+  "description": "Notify users of collaboration events",
+  "estimatedMinutes": 40,
+  "priority": "P1",
+  "dependencies": ["232-comments-system", "236-invitation-system"],
+
+  "objective": {
+    "what": "Create notification system",
+    "why": "Stay informed of collaboration events",
+    "outcome": "Working notifications"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/lib/notifications/notification-manager.ts",
+      "src/components/notifications/notification-center.tsx",
+      "src/components/notifications/notification-item.tsx",
+      "convex/notifications.ts"
+    ],
+    "events": [
+      "Invited to workflow",
+      "Mentioned in comment",
+      "Comment on your node",
+      "Workflow shared",
+      "Execution completed",
+      "Approval requested"
+    ],
+    "channels": {
+      "inApp": "In-app notification center",
+      "email": "Email notifications",
+      "browser": "Browser push (optional)"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create notifications",
+    "tasks": [
+      "Create notification schema",
+      "Build notification center",
+      "Send email notifications",
+      "Add browser push option",
+      "Mark as read/unread"
+    ],
+    "constraints": [
+      "Don't spam users",
+      "Configurable preferences",
+      "Batch similar notifications"
+    ]
+  },
+
+  "outputs": {
+    "files": 4
+  }
+}

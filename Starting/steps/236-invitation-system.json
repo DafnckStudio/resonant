@@ -1,0 +1,57 @@
+{
+  "step": 236,
+  "id": "236-invitation-system",
+  "phase": 7,
+  "phaseName": "Real-time Collaboration",
+  "title": "Invitation System",
+  "description": "Handle workflow invitations",
+  "estimatedMinutes": 45,
+  "priority": "P1",
+  "dependencies": ["235-share-workflow"],
+
+  "objective": {
+    "what": "Create invitation system",
+    "why": "Onboard new collaborators",
+    "outcome": "Working invitations"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/lib/collaboration/invitations/invitation-manager.ts",
+      "src/app/(dashboard)/invitations/page.tsx",
+      "src/components/invitations/invitation-card.tsx",
+      "convex/invitations.ts"
+    ],
+    "features": {
+      "send": "Send email invitations",
+      "pending": "View pending invitations",
+      "accept": "Accept invitation",
+      "decline": "Decline invitation"
+    },
+    "email": {
+      "template": "Invitation email template",
+      "preview": "Workflow preview",
+      "link": "Direct join link"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create invitation system",
+    "tasks": [
+      "Create invitation schema",
+      "Send invitation emails",
+      "Build invitations page",
+      "Handle accept/decline",
+      "Add to workflow on accept"
+    ],
+    "constraints": [
+      "Secure tokens",
+      "Expiration handling",
+      "Duplicate prevention"
+    ]
+  },
+
+  "outputs": {
+    "files": 4
+  }
+}

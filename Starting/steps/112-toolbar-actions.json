@@ -1,0 +1,57 @@
+{
+  "step": 112,
+  "id": "112-toolbar-actions",
+  "phase": 4,
+  "phaseName": "Workflow Editor Core",
+  "title": "Implement Toolbar Actions",
+  "description": "Add action buttons to editor toolbar",
+  "estimatedMinutes": 35,
+  "priority": "P0",
+  "dependencies": ["102-editor-layout"],
+
+  "objective": {
+    "what": "Implement toolbar action buttons",
+    "why": "Quick access to common operations",
+    "outcome": "Functional toolbar with all actions"
+  },
+
+  "specifications": {
+    "filesToModify": [
+      "src/components/editor/editor-toolbar.tsx"
+    ],
+    "filesToCreate": [
+      "src/components/editor/toolbar/toolbar-button.tsx",
+      "src/components/editor/toolbar/toolbar-separator.tsx"
+    ],
+    "actions": {
+      "save": "Save workflow (Ctrl+S)",
+      "run": "Execute workflow",
+      "undo": "Undo last action (Ctrl+Z)",
+      "redo": "Redo action (Ctrl+Shift+Z)",
+      "zoomIn": "Zoom in",
+      "zoomOut": "Zoom out",
+      "fitView": "Fit to view",
+      "lock": "Lock canvas"
+    }
+  },
+
+  "prompt": {
+    "mission": "Implement toolbar actions",
+    "tasks": [
+      "Create ToolbarButton component",
+      "Add all action buttons",
+      "Connect to keyboard shortcuts",
+      "Add tooltips with shortcuts",
+      "Disable when not applicable"
+    ],
+    "constraints": [
+      "Use Lucide icons",
+      "Show loading states"
+    ]
+  },
+
+  "outputs": {
+    "files": 2,
+    "filesModified": 1
+  }
+}

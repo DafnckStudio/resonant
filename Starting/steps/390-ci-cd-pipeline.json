@@ -1,0 +1,56 @@
+{
+  "step": 390,
+  "id": "390-ci-cd-pipeline",
+  "phase": 12,
+  "phaseName": "Testing & Polish",
+  "title": "CI/CD Pipeline",
+  "description": "Set up complete CI/CD pipeline",
+  "estimatedMinutes": 45,
+  "priority": "P1",
+  "dependencies": [],
+
+  "objective": {
+    "what": "CI/CD setup",
+    "why": "Automated deployment",
+    "outcome": "Reliable pipeline"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      ".github/workflows/ci.yml",
+      ".github/workflows/deploy.yml",
+      ".github/workflows/preview.yml"
+    ],
+    "pipeline": {
+      "lint": "Linting check",
+      "test": "Test execution",
+      "build": "Build verification",
+      "deploy": "Auto deployment"
+    },
+    "environments": {
+      "preview": "PR previews",
+      "staging": "Staging deploys",
+      "production": "Production deploys"
+    }
+  },
+
+  "prompt": {
+    "mission": "Set up CI/CD",
+    "tasks": [
+      "Create CI workflow",
+      "Add test automation",
+      "Set up preview deploys",
+      "Configure production deploy",
+      "Add deployment notifications"
+    ],
+    "constraints": [
+      "GitHub Actions",
+      "Vercel deployment",
+      "Fast feedback loop"
+    ]
+  },
+
+  "outputs": {
+    "files": 3
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "step": 212,
+  "id": "212-rate-limiting",
+  "phase": 6,
+  "phaseName": "AI Router & Execution",
+  "title": "Execution Rate Limiting",
+  "description": "Rate limit executions per user/workspace",
+  "estimatedMinutes": 40,
+  "priority": "P1",
+  "dependencies": ["195-execution-queue"],
+
+  "objective": {
+    "what": "Implement rate limiting",
+    "why": "Prevent abuse and ensure fairness",
+    "outcome": "Fair resource allocation"
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "src/lib/execution/limits/rate-limiter.ts",
+      "src/lib/execution/limits/quota-manager.ts",
+      "convex/quotas.ts"
+    ],
+    "limits": {
+      "concurrent": "Max concurrent executions",
+      "perMinute": "Executions per minute",
+      "perDay": "Executions per day",
+      "tokens": "AI tokens per period"
+    },
+    "tiers": {
+      "free": "10 exec/day, 2 concurrent",
+      "pro": "1000 exec/day, 10 concurrent",
+      "enterprise": "Unlimited, 50 concurrent"
+    }
+  },
+
+  "prompt": {
+    "mission": "Create rate limiting",
+    "tasks": [
+      "Implement rate limiter",
+      "Add quota management",
+      "Define plan limits",
+      "Handle limit exceeded",
+      "Add quota UI"
+    ],
+    "constraints": [
+      "Fair distribution",
+      "Clear error messages",
+      "Upgrade prompts"
+    ]
+  },
+
+  "outputs": {
+    "files": 3
+  }
+}

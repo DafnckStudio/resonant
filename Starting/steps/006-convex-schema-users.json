@@ -1,0 +1,94 @@
+{
+  "step": 6,
+  "id": "006-convex-schema-users",
+  "phase": 0,
+  "phaseName": "Foundation Setup",
+  "title": "Create Convex Schema - Users Table",
+  "description": "Define the users table schema with Clerk integration fields",
+  "estimatedMinutes": 15,
+  "priority": "P0",
+  "dependencies": ["005-convex-initialization"],
+
+  "objective": {
+    "what": "Create the users table schema with all fields for Clerk sync, profile, and Stripe integration",
+    "why": "Users table is the foundation for all data relationships - must be defined first",
+    "outcome": "Users table schema with indexes for clerkId, email, and stripeCustomerId"
+  },
+
+  "context": {
+    "dataModel": "Users synced from Clerk via webhook, extended with Stripe billing",
+    "relationships": {
+      "hasMany": ["workspaces", "executions", "usageRecords"]
+    }
+  },
+
+  "specifications": {
+    "filesToCreate": [
+      "convex/schema.ts"
+    ],
+    "schema": {
+      "users": {
+        "fields": {
+          "clerkId": "v.string() - Clerk user ID",
+          "email": "v.string() - User email",
+          "name": "v.optional(v.string()) - Display name",
+          "imageUrl": "v.optional(v.string()) - Profile image",
+          "role": "v.optional(v.union(v.literal('user'), v.literal('admin'))) - User role",
+          "stripeCustomerId": "v.optional(v.string()) - Stripe customer ID",
+          "subscriptionId": "v.optional(v.string()) - Active subscription ID",
+          "subscriptionStatus": "v.optional(v.string()) - Subscription status",
+          "subscriptionPlan": "v.optional(v.string()) - Plan name (free, pro, team, enterprise)",
+          "tokenBalance": "v.optional(v.number()) - Available tokens",
+          "tokenLimit": "v.optional(v.number()) - Monthly token limit",
+          "preferences": "v.optional(v.object({...})) - User preferences",
+          "createdAt": "v.number() - Creation timestamp",
+          "updatedAt": "v.number() - Last update timestamp"
+        },
+        "indexes": [
+          { "name": "by_clerkId", "fields": ["clerkId"] },
+          { "name": "by_email", "fields": ["email"] },
+          { "name": "by_stripeCustomerId", "fields": ["stripeCustomerId"] }
+        ]
+      }
+    },
+    "codeExample": "import { defineSchema, defineTable } from \"convex/server\";\nimport { v } from \"convex/values\";\n\nexport default defineSchema({\n  users: defineTable({\n    clerkId: v.string(),\n    email: v.string(),\n    name: v.optional(v.string()),\n    imageUrl: v.optional(v.string()),\n    role: v.optional(v.union(v.literal(\"user\"), v.literal(\"admin\"))),\n    stripeCustomerId: v.optional(v.string()),\n    subscriptionId: v.optional(v.string()),\n    subscriptionStatus: v.optional(v.string()),\n    subscriptionPlan: v.optional(v.string()),\n    tokenBalance: v.optional(v.number()),\n    tokenLimit: v.optional(v.number()),\n    preferences: v.optional(v.object({\n      theme: v.optional(v.union(v.literal(\"light\"), v.literal(\"dark\"), v.literal(\"system\"))),\n      defaultAiProvider: v.optional(v.string()),\n      emailNotifications: v.optional(v.boolean()),\n    })),\n    createdAt: v.number(),\n    updatedAt: v.number(),\n  })\n    .index(\"by_clerkId\", [\"clerkId\"])\n    .index(\"by_email\", [\"email\"])\n    .index(\"by_stripeCustomerId\", [\"stripeCustomerId\"]),\n});"
+  },
+
+  "prompt": {
+    "mission": "Create the users table schema for Resonant.ai",
+    "tasks": [
+      "Create convex/schema.ts with users table",
+      "Define all user fields as specified",
+      "Add indexes for clerkId, email, and stripeCustomerId",
+      "Include preferences object for user settings",
+      "Run npx convex dev to push schema"
+    ],
+    "constraints": [
+      "Follow Convex naming conventions (camelCase)",
+      "All optional fields must use v.optional()",
+      "Indexes must be defined for query fields",
+      "Include timestamps (createdAt, updatedAt)"
+    ],
+    "validation": [
+      "Schema pushes without errors",
+      "Table visible in Convex dashboard"
+    ]
+  },
+
+  "validation": {
+    "automated": [
+      "npx convex dev succeeds",
+      "No schema errors"
+    ],
+    "functional": [
+      "Table appears in dashboard",
+      "Indexes are created"
+    ]
+  },
+
+  "outputs": {
+    "files": ["convex/schema.ts"],
+    "tables": ["users"],
+    "indexes": ["by_clerkId", "by_email", "by_stripeCustomerId"]
+  }
+}
